@@ -1,0 +1,138 @@
+
+real	1m12,006s
+user	1m11,913s
+sys	0m0,084s
+
+real	1m30,035s
+user	1m29,921s
+sys	0m0,104s
+
+real	1m42,624s
+user	1m42,524s
+sys	0m0,089s
+
+real	2m25,801s
+user	2m25,651s
+sys	0m0,134s
+
+real	2m42,562s
+user	2m42,437s
+sys	0m0,106s
+
+real	1m42,687s
+user	1m42,567s
+sys	0m0,109s
+
+real	3m25,506s
+user	3m25,381s
+sys	0m0,102s
+
+real	2m32,238s
+user	2m32,115s
+sys	0m0,105s
+
+real	3m21,393s
+user	3m21,270s
+sys	0m0,102s
+
+real	2m17,698s
+user	2m17,582s
+sys	0m0,100s
+
+real	1m26,041s
+user	1m25,921s
+sys	0m0,110s
+
+real	2m18,395s
+user	2m18,279s
+sys	0m0,100s
+
+real	2m23,902s
+user	2m23,778s
+sys	0m0,108s
+
+real	1m33,582s
+user	1m33,482s
+sys	0m0,090s
+
+real	1m52,645s
+user	1m52,534s
+sys	0m0,098s
+
+real	1m16,929s
+user	1m16,825s
+sys	0m0,096s
+
+real	2m16,317s
+user	2m16,205s
+sys	0m0,097s
+
+real	1m19,574s
+user	1m19,465s
+sys	0m0,099s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eqsat-symreg/experiments/GECCO/runOperon_realworld.py", line 61, in <module>
+    print(f"0,{model['model']},{model['tree'].Length + n},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+real	2m13,435s
+user	2m13,320s
+sys	0m0,100s
+
+real	1m49,333s
+user	1m49,233s
+sys	0m0,087s
+
+real	1m43,438s
+user	1m43,330s
+sys	0m0,097s
+
+real	2m16,655s
+user	2m16,548s
+sys	0m0,092s
+
+real	2m20,266s
+user	2m20,157s
+sys	0m0,092s
+
+real	1m27,846s
+user	1m27,732s
+sys	0m0,103s
+
+real	2m10,778s
+user	2m10,664s
+sys	0m0,098s
+
+real	3m13,195s
+user	3m13,086s
+sys	0m0,086s
+
+real	2m13,654s
+user	2m13,538s
+sys	0m0,101s
+
+real	3m16,161s
+user	3m16,047s
+sys	0m0,091s
+
+real	3m14,205s
+user	3m14,085s
+sys	0m0,098s
+
+real	1m19,083s
+user	1m18,978s
+sys	0m0,096s

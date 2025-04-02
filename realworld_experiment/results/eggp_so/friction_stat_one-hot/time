@@ -1,0 +1,510 @@
+
+real	2m17,843s
+user	2m13,647s
+sys	0m2,009s
+
+real	2m7,767s
+user	2m5,030s
+sys	0m0,888s
+
+real	2m18,174s
+user	2m14,667s
+sys	0m1,130s
+
+real	2m37,869s
+user	2m33,713s
+sys	0m1,403s
+
+real	2m49,583s
+user	2m45,599s
+sys	0m1,202s
+
+real	1m52,313s
+user	1m49,936s
+sys	0m0,905s
+
+real	2m17,425s
+user	2m14,567s
+sys	0m0,987s
+
+real	3m38,015s
+user	3m32,373s
+sys	0m1,758s
+
+real	2m12,846s
+user	2m10,969s
+sys	0m1,034s
+
+real	1m14,073s
+user	1m12,829s
+sys	0m0,648s
+
+real	2m46,291s
+user	2m42,939s
+sys	0m1,118s
+
+real	2m11,743s
+user	2m3,830s
+sys	0m6,792s
+
+real	2m48,098s
+user	2m44,568s
+sys	0m1,087s
+
+real	1m47,602s
+user	1m44,499s
+sys	0m0,910s
+
+real	1m38,355s
+user	1m35,712s
+sys	0m1,256s
+
+real	1m35,441s
+user	1m33,440s
+sys	0m1,051s
+
+real	2m0,257s
+user	1m57,371s
+sys	0m0,953s
+
+real	1m13,922s
+user	1m12,327s
+sys	0m0,567s
+
+real	2m43,252s
+user	2m38,663s
+sys	0m1,461s
+
+real	4m0,900s
+user	3m56,482s
+sys	0m1,339s
+
+real	2m15,067s
+user	2m12,843s
+sys	0m0,797s
+
+real	1m31,930s
+user	1m29,199s
+sys	0m0,805s
+
+real	1m57,323s
+user	1m55,118s
+sys	0m0,754s
+
+real	2m2,779s
+user	2m0,721s
+sys	0m0,724s
+
+real	3m59,558s
+user	3m53,509s
+sys	0m2,136s
+
+real	2m3,121s
+user	1m59,661s
+sys	0m0,993s
+
+real	1m39,074s
+user	1m36,981s
+sys	0m0,797s
+
+real	1m46,038s
+user	1m44,148s
+sys	0m0,674s
+
+real	2m40,070s
+user	2m37,366s
+sys	0m0,985s
+
+real	2m20,148s
+user	2m18,687s
+sys	0m0,961s
+
+real	4m15,809s
+user	4m10,260s
+sys	0m1,720s
+
+real	5m31,546s
+user	5m24,265s
+sys	0m2,135s
+
+real	4m54,486s
+user	4m51,384s
+sys	0m1,342s
+
+real	3m42,183s
+user	3m36,356s
+sys	0m1,733s
+
+real	8m21,968s
+user	8m18,066s
+sys	0m1,537s
+
+real	5m53,694s
+user	5m47,818s
+sys	0m1,903s
+
+real	6m31,139s
+user	6m25,003s
+sys	0m2,016s
+
+real	4m30,650s
+user	4m25,142s
+sys	0m1,676s
+
+real	6m59,835s
+user	6m52,413s
+sys	0m2,250s
+
+real	4m48,161s
+user	4m40,368s
+sys	0m2,208s
+
+real	4m10,075s
+user	4m4,207s
+sys	0m1,697s
+
+real	4m33,837s
+user	4m27,034s
+sys	0m1,909s
+
+real	5m0,655s
+user	4m54,211s
+sys	0m2,013s
+
+real	4m46,556s
+user	4m38,811s
+sys	0m2,153s
+
+real	4m54,890s
+user	4m49,288s
+sys	0m1,661s
+
+real	4m41,985s
+user	4m35,691s
+sys	0m2,098s
+
+real	4m25,611s
+user	4m19,261s
+sys	0m1,966s
+
+real	4m8,906s
+user	4m2,530s
+sys	0m1,790s
+
+real	4m22,778s
+user	4m16,289s
+sys	0m2,168s
+
+real	5m56,603s
+user	5m50,877s
+sys	0m1,810s
+
+real	5m32,201s
+user	5m27,948s
+sys	0m1,664s
+
+real	4m50,734s
+user	4m44,122s
+sys	0m1,984s
+
+real	4m10,544s
+user	4m4,011s
+sys	0m1,763s
+
+real	4m32,490s
+user	4m27,630s
+sys	0m1,482s
+
+real	4m8,841s
+user	4m1,891s
+sys	0m2,131s
+
+real	5m15,245s
+user	5m10,074s
+sys	0m1,651s
+
+real	9m8,353s
+user	9m2,340s
+sys	0m1,946s
+
+real	5m49,248s
+user	5m44,959s
+sys	0m1,464s
+
+real	6m43,331s
+user	6m35,527s
+sys	0m2,397s
+
+real	4m47,588s
+user	4m42,173s
+sys	0m1,761s
+./runEgraphGP_realworld_single.sh, linha 5: 757708 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m46,548s
+user	0m45,683s
+sys	0m0,319s
+./runEgraphGP_realworld_single.sh, linha 5: 757856 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,965s
+user	0m0,922s
+sys	0m0,024s
+./runEgraphGP_realworld_single.sh, linha 5: 757862 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,623s
+user	0m0,588s
+sys	0m0,019s
+./runEgraphGP_realworld_single.sh, linha 5: 757868 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,743s
+user	0m0,729s
+sys	0m0,013s
+./runEgraphGP_realworld_single.sh, linha 5: 757875 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,531s
+user	0m0,507s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757881 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,475s
+user	0m0,438s
+sys	0m0,010s
+./runEgraphGP_realworld_single.sh, linha 5: 757887 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,431s
+user	0m0,411s
+sys	0m0,016s
+./runEgraphGP_realworld_single.sh, linha 5: 757893 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,412s
+user	0m0,386s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757899 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,447s
+user	0m0,418s
+sys	0m0,012s
+./runEgraphGP_realworld_single.sh, linha 5: 757905 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,412s
+user	0m0,385s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757912 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,429s
+user	0m0,410s
+sys	0m0,009s
+./runEgraphGP_realworld_single.sh, linha 5: 757918 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,411s
+user	0m0,387s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757924 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,390s
+user	0m0,369s
+sys	0m0,010s
+./runEgraphGP_realworld_single.sh, linha 5: 757930 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,452s
+user	0m0,426s
+sys	0m0,010s
+./runEgraphGP_realworld_single.sh, linha 5: 757936 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,369s
+user	0m0,351s
+sys	0m0,006s
+./runEgraphGP_realworld_single.sh, linha 5: 757942 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,374s
+user	0m0,355s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757948 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,390s
+user	0m0,368s
+sys	0m0,010s
+./runEgraphGP_realworld_single.sh, linha 5: 757954 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,423s
+user	0m0,395s
+sys	0m0,019s
+./runEgraphGP_realworld_single.sh, linha 5: 757960 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,347s
+user	0m0,314s
+sys	0m0,009s
+./runEgraphGP_realworld_single.sh, linha 5: 757966 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,431s
+user	0m0,402s
+sys	0m0,014s
+./runEgraphGP_realworld_single.sh, linha 5: 757972 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,375s
+user	0m0,353s
+sys	0m0,010s
+./runEgraphGP_realworld_single.sh, linha 5: 757978 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,370s
+user	0m0,345s
+sys	0m0,012s
+./runEgraphGP_realworld_single.sh, linha 5: 757984 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,413s
+user	0m0,398s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757991 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,392s
+user	0m0,370s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 757998 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,392s
+user	0m0,368s
+sys	0m0,011s
+./runEgraphGP_realworld_single.sh, linha 5: 758004 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,409s
+user	0m0,387s
+sys	0m0,010s
+./runEgraphGP_realworld_single.sh, linha 5: 758010 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,355s
+user	0m0,333s
+sys	0m0,012s
+./runEgraphGP_realworld_single.sh, linha 5: 758016 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,395s
+user	0m0,369s
+sys	0m0,009s
+./runEgraphGP_realworld_single.sh, linha 5: 758022 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,374s
+user	0m0,356s
+sys	0m0,014s
+./runEgraphGP_realworld_single.sh, linha 5: 758028 Morto                   eggp -d Datasets/realworld/$1_train.csv:::target --test Datasets/realworld/$1_test.csv:::target -g 200 --nPop 500 --pm 0.3 --pc 0.9 --tournament-size 3 -s $2 -k 3 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,powerabs,sqrtabs --print-pareto +RTS -N1 -M3G > Results/realworld/egraphGP_simple/$1/run_${i}.csv
+
+real	0m0,353s
+user	0m0,335s
+sys	0m0,012s
+
+real	6m56,033s
+user	6m52,077s
+sys	0m1,617s
+
+real	5m32,700s
+user	5m25,510s
+sys	0m2,128s
+
+real	16m37,682s
+user	16m36,859s
+sys	0m2,286s
+
+real	15m41,288s
+user	15m40,260s
+sys	0m2,701s
+
+real	16m41,577s
+user	16m40,906s
+sys	0m2,455s
+
+real	12m53,943s
+user	12m52,352s
+sys	0m2,277s
+
+real	15m37,252s
+user	15m36,676s
+sys	0m2,104s
+
+real	11m31,996s
+user	11m31,417s
+sys	0m2,189s
+
+real	20m58,402s
+user	20m47,260s
+sys	0m12,767s
+
+real	14m14,870s
+user	14m10,525s
+sys	0m2,720s
+
+real	12m4,579s
+user	12m1,174s
+sys	0m2,264s
+
+real	11m42,017s
+user	11m38,846s
+sys	0m2,337s
+
+real	13m9,490s
+user	13m6,860s
+sys	0m2,187s
+
+real	12m56,813s
+user	12m53,339s
+sys	0m2,310s
+
+real	12m8,559s
+user	12m5,114s
+sys	0m2,320s
+
+real	14m33,035s
+user	14m29,580s
+sys	0m2,515s
+
+real	10m11,190s
+user	10m8,246s
+sys	0m1,830s
+
+real	14m9,411s
+user	14m6,617s
+sys	0m2,476s
+
+real	13m36,622s
+user	13m32,412s
+sys	0m2,462s
+
+real	10m47,933s
+user	10m46,240s
+sys	0m1,733s
+
+real	16m46,727s
+user	16m43,628s
+sys	0m2,534s
+
+real	11m42,066s
+user	11m39,826s
+sys	0m2,042s
+
+real	14m32,666s
+user	14m30,756s
+sys	0m2,063s
+
+real	14m2,508s
+user	14m0,078s
+sys	0m2,210s
+
+real	12m23,310s
+user	12m20,513s
+sys	0m1,952s
+
+real	12m6,250s
+user	12m3,796s
+sys	0m2,114s
+
+real	10m22,887s
+user	10m19,390s
+sys	0m1,982s
+
+real	10m5,132s
+user	10m1,269s
+sys	0m2,419s
+
+real	15m1,656s
+user	14m55,639s
+sys	0m4,580s
+
+real	9m27,963s
+user	9m23,275s
+sys	0m2,049s
