@@ -1,0 +1,2 @@
+id,Expression,theta,size,MSE_train,MSE_test,R2_train,R2_test
+0,((Sqrt(Abs(((Exp(((Log(t0) + (t1 / x0)) + Sin((Sqrt(Abs(t2)) - x1)))) * Sin(Sin((Log(x0) * Sqrt(Abs((t3 + (Sin(t4) - x1)))))))) - (Sin(x0) - x0)))) * (t5 / Sqrt(Abs(Sqrt(Abs(Sqrt(Abs((t6 + x1))))))))) + (Sin((t7 - x0)) + t8)),-0.6868928077979952;0.9717359952345894;-0.2364368791247935;-0.5955846792638373;-0.5505171831545024;-0.868095549408195;-0.6765982447681089;-0.9142086027209628;-0.24432374525164868,48,NaN,NaN,NaN,NaN

@@ -1,0 +1,138 @@
+
+real	1m40,592s
+user	1m40,506s
+sys	0m0,083s
+
+real	1m0,359s
+user	1m0,288s
+sys	0m0,069s
+
+real	1m27,663s
+user	1m27,588s
+sys	0m0,073s
+
+real	1m9,517s
+user	1m9,440s
+sys	0m0,075s
+
+real	1m6,473s
+user	1m6,391s
+sys	0m0,080s
+
+real	1m1,108s
+user	1m1,013s
+sys	0m0,093s
+
+real	1m4,828s
+user	1m4,752s
+sys	0m0,074s
+
+real	1m17,353s
+user	1m17,271s
+sys	0m0,079s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eqsat-symreg/experiments/GECCO/runOperon_srbench.py", line 58, in <module>
+    print(f"0,{model['model']},{model['tree'].Length + n},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains infinity or a value too large for dtype('float64').
+
+real	1m3,331s
+user	1m3,224s
+sys	0m0,105s
+
+real	1m46,320s
+user	1m46,236s
+sys	0m0,081s
+
+real	1m51,831s
+user	1m51,747s
+sys	0m0,081s
+
+real	1m4,221s
+user	1m4,140s
+sys	0m0,078s
+
+real	2m8,683s
+user	2m8,602s
+sys	0m0,078s
+
+real	0m45,222s
+user	0m45,140s
+sys	0m0,081s
+
+real	0m40,733s
+user	0m40,645s
+sys	0m0,087s
+
+real	2m18,912s
+user	2m18,834s
+sys	0m0,074s
+
+real	1m1,315s
+user	1m1,225s
+sys	0m0,088s
+
+real	1m5,815s
+user	1m5,745s
+sys	0m0,068s
+
+real	1m4,607s
+user	1m4,526s
+sys	0m0,079s
+
+real	1m4,610s
+user	1m4,540s
+sys	0m0,068s
+
+real	1m17,922s
+user	1m17,840s
+sys	0m0,080s
+
+real	0m52,029s
+user	0m51,940s
+sys	0m0,087s
+
+real	1m6,456s
+user	1m6,373s
+sys	0m0,081s
+
+real	1m57,545s
+user	1m57,468s
+sys	0m0,074s
+
+real	1m50,032s
+user	1m49,953s
+sys	0m0,076s
+
+real	1m2,475s
+user	1m2,388s
+sys	0m0,085s
+
+real	2m13,328s
+user	2m13,231s
+sys	0m0,093s
+
+real	1m28,883s
+user	1m28,794s
+sys	0m0,086s
+
+real	1m55,043s
+user	1m54,966s
+sys	0m0,074s
+
+real	1m59,360s
+user	1m59,285s
+sys	0m0,071s

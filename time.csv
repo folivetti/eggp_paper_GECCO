@@ -1,0 +1,106 @@
+dataset,algorithm,time
+chem 1,PySR,2577.63
+chem 1,eggp_so,2026.9
+chem 1,eggp_mo,1040.87
+chem 1,Operon,218.033
+chem 1,tinyGP,1156
+chem 2,PySR,288.967
+chem 2,eggp_so,744.867
+chem 2,eggp_mo,386.833
+chem 2,Operon,126.4
+chem 2,tinyGP,242.167
+flow,PySR,622.433
+flow,eggp_so,2161.13
+flow,eggp_mo,450.833
+flow,Operon,531.367
+flow,tinyGP,1233.27
+fric dyn,PySR,827.133
+fric dyn,eggp_so,837.333
+fric dyn,eggp_mo,423.067
+fric dyn,Operon,117.567
+fric dyn,tinyGP,493.6
+fric,PySR,864.333
+fric,eggp_so,776.7
+fric,eggp_mo,434.467
+fric,Operon,124.733
+fric,tinyGP,515.533
+nasa 1,PySR,290.733
+nasa 1,eggp_so,335.967
+nasa 1,eggp_mo,157.133
+nasa 1,Operon,37.3667
+nasa 1,tinyGP,166.8
+nasa 2,PySR,410.9
+nasa 2,eggp_so,659.467
+nasa 2,eggp_mo,283.833
+nasa 2,Operon,118.667
+nasa 2,tinyGP,486.667
+niku 1,PySR,97.5333
+niku 1,eggp_so,216.533
+niku 1,eggp_mo,121.133
+niku 1,Operon,63.2
+niku 1,tinyGP,138.133
+niku 2,PySR,98.8667
+niku 2,eggp_so,204.4
+niku 2,eggp_mo,89.2667
+niku 2,Operon,46.4333
+niku 2,tinyGP,124.167
+1028,PySR,880.3
+1028,eggp_so,871.6
+1028,eggp_mo,1159.23
+1028,Operon,91.5
+1028,tinyGP,798.533
+1089,PySR,486.867
+1089,eggp_so,200.7
+1089,eggp_mo,318.233
+1089,Operon,27.1667
+1089,tinyGP,91.1333
+1193,PySR,1156.2
+1193,eggp_so,618.433
+1193,eggp_mo,911.933
+1193,Operon,214.167
+1193,tinyGP,794.067
+1199,PySR,2375.87
+1199,eggp_so,838.7
+1199,eggp_mo,1105.97
+1199,Operon,221.633
+1199,tinyGP,814.533
+192,PySR,301.8
+192,eggp_so,190.267
+192,eggp_mo,349.633
+192,Operon,84.8333
+192,tinyGP,118.733
+210,PySR,510.167
+210,eggp_so,202.967
+210,eggp_mo,353.2
+210,Operon,62.4
+210,tinyGP,145.867
+522,PySR,1203.33
+522,eggp_so,589.133
+522,eggp_mo,685.333
+522,Operon,104.633
+522,tinyGP,348
+557,PySR,1418.2
+557,eggp_so,424.9
+557,eggp_mo,615.933
+557,Operon,82.4
+557,tinyGP,306.467
+579,PySR,495.833
+579,eggp_so,400.567
+579,eggp_mo,531.967
+579,Operon,33.9333
+579,tinyGP,268.1
+606,PySR,1089.73
+606,eggp_so,905.2
+606,eggp_mo,659.867
+606,Operon,90.2333
+606,tinyGP,693.767
+650,PySR,1168.8
+650,eggp_so,474.367
+650,eggp_mo,384.733
+650,Operon,49.8
+650,tinyGP,305.467
+678,PySR,602.833
+678,eggp_so,313.767
+678,eggp_mo,240.4
+678,Operon,25.3
+678,tinyGP,162.067

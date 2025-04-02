@@ -1,0 +1,14 @@
+numpy
+scipy
+pandas
+scikit-learn
+sympy
+matplotlib
+pymoo
+
+# pysr
+juliapkg
+pysr
+
+# operon
+pyoperon

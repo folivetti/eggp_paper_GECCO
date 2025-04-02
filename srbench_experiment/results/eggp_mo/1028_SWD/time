@@ -1,0 +1,123 @@
+
+real	26m44,359s
+user	26m42,712s
+sys	0m2,664s
+
+real	15m36,973s
+user	15m34,145s
+sys	0m2,515s
+
+real	34m26,866s
+user	34m26,052s
+sys	0m2,399s
+
+real	24m58,301s
+user	24m57,276s
+sys	0m2,647s
+
+real	13m40,622s
+user	13m38,722s
+sys	0m2,484s
+egraphGP: Heap exhausted;
+egraphGP: Current maximum heap size is 3221225472 bytes (3072 MB).
+egraphGP: Use `+RTS -M<size>' to increase it.
+
+real	98m4,642s
+user	98m2,721s
+sys	0m5,425s
+
+real	25m16,489s
+user	25m14,952s
+sys	0m2,715s
+
+real	23m1,557s
+user	22m59,435s
+sys	0m2,441s
+
+real	18m55,893s
+user	18m52,846s
+sys	0m2,695s
+
+real	20m13,577s
+user	20m13,192s
+sys	0m2,197s
+
+real	16m29,687s
+user	16m25,974s
+sys	0m2,497s
+
+real	19m59,667s
+user	19m56,106s
+sys	0m2,656s
+
+real	16m32,356s
+user	16m27,463s
+sys	0m2,731s
+
+real	16m1,667s
+user	15m58,985s
+sys	0m2,347s
+
+real	11m45,210s
+user	11m41,819s
+sys	0m2,266s
+
+real	22m26,141s
+user	22m23,403s
+sys	0m2,554s
+
+real	16m0,424s
+user	15m56,617s
+sys	0m2,537s
+
+real	18m42,915s
+user	18m38,671s
+sys	0m2,621s
+
+real	9m5,771s
+user	9m0,515s
+sys	0m2,288s
+
+real	11m25,999s
+user	11m21,375s
+sys	0m2,236s
+
+real	13m59,352s
+user	13m56,230s
+sys	0m2,084s
+
+real	11m55,708s
+user	11m53,391s
+sys	0m1,701s
+
+real	11m11,353s
+user	11m6,615s
+sys	0m2,198s
+
+real	12m21,102s
+user	12m19,375s
+sys	0m1,805s
+
+real	17m9,581s
+user	17m8,867s
+sys	0m1,706s
+
+real	10m25,670s
+user	10m20,958s
+sys	0m2,091s
+
+real	14m6,147s
+user	14m5,225s
+sys	0m1,682s
+
+real	12m16,115s
+user	11m38,044s
+sys	0m36,207s
+
+real	9m15,002s
+user	9m7,715s
+sys	0m2,427s
+
+real	7m43,115s
+user	7m35,924s
+sys	0m2,404s
