@@ -165,18 +165,24 @@ for alg in ["eggp_so", "Operon", "PySR", "tinyGP"]:
 
 tbl_auc.loc["mean"] = tbl_auc.mean()
 print("\n====AUC====")
-print(tbl_auc[["eggp_mo", "eggp_so", "Operon", "PySR", "tinyGP"]].to_latex(float_format="%.2f"))
+s = tbl_auc[["eggp_mo", "eggp_so", "Operon", "PySR", "tinyGP"]].style.highlight_max(axis=1, props="mathbf:--rwrap")
+s.format("{:.2f}")
+print(s.to_latex())
 
 print("\n====Size====")
 tbl_sz = df.groupby(["dataset","algorithm"])['size'].mean().unstack()
 tbl_sz.loc["mean"] = tbl_sz.mean()
-print(tbl_sz[["eggp_mo", "eggp_so", "Operon", "PySR", "tinyGP"]].to_latex(float_format="%.2f"))
+s = tbl_sz[["eggp_mo", "eggp_so", "Operon", "PySR", "tinyGP"]].style.highlight_min(axis=1, props="mathbf:--rwrap")
+s.format("{:.2f}")
+print(s.to_latex())
 
 # calculate the rank of each algorithm by dataset based on the mean r2_test 
 ranks = tbl["r2_test"]["median"].unstack().rank(axis=1, ascending=False)
 ranks.loc["mean"] = ranks.mean()
 print("\n====Ranks====")
-print(ranks[["eggp_mo", "eggp_so", "Operon", "PySR", "tinyGP"]].to_latex(float_format="%.2f"))
+s = ranks[["eggp_mo", "eggp_so", "Operon", "PySR", "tinyGP"]].style.highlight_min(axis=1, props="mathbf:--rwrap")
+s.format("{:.2f}")
+print(s.to_latex())
 
 print("\n====hypervolume====")
 tbl = df.pivot_table(index="dataset", columns="algorithm", values="hypervolume", aggfunc=['mean','std'])
@@ -187,4 +193,5 @@ for alg in algs:
 
 # rename indeces by taking the first element after splitting on _ 
 #tbl.index = tbl.index.str.split("_").str[0]
-print(tbl[["eggp_mo", "eggp_so", "Operon", "PySR"]].to_latex())
+s = tbl[["eggp_mo", "eggp_so", "Operon", "PySR"]].style.highlight_max(axis=1, props="mathbf:--rwrap")
+print(s.to_latex())
