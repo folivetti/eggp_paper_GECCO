@@ -38,7 +38,9 @@ python processTime.py
 
 ## To rerun the experiments 
 
-To run the experiments, each folder contains an individual bash script for each algorithm and a `runAllOf.sh` script to run all experiments for a single algorithm. The syntax for each script (using `srbench` folder as an example) are:
+To run the experiments, each folder contains an individual bash script for each algorithm and a `runAllOf.sh` script to run all experiments for a single algorithm. **Note that the results may differ slightly from the paper since we are not fixing the random seed AND the algorithms may have been updated in the meantime.**
+
+The syntax for each script (using `srbench` folder as an example) are:
 
 ```bash
 ./runAllOf.sh [eggp_mo|eggp_so|pysr|operon|tinygp]
