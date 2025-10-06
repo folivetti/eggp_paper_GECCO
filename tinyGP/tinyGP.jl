@@ -3,12 +3,12 @@ module TinyGP
 using Random
 using Printf
 
-const ADD::Int16 = 110
-const SUB::Int16 = 111
-const MUL::Int16 = 112
-const DIV::Int16 = 113
-const FSET_START::Int16 = ADD
-const FSET_END::Int16 = DIV
+const ADD::UInt8 = 110
+const SUB::UInt8 = 111
+const MUL::UInt8 = 112
+const DIV::UInt8 = 113
+const FSET_START::UInt8 = ADD
+const FSET_END::UInt8 = DIV
 const MAX_LEN::Int = 10_000
 const POPSIZE::Int = 100_000
 const DEPTH::Int = 5
@@ -16,16 +16,16 @@ const GENERATIONS::Int = 100
 const TSIZE::Int = 2
 const PMUT_PER_NODE::Float64 = 0.05
 const CROSSOVER_PROB::Float64 = 0.9
-const BUFFER = Vector{Int16}(undef, MAX_LEN)
+const BUFFER = Vector{UInt8}(undef, MAX_LEN)
 
 mutable struct Algorithm
     fitness::Vector{Float64}
-    pop::Vector{Vector{Int16}}
+    pop::Vector{Vector{UInt8}}
     rng::AbstractRNG
     x::Vector{Float64}
     minrandom::Float64
     maxrandom::Float64
-    program::Vector{Int16}
+    program::Vector{UInt8}
     pc::Int
     varnumber::Int
     fitnesscases::Int
@@ -44,9 +44,9 @@ Algorithm(fname::AbstractString, seed::Integer=-1) = begin
         error("too many variables and constants")
     end
     fitness = Vector{Float64}(undef, POPSIZE)
-    pop = Vector{Vector{Int16}}(undef, POPSIZE)
+    pop = Vector{Vector{UInt8}}(undef, POPSIZE)
     x = [(maxrandom - minrandom) * rand(rng) + minrandom for _ in 1:Int(FSET_START)]
-    gp = Algorithm(fitness, pop, rng, x, minrandom, maxrandom, Int16[], 0,
+    gp = Algorithm(fitness, pop, rng, x, minrandom, maxrandom, UInt8[], 0,
                 varnumber, fitnesscases, randomnumber, targets, 0.0, 0.0, 0.0, Int(seed))
     gp.pop = create_random_pop!(gp, POPSIZE, DEPTH)
     return gp
@@ -75,7 +75,7 @@ function setup_fitness(fname::AbstractString)
     end
 end
 
-function traverse(buffer::Vector{Int16}, pos::Int)
+function traverse(buffer::Vector{UInt8}, pos::Int)
     primitive = buffer[pos + 1]
     if primitive < FSET_START
         return pos + 1
@@ -85,7 +85,7 @@ function traverse(buffer::Vector{Int16}, pos::Int)
     end
 end
 
-function grow!(gp::Algorithm, buffer::Vector{Int16}, pos::Int, maxlen::Int, depth::Int)
+function grow!(gp::Algorithm, buffer::Vector{UInt8}, pos::Int, maxlen::Int, depth::Int)
     pos >= maxlen && return -1
     prim = rand(gp.rng, 0:1)
     if pos == 0
@@ -93,10 +93,10 @@ function grow!(gp::Algorithm, buffer::Vector{Int16}, pos::Int, maxlen::Int, dept
     end
     if prim == 0 || depth == 0
         code = rand(gp.rng, 0:(gp.varnumber + gp.randomnumber - 1))
-        buffer[pos + 1] = Int16(code)
+        buffer[pos + 1] = UInt8(code)
         return pos + 1
     else
-        func = Int16(rand(gp.rng, Int(FSET_START):Int(FSET_END)))
+        func = UInt8(rand(gp.rng, Int(FSET_START):Int(FSET_END)))
         buffer[pos + 1] = func
         child = grow!(gp, buffer, pos + 1, maxlen, depth - 1)
         child < 0 && return -1
@@ -109,13 +109,13 @@ function create_random_indiv(gp::Algorithm, depth::Int)
     while len < 0
         len = grow!(gp, BUFFER, 0, MAX_LEN, depth)
     end
-    ind = Vector{Int16}(undef, len)
+    ind = Vector{UInt8}(undef, len)
     copyto!(ind, 1, BUFFER, 1, len)
     return ind
 end
 
 function create_random_pop!(gp::Algorithm, n::Int, depth::Int)
-    pop = Vector{Vector{Int16}}(undef, n)
+    pop = Vector{Vector{UInt8}}(undef, n)
     for i in 1:n
         pop[i] = create_random_indiv(gp, depth)
         gp.fitness[i] = fitness_function(gp, pop[i])
@@ -123,7 +123,7 @@ function create_random_pop!(gp::Algorithm, n::Int, depth::Int)
     return pop
 end
 
-function run_program!(gp::Algorithm, prog::Vector{Int16})
+function run_program!(gp::Algorithm, prog::Vector{UInt8})
     gp.program = prog
     gp.pc = 0
     return eval_node!(gp)
@@ -155,7 +155,7 @@ function eval_node!(gp::Algorithm)
     end
 end
 
-function fitness_function(gp::Algorithm, prog::Vector{Int16})
+function fitness_function(gp::Algorithm, prog::Vector{UInt8})
     fit = 0.0
     for i in 1:gp.fitnesscases
         for j in 1:gp.varnumber
@@ -167,7 +167,7 @@ function fitness_function(gp::Algorithm, prog::Vector{Int16})
     return -fit
 end
 
-function print_indiv(gp::Algorithm, buffer::Vector{Int16}, pos::Int=0)
+function print_indiv(gp::Algorithm, buffer::Vector{UInt8}, pos::Int=0)
     primitive = buffer[pos + 1]
     if primitive < FSET_START
         if primitive < gp.varnumber
@@ -220,37 +220,37 @@ function negative_tournament(gp::Algorithm, tsize::Int)
     return worst
 end
 
-function slice0(buffer::Vector{Int16}, start0::Int, end0::Int)
+function slice0(buffer::Vector{UInt8}, start0::Int, end0::Int)
     if end0 <= start0
-        return Int16[]
+        return UInt8[]
     else
         return buffer[start0 + 1:end0]
     end
 end
 
-function crossover(gp::Algorithm, parent1::Vector{Int16}, parent2::Vector{Int16})
+function crossover(gp::Algorithm, parent1::Vector{UInt8}, parent2::Vector{UInt8})
     len1 = traverse(parent1, 0)
     len2 = traverse(parent2, 0)
     xo1start = rand(gp.rng, 0:len1 - 1)
     xo1end = traverse(parent1, xo1start)
     xo2start = rand(gp.rng, 0:len2 - 1)
     xo2end = traverse(parent2, xo2start)
-    offspring = Int16[]
+    offspring = UInt8[]
     append!(offspring, slice0(parent1, 0, xo1start))
     append!(offspring, slice0(parent2, xo2start, xo2end))
     append!(offspring, slice0(parent1, xo1end, len1))
     return offspring
 end
 
-function mutation(gp::Algorithm, parent::Vector{Int16}, pmut::Float64)
+function mutation(gp::Algorithm, parent::Vector{UInt8}, pmut::Float64)
     len = traverse(parent, 0)
     child = copy(parent)
     for i in 0:len - 1
         if rand(gp.rng) < pmut
             if child[i + 1] < FSET_START
-                child[i + 1] = Int16(rand(gp.rng, 0:gp.varnumber - 1))
+                child[i + 1] = UInt8(rand(gp.rng, 0:gp.varnumber - 1))
             else
-                child[i + 1] = Int16(rand(gp.rng, Int(FSET_START):Int(FSET_END)))
+                child[i + 1] = UInt8(rand(gp.rng, Int(FSET_START):Int(FSET_END)))
             end
         end
     end
