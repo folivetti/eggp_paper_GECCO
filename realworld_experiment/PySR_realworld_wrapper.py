@@ -8,7 +8,7 @@ from pysr import PySRRegressor
 import sympy 
 
 reg = PySRRegressor(
-        maxsize=int(sys.argv[4]),
+        maxsize=50,
         maxdepth=10,
         niterations=int(sys.argv[2]),
         populations=10,

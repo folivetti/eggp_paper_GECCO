@@ -6,42 +6,42 @@ datasets20=( "flow_stress_phip0.1" nasa_battery_1_10min nasa_battery_2_20min nik
 if [ "${1,,}" == "operon" ]; then
    echo "running Operon..."
    for key in "${!datasets30[@]}"; do
-     ./runOperon_realworld.sh ${datasets30[$key]} 20 $key &
+     ./runOperon_realworld.sh ${datasets30[$key]} &
    done
    for key in "${!datasets20[@]}"; do
-     ./runOperon_realworld.sh ${datasets20[$key]} 13 $key &
+     ./runOperon_realworld.sh ${datasets20[$key]} &
    done
 elif [ "${1,,}" == "pysr" ]; then
    echo "running PySR..."
    for key in "${!datasets30[@]}"; do
-     ./runPySR_realworld.sh ${datasets30[$key]} 30 $key &
+     ./runPySR_realworld.sh ${datasets30[$key]} &
    done
    for key in "${!datasets20[@]}"; do
-     ./runPySR_realworld.sh ${datasets20[$key]} 20 $key &
+     ./runPySR_realworld.sh ${datasets20[$key]} &
    done
 elif [ "${1,,}" == "tinygp" ]; then
    echo "running tinyGP..."
    for key in "${!datasets30[@]}"; do
-     ./runTinyGP_realworld.sh ${datasets30[$key]} 30 &
+     ./runTinyGP_realworld.sh ${datasets30[$key]} &
    done
    for key in "${!datasets20[@]}"; do
-     ./runTinyGP_realworld.sh ${datasets20[$key]} 20 &
+     ./runTinyGP_realworld.sh ${datasets20[$key]} &
    done
 elif [ "${1,,}" == "eggp_so" ]; then
    echo "running eggp_so..."
    for key in "${!datasets30[@]}"; do
-     ./runEggp_so_realworld.sh ${datasets30[$key]} 30 &
+     ./runEggp_so_realworld.sh ${datasets30[$key]} &
    done
    for key in "${!datasets20[@]}"; do
-     ./runEggp_so_realworld.sh ${datasets20[$key]} 20 &
+     ./runEggp_so_realworld.sh ${datasets20[$key]} &
    done
 elif [ "${1,,}" == "eggp_mo" ]; then
    echo "running eggp_mo..."
    for key in "${!datasets30[@]}"; do
-     ./runEggp_mo_realworld.sh ${datasets30[$key]} 30 &
+     ./runEggp_mo_realworld.sh ${datasets30[$key]} &
    done
    for key in "${!datasets20[@]}"; do
-     ./runEggp_mo_realworld.sh ${datasets20[$key]} 20 &
+     ./runEggp_mo_realworld.sh ${datasets20[$key]} &
    done
 else
    echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo]"
