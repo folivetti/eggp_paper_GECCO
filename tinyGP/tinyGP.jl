@@ -7,62 +7,62 @@ const ADD::UInt8 = 110
 const SUB::UInt8 = 111
 const MUL::UInt8 = 112
 const DIV::UInt8 = 113
-const FSET_START::UInt8 = ADD
-const FSET_END::UInt8 = DIV
-const MAX_LEN::Int = 10_000
-const POPSIZE::Int = 100_000
-const DEPTH::Int = 5
-const GENERATIONS::Int = 100
-const TSIZE::Int = 2
-const PMUT_PER_NODE::Float64 = 0.05
-const CROSSOVER_PROB::Float64 = 0.9
+const FSET_START = ADD
+const FSET_END = DIV
+
+const MAX_LEN = 10_000
+const POPSIZE = 100_000
+const DEPTH = 5
+const GENERATIONS = 100
+const TSIZE = 2
+const PMUT_PER_NODE = 0.05
+const CROSSOVER_PROB = 0.9
 const BUFFER = Vector{UInt8}(undef, MAX_LEN)
 
-mutable struct Algorithm
-    fitness::Vector{Float64}
+mutable struct Algorithm{T}
+    fitness::Vector{T}
     pop::Vector{Vector{UInt8}}
     rng::AbstractRNG
-    x::Vector{Float64}
-    minrandom::Float64
-    maxrandom::Float64
+    x::Vector{T}
+    minrandom::T
+    maxrandom::T
     program::Vector{UInt8}
     pc::Int
     varnumber::Int
     fitnesscases::Int
     randomnumber::Int
-    targets::Matrix{Float64}
-    fbestpop::Float64
-    favgpop::Float64
-    avg_len::Float64
+    targets::Matrix{T}
+    fbestpop::T
+    favgpop::T
+    avg_len::T
     seed::Int
 end
 
-Algorithm(fname::AbstractString, seed::Integer=-1) = begin
+function Algorithm{T}(fname::AbstractString, seed::Integer=-1) where {T <: AbstractFloat}
     rng = seed >= 0 ? MersenneTwister(seed) : MersenneTwister()
-    varnumber, randomnumber, minrandom, maxrandom, fitnesscases, targets = setup_fitness(fname)
-    if varnumber + randomnumber >= Int(FSET_START)
-        error("too many variables and constants")
-    end
-    fitness = Vector{Float64}(undef, POPSIZE)
+    varnumber, randomnumber, minrandom, maxrandom, fitnesscases, targets = setup_fitness(T, fname)
+    varnumber + randomnumber < FSET_START || error("too many variables and constants")
+    
+    fitness = Vector{T}(undef, POPSIZE)
     pop = Vector{Vector{UInt8}}(undef, POPSIZE)
     x = [(maxrandom - minrandom) * rand(rng) + minrandom for _ in 1:Int(FSET_START)]
-    gp = Algorithm(fitness, pop, rng, x, minrandom, maxrandom, UInt8[], 0,
+    gp = Algorithm{T}(fitness, pop, rng, x, minrandom, maxrandom, UInt8[], 0,
                 varnumber, fitnesscases, randomnumber, targets, 0.0, 0.0, 0.0, Int(seed))
     gp.pop = create_random_pop!(gp, POPSIZE, DEPTH)
     return gp
 end
 
-function setup_fitness(fname::AbstractString)
+function setup_fitness(::Type{T}, fname::AbstractString) where {T <: AbstractFloat}
     open(fname, "r") do io
         eof(io) && error("empty data file")
         header = split(strip(readline(io)))
         length(header) == 5 || error("expected five header values")
         varnumber = parse(Int, header[1])
         randomnumber = parse(Int, header[2])
-        minrandom = parse(Float64, header[3])
-        maxrandom = parse(Float64, header[4])
+        minrandom = parse(T, header[3])
+        maxrandom = parse(T, header[4])
         fitnesscases = parse(Int, header[5])
-        targets = Matrix{Float64}(undef, fitnesscases, varnumber + 1)
+        targets = Matrix{T}(undef, fitnesscases, varnumber + 1)
         for i in 1:fitnesscases
             eof(io) && error("unexpected end of data at case $i")
             tokens = split(strip(readline(io)))
@@ -323,7 +323,7 @@ function main(args::Vector{String})
     elseif length(args) == 1
         fname = args[1]
     end
-    gp = Algorithm(fname, seed)
+    gp = Algorithm{Float64}(fname, seed)
     evolve!(gp)
 end
 
