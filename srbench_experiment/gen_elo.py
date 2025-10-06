@@ -42,7 +42,7 @@ else:
     minobj = True
 
 tbl = df.groupby(["dataset","algorithm"])[criteria].apply(args.agg).unstack()
-tbl.round(2)
+#tbl.round(2)
 
 datasets = tbl.index.values
 rng.shuffle(datasets)

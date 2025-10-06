@@ -38,7 +38,7 @@ else:
     minobj = True
 
 tbl = df.groupby(["dataset","algorithm"])[criteria].apply(args.agg).unstack()
-tbl.round(2)
+#tbl.round(2)
 
 ranks = tbl.rank(axis=1, ascending=minobj!=args.pct, pct=args.pct)
 

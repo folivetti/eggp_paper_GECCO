@@ -99,7 +99,7 @@ if isinstance(aggreg, list):
     tbl = df.groupby(["dataset","algorithm"])[criteria].agg(aggreg).unstack()
 else:
     tbl = df.groupby(["dataset","algorithm"])[criteria].apply(aggreg).unstack()
-tbl.round(2)
+#tbl.round(2)
 
 
 if sys.argv[2] == 'auc' or sys.argv[2][0] == 'P':
