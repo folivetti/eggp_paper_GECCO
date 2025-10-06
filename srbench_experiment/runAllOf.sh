@@ -27,6 +27,16 @@ elif [ "${1,,}" == "eggp_mo" ]; then
    for key in "${!datasets[@]}"; do
      ./runEggp_mo_srbench.sh ${datasets[$key]} &
    done
+elif [ "${1,,}" == "pysips" ]; then
+   echo "running pysips..."
+   for key in "${!datasets[@]}"; do
+     ./runPySIPS_srbench.sh ${datasets[$key]} &
+   done
+elif [ "${1,,}" == "slim" ]; then
+   echo "running slim GSGP..."
+   for key in "${!datasets[@]}"; do
+     ./runSlim_srbench.sh ${datasets[$key]} &
+   done
 else
-   echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo]"
+   echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo|pysips]"
 fi
