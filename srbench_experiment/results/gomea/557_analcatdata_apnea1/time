@@ -1,0 +1,258 @@
+<lambdifygenerated-6>:2: RuntimeWarning: divide by zero encountered in divide
+  return 234.090271 + 0.736556*(numpy.sin(4.517757*x_2) - 5.214479)*(4.829137*x_1 + x_2 - 2.424407)/(x_2*(numpy.sin(x_0) - 0.424753/x_1))
+<lambdifygenerated-7>:2: RuntimeWarning: divide by zero encountered in divide
+  return 234.37085 - 17.920569258868*(x_1 + 0.189211500804811*x_2)/(x_2*(numpy.sin(x_0) - 0.424753/x_1))
+<lambdifygenerated-10>:2: RuntimeWarning: divide by zero encountered in divide
+  return -29.169637223397*x_1/(x_2*(numpy.sin(x_0) - 0.424668/x_1)) + 256.798767
+
+real	7m5,441s
+user	7m6,703s
+sys	0m0,277s
+<lambdifygenerated-14>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.50935*x_0*x_1*(x_1 + x_2)/((x_1 - x_2)*(x_1 - 4.118943 + 3.358201/x_0)) + 231.972656
+<lambdifygenerated-16>:2: RuntimeWarning: divide by zero encountered in divide
+  return 118.531464*(-0.772787775707486*x_0 + 0.227212224292514*x_1 + x_1/x_2 + 1.826742)/(x_0 - x_1 + 0.206796552302 + 1.36603624094147*(x_1 - 3.447436)/x_0) + 145.289795 + 118.531464*numpy.sin(0.970617530932323*x_1 + 1.47061076902396)/(x_0*x_1 + numpy.sin(x_0 - x_1) + 0.0723414074023163)
+<lambdifygenerated-18>:2: RuntimeWarning: divide by zero encountered in divide
+  return -143.210312*x_0 - 143.210312*x_1/(x_2*(-x_0 + 1.317231 + 5.041939/x_1)) + 531.095093
+<lambdifygenerated-20>:2: RuntimeWarning: divide by zero encountered in divide
+  return 269.259281772251*x_0/((x_2 + 4.340652)*(x_1 - 4.118943 + 3.365473/x_0)) + 248.623779
+<lambdifygenerated-25>:2: RuntimeWarning: divide by zero encountered in divide
+  return -1.443348*x_1*(x_2 + 3.366019)/((x_1 - x_2)*(x_1 - 4.018491 + 3.0568/x_0)) + 230.121033
+
+real	2m39,269s
+user	2m48,071s
+sys	0m0,280s
+<lambdifygenerated-12>:2: RuntimeWarning: divide by zero encountered in divide
+  return 266.657715 - 735.459947690199/(x_2*(numpy.sin(x_0) + (numpy.sin(x_1) - 0.575475487713293)/x_1))
+
+real	2m19,021s
+user	2m27,818s
+sys	0m0,286s
+<lambdifygenerated-7>:2: RuntimeWarning: divide by zero encountered in divide
+  return -1.918687*x_0 + 1.918687*x_2 - 1.918687*(x_0 + x_2)/((x_1 - x_2)*(numpy.sin(x_1) - 0.422786/x_0)) + 210.698059
+<lambdifygenerated-8>:2: RuntimeWarning: divide by zero encountered in divide
+  return -23.218319*x_0*numpy.sin(1.597225*x_2) - 23.218319*x_0 + 107.353149 + 23.218319*(x_1 + x_2 - numpy.sin(x_0))/(x_0 + x_1 + 0.181114) + 23.218319*(x_2 + 3.138525)/((x_1 - x_2)*(-x_1 + 2.018051 + 2.938892/x_0))
+<lambdifygenerated-10>:2: RuntimeWarning: divide by zero encountered in divide
+  return -18.954935*x_0 + 153.369673448295 - 18.954935*(x_0*x_1 - x_2 + 2.088039)/(x_0 + x_1 + 0.133108) + 18.954935*(x_2 + 3.183038)/((x_1 - x_2)*(-x_1 + 1.979752 + 3.055049/x_0))
+<lambdifygenerated-11>:2: RuntimeWarning: divide by zero encountered in divide
+  return -23.651104955208*x_2/((x_2 - 4.101892)*(-x_1 + 2.03402 + 2.891644/x_0)) + 643.409912*numpy.sin((x_0 + 2.206035)*(x_1 - 4.107487) - 2.31387383179172) + 292.077393
+<lambdifygenerated-13>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.135599*x_1 + 0.598218853924*x_1/(numpy.sin(x_1) - 0.423034/x_0) + 232.294861
+<lambdifygenerated-15>:2: RuntimeWarning: divide by zero encountered in divide
+  return -21.659082922592*x_2/((x_2 - 4.097165)*(-x_1 + 2.033973 + 2.89228/x_0)) - 501.739319*numpy.sin((x_0 + 2.211211)*(x_1 - 3.940384) + 0.196419) + 305.560669
+<lambdifygenerated-16>:2: RuntimeWarning: divide by zero encountered in divide
+  return -107.43689*x_0 + 448.51346299761 - 64.97385590707/(-x_1 + 2.022253 + 2.921516/x_0)
+<lambdifygenerated-19>:2: RuntimeWarning: divide by zero encountered in divide
+  return -22.846676*x_0 + 124.227964418808 + 22.846676*(-x_0*x_1 + x_1 + x_2)/(x_0 + x_1 + 0.17883) + 22.846676*(x_2 + 3.389806)/((x_1 - x_2)*(-x_1 + 2.018051 + 2.938892/x_0))
+<lambdifygenerated-20>:2: RuntimeWarning: divide by zero encountered in divide
+  return -25.76832*x_0 - 165.70578436032*numpy.sin(1.58659895062345*x_1) + 172.40741 - 25.76832*(x_0*x_1 - x_2 + 3.96423)/(x_0 + x_1 + 0.149438) + 25.76832*(x_2 + 3.461267)/((x_1 - x_2)*(-x_1 + 1.972085 + 3.075781/x_0))
+<lambdifygenerated-21>:2: RuntimeWarning: divide by zero encountered in divide
+  return -12.267249*(4.81916 + 6.070037/((x_2 + 9.161773)*(-x_1 + 2.03402 + 2.891644/x_0)))*(3.190053*x_0 + 5.827387847061*numpy.sin(x_0)) + 684.313049
+<lambdifygenerated-22>:2: RuntimeWarning: divide by zero encountered in divide
+  return -23.187649*x_0 + 113.060338022513 + 23.187649*(x_1 + x_2 - numpy.sin(x_0))/(x_0 + x_1 + 0.188374) + 23.187649*(x_2 + 3.155805)/((x_1 - x_2)*(-x_1 + 2.018051 + 2.938892/x_0))
+<lambdifygenerated-25>:2: RuntimeWarning: divide by zero encountered in divide
+  return -20.389105*x_0 - 161.482017436575*numpy.sin(3.593941*x_1) + 101.557068 + 20.389105*(6.947253*x_1 + x_2 - 3.395418)/(x_0 + x_1 + 0.122061) + 20.389105*(x_2 + 3.41438)/((x_1 - x_2)*(-x_1 + 2.03402 + 2.891644/x_0))
+<lambdifygenerated-28>:2: RuntimeWarning: divide by zero encountered in divide
+  return 32.053768*(0.98906158655004 - 5.153424/x_2)*(numpy.sin(x_1) + 3.919725562752)*(1.372817*x_1 - numpy.sin(4.521354*x_2) + 0.968767)/((x_1 - x_2)*(-x_0 + 0.182566605318202*x_1 + 2.449461)*numpy.sin(0.334526142047159*x_0 - 0.0279153731349225)) + 177.976013
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/srbench_experiment/GOMEA_srbench_wrapper.py", line 33, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 580, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 209, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, sample_weight, multioutput = _check_reg_targets(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 116, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1105, in check_array
+    _assert_all_finite(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains infinity or a value too large for dtype('float64').
+
+real	1m25,632s
+user	1m34,427s
+sys	0m0,279s
+<lambdifygenerated-2>:2: RuntimeWarning: divide by zero encountered in divide
+  return 241.424011 + 3.602446*(x_0**2 - x_1 + numpy.sin(4.296525*x_2))*(x_1**2 + 3.158232*x_1 + x_2 - 3.219557)/((x_1*x_2*numpy.sin(x_0) - 0.369145349374051*x_2)*(-x_1 + 1.423559 + 4.891555/x_1))
+
+real	4m0,610s
+user	4m9,376s
+sys	0m0,312s
+
+real	3m51,979s
+user	4m0,766s
+sys	0m0,294s
+<lambdifygenerated-5>:2: RuntimeWarning: divide by zero encountered in divide
+  return 195.798218 + 737.54680574088*(numpy.sin(numpy.sin(2*x_2)) - 5.077438)/((x_0*x_1 + x_2)*(-x_0 + 2.418203 + 1.74012/x_1)*(2*x_0 - x_1 + 2.932101))
+<lambdifygenerated-8>:2: RuntimeWarning: divide by zero encountered in divide
+  return 212.502136 - 1735.600952*(numpy.sin(numpy.sin(1.761656*x_2)) + 4.206839)*numpy.sin(x_1 - 0.78386)/((x_2 + 12.156780701075)*(-x_0 + 2.376755 + 1.855193/x_1)*(x_0 - x_1 + 2.947167))
+<lambdifygenerated-16>:2: RuntimeWarning: divide by zero encountered in divide
+  return 59.261911501538*x_1/((x_0 + x_2/x_1)*(x_1 - 3.159903)*(-x_1 + numpy.sin(x_0) + 2.849668)) + 213.25238
+<lambdifygenerated-24>:2: RuntimeWarning: divide by zero encountered in divide
+  return -121.234528*x_0 + 478.279907 - 542.140926753408/((x_0**2 + x_2)*(-x_0 + 2.388181 + 1.831001/x_1))
+
+real	5m46,407s
+user	5m55,163s
+sys	0m0,312s
+
+real	1m3,930s
+user	1m12,748s
+sys	0m0,242s
+<lambdifygenerated-5>:2: RuntimeWarning: divide by zero encountered in divide
+  return -51.041561*x_1/((x_0*x_1 + x_2)*(numpy.sin(x_0) - 0.424627/x_1)) + 229.84025742858
+
+real	3m40,997s
+user	3m49,791s
+sys	0m0,266s
+<lambdifygenerated-22>:2: RuntimeWarning: divide by zero encountered in divide
+  return 1.510974*x_1*(5.326596*x_1 + x_2)/(x_2*(-x_1 + 2.538529 + 1.386285/x_0)) + 245.074951
+
+real	5m45,234s
+user	5m54,039s
+sys	0m0,306s
+<lambdifygenerated-19>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.966887*x_0/(numpy.sin(x_0) - 0.423989329639406/x_1) + 249.770081
+
+real	2m48,063s
+user	2m56,913s
+sys	0m0,286s
+
+real	2m43,325s
+user	2m52,160s
+sys	0m0,290s
+
+real	4m35,560s
+user	4m44,358s
+sys	0m0,287s
+
+real	3m30,839s
+user	3m39,642s
+sys	0m0,274s
+
+real	5m23,303s
+user	5m32,101s
+sys	0m0,282s
+<lambdifygenerated-12>:2: RuntimeWarning: divide by zero encountered in divide
+  return -32.804768*(numpy.sin(1.676773*x_2) - 0.997195133148748)/(x_0 + x_1 + 0.0172801032190948) + 32.804768*(numpy.sin(numpy.sin(x_2)) + 3.25049 - 0.330727/x_2)/(x_0*x_2 - x_1*x_2 + numpy.sin(x_1) - 0.400757/x_0) + 143.166016
+<lambdifygenerated-15>:2: RuntimeWarning: divide by zero encountered in divide
+  return 249.231812 + 4.805239*(x_1 + numpy.sin(numpy.sin(numpy.sin(x_2))))/(x_0 - (x_1 + 5.99685)/x_0)
+
+real	2m26,034s
+user	2m34,801s
+sys	0m0,255s
+<lambdifygenerated-1>:2: RuntimeWarning: divide by zero encountered in divide
+  return 31.017622*(2.832508*x_0 - 1.738854*x_1 + numpy.sin(numpy.sin(x_2)))/(x_1 + numpy.sin(x_0) + 4.843569*(x_1 - 4.940948)/x_1) + 31.017622*(numpy.sin(x_2 - 5.245396) + 2.27977 - 2.182438/x_2)/numpy.sin(x_0 + 1.986054*x_1 - 6.255657) + 115.401733
+<lambdifygenerated-6>:2: RuntimeWarning: divide by zero encountered in divide
+  return -8.270669*x_0 + 8.270669*x_0/(-x_1 + 2.622444 + 1.138052/x_0) + 274.027161
+<lambdifygenerated-9>:2: RuntimeWarning: divide by zero encountered in divide
+  return -32.575089*(numpy.sin(1.674211*x_2) - 0.999900257693085)/numpy.sin(x_0 + 2.013823*x_1 - 6.266015) + 32.575089*(2.702671*x_0 - 1.600675*x_1 + numpy.sin(numpy.sin(x_2)))/(x_1 + numpy.sin(x_0) + 4.363643*(x_1 - 5.154132)/x_1) + 129.611877
+<lambdifygenerated-15>:2: RuntimeWarning: divide by zero encountered in divide
+  return -46.832478*(x_1 + numpy.sin(numpy.sin(x_2)))/(x_1 + numpy.sin(x_0) + 4.844858*(x_1 - 4.951312)/x_1) - 46.832478*(numpy.sin(x_1 - 1.331496) - 0.785766255419742)/numpy.sin(x_0 + 2*x_1 - 6.24277) + 94.555603
+<lambdifygenerated-21>:2: RuntimeWarning: divide by zero encountered in divide
+  return -23.119972*(numpy.sin(1.6795*x_2) - 0.999517553358782)/numpy.sin(x_0 + x_1 - 6.270731) + 113.556763 + 23.119972*(x_0*x_1 - 1.831479*x_1 + numpy.sin(numpy.sin(x_2)))/(x_1 + numpy.sin(x_0) + 4.368312*(x_1 - 5.153225)/x_1)
+<lambdifygenerated-23>:2: RuntimeWarning: divide by zero encountered in divide
+  return 31.017622*(2.832508*x_0 - 1.738854*x_1 + numpy.sin(numpy.sin(x_2)))/(x_1 + numpy.sin(x_0) + 4.843569*(x_1 - 4.940948)/x_1) + 31.017622*(numpy.sin(x_2 - 5.245396) + 2.27977 - 2.182438/x_2)/numpy.sin(x_0 + 1.986054*x_1 - 6.255657) + 115.401733
+<lambdifygenerated-24>:2: RuntimeWarning: divide by zero encountered in divide
+  return 31.017622*(2.832508*x_0 - 1.738854*x_1 + numpy.sin(numpy.sin(x_2)))/(x_1 + numpy.sin(x_0) + 4.843569*(x_1 - 4.940948)/x_1) + 31.017622*(numpy.sin(x_2 - 5.245396) + 2.27977 - 2.182438/x_2)/numpy.sin(x_0 + 1.986054*x_1 - 6.255657) + 115.401733
+
+real	4m26,712s
+user	4m35,473s
+sys	0m0,287s
+
+real	2m25,016s
+user	2m33,816s
+sys	0m0,277s
+
+real	8m15,902s
+user	8m24,571s
+sys	0m0,393s
+
+real	5m55,650s
+user	6m4,364s
+sys	0m0,344s
+<lambdifygenerated-9>:2: RuntimeWarning: divide by zero encountered in divide
+  return 7.208489*(numpy.sin(numpy.sin(1.508177*x_2)) - 5.501616)*(-numpy.sin(0.433585*x_2) + numpy.sin(x_2) + 4.23394)/(-x_1 + 1.16638070899618*numpy.sin(x_0) + 1.566469 + 3.77533/x_1) + 148.152344
+<lambdifygenerated-21>:2: RuntimeWarning: divide by zero encountered in divide
+  return -6.263465*(numpy.sin(1.521642*x_2*(x_2 - 2.598336)) + 4.437293)*(-numpy.sin(0.429738*x_2) + numpy.sin(x_2) + 3.704034)/(-x_1 + 0.617130810749431*numpy.sin(x_0) + 1.598121 + 3.9253/x_1) + 153.939514
+<lambdifygenerated-24>:2: RuntimeWarning: divide by zero encountered in divide
+  return -6.263465*(numpy.sin(1.521642*x_2*(x_2 - 2.598336)) + 4.437293)*(-numpy.sin(0.429738*x_2) + numpy.sin(x_2) + 3.704034)/(-x_1 + 0.617130810749431*numpy.sin(x_0) + 1.598121 + 3.9253/x_1) + 153.939514
+<lambdifygenerated-25>:2: RuntimeWarning: divide by zero encountered in divide
+  return -6.263465*(numpy.sin(1.521642*x_2*(x_2 - 2.598336)) + 4.437293)*(-numpy.sin(0.429738*x_2) + numpy.sin(x_2) + 3.704034)/(-x_1 + 0.617130810749431*numpy.sin(x_0) + 1.598121 + 3.9253/x_1) + 153.939514
+
+real	7m44,745s
+user	7m53,479s
+sys	0m0,316s
+<lambdifygenerated-7>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.110668*(x_0 - 3.684515)*(2.08656315922355*x_0 + 0.401225503176904*x_2 + numpy.sin(x_2**2))*(-(0.310944 - x_0)*(3.011976 - x_0) - numpy.sin(x_2) + numpy.sin((x_2 + 1.147746)*(x_2 + 1.292811)) - 4.829578)/((x_1 - 2.962011)*(numpy.sin(x_0) - 0.440082/x_1)) + 164.566589
+<lambdifygenerated-8>:2: RuntimeWarning: divide by zero encountered in divide
+  return 0.114939*(x_0 - 3.40551)*(2.12036461789969*x_0 + 0.41189333774883*x_2 + numpy.sin(x_2**2))*(x_1 + numpy.sin(x_2) - numpy.sin((x_2 + 0.77915)*(x_2 + 1.67812)) + 1.77271)/((x_1 - 2.967226)*(numpy.sin(x_0) - 0.435448/x_1)) + 172.943237
+<lambdifygenerated-11>:2: RuntimeWarning: divide by zero encountered in divide
+  return 160.018188 - 0.025298*(2.11899873071976*x_1 + 0.378220977118766*x_2 + numpy.sin(x_2**2))*(x_0 + x_1 + numpy.sin(x_2) - numpy.sin((x_2 + 0.477112)*(x_2 + 2.030688)))/((numpy.sin(x_0) - 0.47787/x_1)*numpy.sin(x_1 - 2.99527))
+<lambdifygenerated-17>:2: RuntimeWarning: divide by zero encountered in divide
+  return 159.696411 + 4.153751*(2.12518170303561*x_1 + 0.405671942835955*x_2 + numpy.sin(x_2**2))*(2*x_1 + numpy.sin(x_2) - numpy.sin((x_2 + 0.49201)*(x_2 + 1.993765)) - 1.402458)*numpy.sin(1.567373*x_1)/(numpy.sin(x_0) - 0.457195/x_1)
+<lambdifygenerated-21>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.128712*(x_0 - 3.504899)*(2.0885111004365*x_0 + 0.403762745780477*x_2 + numpy.sin(x_2**2))*(-numpy.sin(x_2) + numpy.sin((x_2 + 0.994603)*(x_2 + 1.449973)) + numpy.sin(x_0 - 0.284725) - 5.205039)/((x_1 - 2.958512)*(numpy.sin(x_0) - 0.436514/x_1)) + 169.063843
+<lambdifygenerated-23>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.110668*(x_0 - 3.684515)*(2.08656315922355*x_0 + 0.401225503176904*x_2 + numpy.sin(x_2**2))*(-(0.310944 - x_0)*(3.011976 - x_0) - numpy.sin(x_2) + numpy.sin((x_2 + 1.147746)*(x_2 + 1.292811)) - 4.829578)/((x_1 - 2.962011)*(numpy.sin(x_0) - 0.440082/x_1)) + 164.566589
+<lambdifygenerated-24>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.110668*(x_0 - 3.684515)*(2.08656315922355*x_0 + 0.401225503176904*x_2 + numpy.sin(x_2**2))*(-(0.310944 - x_0)*(3.011976 - x_0) - numpy.sin(x_2) + numpy.sin((x_2 + 1.147746)*(x_2 + 1.292811)) - 4.829578)/((x_1 - 2.962011)*(numpy.sin(x_0) - 0.440082/x_1)) + 164.566589
+
+real	8m12,592s
+user	8m21,750s
+sys	0m0,308s
+<lambdifygenerated-4>:2: RuntimeWarning: divide by zero encountered in divide
+  return 2.225143*(x_1 - numpy.sin(x_0*x_2*numpy.sin(x_0)))/(2*x_0 - x_1 - 3.142581 + 0.429018/x_1) + 202.201477
+<lambdifygenerated-18>:2: RuntimeWarning: divide by zero encountered in divide
+  return -27.715128*x_0 + 10.873781034648*(1.812717*x_0 + numpy.sin(x_2))/(x_1 - 4.632718 + 4.909346/x_0) + 256.179871
+
+real	3m56,899s
+user	4m6,079s
+sys	0m0,283s
+
+real	4m9,976s
+user	4m19,152s
+sys	0m0,293s
+
+real	6m19,384s
+user	6m28,538s
+sys	0m0,322s
+<lambdifygenerated-12>:2: RuntimeWarning: divide by zero encountered in divide
+  return -10.421232*x_0 - 10.421232*(0.171549361784909*x_2 - numpy.sin(x_2 - 3.444655) + 2.626464)/(numpy.sin(x_1) + 0.993512 - 3.411452/x_0) + 229.535339
+<lambdifygenerated-14>:2: RuntimeWarning: divide by zero encountered in divide
+  return 14.807158*x_0*(numpy.sin(0.451313*x_2) - 3.826531)/((numpy.sin(x_2 + 3.042449) + 5.081964)*(numpy.sin(x_1) + 1.06435 - 3.622855/x_0)) + 210.559326
+<lambdifygenerated-15>:2: RuntimeWarning: divide by zero encountered in divide
+  return 1.758837*(numpy.sin(0.459153*x_2) - 3.896878)*(x_0 + x_1 + numpy.sin(numpy.sin(x_2)))/(numpy.sin(x_1) + 1.05188 - 3.586758/x_0) + 203.914246
+<lambdifygenerated-21>:2: RuntimeWarning: divide by zero encountered in divide
+  return -8.700922*x_0 + 8.700922*(numpy.sin(0.470306*x_2) - 3.982769)/(numpy.sin(x_1) + 0.977405 - 3.362122/x_0) + 222.787476
+
+real	3m47,465s
+user	3m56,647s
+sys	0m0,289s
+
+real	6m21,543s
+user	6m30,726s
+sys	0m0,294s
+<lambdifygenerated-3>:2: RuntimeWarning: divide by zero encountered in divide
+  return -7.653589*x_0 - 7.653589*(x_0 + x_2/(x_1 + 2.866978) + numpy.sin(x_2))/(numpy.sin(x_1) - 1.580357 + 4.311634/x_0) + 196.156006
+<lambdifygenerated-23>:2: RuntimeWarning: divide by zero encountered in divide
+  return -2.498856*x_0 + 2.498856*(numpy.sin(numpy.sin(x_2)) + 4.412477)/(numpy.sin(x_1) - 1.527016 + 4.159783/x_0) + 197.294861
+
+real	8m39,388s
+user	8m48,474s
+sys	0m0,384s
+
+real	2m34,407s
+user	2m43,573s
+sys	0m0,271s
+<lambdifygenerated-1>:2: RuntimeWarning: divide by zero encountered in divide
+  return -35.092842*(x_2/(x_2 + 3.943232) + numpy.sin(x_2)/(x_2 + 1.00263))*(numpy.sin(3.38193/x_2)*numpy.sin(1.479131*x_2) - 2.246589)/((x_0 - x_1)/(x_0 - 2.720711) + 1.0663879839402*(x_0 - 2.991097)/x_1) + 123.550415
+
+real	5m8,423s
+user	5m17,598s
+sys	0m0,294s

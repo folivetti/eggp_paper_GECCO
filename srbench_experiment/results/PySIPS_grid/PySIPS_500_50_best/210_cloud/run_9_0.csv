@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,((-2.9500459633565557)^(sqrt(X_3)))(X_2 + (X_3)(X_3)),8,inf,inf,inf,inf,-inf,-inf

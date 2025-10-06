@@ -1,0 +1,540 @@
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,873s
+user	0m6,088s
+sys	0m0,143s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m2,059s
+user	0m8,007s
+sys	0m0,142s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,821s
+user	0m6,733s
+sys	0m0,137s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,651s
+user	0m5,437s
+sys	0m0,119s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,938s
+user	0m8,130s
+sys	0m0,138s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,886s
+user	0m6,903s
+sys	0m0,143s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,908s
+user	0m6,690s
+sys	0m0,131s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,572s
+user	0m5,411s
+sys	0m0,107s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,689s
+user	0m4,753s
+sys	0m0,119s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,720s
+user	0m4,874s
+sys	0m0,118s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,816s
+user	0m5,623s
+sys	0m0,136s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,839s
+user	0m4,533s
+sys	0m0,159s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m2,076s
+user	0m6,437s
+sys	0m0,131s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,883s
+user	0m5,477s
+sys	0m0,135s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,648s
+user	0m6,120s
+sys	0m0,116s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,874s
+user	0m7,042s
+sys	0m0,129s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,315s
+user	0m5,763s
+sys	0m0,112s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m2,108s
+user	0m6,792s
+sys	0m0,136s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,631s
+user	0m5,640s
+sys	0m0,121s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,769s
+user	0m5,880s
+sys	0m0,133s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,891s
+user	0m7,545s
+sys	0m0,127s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,881s
+user	0m6,059s
+sys	0m0,140s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,758s
+user	0m9,265s
+sys	0m0,150s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,802s
+user	0m7,712s
+sys	0m0,136s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m2,105s
+user	0m8,912s
+sys	0m0,133s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,824s
+user	0m5,276s
+sys	0m0,112s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,814s
+user	0m6,947s
+sys	0m0,139s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,705s
+user	0m5,376s
+sys	0m0,106s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,627s
+user	0m6,508s
+sys	0m0,166s
+eggp: the flag -N1 requires the program to be built with -threaded
+eggp: Most RTS options are disabled. Use hs_init_with_rtsopts() to enable them.
+
+real	0m1,319s
+user	0m8,354s
+sys	0m0,119s
+
+real	3m0,652s
+user	3m3,282s
+sys	0m0,600s
+
+real	2m38,570s
+user	2m46,767s
+sys	0m0,536s
+
+real	3m16,608s
+user	3m25,530s
+sys	0m0,645s
+
+real	2m51,171s
+user	2m57,746s
+sys	0m0,679s
+
+real	3m9,722s
+user	3m17,943s
+sys	0m0,676s
+
+real	2m56,644s
+user	3m5,109s
+sys	0m0,618s
+
+real	2m28,918s
+user	2m37,456s
+sys	0m0,546s
+
+real	3m13,813s
+user	3m22,084s
+sys	0m0,744s
+
+real	2m56,930s
+user	3m5,189s
+sys	0m0,582s
+
+real	2m44,462s
+user	2m52,742s
+sys	0m0,678s
+
+real	2m57,419s
+user	3m5,764s
+sys	0m0,632s
+
+real	2m57,690s
+user	3m6,013s
+sys	0m0,654s
+
+real	3m16,099s
+user	3m24,424s
+sys	0m0,851s
+
+real	2m54,422s
+user	3m1,620s
+sys	0m2,067s
+
+real	2m56,128s
+user	3m4,111s
+sys	0m0,763s
+
+real	3m0,270s
+user	3m8,808s
+sys	0m0,627s
+
+real	2m55,772s
+user	3m4,128s
+sys	0m0,620s
+
+real	2m43,351s
+user	2m51,939s
+sys	0m0,539s
+
+real	2m58,899s
+user	3m7,766s
+sys	0m0,710s
+
+real	3m13,800s
+user	3m22,358s
+sys	0m0,674s
+
+real	2m55,592s
+user	3m3,982s
+sys	0m0,609s
+
+real	2m49,372s
+user	2m57,724s
+sys	0m0,619s
+
+real	2m49,367s
+user	2m57,895s
+sys	0m0,599s
+
+real	3m6,059s
+user	3m14,650s
+sys	0m0,640s
+
+real	3m6,953s
+user	3m15,514s
+sys	0m0,782s
+
+real	2m54,905s
+user	3m3,269s
+sys	0m0,662s
+
+real	3m12,051s
+user	3m20,283s
+sys	0m0,750s
+
+real	2m45,079s
+user	2m53,588s
+sys	0m0,643s
+
+real	3m16,520s
+user	3m25,350s
+sys	0m0,866s
+
+real	3m10,779s
+user	3m19,132s
+sys	0m0,728s
+
+real	3m0,008s
+user	3m0,558s
+sys	0m2,517s
+
+real	3m23,178s
+user	3m31,804s
+sys	0m0,915s
+
+real	3m5,736s
+user	3m13,318s
+sys	0m1,796s
+
+real	3m16,753s
+user	3m23,611s
+sys	0m0,843s
+
+real	2m47,160s
+user	2m55,759s
+sys	0m0,681s
+
+real	2m55,693s
+user	3m3,896s
+sys	0m0,701s
+
+real	3m22,151s
+user	3m30,610s
+sys	0m0,649s
+
+real	3m12,306s
+user	3m20,770s
+sys	0m0,767s
+
+real	2m51,010s
+user	2m59,375s
+sys	0m0,787s
+
+real	3m17,151s
+user	3m25,568s
+sys	0m0,780s
+
+real	3m20,315s
+user	3m28,001s
+sys	0m0,974s
+
+real	3m30,404s
+user	3m38,788s
+sys	0m0,913s
+
+real	3m15,044s
+user	3m22,570s
+sys	0m1,380s
+
+real	2m48,274s
+user	2m56,703s
+sys	0m0,830s
+
+real	3m17,008s
+user	3m25,570s
+sys	0m0,869s
+
+real	3m12,441s
+user	3m20,798s
+sys	0m0,807s
+
+real	3m21,796s
+user	3m30,276s
+sys	0m0,940s
+
+real	3m27,322s
+user	3m34,903s
+sys	0m1,007s
+
+real	2m58,200s
+user	3m6,016s
+sys	0m0,883s
+
+real	3m7,284s
+user	3m15,695s
+sys	0m0,775s
+
+real	3m15,456s
+user	3m23,640s
+sys	0m0,876s
+
+real	3m28,798s
+user	3m37,214s
+sys	0m0,770s
+
+real	3m18,516s
+user	3m26,612s
+sys	0m0,764s
+
+real	3m16,598s
+user	3m24,771s
+sys	0m0,927s
+
+real	3m26,806s
+user	3m35,117s
+sys	0m0,834s
+
+real	2m55,416s
+user	3m3,873s
+sys	0m0,729s
+
+real	2m55,664s
+user	3m3,744s
+sys	0m0,844s
+
+real	3m21,776s
+user	3m30,260s
+sys	0m0,697s
+
+real	3m3,913s
+user	3m12,611s
+sys	0m0,713s
+
+real	2m47,426s
+user	2m56,000s
+sys	0m0,786s
+
+real	2m44,275s
+user	2m46,998s
+sys	0m0,788s
+
+real	2m43,460s
+user	2m52,144s
+sys	0m1,011s
+
+real	2m21,643s
+user	2m30,835s
+sys	0m0,836s
+
+real	2m22,340s
+user	2m31,809s
+sys	0m0,851s
+
+real	2m14,574s
+user	2m24,075s
+sys	0m0,865s
+
+real	2m17,163s
+user	2m26,675s
+sys	0m0,779s
+
+real	2m18,500s
+user	2m27,952s
+sys	0m0,912s
+
+real	2m13,618s
+user	2m22,935s
+sys	0m0,783s
+
+real	2m14,132s
+user	2m23,761s
+sys	0m0,744s
+
+real	2m18,609s
+user	2m28,096s
+sys	0m0,917s
+
+real	2m18,176s
+user	2m27,762s
+sys	0m0,800s
+
+real	2m21,185s
+user	2m30,748s
+sys	0m0,856s
+
+real	2m22,201s
+user	2m31,803s
+sys	0m0,799s
+
+real	2m10,212s
+user	2m19,881s
+sys	0m0,649s
+
+real	2m21,379s
+user	2m30,797s
+sys	0m0,876s
+
+real	2m22,105s
+user	2m31,591s
+sys	0m0,914s
+
+real	2m22,504s
+user	2m32,029s
+sys	0m0,878s
+
+real	2m11,383s
+user	2m21,083s
+sys	0m0,669s
+
+real	2m12,516s
+user	2m16,288s
+sys	0m6,499s
+
+real	2m26,590s
+user	2m36,251s
+sys	0m0,717s
+
+real	2m20,486s
+user	2m29,767s
+sys	0m1,097s
+
+real	2m17,581s
+user	2m26,860s
+sys	0m0,892s
+
+real	2m21,782s
+user	2m31,201s
+sys	0m0,898s
+
+real	2m19,156s
+user	2m28,563s
+sys	0m0,880s
+
+real	2m18,218s
+user	2m27,897s
+sys	0m0,715s
+
+real	2m12,528s
+user	2m22,097s
+sys	0m0,814s
+
+real	2m15,049s
+user	2m24,591s
+sys	0m0,771s
+
+real	2m15,793s
+user	2m25,121s
+sys	0m0,930s
+
+real	2m6,090s
+user	2m15,719s
+sys	0m0,812s
+
+real	2m12,524s
+user	2m22,445s
+sys	0m0,850s

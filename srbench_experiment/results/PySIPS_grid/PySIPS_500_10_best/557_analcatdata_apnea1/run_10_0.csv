@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,(22765.646101073038)(((X_2)^(-1))((exp(sin(X_0)))((sin(X_1) + exp(X_1) + exp(sqrt(exp(sin(X_0)))) + (15.322261885494848)(((X_2)^(-1))((exp(sqrt(exp(sin(X_0)))))^((-1)(exp(sqrt(exp(sin(X_0)))))))) + ((X_1)^(-1))(exp(X_1) + exp(sqrt(exp(sin(X_0)))) - ((exp(sqrt(exp(sin(X_0)))))^(exp(sqrt(exp(sin(X_0))))))) - ((exp(sqrt(exp(sin(X_0)))))^(exp(sqrt(exp(sin(X_0)))))))^(-1)))),31,742552.5516627275,11239876.910500742,742552.5516627275,11239876.910500742,0.9319607805744767,-0.30792042340642634

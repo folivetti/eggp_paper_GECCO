@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,(-2.594730341878223)((1.9009575942162709)(((6)(-2.594730341878223))^(X_4) + sin(X_1) - (X_3)) - (X_2)) - (sin(1.3178986850908645 + X_0 + exp(X_1))),22,inf,inf,inf,inf,-inf,-inf

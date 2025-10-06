@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sqrt(X_2 + log(sqrt(((-0.43576063638441465)(((0.9985113390289388)((X_3)(X_3)))^((0.9985113390289388)((X_3)(X_3)))))^(sqrt(-0.43576063638441465))))),14,inf,inf,inf,inf,-inf,-inf
