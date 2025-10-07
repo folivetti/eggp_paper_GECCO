@@ -173,11 +173,8 @@ function run_program(gp, prog)
             elseif primitive == DIV
                 num = eval_node(gp)
                 den = eval_node(gp)
-                if abs(den) <= 0.001
-                    return num
-                else
-                    return num / den
-                end
+                den ≈ 0.0 && return 0.0
+                return num / den
             elseif primitive == EXP
                 return exp(eval_node(gp))
             else
@@ -384,7 +381,7 @@ end
 # only for testing
 gp = Algorithm{Float64}("problem.dat", seed=3141, generations=2, popsize=1000)
 evolve!(gp)
-@assert (@show gp.favgpop) ≈ -780.0116884073584
+@assert (@show gp.favgpop) ≈ -780.3112327462827
 @assert (@show gp.fbestpop) ≈ -30.64128742851832
 
 end # module
