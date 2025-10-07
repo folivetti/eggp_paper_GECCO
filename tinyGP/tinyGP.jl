@@ -3,6 +3,7 @@ module TinyGP
 using TimerOutputs
 
 # TODO 
+# - enforce length limit in xover and mutation
 # - parameters in the code instead of ERC
 # - AutoDiff
 # - read from CSV (and automatically determine num vars and num obs)
@@ -40,7 +41,7 @@ const DEPTH = 5
 const GENERATIONS = 100
 const TSIZE = 2
 const PMUT_PER_NODE = 0.05
-const CROSSOVER_PROB = 0.9
+const CROSSOVER_PROB = 0.9 # (1 - CROSSOVER_PROB) individuals are mutated, and each node has PMUT_PER_NODE probability
 
 const BUFFER = Vector{UInt8}(undef, MAX_LEN)
 
@@ -65,7 +66,6 @@ mutable struct Algorithm{T}
 end
 
 varnumber(gp) = size(gp.X, 2)
-fitnesscases(gp) = size(gp.X, 1) # TODO should be removed
 
 function Algorithm{T}(fname::AbstractString; seed=-1, generations=GENERATIONS, popsize=POPSIZE, maxlen=MAX_LEN, tournamentsize=TSIZE) where {T <: AbstractFloat}
     rng = seed >= 0 ? MersenneTwister(seed) : MersenneTwister()
@@ -287,36 +287,38 @@ function tournament!(gp)
     bestidx
 end
 
-function negative_tournament!(gp)
-    popsize=length(gp.pop)
-    worstidx = rand(gp.rng, 1:popsize)
-    fworst = floatmax(eltype(gp.X))
-    for _ in 1:gp.tournamentsize
-        competitor = rand(gp.rng, 1:popsize)
-        if gp.fitness[competitor] < fworst
-            fworst = gp.fitness[competitor]
-            worstidx = competitor
-        end
-    end
-    worstidx
-end
-
 function crossover(gp, parent1, parent2)
     len1 = traverse(parent1, 1)
     len2 = traverse(parent2, 1)
+    
+    # this is the part we cut out of p1
     xo1start = rand(gp.rng, 0:len1 - 1)
     xo1end = traverse(parent1, xo1start + 1)
-    xo2start = rand(gp.rng, 0:len2 - 1)
-    xo2end = traverse(parent2, xo2start + 1)
-    p1len = xo1start
-    p2len = xo2end - xo2start
+    
+    p1len = xo1start 
     p3len = len1 - xo1end
     
+    maxp2len = gp.maxlen - p1len - p3len
+
+    # this is the part we use from p2
+    xo2start = rand(gp.rng, 0:len2 - 1)
+    xo2end = traverse(parent2, xo2start + 1)
+    p2len = xo2end - xo2start
+    while p1len + p2len + p3len > gp.maxlen
+        xo2start = rand(gp.rng, 0:len2 - 1)
+        xo2end = traverse(parent2, xo2start + 1)
+        p2len = xo2end - xo2start
+    end
+
     offspring = Vector{UInt8}(undef,  p1len + p2len + p3len)
     copyto!(offspring, 1,                 parent1, 1, p1len)
     copyto!(offspring, 1 + p1len,         parent2, xo2start + 1, p2len)
     copyto!(offspring, 1 + p1len + p2len, parent1, xo1end + 1, p3len)
+
+    @assert length(offspring) <= gp.maxlen
+
     offspring
+    
 end
 
 function mutate!(gp, parent, pmut)
@@ -425,7 +427,7 @@ if abspath(PROGRAM_FILE) == @__FILE__
 end
 
 # only for testing
-gp = Algorithm{Float64}("problem.dat", seed=3141, generations=5, popsize=1000)
+gp = Algorithm{Float64}("problem.dat", seed=3141, generations=100, popsize=1000, maxlen=25)
 @time evolve!(gp)
 print_timer(gp.to)
 @assert (@show gp.fbestpop) ≈  -32.707488650391184
