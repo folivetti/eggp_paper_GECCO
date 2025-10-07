@@ -23,6 +23,12 @@ const EXP::UInt8 = 114
 const FSET_START = ADD
 const FSET_END = DIV
 
+const ARITY = Dict(ADD => 2,
+    SUB => 2,
+    MUL => 2,
+    DIV => 2,
+    EXP => 1)
+
 # Default parameter values
 const MAX_LEN = 100
 const POPSIZE = 10_000
@@ -97,41 +103,44 @@ function setup_fitness(::Type{T}, fname::AbstractString) where {T <: AbstractFlo
     end
 end
 
+# returns end of subexpression starting at pos
 function traverse(buffer, pos)
-    primitive = buffer[pos + 1]
+    primitive = buffer[pos]
     if primitive < FSET_START
-        return pos + 1
-    else
+        return pos
+    elseif ARITY[primitive] == 1
+        traverse(buffer, pos + 1)
+    elseif ARITY[primitive] == 2
         nextpos = traverse(buffer, pos + 1)
-        return traverse(buffer, nextpos)
+        return traverse(buffer, nextpos + 1)
     end
 end
 
 function grow!(gp, buffer, pos, maxlen, depth)
     pos >= maxlen && return -1
-    prim = rand(gp.rng, 0:1)
-    if pos == 0
-        prim = 1
-    end
+    prim = pos == 1 ? 1 : rand(gp.rng, 0:1)  # terminal or function but force terminal on first position
     if prim == 0 || depth == 0
         # random terminal
         code = rand(gp.rng, 1:(varnumber(gp) + gp.randomnumber))
-        buffer[pos + 1] = UInt8(code)
-        return pos + 1
+        buffer[pos] = UInt8(code)
+        return pos
     else
         # random function 
         func = UInt8(rand(gp.rng, FSET_START:FSET_END))
-        buffer[pos + 1] = func
+        buffer[pos] = func
         child = grow!(gp, buffer, pos + 1, maxlen, depth - 1)
-        child < 0 && return -1
-        return grow!(gp, buffer, child, maxlen, depth - 1)
+        (child < 0 || ARITY[func] == 1) && return child # unary functions
+        
+        # binary functions
+        return grow!(gp, buffer, child + 1, maxlen, depth - 1)
     end
 end
 
 function create_random_indiv!(gp, depth)
-    len = grow!(gp, BUFFER, 0, gp.maxlen, depth)
+    len = grow!(gp, BUFFER, 1, gp.maxlen, depth)
+    # retry if the random individual was too long
     while len < 0
-        len = grow!(gp, BUFFER, 0, gp.maxlen, depth)
+        len = grow!(gp, BUFFER, 1, gp.maxlen, depth)
     end
     
     copyto!(Vector{UInt8}(undef, len), 1, BUFFER, 1, len)
@@ -177,7 +186,13 @@ function run_program(gp, prog)
         end
     end
     
-    eval_node(gp)
+    try 
+        eval_node(gp)
+    catch ex
+        @show prog
+        print_indiv(gp, prog)
+        rethrow()
+    end
 end
 
 
@@ -194,16 +209,23 @@ function fitness_function(gp, prog)
     -fit
 end
 
-function print_indiv(gp, buffer, pos=0)
-    primitive = buffer[pos + 1]
+function print_indiv(gp, buffer, pos=1)
+    primitive = buffer[pos]
     if primitive < FSET_START
-        if primitive < varnumber(gp)
+        if primitive <= varnumber(gp)
             print("X", primitive, " ")
         else
             print(gp.x[primitive])
         end
-        return pos + 1
-    else
+        return pos
+    elseif ARITY[primitive] == 1
+        if primitive == EXP
+            print("exp(")
+            endpos = print_indiv(gp, buffer, pos + 1)
+            print(")")
+        end
+        return endpos
+    elseif ARITY[primitive] == 2
         print("(")
         nextpos = print_indiv(gp, buffer, pos + 1)
         if primitive == ADD
@@ -215,7 +237,7 @@ function print_indiv(gp, buffer, pos=0)
         elseif primitive == DIV
             print(" / ")
         end
-        endpos = print_indiv(gp, buffer, nextpos)
+        endpos = print_indiv(gp, buffer, nextpos + 1)
         print(")")
         return endpos
     end
@@ -250,12 +272,12 @@ function negative_tournament!(gp)
 end
 
 function crossover(gp, parent1, parent2)
-    len1 = traverse(parent1, 0)
-    len2 = traverse(parent2, 0)
+    len1 = traverse(parent1, 1)
+    len2 = traverse(parent2, 1)
     xo1start = rand(gp.rng, 0:len1 - 1)
-    xo1end = traverse(parent1, xo1start)
+    xo1end = traverse(parent1, xo1start + 1)
     xo2start = rand(gp.rng, 0:len2 - 1)
-    xo2end = traverse(parent2, xo2start)
+    xo2end = traverse(parent2, xo2start + 1)
     p1len = xo1start
     p2len = xo2end - xo2start
     p3len = len1 - xo1end
@@ -268,7 +290,7 @@ function crossover(gp, parent1, parent2)
 end
 
 function mutate!(gp, parent, pmut)
-    len = traverse(parent, 0)
+    len = traverse(parent, 1)
     child = copy(parent)
     for i in 1:len
         if rand(gp.rng) < pmut
@@ -289,7 +311,7 @@ function update_stats!(gp, gen)
     gp.favgpop = 0.0
     node_count = 0
     for i in 1:popsize
-        node_count += traverse(gp.pop[i], 0)
+        node_count += traverse(gp.pop[i], 1)
         gp.favgpop += gp.fitness[i]
         if gp.fitness[i] > gp.fbestpop
             best = i
@@ -362,7 +384,7 @@ end
 # only for testing
 gp = Algorithm{Float64}("problem.dat", seed=3141, generations=2, popsize=1000)
 evolve!(gp)
-@assert (@show gp.favgpop) ≈ -1213.0323150201184
-@assert (@show gp.fbestpop) ≈ -32.97528021345691
+@assert (@show gp.favgpop) ≈ -780.0116884073584
+@assert (@show gp.fbestpop) ≈ -30.64128742851832
 
 end # module
