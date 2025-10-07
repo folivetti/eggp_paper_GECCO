@@ -3,7 +3,6 @@ module TinyGP
 using TimerOutputs
 
 # TODO 
-# - enforce length limit in xover and mutation
 # - parameters in the code instead of ERC
 # - AutoDiff
 # - read from CSV (and automatically determine num vars and num obs)
@@ -24,7 +23,7 @@ const EXP::UInt8 = 114
 const LOGABS::UInt8 = 115 # log |x|
 const POWABS::UInt8 = 116 # |x|^y
 const FSET_START = ADD
-const FSET_END = EXP
+const FSET_END = POWABS
 
 const ARITY = Dict(ADD => 2,
     SUB => 2,
@@ -430,6 +429,6 @@ end
 gp = Algorithm{Float64}("problem.dat", seed=3141, generations=100, popsize=1000, maxlen=25)
 @time evolve!(gp)
 print_timer(gp.to)
-@assert (@show gp.fbestpop) ≈  -32.707488650391184
+@assert (@show gp.fbestpop) ≈  -22.51975965594499
 
 end # module
