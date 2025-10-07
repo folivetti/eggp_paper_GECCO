@@ -337,7 +337,6 @@ function crossover(gp, parent1, parent2)
 end
 
 function mutate!(gp, parent, pmut)
-    len = traverse(parent, 1)
     child = copy(parent)
     for i in eachindex(child)
         if rand(gp.rng) < pmut
