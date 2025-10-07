@@ -2,11 +2,14 @@ module TinyGP
 
 # TODO 
 # - parameters in the code instead of ERC
+# - univariate functions
 # - AutoDiff
 # - read from CSV (and automatically determine num vars and num obs)
 # - postfix instead of prefix
-# - move PC out of Algorithm type (local var sufficient)
+# - batched evaluation
 # - parallel evaluation
+# - likelihoods
+# - dl
 
 
 using Random
@@ -16,9 +19,11 @@ const ADD::UInt8 = 110
 const SUB::UInt8 = 111
 const MUL::UInt8 = 112
 const DIV::UInt8 = 113
+const EXP::UInt8 = 114
 const FSET_START = ADD
 const FSET_END = DIV
 
+# Default parameter values
 const MAX_LEN = 100
 const POPSIZE = 10_000
 const DEPTH = 5
@@ -26,6 +31,7 @@ const GENERATIONS = 100
 const TSIZE = 2
 const PMUT_PER_NODE = 0.05
 const CROSSOVER_PROB = 0.9
+
 const BUFFER = Vector{UInt8}(undef, MAX_LEN)
 
 mutable struct Algorithm{T}
@@ -35,12 +41,9 @@ mutable struct Algorithm{T}
     const x::Vector{T}
     const minrandom::T
     const maxrandom::T
-    program::Vector{UInt8}
-    pc::Int32
-    const varnumber::Int32
-    const fitnesscases::Int32
     const randomnumber::Int32
-    const targets::Matrix{T}
+    const X::Matrix{T}
+    const y::Vector{T}
     fbestpop::T
     favgpop::T
     avg_len::T
@@ -50,16 +53,21 @@ mutable struct Algorithm{T}
     const tournamentsize::Int32
 end
 
+varnumber(gp) = size(gp.X, 2)
+fitnesscases(gp) = size(gp.X, 1) # TODO should be removed
+
 function Algorithm{T}(fname::AbstractString; seed=-1, generations=GENERATIONS, popsize=POPSIZE, maxlen=MAX_LEN, tournamentsize=TSIZE) where {T <: AbstractFloat}
     rng = seed >= 0 ? MersenneTwister(seed) : MersenneTwister()
-    varnumber, randomnumber, minrandom, maxrandom, fitnesscases, targets = setup_fitness(T, fname)
+    randomnumber, minrandom, maxrandom, X, y = setup_fitness(T, fname)
+    
+    varnumber = size(X, 2)
     varnumber + randomnumber < FSET_START || error("too many variables and constants")
     
     fitness = Vector{T}(undef, popsize)
     pop = Vector{Vector{UInt8}}(undef, popsize)
-    x = [(maxrandom - minrandom) * rand(rng) + minrandom for _ in 1:Int(FSET_START)]
-    gp = Algorithm{T}(fitness, pop, rng, x, minrandom, maxrandom, UInt8[], 0,
-                varnumber, fitnesscases, randomnumber, targets, 0.0, 0.0, 0.0, Int(seed), generations, maxlen, tournamentsize)
+    x = [(maxrandom - minrandom) * rand(rng) + minrandom for _ in 1:FSET_START] # initialize ephemeral random constants
+    gp = Algorithm{T}(fitness, pop, rng, x, minrandom, maxrandom, 
+                randomnumber, X, y, 0.0, 0.0, 0.0, seed, generations, maxlen, tournamentsize)
     create_random_pop!(gp, popsize, DEPTH)
     return gp
 end
@@ -74,16 +82,18 @@ function setup_fitness(::Type{T}, fname::AbstractString) where {T <: AbstractFlo
         minrandom = parse(T, header[3])
         maxrandom = parse(T, header[4])
         fitnesscases = parse(Int, header[5])
-        targets = Matrix{T}(undef, fitnesscases, varnumber + 1)
+        X = Matrix{T}(undef, fitnesscases, varnumber)
+        y = Vector{T}(undef, fitnesscases)
         for i in 1:fitnesscases
             eof(io) && error("unexpected end of data at case $i")
             tokens = split(strip(readline(io)))
             length(tokens) >= varnumber + 1 || error("not enough values on line $i")
-            for j in 1:(varnumber + 1)
-                targets[i, j] = parse(Float64, tokens[j])
+            for j in 1:(varnumber)
+                X[i, j] = parse(Float64, tokens[j])
             end
+            y[i] = parse(Float64, tokens[varnumber+1])
         end
-        return varnumber, randomnumber, minrandom, maxrandom, fitnesscases, targets
+        return randomnumber, minrandom, maxrandom, X, y
     end
 end
 
@@ -104,10 +114,12 @@ function grow!(gp, buffer, pos, maxlen, depth)
         prim = 1
     end
     if prim == 0 || depth == 0
-        code = rand(gp.rng, 0:(gp.varnumber + gp.randomnumber - 1))
+        # random terminal
+        code = rand(gp.rng, 1:(varnumber(gp) + gp.randomnumber))
         buffer[pos + 1] = UInt8(code)
         return pos + 1
     else
+        # random function 
         func = UInt8(rand(gp.rng, FSET_START:FSET_END))
         buffer[pos + 1] = func
         child = grow!(gp, buffer, pos + 1, maxlen, depth - 1)
@@ -134,46 +146,50 @@ function create_random_pop!(gp, popsize, depth)
     gp.pop
 end
 
-function run_program!(gp, prog)
-    gp.program = prog
-    gp.pc = 0
-    eval_node!(gp)
-end
-
-function eval_node!(gp)
-    primitive = gp.program[gp.pc + 1]
-    gp.pc += 1
-    if primitive < FSET_START
-        return gp.x[primitive + 1]
-    else
-        if primitive == ADD
-            return eval_node!(gp) + eval_node!(gp)
-        elseif primitive == SUB
-            return eval_node!(gp) - eval_node!(gp)
-        elseif primitive == MUL
-            return eval_node!(gp) * eval_node!(gp)
-        elseif primitive == DIV
-            num = eval_node!(gp)
-            den = eval_node!(gp)
-            if abs(den) <= 0.001
-                return num
-            else
-                return num / den
-            end
+function run_program(gp, prog)
+    pc = 0
+    
+    function eval_node(gp)
+        pc += 1
+        primitive = prog[pc]
+        if primitive < FSET_START
+            return gp.x[primitive]
         else
-            return 0.0
+            if primitive == ADD
+                return eval_node(gp) + eval_node(gp)
+            elseif primitive == SUB
+                return eval_node(gp) - eval_node(gp)
+            elseif primitive == MUL
+                return eval_node(gp) * eval_node(gp)
+            elseif primitive == DIV
+                num = eval_node(gp)
+                den = eval_node(gp)
+                if abs(den) <= 0.001
+                    return num
+                else
+                    return num / den
+                end
+            elseif primitive == EXP
+                return exp(eval_node(gp))
+            else
+                error("unknown operator $primitive")
+            end
         end
     end
+    
+    eval_node(gp)
 end
+
+
 
 function fitness_function(gp, prog)
     fit = 0.0
-    for i in 1:gp.fitnesscases
-        for j in 1:gp.varnumber
-            gp.x[j] = gp.targets[i, j]
+    for i in axes(gp.X, 1)
+        for j in 1:varnumber(gp)
+            gp.x[j] = gp.X[i, j]
         end
-        result = run_program!(gp, prog)
-        fit += abs(result - gp.targets[i, gp.varnumber + 1])
+        result = run_program(gp, prog)
+        fit += abs(result - gp.y[i])
     end
     -fit
 end
@@ -181,10 +197,10 @@ end
 function print_indiv(gp, buffer, pos=0)
     primitive = buffer[pos + 1]
     if primitive < FSET_START
-        if primitive < gp.varnumber
-            print("X", primitive + 1, " ")
+        if primitive < varnumber(gp)
+            print("X", primitive, " ")
         else
-            print(gp.x[primitive + 1])
+            print(gp.x[primitive])
         end
         return pos + 1
     else
@@ -208,7 +224,7 @@ end
 function tournament!(gp)
     popsize=length(gp.pop)
     bestidx = rand(gp.rng, 1:popsize)
-    fbest = -1.0e34
+    fbest = floatmin(eltype(gp.X))
     for _ in 1:gp.tournamentsize
         competitor = rand(gp.rng, 1:popsize)
         if gp.fitness[competitor] > fbest
@@ -222,7 +238,7 @@ end
 function negative_tournament!(gp)
     popsize=length(gp.pop)
     worstidx = rand(gp.rng, 1:popsize)
-    fworst = 1.0e34
+    fworst = floatmax(eltype(gp.X))
     for _ in 1:gp.tournamentsize
         competitor = rand(gp.rng, 1:popsize)
         if gp.fitness[competitor] < fworst
@@ -254,12 +270,12 @@ end
 function mutate!(gp, parent, pmut)
     len = traverse(parent, 0)
     child = copy(parent)
-    for i in 0:len - 1
+    for i in 1:len
         if rand(gp.rng) < pmut
-            if child[i + 1] < FSET_START
-                child[i + 1] = UInt8(rand(gp.rng, 0:gp.varnumber - 1))
+            if child[i] < FSET_START
+                child[i] = UInt8(rand(gp.rng, 1:varnumber(gp)))
             else
-                child[i + 1] = UInt8(rand(gp.rng, Int(FSET_START):Int(FSET_END)))
+                child[i] = UInt8(rand(gp.rng, FSET_START:FSET_END)) # random operator or function
             end
         end
     end
@@ -346,7 +362,7 @@ end
 # only for testing
 gp = Algorithm{Float64}("problem.dat", seed=3141, generations=2, popsize=1000)
 evolve!(gp)
-@assert (@show gp.favgpop) == -353.1842657981622
-@assert (@show gp.fbestpop) == -32.17519321627807
+@assert (@show gp.favgpop) ≈ -1213.0323150201184
+@assert (@show gp.fbestpop) ≈ -32.97528021345691
 
 end # module
