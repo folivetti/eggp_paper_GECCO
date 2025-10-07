@@ -2,7 +2,6 @@ module TinyGP
 
 # TODO 
 # - parameters in the code instead of ERC
-# - univariate functions
 # - AutoDiff
 # - read from CSV (and automatically determine num vars and num obs)
 # - postfix instead of prefix
@@ -371,11 +370,15 @@ function evolve!(gp)
     update_stats!(gp, 0)
     popsize = length(gp.pop)
     for gen in 1:gp.generations - 1
-        if gp.fbestpop > -1e-5
-            println("PROBLEM SOLVED")
-            return
-        end
-        for _ in 1:popsize
+        newpop = Vector{Vector{UInt8}}()
+        sizehint!(newpop, popsize)
+        newfitness = similar(gp.fitness)
+        
+        elitefitness,eliteidx = findmax(gp.fitness)
+        push!(newpop, gp.pop[eliteidx])
+        newfitness[length(newpop)] = elitefitness
+        
+        for _ in 1:popsize-1
             newind = if rand(gp.rng) < CROSSOVER_PROB
                 parent1 = tournament!(gp)
                 parent2 = tournament!(gp)
@@ -385,13 +388,15 @@ function evolve!(gp)
                 mutate!(gp, gp.pop[parent], PMUT_PER_NODE)
             end
             newfit = fitness_function(gp, newind)
-            offspring = negative_tournament!(gp)
-            gp.pop[offspring] = newind
-            gp.fitness[offspring] = newfit
+            push!(newpop, newind)
+            newfitness[length(newpop)] = newfit
+
         end
+
+        copyto!(gp.pop, newpop)
+        copyto!(gp.fitness, newfitness)
         update_stats!(gp, gen)
     end
-    println("PROBLEM *NOT* SOLVED")
 end
 
 function main(args)
@@ -414,6 +419,6 @@ end
 # only for testing
 gp = Algorithm{Float64}("problem.dat", seed=3141, generations=5, popsize=1000)
 evolve!(gp)
-@assert (@show gp.fbestpop) ≈ -31.27423516286061
+@assert (@show gp.fbestpop) ≈  -32.707488650391184
 
 end # module
