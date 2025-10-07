@@ -20,14 +20,18 @@ const SUB::UInt8 = 111
 const MUL::UInt8 = 112
 const DIV::UInt8 = 113
 const EXP::UInt8 = 114
+const LOGABS::UInt8 = 115 # log |x|
+const POWABS::UInt8 = 116 # |x|^y
 const FSET_START = ADD
-const FSET_END = DIV
+const FSET_END = EXP
 
 const ARITY = Dict(ADD => 2,
     SUB => 2,
     MUL => 2,
     DIV => 2,
-    EXP => 1)
+    POWABS => 2,
+    EXP => 1,
+    LOGABS => 1)
 
 # Default parameter values
 const MAX_LEN = 100
@@ -149,6 +153,7 @@ end
 function create_random_pop!(gp, popsize, depth)
     for i in 1:popsize
         gp.pop[i] = create_random_indiv!(gp, depth)
+        # print_indiv(gp, gp.pop[i]) # debugging
         gp.fitness[i] = fitness_function(gp, gp.pop[i])
     end
     
@@ -177,6 +182,10 @@ function run_program(gp, prog)
                 return num / den
             elseif primitive == EXP
                 return exp(eval_node(gp))
+            elseif primitive == LOGABS
+                return log(abs(eval_node(gp)))
+            elseif primitive == POWABS
+                return abs(eval_node(gp)) ^ eval_node(gp)
             else
                 error("unknown operator $primitive")
             end
@@ -203,6 +212,9 @@ function fitness_function(gp, prog)
         result = run_program(gp, prog)
         fit += abs(result - gp.y[i])
     end
+    
+    (isnan(fit) || isinf(fit)) && return -floatmax()
+    
     -fit
 end
 
@@ -220,22 +232,39 @@ function print_indiv(gp, buffer, pos=1)
             print("exp(")
             endpos = print_indiv(gp, buffer, pos + 1)
             print(")")
+        elseif primitive == LOGABS
+            print("log(abs(")
+            endpos = print_indiv(gp, buffer, pos + 1)
+            print(")")
         end
         return endpos
     elseif ARITY[primitive] == 2
-        print("(")
-        nextpos = print_indiv(gp, buffer, pos + 1)
-        if primitive == ADD
-            print(" + ")
-        elseif primitive == SUB
-            print(" - ")
-        elseif primitive == MUL
-            print(" * ")
+        if primitive in (ADD, SUB, MUL)
+            print("(")
+            nextpos = print_indiv(gp, buffer, pos + 1)
+            if primitive == ADD
+                print(" + ")
+            elseif primitive == SUB
+                print(" - ")
+            elseif primitive == MUL
+                print(" * ")
+            end
+            endpos = print_indiv(gp, buffer, nextpos + 1)
+            print(")")
         elseif primitive == DIV
-            print(" / ")
+            print("pdiv(")
+            nextpos = print_indiv(gp, buffer, pos + 1)
+            print(", ")
+            endpos = print_indiv(gp, buffer, nextpos + 1)
+            print(")")
+        elseif primitive == POWABS
+            print("(abs(")
+            nextpos = print_indiv(gp, buffer, pos + 1)
+            print(") ^ ")
+            endpos = print_indiv(gp, buffer, nextpos + 1)
+            print(")")
         end
-        endpos = print_indiv(gp, buffer, nextpos + 1)
-        print(")")
+
         return endpos
     end
 end
@@ -292,9 +321,13 @@ function mutate!(gp, parent, pmut)
     for i in 1:len
         if rand(gp.rng) < pmut
             if child[i] < FSET_START
-                child[i] = UInt8(rand(gp.rng, 1:varnumber(gp)))
+                child[i] = UInt8(rand(gp.rng, 1:varnumber(gp))) # only generates variables (bias against ERCs)
             else
-                child[i] = UInt8(rand(gp.rng, FSET_START:FSET_END)) # random operator or function
+                newfunc = UInt8(rand(gp.rng, FSET_START:FSET_END)) # random operator or function
+                while ARITY[newfunc] != ARITY[child[i]]
+                    newfunc = UInt8(rand(gp.rng, FSET_START:FSET_END)) # random operator or function
+                end
+                child[i] = newfunc
             end
         end
     end
@@ -379,9 +412,8 @@ if abspath(PROGRAM_FILE) == @__FILE__
 end
 
 # only for testing
-gp = Algorithm{Float64}("problem.dat", seed=3141, generations=2, popsize=1000)
+gp = Algorithm{Float64}("problem.dat", seed=3141, generations=5, popsize=1000)
 evolve!(gp)
-@assert (@show gp.favgpop) ≈ -780.3112327462827
-@assert (@show gp.fbestpop) ≈ -30.64128742851832
+@assert (@show gp.fbestpop) ≈ -31.27423516286061
 
 end # module
