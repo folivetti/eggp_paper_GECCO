@@ -1,12 +1,13 @@
 module TinyGP
 
+using TimerOutputs
+
 # TODO 
 # - parameters in the code instead of ERC
 # - AutoDiff
 # - read from CSV (and automatically determine num vars and num obs)
 # - postfix instead of prefix
 # - batched evaluation
-# - parallel evaluation
 # - likelihoods
 # - dl
 
@@ -60,6 +61,7 @@ mutable struct Algorithm{T}
     const generations::Int32
     const maxlen::Int32
     const tournamentsize::Int32
+    const to::TimerOutput
 end
 
 varnumber(gp) = size(gp.X, 2)
@@ -76,7 +78,7 @@ function Algorithm{T}(fname::AbstractString; seed=-1, generations=GENERATIONS, p
     pop = Vector{Vector{UInt8}}(undef, popsize)
     x = [(maxrandom - minrandom) * rand(rng) + minrandom for _ in 1:FSET_START] # initialize ephemeral random constants
     gp = Algorithm{T}(fitness, pop, rng, x, minrandom, maxrandom, 
-                randomnumber, X, y, 0.0, 0.0, 0.0, seed, generations, maxlen, tournamentsize)
+                randomnumber, X, y, 0.0, 0.0, 0.0, seed, generations, maxlen, tournamentsize, TimerOutput())
     create_random_pop!(gp, popsize, DEPTH)
     return gp
 end
@@ -153,68 +155,71 @@ function create_random_pop!(gp, popsize, depth)
     for i in 1:popsize
         gp.pop[i] = create_random_indiv!(gp, depth)
         # print_indiv(gp, gp.pop[i]) # debugging
+    end
+    Threads.@threads for i in eachindex(gp.fitness) 
         gp.fitness[i] = fitness_function(gp, gp.pop[i])
     end
     
     gp.pop
 end
 
-function run_program(gp, prog)
+function run_program(prog, x)
     pc = 0
     
-    function eval_node(gp)
+    function eval_node()
         pc += 1
         primitive = prog[pc]
         if primitive < FSET_START
-            return gp.x[primitive]
+            return x[primitive]
         else
             if primitive == ADD
-                return eval_node(gp) + eval_node(gp)
+                return eval_node() + eval_node()
             elseif primitive == SUB
-                return eval_node(gp) - eval_node(gp)
+                return eval_node() - eval_node()
             elseif primitive == MUL
-                return eval_node(gp) * eval_node(gp)
+                return eval_node() * eval_node()
             elseif primitive == DIV
-                num = eval_node(gp)
-                den = eval_node(gp)
+                num = eval_node()
+                den = eval_node()
                 den ≈ 0.0 && return 0.0
                 return num / den
             elseif primitive == EXP
-                return exp(eval_node(gp))
+                return exp(eval_node())
             elseif primitive == LOGABS
-                return log(abs(eval_node(gp)))
+                return log(abs(eval_node()))
             elseif primitive == POWABS
-                return abs(eval_node(gp)) ^ eval_node(gp)
+                return abs(eval_node()) ^ eval_node()
             else
                 error("unknown operator $primitive")
             end
         end
     end
     
-    try 
-        eval_node(gp)
+    eval_node()
+end
+
+
+
+# must be thread-safe
+function fitness_function(gp, prog)
+    try
+        x = copy(gp.x) # this allocation is costly but necessary for parallel evaluation
+        fit = 0.0
+        for i in axes(gp.X, 1)
+            for j in 1:varnumber(gp)
+                x[j] = gp.X[i, j]
+            end
+            result = run_program(prog, x)
+            fit += abs(result - gp.y[i])
+        end
+
+        (isnan(fit) || isinf(fit)) && return -floatmax()
+        -fit
     catch ex
         @show prog
         print_indiv(gp, prog)
         rethrow()
     end
-end
-
-
-
-function fitness_function(gp, prog)
-    fit = 0.0
-    for i in axes(gp.X, 1)
-        for j in 1:varnumber(gp)
-            gp.x[j] = gp.X[i, j]
-        end
-        result = run_program(gp, prog)
-        fit += abs(result - gp.y[i])
-    end
-    
-    (isnan(fit) || isinf(fit)) && return -floatmax()
-    
-    -fit
 end
 
 function print_indiv(gp, buffer, pos=1)
@@ -369,30 +374,33 @@ function evolve!(gp)
     print_parms(gp)
     update_stats!(gp, 0)
     popsize = length(gp.pop)
-    for gen in 1:gp.generations - 1
+    @timeit gp.to "generation loop" for gen in 1:gp.generations - 1
+        # generational replacement
         newpop = Vector{Vector{UInt8}}()
         sizehint!(newpop, popsize)
         newfitness = similar(gp.fitness)
         
         elitefitness,eliteidx = findmax(gp.fitness)
         push!(newpop, gp.pop[eliteidx])
-        newfitness[length(newpop)] = elitefitness
         
         for _ in 1:popsize-1
             newind = if rand(gp.rng) < CROSSOVER_PROB
-                parent1 = tournament!(gp)
-                parent2 = tournament!(gp)
-                crossover(gp, gp.pop[parent1], gp.pop[parent2])
+                @timeit gp.to "tournament" parent1 = tournament!(gp)
+                @timeit gp.to "tournament" parent2 = tournament!(gp)
+                @timeit gp.to "xover" crossover(gp, gp.pop[parent1], gp.pop[parent2])
             else
-                parent = tournament!(gp)
-                mutate!(gp, gp.pop[parent], PMUT_PER_NODE)
+                @timeit gp.to "tournament" parent = tournament!(gp)
+                @timeit gp.to "mutation" mutate!(gp, gp.pop[parent], PMUT_PER_NODE)
             end
-            newfit = fitness_function(gp, newind)
             push!(newpop, newind)
-            newfitness[length(newpop)] = newfit
-
         end
 
+        # also evaluate the elite again (for dynamic fitness function or parameter optimization)
+        @timeit gp.to "fitness" Threads.@threads for i in eachindex(newpop)
+            newfitness[i] = fitness_function(gp, newpop[i])
+        end
+
+        
         copyto!(gp.pop, newpop)
         copyto!(gp.fitness, newfitness)
         update_stats!(gp, gen)
@@ -418,7 +426,8 @@ end
 
 # only for testing
 gp = Algorithm{Float64}("problem.dat", seed=3141, generations=5, popsize=1000)
-evolve!(gp)
+@time evolve!(gp)
+print_timer(gp.to)
 @assert (@show gp.fbestpop) ≈  -32.707488650391184
 
 end # module
