@@ -1398,3 +1398,1359 @@ sys	0m3,485s
 real	5m15,669s
 user	5m13,666s
 sys	0m1,932s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,852s
+user	0m7,603s
+sys	0m1,329s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,478s
+user	0m9,229s
+sys	0m1,628s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,662s
+user	0m13,044s
+sys	0m1,350s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,569s
+user	0m11,662s
+sys	0m1,718s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,426s
+user	0m12,073s
+sys	0m1,381s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,540s
+user	0m11,600s
+sys	0m1,459s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 67, in <module>
+    jl.seval("using Pkg: Pkg")
+  File "/home/olivetti/.julia/packages/PythonCall/Nr75f/src/JlWrap/module.jl", line 27, in seval
+    return self._jl_callmethod($(pyjl_methodnum(pyjlmodule_seval)), expr)
+juliacall.JuliaError: ArgumentError: Package Pkg not found in current path, maybe you meant `import/using .Pkg`.
+- Otherwise, run `import Pkg; Pkg.add("Pkg")` to install the Pkg package.
+Stacktrace:
+ [1] eval
+   @ ./boot.jl:385 [inlined]
+ [2] eval
+   @ ./Base.jl:88 [inlined]
+ [3] pyjlmodule_seval(self::Module, expr::Py)
+   @ PythonCall.JlWrap ~/.julia/packages/PythonCall/Nr75f/src/JlWrap/module.jl:13
+ [4] _pyjl_callmethod(f::Any, self_::Ptr{PythonCall.C.PyObject}, args_::Ptr{PythonCall.C.PyObject}, nargs::Int64)
+   @ PythonCall.JlWrap ~/.julia/packages/PythonCall/Nr75f/src/JlWrap/base.jl:67
+ [5] _pyjl_callmethod(o::Ptr{PythonCall.C.PyObject}, args::Ptr{PythonCall.C.PyObject})
+   @ PythonCall.JlWrap.Cjl ~/.julia/packages/PythonCall/Nr75f/src/JlWrap/C.jl:63
+
+real	0m8,364s
+user	0m13,990s
+sys	0m2,145s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m30,047s
+user	0m11,393s
+sys	0m0,864s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m31,122s
+user	0m10,827s
+sys	0m1,050s
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+  No Changes to `~/.local/pyenv/julia_env/Project.toml`
+  No Changes to `~/.local/pyenv/julia_env/Manifest.toml`
+    Updating registry at `~/.julia/registries/General.toml`
+ERROR: AssertionError: proj_file !== nothing
+Stacktrace:
+ [1] precompile
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:1065 [inlined]
+ [2] #_auto_precompile#6
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Pkg.jl:811 [inlined]
+ [3] _auto_precompile (repeats 2 times)
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Pkg.jl:809 [inlined]
+ [4] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:160
+ [5] top-level scope
+   @ none:1
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 350, in resolve
+    run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-e', 'import Pkg; Pkg.Registry.update(); Pkg.add([Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"), Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b"), Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d")]); Pkg.resolve(); Pkg.precompile()']' returned non-zero exit status 1.
+
+real	0m10,309s
+user	0m15,913s
+sys	0m2,042s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m30,267s
+user	0m10,317s
+sys	0m1,076s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m30,955s
+user	0m12,723s
+sys	0m0,906s
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+ERROR: IOError: readdir("/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10"): no such file or directory (ENOENT)
+Stacktrace:
+ [1] _resolve(io::IOStream, env::Pkg.Types.EnvCache, registries::Vector{Pkg.Registry.RegistryInstance}, pkgs::Vector{Pkg.Types.PackageSpec}, preserve::Pkg.Types.PreserveLevel, julia_version::VersionNumber)
+   @ Pkg.Operations ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1384
+ [2] add
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1390 [inlined]
+ [3] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform, kwargs::@Kwargs{io::IOStream})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:278
+ [4] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:159
+ [5] top-level scope
+   @ none:1
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 350, in resolve
+    run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-e', 'import Pkg; Pkg.Registry.update(); Pkg.add([Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d"), Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"), Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b")]); Pkg.resolve(); Pkg.precompile()']' returned non-zero exit status 1.
+
+real	0m36,966s
+user	0m18,291s
+sys	0m3,114s
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+ERROR: IOError: readdir("/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10"): no such file or directory (ENOENT)
+Stacktrace:
+ [1] _resolve(io::IOStream, env::Pkg.Types.EnvCache, registries::Vector{Pkg.Registry.RegistryInstance}, pkgs::Vector{Pkg.Types.PackageSpec}, preserve::Pkg.Types.PreserveLevel, julia_version::VersionNumber)
+   @ Pkg.Operations ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1384
+ [2] add
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1390 [inlined]
+ [3] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform, kwargs::@Kwargs{io::IOStream})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:278
+ [4] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:159
+ [5] top-level scope
+   @ none:1
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 350, in resolve
+    run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-e', 'import Pkg; Pkg.Registry.update(); Pkg.add([Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d"), Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"), Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b")]); Pkg.resolve(); Pkg.precompile()']' returned non-zero exit status 1.
+
+real	0m15,945s
+user	0m17,598s
+sys	0m3,034s
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+ERROR: IOError: readdir("/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10"): no such file or directory (ENOENT)
+Stacktrace:
+ [1] _resolve(io::IOStream, env::Pkg.Types.EnvCache, registries::Vector{Pkg.Registry.RegistryInstance}, pkgs::Vector{Pkg.Types.PackageSpec}, preserve::Pkg.Types.PreserveLevel, julia_version::VersionNumber)
+   @ Pkg.Operations ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1384
+ [2] add
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1390 [inlined]
+ [3] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform, kwargs::@Kwargs{io::IOStream})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:278
+ [4] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:159
+ [5] top-level scope
+   @ none:1
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 350, in resolve
+    run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-e', 'import Pkg; Pkg.Registry.update(); Pkg.add([Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"), Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b"), Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d")]); Pkg.resolve(); Pkg.precompile()']' returned non-zero exit status 1.
+
+real	0m23,716s
+user	0m18,497s
+sys	0m2,939s
+    Updating registry at `~/.julia/registries/General.toml`
+ERROR: IOError: readdir("/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10"): no such file or directory (ENOENT)
+Stacktrace:
+ [1] add
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1390 [inlined]
+ [2] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform, kwargs::@Kwargs{io::IOStream})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:278
+ [3] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:159
+ [4] top-level scope
+   @ none:1
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 350, in resolve
+    run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-e', 'import Pkg; Pkg.Registry.update(); Pkg.add([Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d"), Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"), Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b")]); Pkg.resolve(); Pkg.precompile()']' returned non-zero exit status 1.
+
+real	0m26,977s
+user	0m18,861s
+sys	0m3,437s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m18,600s
+user	0m13,379s
+sys	0m1,241s
+ERROR: ArgumentError: Package PythonCall [6099a3de-0909-46bc-b1f4-468b9a2dfc0d] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+Stacktrace:
+  [1] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1996
+  [2] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1882
+  [3] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+  [4] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+  [5] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1873
+  [6] macro expansion
+    @ ./loading.jl:1860 [inlined]
+  [7] macro expansion
+    @ ./lock.jl:267 [inlined]
+  [8] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1823
+  [9] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [10] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [11] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1816
+ [12] top-level scope
+    @ none:8Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 239, in init
+    raise Exception('PythonCall.jl did not start properly')
+Exception: PythonCall.jl did not start properly
+
+real	0m3,508s
+user	0m11,694s
+sys	0m2,450s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 165, in init
+    libpath, default_bindir = subprocess.run(cmd, check=True, capture_output=True, encoding='utf8').stdout.split('\0')
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-O0', '--compile=min', '-e', 'import Libdl; print(abspath(Libdl.dlpath("libjulia")), "\\0", Sys.BINDIR)']' returned non-zero exit status 1.
+
+real	0m1,714s
+user	0m9,088s
+sys	0m0,322s
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+ERROR: IOError: readdir("/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10"): no such file or directory (ENOENT)
+Stacktrace:
+ [1] _resolve(io::IOStream, env::Pkg.Types.EnvCache, registries::Vector{Pkg.Registry.RegistryInstance}, pkgs::Vector{Pkg.Types.PackageSpec}, preserve::Pkg.Types.PreserveLevel, julia_version::VersionNumber)
+   @ Pkg.Operations ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1384
+ [2] add
+   @ ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/Operations.jl:1390 [inlined]
+ [3] add(ctx::Pkg.Types.Context, pkgs::Vector{Pkg.Types.PackageSpec}; preserve::Pkg.Types.PreserveLevel, platform::Base.BinaryPlatforms.Platform, kwargs::@Kwargs{io::IOStream})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:278
+ [4] add(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+   @ Pkg.API ~/.local/pyenv/julia_env/pyjuliapkg/install/share/julia/stdlib/v1.10/Pkg/src/API.jl:159
+ [5] top-level scope
+   @ none:1
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 350, in resolve
+    run(
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install/bin/julia', '--project=/home/olivetti/.local/pyenv/julia_env', '--startup-file=no', '-e', 'import Pkg; Pkg.Registry.update(); Pkg.add([Pkg.PackageSpec(name="PythonCall", uuid="6099a3de-0909-46bc-b1f4-468b9a2dfc0d"), Pkg.PackageSpec(name="SymbolicRegression", uuid="8254be44-1295-4e6a-a16d-46603ac705cb"), Pkg.PackageSpec(name="Serialization", uuid="9e88b42a-f829-5b0c-bbe9-9e923198166b")]); Pkg.resolve(); Pkg.precompile()']' returned non-zero exit status 1.
+
+real	0m24,355s
+user	0m16,743s
+sys	0m3,021s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m15,613s
+user	0m14,048s
+sys	0m0,935s
+ERROR: ArgumentError: Package PythonCall [6099a3de-0909-46bc-b1f4-468b9a2dfc0d] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+Stacktrace:
+  [1] _require(pkg::Base.PkgId, env::String)
+    @ Base ./loading.jl:1996
+  [2] __require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1882
+  [3] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+  [4] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+  [5] _require_prelocked(uuidkey::Base.PkgId, env::String)
+    @ Base ./loading.jl:1873
+  [6] macro expansion
+    @ ./loading.jl:1860 [inlined]
+  [7] macro expansion
+    @ ./lock.jl:267 [inlined]
+  [8] __require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1823
+  [9] #invoke_in_world#3
+    @ ./essentials.jl:926 [inlined]
+ [10] invoke_in_world
+    @ ./essentials.jl:923 [inlined]
+ [11] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:1816
+ [12] top-level scope
+    @ none:8Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 239, in init
+    raise Exception('PythonCall.jl did not start properly')
+Exception: PythonCall.jl did not start properly
+
+real	0m3,603s
+user	0m10,516s
+sys	0m2,070s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 7, in <module>
+    from pysr import PySRRegressor
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/__init__.py", line 11, in <module>
+    from .julia_import import jl, SymbolicRegression  # isort:skip
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 52, in <module>
+    try_with_registry_fallback(_import_juliacall)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 27, in try_with_registry_fallback
+    raise initial_error
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_registry_helpers.py", line 21, in try_with_registry_fallback
+    return f(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/julia_import.py", line 49, in _import_juliacall
+    import juliacall  # type: ignore
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 287, in <module>
+    init()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliacall/__init__.py", line 159, in init
+    CONFIG['exepath'] = exepath = juliapkg.executable()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 381, in executable
+    resolve()
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 307, in resolve
+    exe, ver = find_julia(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/find_julia.py", line 102, in find_julia
+    install_julia(info, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 155, in install_julia
+    installer(f, buf, prefix)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/install_julia.py", line 217, in install_julia_tar_gz
+    shutil.copytree(os.path.join(tmpdir, srcdirs[0]), prefix, symlinks=True)
+  File "/usr/lib/python3.10/shutil.py", line 559, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+  File "/usr/lib/python3.10/shutil.py", line 457, in _copytree
+    os.makedirs(dst, exist_ok=dirs_exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/olivetti/.local/pyenv/julia_env/pyjuliapkg/install'
+
+real	0m29,430s
+user	0m13,882s
+sys	0m1,319s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m48,844s
+user	0m12,639s
+sys	0m2,189s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m5,220s
+user	0m12,832s
+sys	0m2,038s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,380s
+user	0m15,880s
+sys	0m1,901s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m5,586s
+user	0m14,664s
+sys	0m2,147s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m5,859s
+user	0m13,539s
+sys	0m2,029s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m4,972s
+user	0m12,591s
+sys	0m2,097s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m4,022s
+user	0m12,680s
+sys	0m2,007s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m5,857s
+user	0m8,929s
+sys	0m1,769s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m8,383s
+user	0m11,699s
+sys	0m1,651s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,800s
+user	0m13,568s
+sys	0m2,068s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,971s
+user	0m14,345s
+sys	0m1,190s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,160s
+user	0m13,487s
+sys	0m2,196s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,694s
+user	0m11,903s
+sys	0m2,076s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,196s
+user	0m11,179s
+sys	0m1,681s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,669s
+user	0m13,977s
+sys	0m1,646s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,735s
+user	0m14,546s
+sys	0m2,300s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,283s
+user	0m13,788s
+sys	0m1,837s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,636s
+user	0m13,433s
+sys	0m1,977s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,570s
+user	0m12,872s
+sys	0m1,651s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,840s
+user	0m12,572s
+sys	0m1,412s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,379s
+user	0m15,328s
+sys	0m1,938s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,206s
+user	0m13,594s
+sys	0m2,212s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,283s
+user	0m13,411s
+sys	0m2,115s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,999s
+user	0m13,488s
+sys	0m1,913s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,283s
+user	0m14,818s
+sys	0m2,055s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,021s
+user	0m13,168s
+sys	0m1,381s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m8,017s
+user	0m14,938s
+sys	0m1,391s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,895s
+user	0m14,565s
+sys	0m2,219s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,117s
+user	0m11,507s
+sys	0m1,846s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,443s
+user	0m13,703s
+sys	0m1,570s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,200s
+user	0m11,068s
+sys	0m1,811s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m8,027s
+user	0m15,355s
+sys	0m2,043s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,845s
+user	0m11,434s
+sys	0m2,012s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,796s
+user	0m13,196s
+sys	0m2,165s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m7,527s
+user	0m14,604s
+sys	0m2,114s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m6,207s
+user	0m11,225s
+sys	0m1,697s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1407: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 35, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 2180, in fit
+    ) = self._validate_and_set_fit_params(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1568, in _validate_and_set_fit_params
+    X, y = self._validate_data_X_y(X, y)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py", line 1607, in _validate_data_X_y
+    raw_out = self._validate_data(X=X, y=y, reset=True, multi_output=True)  # type: ignore
+AttributeError: 'PySRRegressor' object has no attribute '_validate_data'. Did you mean: '_validate_data_X'?
+
+real	0m5,980s
+user	0m12,248s
+sys	0m2,046s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(

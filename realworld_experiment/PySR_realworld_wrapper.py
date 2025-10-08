@@ -26,8 +26,8 @@ reg = PySRRegressor(
         verbosity=0
         )
 
-df = pd.read_csv(f"datasets/{sys.argv[1]}_train.csv")
-df_test = pd.read_csv(f"datasets/{sys.argv[1]}_test.csv")
+df = pd.read_csv(f"datasets/{sys.argv[1]}_train.csv", dtype=np.float64)
+df_test = pd.read_csv(f"datasets/{sys.argv[1]}_test.csv", dtype=np.float64)
 
 X_train, y_train = df.loc[:, df.columns != 'target'].values, df.target.values
 X_test,  y_test  = df_test.loc[:, df_test.columns != 'target'].values, df_test.target.values
