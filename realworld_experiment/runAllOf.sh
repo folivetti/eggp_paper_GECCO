@@ -43,6 +43,30 @@ elif [ "${1,,}" == "eggp_mo" ]; then
    for key in "${!datasets20[@]}"; do
      ./runEggp_mo_realworld.sh ${datasets20[$key]} &
    done
+elif [ "${1,,}" == "pysips" ]; then
+   echo "running pysips..."
+   for key in "${!datasets30[@]}"; do
+     ./runPySIPS_realworld.sh ${datasets30[$key]} &
+   done
+   for key in "${!datasets20[@]}"; do
+     ./runPySIPS_realworld.sh ${datasets20[$key]} &
+   done
+elif [ "${1,,}" == "symregg" ]; then
+   echo "running symregg..."
+   #for key in "${!datasets30[@]}"; do
+   #  ./runSymRegg_realworld.sh ${datasets30[$key]} &
+   #done
+    for key in "${!datasets20[@]}"; do
+     ./runSymRegg_realworld.sh ${datasets20[$key]} &
+    done
+elif [ "${1,,}" == "random" ]; then
+   echo "running random..."
+   for key in "${!datasets30[@]}"; do
+     ./runRandom_realworld.sh ${datasets30[$key]} &
+   done
+   # for key in "${!datasets20[@]}"; do
+   #  ./runRandom_realworld.sh ${datasets20[$key]} &
+   # done
 else
    echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo]"
 fi
