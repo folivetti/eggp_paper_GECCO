@@ -3,10 +3,9 @@ module TinyGP
 
 
 # TODO 
-# - AutoDiff
 # - read from CSV (and automatically determine num vars and num obs)
 # - postfix instead of prefix
-# - batched evaluation
+# - batched evaluation and preallocation of buffers 
 # - likelihoods
 # - dl
 
@@ -15,6 +14,8 @@ using TimerOutputs
 using Random
 using Printf
 using Optim # gradient-based optimization of parameters
+using PreallocationTools 
+using DelimitedFiles
 
 # TODO check this
 using ForwardDiff, Preferences
@@ -61,14 +62,12 @@ mutable struct Algorithm{T}
     const fitness::Vector{T}
     const pop::Vector{Vector{Instruction}}
     const rng::AbstractRNG
-    const x::Vector{T}
-    const minrandom::T
-    const maxrandom::T
     const X::Matrix{T}
     const y::Vector{T}
     fbestpop::T
     favgpop::T
     avg_len::T
+    fevals::Int64
     const seed::Int64
     const generations::Int32
     const maxlen::Int32
@@ -80,43 +79,27 @@ varnumber(gp) = size(gp.X, 2)
 
 function Algorithm{T}(fname::AbstractString; seed=-1, generations=GENERATIONS, popsize=POPSIZE, maxlen=MAX_LEN, tournamentsize=TSIZE) where {T <: AbstractFloat}
     rng = seed >= 0 ? MersenneTwister(seed) : MersenneTwister()
-    minrandom, maxrandom, X, y = setup_fitness(T, fname)
+    
+    X, y = setup_fitness(T, fname)
     
     varnumber = size(X, 2)
     varnumber < FSET_START || error("too many variables")
     
     fitness = Vector{T}(undef, popsize)
     pop = Vector{Vector{Instruction}}(undef, popsize)
-    x = T[varnumber] # buffer TODO not necessary?
-    gp = Algorithm{T}(fitness, pop, rng, x, minrandom, maxrandom, 
-                X, y, 0.0, 0.0, 0.0, seed, generations, maxlen, tournamentsize, TimerOutput())
+    
+    gp = Algorithm{T}(fitness, pop, rng, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, tournamentsize, TimerOutput())
     create_random_pop!(gp, popsize, DEPTH)
     return gp
 end
 
-function setup_fitness(::Type{T}, fname::AbstractString) where {T <: AbstractFloat}
-    open(fname, "r") do io
-        eof(io) && error("empty data file")
-        header = split(strip(readline(io)))
-        length(header) == 5 || error("expected five header values")
-        varnumber = parse(Int, header[1])
-        randomnumber = parse(Int, header[2])
-        minrandom = parse(T, header[3])
-        maxrandom = parse(T, header[4])
-        fitnesscases = parse(Int, header[5])
-        X = Matrix{T}(undef, fitnesscases, varnumber)
-        y = Vector{T}(undef, fitnesscases)
-        for i in 1:fitnesscases
-            eof(io) && error("unexpected end of data at case $i")
-            tokens = split(strip(readline(io)))
-            length(tokens) >= varnumber + 1 || error("not enough values on line $i")
-            for j in 1:(varnumber)
-                X[i, j] = parse(Float64, tokens[j])
-            end
-            y[i] = parse(Float64, tokens[varnumber+1])
-        end
-        return minrandom, maxrandom, X, y
-    end
+# last column is target
+# all other columns are inputs
+function setup_fitness(::Type{T}, filename::AbstractString) where {T <: AbstractFloat}
+    data,varnames = readdlm(filename, ',', header=true)
+    X = data[:, 1:end-1]
+    y = data[:, end]
+    X, y
 end
 
 # returns end of subexpression starting at pos
@@ -141,19 +124,17 @@ function grow!(gp::Algorithm{T}, buffer, pos, maxlen, depth) where {T}
     pos > maxlen && return -1
     prim = pos == 1 ? 1 : rand(gp.rng, 0:1)  # terminal or function but force terminal on first position
     if prim == 0 || depth == 0
-        # random value initial value for the terminal node (ineffective for variables)
-        randval = (gp.maxrandom - gp.minrandom) * rand(gp.rng, T) + gp.minrandom
+        # random value initial value ~ N(0,1) for the terminal node (ineffective for variables)
+        randval = randn(gp.rng, T)
         if rand(gp.rng) < 0.5
-            # random variable
-            code = rand(gp.rng, 1:varnumber(gp))
-            buffer[pos] = Instruction(UInt8(code), randval)
+            varCode = rand(gp.rng, 1:varnumber(gp))
+            buffer[pos] = Instruction(UInt8(varCode), randval)
             return pos
         else
             buffer[pos] = Instruction(UInt8(PARAM), randval)
             return pos
         end
     else
-        # random function 
         func = UInt8(rand(gp.rng, FSET_START:FSET_END))
         buffer[pos] = Instruction(func)
         child = grow!(gp, buffer, pos + 1, maxlen, depth - 1)
@@ -263,20 +244,42 @@ function mean_squared_error(y::AbstractArray{T}, ypred::AbstractArray{TE}) where
 end
 
 
+#=
+# demo task distribution for allocating one buffer for each thread
+# to implement later
+
+ntasks = Thraeds.nthraeds()  # use a larger values if `do_stuff!` contains I/O
+@sync begin
+    workqueue = Channel{Tuple{Int,Float64}}(Inf)
+
+    # Do this after `@spawn`s if computing work itself is CPU-intensive
+    for (i, x) in enumerate(xs)
+        put!(workqueue, (i, x))
+    end
+    close(workqueue)  # signal the end of work
+
+    for _ in 1:ntasks
+        @spawn begin
+            local matrix = zeros(2, 2)  # allocate the buffer, and don't share
+            for (i, x) in workqueue
+                out[i] = do_stuff!(matrix, x)
+            end
+        end
+    end
+end
+=#
+
 # must be thread-safe
 function fitness_function(gp::Algorithm{T}, prog; optimize=true) where {T}
-    # create buffers
-    x = copy(gp.x) # these two allocations are costly but necessary for parallel evaluation
-
+    ypred_buffer = DiffCache(similar(gp.y)) # TODO preallocate once per thread
 
     function loss(p)
-        ypred = Vector{eltype(p)}(undef, length(gp.y))# TODO preallocationbuffers
+        gp.fevals += 1
+        ypred = get_tmp(ypred_buffer, p)
 
         for i in axes(gp.X, 1)
-            for j in 1:varnumber(gp)
-                x[j] = gp.X[i, j]
-            end
-            ypred[i] = run_program(prog, x, p)
+            xi = @view gp.X[i, :]
+            ypred[i] = run_program(prog, xi, p)
         end
         mse = mean_squared_error(gp.y, ypred)
         (isnan(mse) || mse > 1e100) && return floatmax(eltype(p))
@@ -287,7 +290,7 @@ function fitness_function(gp::Algorithm{T}, prog; optimize=true) where {T}
     try
         param = extractparam(prog)
         fit = loss(param)
-        if length(param) > 0
+        if length(param) > 0 && optimize
             try
                 res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
                 # println(summary(res))
@@ -418,7 +421,7 @@ function mutate!(gp, parent, pmut)
         if rand(gp.rng) < pmut
             if child[i].opcode < FSET_START
                 # convert variable to param (values are copied but ineffective for variables)
-                child[i] = Instruction(PARAM, child[i].val + randn(gp.rng))  # TODO could use minrandom maxrandom here
+                child[i] = Instruction(PARAM, child[i].val + randn(gp.rng)) # + delta ~ N(0, 1), may want to force larger jumps here
             elseif child[i].opcode == PARAM
                 # convert param to variable
                 child[i] = Instruction(rand(gp.rng, 1:varnumber(gp)), child[i].val) 
@@ -446,7 +449,7 @@ function update_stats!(gp::Algorithm{T}, gen) where {T}
     end
     gp.avg_len = node_count / popsize
     gp.favgpop /= popsize
-    @printf "Generation=%d Avg Fitness=%f Best Fitness=%f Avg Size=%f\nBest Individual: " gen -gp.favgpop -gp.fbestpop gp.avg_len
+    @printf "Generation=%d Fitness evaluations=%d Avg Fitness=%f Best Fitness=%f Avg Size=%f\nBest Individual: " gen gp.fevals gp.favgpop gp.fbestpop gp.avg_len
     print_indiv(gp, gp.pop[bestidx])
     println()
     flush(stdout)
@@ -456,10 +459,10 @@ function print_parms(gp)
     popsize = length(gp.pop)
     @printf("-- TINY GP (Julia version) --\n")
     @printf("SEED=%d\nMAX_LEN=%d\nPOPSIZE=%d\nDEPTH=%d\nCROSSOVER_PROB=%f\n\
-            PMUT_PER_NODE=%f\nMIN_RANDOM=%f\nMAXRANDOM=%f\nGENERATIONS=%d\n\
+            PMUT_PER_NODE=%f\nGENERATIONS=%d\n\
             TSIZE=%d\n----------------------------------\n",
             gp.seed, gp.maxlen, popsize, DEPTH, CROSSOVER_PROB,
-            PMUT_PER_NODE, gp.minrandom, gp.maxrandom, gp.generations, gp.tournamentsize)
+            PMUT_PER_NODE, gp.generations, gp.tournamentsize)
 end
 
 function evolve!(gp)
@@ -517,9 +520,9 @@ if abspath(PROGRAM_FILE) == @__FILE__
 end
 
 # only for testing
-gp = Algorithm{Float64}("problem.dat", seed=3141, generations=10, popsize=1000, maxlen=25)
+gp = Algorithm{Float64}("problem.csv", seed=3141, generations=10, popsize=1000, maxlen=25)
 @time evolve!(gp)
 print_timer(gp.to)
-@assert (@show gp.fbestpop) ≈  -20.732699834060465
+@assert (@show gp.fbestpop) ≈  -0.0038802605687494776
 
 end # module
