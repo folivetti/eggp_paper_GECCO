@@ -1,6 +1,6 @@
 module TinyGP
 
-using TimerOutputs
+
 
 # TODO 
 # - AutoDiff
@@ -11,8 +11,14 @@ using TimerOutputs
 # - dl
 
 
+using TimerOutputs
 using Random
 using Printf
+using Optim # gradient-based optimization of parameters
+
+# TODO check this
+using ForwardDiff, Preferences
+set_preferences!(ForwardDiff, "nansafe_mode" => true) 
 
 struct Instruction 
     opcode::UInt8
@@ -114,17 +120,20 @@ function setup_fitness(::Type{T}, fname::AbstractString) where {T <: AbstractFlo
 end
 
 # returns end of subexpression starting at pos
-function traverse(buffer, pos)
+# optional update action allows to modify instructions while traversing
+function traverse(buffer, pos; update=identity)
+    buffer[pos] = update(buffer[pos])
+
     primitive = buffer[pos].opcode
     if primitive < FSET_START
         return pos
     elseif primitive == PARAM
         return pos
     elseif ARITY[primitive] == 1
-        traverse(buffer, pos + 1)
+        traverse(buffer, pos + 1, update = update)
     elseif ARITY[primitive] == 2
-        nextpos = traverse(buffer, pos + 1)
-        return traverse(buffer, nextpos + 1)
+        nextpos = traverse(buffer, pos + 1, update = update)
+        return traverse(buffer, nextpos + 1, update = update)
     end
 end
 
@@ -168,7 +177,7 @@ end
 function create_random_pop!(gp, popsize, depth)
     for i in 1:popsize
         gp.pop[i] = create_random_indiv!(gp, depth)
-        print_indiv(gp, gp.pop[i]); println() # debugging
+        # print_indiv(gp, gp.pop[i]); println() # debugging
     end
     Threads.@threads for i in eachindex(gp.fitness) 
         gp.fitness[i] = fitness_function(gp, gp.pop[i])
@@ -177,16 +186,47 @@ function create_random_pop!(gp, popsize, depth)
     gp.pop
 end
 
-function run_program(prog, x::AbstractArray{T})::T  where {T <: AbstractFloat}
+function extractparam(prog)
+    param = Float64[]
+
+    function extract(instruction)
+        if instruction.opcode == PARAM
+            push!(param, instruction.val)
+        end
+        instruction
+    end
+
+    traverse(prog, 1, update = extract)
+
+    param
+end
+
+function updateparam!(prog, param)
+    paramidx = 0
+    function updateval(instruction)
+        if instruction.opcode == PARAM
+            paramidx += 1
+            return Instruction(PARAM, param[paramidx])
+        end
+        instruction # unchanged
+    end
+
+    traverse(prog, 1, update = updateval)
+
+    param
+end
+
+function run_program(prog, x::AbstractArray{T}, param::AbstractVector{TE})::TE  where {T <: AbstractFloat, TE <: Real}
     pc = 0
-    
+    paramidx = 0
     function eval_node()
         pc += 1
         primitive = prog[pc].opcode
         if primitive < FSET_START
             return x[primitive]
         elseif primitive == PARAM
-            return T(prog[pc].val)
+            paramidx += 1
+            return param[paramidx]
         elseif primitive == ADD
             return eval_node() + eval_node()
         elseif primitive == SUB
@@ -213,18 +253,54 @@ function run_program(prog, x::AbstractArray{T})::T  where {T <: AbstractFloat}
 end
 
 
+function mean_squared_error(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
+    @assert length(y) == length(ypred)
+    sumsq = zero(TE)
+    for i in eachindex(y)
+        sumsq += (y[i] - ypred[i])^2
+    end
+    sumsq / length(y)
+end
+
 
 # must be thread-safe
-function fitness_function(gp::Algorithm{T}, prog) where {T}
-    try
-        x = copy(gp.x) # this allocation is costly but necessary for parallel evaluation
-        fit = zero(T)
+function fitness_function(gp::Algorithm{T}, prog; optimize=true) where {T}
+    # create buffers
+    x = copy(gp.x) # these two allocations are costly but necessary for parallel evaluation
+
+
+    function loss(p)
+        ypred = Vector{eltype(p)}(undef, length(gp.y))# TODO preallocationbuffers
+
         for i in axes(gp.X, 1)
             for j in 1:varnumber(gp)
                 x[j] = gp.X[i, j]
             end
-            result = run_program(prog, x)
-            fit += abs(result - gp.y[i])
+            ypred[i] = run_program(prog, x, p)
+        end
+        mse = mean_squared_error(gp.y, ypred)
+        (isnan(mse) || mse > 1e100) && return floatmax(eltype(p))
+        
+        mse
+    end
+
+    try
+        param = extractparam(prog)
+        fit = loss(param)
+        if length(param) > 0
+            try
+                res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
+                # println(summary(res))
+                # update parameters in the solution if an improvement is found
+                if isnan(fit) || isinf(fit) || Optim.minimum(res) < fit
+                    param = Optim.minimizer(res)
+                    updateparam!(prog, param)
+                    fit = Optim.minimum(res)
+                end
+            catch ex
+                # ignore exceptions from Optim
+                @show ex
+            end
         end
 
         (isnan(fit) || isinf(fit)) && return -floatmax(T)
