@@ -56,8 +56,6 @@ const TSIZE = 2
 const PMUT_PER_NODE = 0.05
 const CROSSOVER_PROB = 0.9 # (1 - CROSSOVER_PROB) individuals are mutated, and each node has PMUT_PER_NODE probability
 
-const BUFFER = Vector{Instruction}(undef, MAX_LEN)
-
 mutable struct Algorithm{T}
     const fitness::Vector{T}
     const pop::Vector{Vector{Instruction}}
@@ -95,7 +93,7 @@ function Algorithm{T}(fname::AbstractString, targetname;
     
     print_parms(gp)
    
-    create_random_pop!(gp, popsize, DEPTH)
+    create_random_pop!(gp, DEPTH)
     return gp
 end
 
@@ -129,47 +127,45 @@ function traverse(buffer, pos; update=identity)
     end
 end
 
-function grow!(gp::Algorithm{T}, buffer, pos, maxlen, depth) where {T}
-    pos > maxlen && return -1
-    prim = pos == 1 ? 1 : rand(gp.rng, 0:1)  # terminal or function but force terminal on first position
-    if prim == 0 || depth == 0
-        # random value initial value ~ N(0,1) for the terminal node (ineffective for variables)
-        randval = randn(gp.rng, T)
-        if rand(gp.rng) < 0.5
-            varCode = rand(gp.rng, 1:varnumber(gp))
-            buffer[pos] = Instruction(UInt8(varCode), randval)
-            return pos
-        else
-            buffer[pos] = Instruction(UInt8(PARAM), randval)
-            return pos
-        end
-    else
-        func = UInt8(rand(gp.rng, FSET_START:FSET_END))
-        buffer[pos] = Instruction(func)
-        child = grow!(gp, buffer, pos + 1, maxlen, depth - 1)
-        (child < 0 || ARITY[func] == 1) && return child # unary functions
-        
-        # binary functions
-        return grow!(gp, buffer, child + 1, maxlen, depth - 1)
-    end
-end
-
-function create_random_indiv!(gp, depth)
-    len = grow!(gp, BUFFER, 1, gp.maxlen, depth)
-    # retry if the random individual was too long
-    while len < 0
-        len = grow!(gp, BUFFER, 1, gp.maxlen, depth)
+function grow!(buffer, maxlen, depth, numvars, rng)
+    if length(buffer) >= maxlen
+        empty!(buffer) # over size limit, clear buffer to indicate failure
+        return buffer
     end
     
-    copyto!(Vector{Instruction}(undef, len), 1, BUFFER, 1, len)
+    prim = isempty(buffer) ? 1 : rand(rng, 0:1)  # terminal or function but force terminal on first position
+    if prim == 0 || depth == 0
+        # random value initial value ~ N(0,1) for the terminal node (ineffective for variables)
+        randval = randn(rng, Float32)
+        if rand(rng) < 0.5
+            varCode = rand(rng, 1:numvars)
+            push!(buffer, Instruction(UInt8(varCode), randval))
+        else
+            push!(buffer, Instruction(UInt8(PARAM), randval))
+        end
+    else
+        func = UInt8(rand(rng, FSET_START:FSET_END))
+        push!(buffer, Instruction(func))
+        grow!(buffer, maxlen, depth - 1, numvars, rng)
+        ARITY[func] == 1 && return buffer # unary functions
+        
+        # binary functions
+        grow!(buffer, maxlen, depth - 1, numvars, rng)
+    end
 end
 
-function create_random_pop!(gp, popsize, depth)
-    for i in 1:popsize
-        gp.pop[i] = create_random_indiv!(gp, depth)
-        # print_indiv(gp.pop[i]); println() # debugging
+function create_random_indiv(gp, depth)
+    buffer = Instruction[]; sizehint!(buffer, gp.maxlen + 1)
+    while isempty(buffer)
+        grow!(buffer, gp.maxlen, depth, varnumber(gp), gp.rng)
     end
-    Threads.@threads for i in eachindex(gp.fitness) 
+    
+    buffer
+end
+
+function create_random_pop!(gp, depth)
+    Threads.@threads for i in eachindex(gp.pop) 
+        gp.pop[i] = create_random_indiv(gp, depth)
         gp.fitness[i] = fitness_function(gp, gp.pop[i], optimize=true)
     end
     
