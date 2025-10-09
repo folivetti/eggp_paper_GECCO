@@ -334,6 +334,11 @@ function fitness_function(prog, buffers, gp; optimize=false)
     -fit, fevals
 end
 
+function tostring(prog)
+    buf = IOBuffer()
+    print_indiv(buf, prog)
+    String(take!(buf))
+end
 function print_indiv(io::IO, prog, pos=1)
     primitive = prog[pos].opcode
     if primitive < FSET_START
