@@ -59,7 +59,6 @@ const CROSSOVER_PROB = 0.9 # (1 - CROSSOVER_PROB) individuals are mutated, and e
 mutable struct Algorithm{T}
     const fitness::Vector{T}
     const pop::Vector{Vector{Instruction}}
-    const rng::AbstractRNG
     const X::Matrix{T}
     const y::Vector{T}
     fbestpop::T
@@ -79,7 +78,7 @@ varnumber(gp) = size(gp.X, 2)
 function Algorithm{T}(fname::AbstractString, targetname; 
     seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
     maxlen=MAX_LEN, tournamentsize=TSIZE,print_trace=false) where {T <: AbstractFloat}
-    rng = seed >= 0 ? MersenneTwister(seed) : MersenneTwister()
+    seed >= 0 && seed!(seed)
     
     X, y = load_dataset(T, fname, targetname)
     
@@ -89,7 +88,7 @@ function Algorithm{T}(fname::AbstractString, targetname;
     fitness = Vector{T}(undef, popsize)
     pop = Vector{Vector{Instruction}}(undef, popsize)
     
-    gp = Algorithm{T}(fitness, pop, rng, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, tournamentsize, TimerOutput(), print_trace)
+    gp = Algorithm{T}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, tournamentsize, TimerOutput(), print_trace)
     
     print_parms(gp)
    
@@ -127,37 +126,37 @@ function traverse(buffer, pos; update=identity)
     end
 end
 
-function grow!(buffer, maxlen, depth, numvars, rng)
+function grow!(buffer, maxlen, depth, numvars)
     if length(buffer) >= maxlen
         empty!(buffer) # over size limit, clear buffer to indicate failure
         return buffer
     end
     
-    prim = isempty(buffer) ? 1 : rand(rng, 0:1)  # terminal or function but force terminal on first position
+    prim = isempty(buffer) ? 1 : rand(0:1)  # terminal or function but force terminal on first position
     if prim == 0 || depth == 0
         # random value initial value ~ N(0,1) for the terminal node (ineffective for variables)
-        randval = randn(rng, Float32)
-        if rand(rng) < 0.5
-            varCode = rand(rng, 1:numvars)
+        randval = randn(Float32)
+        if rand() < 0.5
+            varCode = rand(1:numvars)
             push!(buffer, Instruction(UInt8(varCode), randval))
         else
             push!(buffer, Instruction(UInt8(PARAM), randval))
         end
     else
-        func = UInt8(rand(rng, FSET_START:FSET_END))
+        func = UInt8(rand(FSET_START:FSET_END))
         push!(buffer, Instruction(func))
-        grow!(buffer, maxlen, depth - 1, numvars, rng)
+        grow!(buffer, maxlen, depth - 1, numvars)
         ARITY[func] == 1 && return buffer # unary functions
         
         # binary functions
-        grow!(buffer, maxlen, depth - 1, numvars, rng)
+        grow!(buffer, maxlen, depth - 1, numvars)
     end
 end
 
 function create_random_indiv(gp, depth)
     buffer = Instruction[]; sizehint!(buffer, gp.maxlen + 1)
     while isempty(buffer)
-        grow!(buffer, gp.maxlen, depth, varnumber(gp), gp.rng)
+        grow!(buffer, gp.maxlen, depth, varnumber(gp))
     end
     
     buffer
@@ -376,10 +375,10 @@ end
 
 function tournament(gp::Algorithm{T}) where {T}
     popsize = length(gp.pop)
-    bestidx = rand(gp.rng, 1:popsize)
+    bestidx = rand(1:popsize)
     fbest = floatmin(T)
     for _ in 1:gp.tournamentsize
-        competitor = rand(gp.rng, 1:popsize)
+        competitor = rand(1:popsize)
         if gp.fitness[competitor] > fbest
             fbest = gp.fitness[competitor]
             bestidx = competitor
@@ -393,18 +392,18 @@ function crossover(gp, parent1, parent2)
     len2 = traverse(parent2, 1)
     
     # this is the part we cut out of p1
-    xo1start = rand(gp.rng, 0:len1 - 1)
+    xo1start = rand(0:len1 - 1)
     xo1end = traverse(parent1, xo1start + 1)
     
     p1len = xo1start 
     p3len = len1 - xo1end
     
     # this is the part we use from p2
-    xo2start = rand(gp.rng, 0:len2 - 1)
+    xo2start = rand(0:len2 - 1)
     xo2end = traverse(parent2, xo2start + 1)
     p2len = xo2end - xo2start
     while p1len + p2len + p3len > gp.maxlen
-        xo2start = rand(gp.rng, 0:len2 - 1)
+        xo2start = rand(0:len2 - 1)
         xo2end = traverse(parent2, xo2start + 1)
         p2len = xo2end - xo2start
     end
@@ -419,19 +418,19 @@ function crossover(gp, parent1, parent2)
     offspring
 end
 
-function mutate!(indiv, pmut, numvars, rng)
+function mutate!(indiv, pmut, numvars)
     for i in eachindex(indiv)
-        if rand(rng) < pmut
+        if rand() < pmut
             if indiv[i].opcode < FSET_START
                 # convert variable to param (values are copied but ineffective for variables)
-                indiv[i] = Instruction(PARAM, indiv[i].val + randn(rng)) # + delta ~ N(0, 1), may want to force larger jumps here
+                indiv[i] = Instruction(PARAM, indiv[i].val + randn()) # + delta ~ N(0, 1), may want to force larger jumps here
             elseif indiv[i].opcode == PARAM
                 # convert param to variable
-                indiv[i] = Instruction(rand(rng, 1:numvars), indiv[i].val) 
+                indiv[i] = Instruction(rand(1:numvars), indiv[i].val) 
             else
-                newfunc = UInt8(rand(rng, FSET_START:FSET_END)) # random operator or function
+                newfunc = UInt8(rand(FSET_START:FSET_END)) # random operator or function
                 while ARITY[newfunc] != ARITY[indiv[i].opcode]
-                    newfunc = UInt8(rand(rng, FSET_START:FSET_END)) # random operator or function
+                    newfunc = UInt8(rand(FSET_START:FSET_END)) # random operator or function
                 end
                 indiv[i] = Instruction(newfunc, indiv[i].val)
             end
@@ -484,23 +483,27 @@ function evolve!(gp; iter_callback=nothing)
         elitefitness,eliteidx = findmax(gp.fitness)
         push!(newpop, gp.pop[eliteidx])
         
-        for _ in 1:popsize-1
-            newind = if rand(gp.rng) < CROSSOVER_PROB
-                @timeit gp.to "tournament" parent1 = tournament(gp)
-                @timeit gp.to "tournament" parent2 = tournament(gp)
-                @timeit gp.to "xover" crossover(gp, gp.pop[parent1], gp.pop[parent2])
+        tasks = [Threads.@spawn begin 
+            if rand() < CROSSOVER_PROB
+                local parent1idx = tournament(gp)
+                local parent2idx = tournament(gp)
+                child = crossover(gp, gp.pop[parent1idx], gp.pop[parent2idx])
             else
-                @timeit gp.to "tournament" parent = tournament(gp)
-                @timeit gp.to "mutation" mutate!(gp.pop[parent], PMUT_PER_NODE, varnumber(gp), gp.rng)
+                local parentidx = tournament(gp)
+                child = copy(gp.pop[parentidx])
+                mutate!(child, PMUT_PER_NODE, varnumber(gp))
             end
-            push!(newpop, newind)
-        end
+            child
+        end for _ in 1:popsize-1]
+        @timeit gp.to "selection & xover/mut" append!(newpop, fetch.(tasks))
 
+        @assert length(newpop) == length(gp.pop)
+        
         # also evaluate the elite again (for dynamic fitness function or parameter optimization)
         @timeit gp.to "fitness" Threads.@threads for i in eachindex(newpop)
             newfitness[i] = fitness_function(gp, newpop[i], optimize=true)
         end
-
+        
         
         copyto!(gp.pop, newpop)
         copyto!(gp.fitness, newfitness)
@@ -541,6 +544,7 @@ function main(args)
         
     end
     evolve!(gp, iter_callback = callback)
+    print_timer(gp.to)
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
