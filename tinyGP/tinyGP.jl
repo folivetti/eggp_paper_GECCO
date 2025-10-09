@@ -429,12 +429,14 @@ end
 function mutate!(indiv, pmut, numvars)
     for i in eachindex(indiv)
         if rand() < pmut
-            if indiv[i].opcode < FSET_START
-                # convert variable to param (values are copied but ineffective for variables)
-                indiv[i] = Instruction(PARAM, indiv[i].val + randn()) # + delta ~ N(0, 1), may want to force larger jumps here
-            elseif indiv[i].opcode == PARAM
-                # convert param to variable
-                indiv[i] = Instruction(rand(1:numvars), indiv[i].val) 
+            if indiv[i].opcode < FSET_START || indiv[i].opcode == PARAM
+                if rand() < 0.5
+                    # create parameter and change value slightly
+                    indiv[i] = Instruction(PARAM, indiv[i].val + randn()) # + delta ~ N(0, 1), may want to force larger jumps here
+                else
+                    # create variable
+                    indiv[i] = Instruction(rand(1:numvars), indiv[i].val) 
+                end
             else
                 newfunc = UInt8(rand(FSET_START:FSET_END)) # random operator or function
                 while ARITY[newfunc] != ARITY[indiv[i].opcode]
