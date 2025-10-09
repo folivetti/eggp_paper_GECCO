@@ -172,6 +172,8 @@ function create_random_indiv(gp, depth)
     while isempty(buffer)
         grow!(buffer, gp.maxlen, depth, varnumber(gp))
     end
+
+    @assert length(buffer) == traverse(buffer, 1)
     
     buffer
 end
@@ -220,7 +222,7 @@ function run_program(prog, x, param::AbstractVector{T}, stack::AbstractMatrix{T}
             @simd for i in axes(stack)[1] @inbounds stack[i, sp] = x[i, primitive] end
         elseif primitive == PARAM
             sp += 1
-            @assert paramidx > 0 && paramidx <= length(param)
+            @assert paramidx > 0 && paramidx <= length(param) "$(param) $(prog) $(tostring(prog))"
             @simd for i in axes(stack)[1] @inbounds stack[i, sp] = param[paramidx] end
             paramidx -= 1
         elseif primitive == ADD
@@ -326,6 +328,9 @@ function fitness_function(prog, buffers, gp; optimize=false)
                 fit = Optim.minimum(res)
             end
         catch ex
+            if ex isa InterruptException
+                rethrow()
+            end
             # ignore exceptions from Optim
             @warn ex
         end
@@ -573,42 +578,6 @@ function evolve!(gp::Algorithm{T}; iter_callback=nothing) where {T}
     close(fitnessevalqueue) # signal for workers to stop
 end
 
-function main(args)
-     if length(args) < 5 || length(args) > 6
-        println("Usage: tinyGP.jl trainingdata.csv targetvariable generations popsize tournamentsize [ testdataset ]")
-        return 
-    end
-    trainingfilename = args[1]
-    targetname = args[2]
-    generations = parse(Int, args[3])
-    popsize = parse(Int, args[4])
-    tsize = parse(Int, args[5])
-    testdataset = length(args) == 6 ? args[6] : trainingfilename
-    
-    X_test, y_test = load_dataset(Float64, testdataset, targetname)
-    
-    gp = Algorithm{Float64}(trainingfilename, targetname, 
-        generations=generations, popsize=popsize, maxlen=25, tournamentsize=tsize)
-
-    println("gen,fevals,mse_train,mse_test,avg_len,best_expr")
-    gen = 0
-    callback = () -> begin
-        gen += 1
-        bestfitness,bestidx = findmax(gp.fitness)
-        buf = IOBuffer()
-        print_indiv(buf, gp.pop[bestidx])
-        best_expr_str = String(take!(buf))
-        ypred_test = predict(gp.pop[bestidx], X_test)
-        println("$gen,$(gp.fevals),$(-bestfitness),$(mean_squared_error(y_test, ypred_test)),$(gp.avg_len),$(best_expr_str)")
-        
-    end
-    evolve!(gp, iter_callback = callback)
-    # print_timer(gp.to)
-end
-
-if abspath(PROGRAM_FILE) == @__FILE__
-    main(ARGS)
-end
 
 # only for testing
 #gp = Algorithm{Float64}("problem.csv", "y", seed=3141, generations=10, popsize=1000, maxlen=25)
