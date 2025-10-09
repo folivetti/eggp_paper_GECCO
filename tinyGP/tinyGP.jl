@@ -385,17 +385,9 @@ function print_indiv(io::IO, prog, pos=1)
 end
 
 function tournament(gp::Algorithm{T}) where {T}
-    popsize = length(gp.pop)
-    bestidx = rand(1:popsize)
-    fbest = floatmin(T)
-    for _ in 1:gp.tournamentsize
-        competitor = rand(1:popsize)
-        if gp.fitness[competitor] > fbest
-            fbest = gp.fitness[competitor]
-            bestidx = competitor
-        end
-    end
-    bestidx
+    group = rand(eachindex(gp.pop), gp.tournamentsize)
+    bestfitness,bestidx = findmax(gp.fitness[group])
+    group[bestidx]
 end
 
 function crossover(gp, parent1, parent2)
