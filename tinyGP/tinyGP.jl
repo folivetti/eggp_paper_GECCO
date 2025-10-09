@@ -378,8 +378,8 @@ function print_indiv(io::IO, prog, pos=1)
     end
 end
 
-function tournament!(gp::Algorithm{T}) where {T}
-    popsize=length(gp.pop)
+function tournament(gp::Algorithm{T}) where {T}
+    popsize = length(gp.pop)
     bestidx = rand(gp.rng, 1:popsize)
     fbest = floatmin(T)
     for _ in 1:gp.tournamentsize
@@ -421,29 +421,27 @@ function crossover(gp, parent1, parent2)
     @assert length(offspring) <= gp.maxlen
 
     offspring
-    
 end
 
-function mutate!(gp, parent, pmut)
-    child = copy(parent)
-    for i in eachindex(child)
-        if rand(gp.rng) < pmut
-            if child[i].opcode < FSET_START
+function mutate!(indiv, pmut, numvars, rng)
+    for i in eachindex(indiv)
+        if rand(rng) < pmut
+            if indiv[i].opcode < FSET_START
                 # convert variable to param (values are copied but ineffective for variables)
-                child[i] = Instruction(PARAM, child[i].val + randn(gp.rng)) # + delta ~ N(0, 1), may want to force larger jumps here
-            elseif child[i].opcode == PARAM
+                indiv[i] = Instruction(PARAM, indiv[i].val + randn(rng)) # + delta ~ N(0, 1), may want to force larger jumps here
+            elseif indiv[i].opcode == PARAM
                 # convert param to variable
-                child[i] = Instruction(rand(gp.rng, 1:varnumber(gp)), child[i].val) 
+                indiv[i] = Instruction(rand(rng, 1:numvars), indiv[i].val) 
             else
-                newfunc = UInt8(rand(gp.rng, FSET_START:FSET_END)) # random operator or function
-                while ARITY[newfunc] != ARITY[child[i].opcode]
-                    newfunc = UInt8(rand(gp.rng, FSET_START:FSET_END)) # random operator or function
+                newfunc = UInt8(rand(rng, FSET_START:FSET_END)) # random operator or function
+                while ARITY[newfunc] != ARITY[indiv[i].opcode]
+                    newfunc = UInt8(rand(rng, FSET_START:FSET_END)) # random operator or function
                 end
-                child[i] = Instruction(newfunc, child[i].val)
+                indiv[i] = Instruction(newfunc, indiv[i].val)
             end
         end
     end
-    child
+    indiv
 end
 
 function update_stats!(gp::Algorithm{T}, gen) where {T}
@@ -492,12 +490,12 @@ function evolve!(gp; iter_callback=nothing)
         
         for _ in 1:popsize-1
             newind = if rand(gp.rng) < CROSSOVER_PROB
-                @timeit gp.to "tournament" parent1 = tournament!(gp)
-                @timeit gp.to "tournament" parent2 = tournament!(gp)
+                @timeit gp.to "tournament" parent1 = tournament(gp)
+                @timeit gp.to "tournament" parent2 = tournament(gp)
                 @timeit gp.to "xover" crossover(gp, gp.pop[parent1], gp.pop[parent2])
             else
-                @timeit gp.to "tournament" parent = tournament!(gp)
-                @timeit gp.to "mutation" mutate!(gp, gp.pop[parent], PMUT_PER_NODE)
+                @timeit gp.to "tournament" parent = tournament(gp)
+                @timeit gp.to "mutation" mutate!(gp.pop[parent], PMUT_PER_NODE, varnumber(gp), gp.rng)
             end
             push!(newpop, newind)
         end
