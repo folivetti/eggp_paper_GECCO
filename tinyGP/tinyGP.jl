@@ -4,7 +4,6 @@ module TinyGP
 
 # TODO 
 # - postfix instead of prefix
-# - batched evaluation and preallocation of buffers 
 # - likelihoods
 # - dl
 # - better command line argument parsing
@@ -17,7 +16,7 @@ using Optim # gradient-based optimization of parameters
 using PreallocationTools 
 using DelimitedFiles
 
-# TODO check this
+# TODO check if this has an effect
 using ForwardDiff, Preferences
 set_preferences!(ForwardDiff, "nansafe_mode" => true) 
 
@@ -35,8 +34,8 @@ const EXP::UInt8 = 114
 const LOGABS::UInt8 = 115 # log |x|
 const POWABS::UInt8 = 116 # |x|^y
 const PARAM::UInt8 = 117
-const FSET_START = ADD
-const FSET_END = POWABS
+const FSET_START::UInt8 = ADD
+const FSET_END::UInt8 = POWABS
 
 const ARITY = Dict(ADD => 2,
     SUB => 2,
@@ -92,8 +91,23 @@ function Algorithm{T}(fname::AbstractString, targetname;
     
     print_parms(gp)
    
-    create_random_pop!(gp, DEPTH)
     return gp
+end
+
+# for pre-allocation of buffers for fitness evaluation
+struct InterpreterBuffers{T}
+    x_buffer::AbstractMatrix{T}
+    ypred_buffer::DiffCache
+    stack_buffer::DiffCache
+    batchsize::Int64
+end
+batchsize(buffers::InterpreterBuffers) = buffers.batchsize
+
+function InterpreterBuffers(::Type{T}, numobs, numvars, max_stack_size, batchsize=1024) where {T}
+    x_buffer = Matrix{T}(undef, batchsize, numvars)
+    ypred_buffer = DiffCache(Vector{T}(undef, numobs))
+    stack_buffer = DiffCache(Matrix{T}(undef, batchsize, max_stack_size))
+    InterpreterBuffers(x_buffer, ypred_buffer, stack_buffer, batchsize)
 end
 
 # all columns except for the target are allowed input
@@ -162,14 +176,6 @@ function create_random_indiv(gp, depth)
     buffer
 end
 
-function create_random_pop!(gp, depth)
-    Threads.@threads for i in eachindex(gp.pop) 
-        gp.pop[i] = create_random_indiv(gp, depth)
-        gp.fitness[i] = fitness_function(gp, gp.pop[i], optimize=true)
-    end
-    
-    gp.pop
-end
 
 function extractparam(prog)
     param = Float64[]
@@ -201,40 +207,46 @@ function updateparam!(prog, param)
     param
 end
 
-function run_program(prog, x::AbstractArray{T}, param::AbstractVector{TE})::TE  where {T <: AbstractFloat, TE <: Real}
-    pc = 0
-    paramidx = 0
-    function eval_node()
-        pc += 1
-        primitive = prog[pc].opcode
+pdiv(a::T,b::T)  where {T <: Number} = iszero(b) ? zero(T) : a / b
+
+function run_program(prog, x, param::AbstractVector{T}, stack::AbstractMatrix{T})::AbstractVector{T}  where {T <: Real}
+    pc = length(prog)
+    paramidx = length(param)
+    sp = 0
+    while pc > 0
+        @inbounds primitive = prog[pc].opcode
         if primitive < FSET_START
-            return x[primitive]
+            sp += 1
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp] = x[i, primitive] end
         elseif primitive == PARAM
-            paramidx += 1
-            return param[paramidx]
+            sp += 1
+            @assert paramidx > 0 && paramidx <= length(param)
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp] = param[paramidx] end
+            paramidx -= 1
         elseif primitive == ADD
-            return eval_node() + eval_node()
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp - 1] = stack[i, sp] + stack[i, sp - 1] end
+            sp -= 1
         elseif primitive == SUB
-            return eval_node() - eval_node()
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp - 1] = stack[i, sp] - stack[i, sp - 1] end
+            sp -= 1
         elseif primitive == MUL
-            return eval_node() * eval_node()
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp - 1] = stack[i, sp] * stack[i, sp - 1] end
+            sp -= 1
         elseif primitive == DIV
-            num = eval_node()
-            den = eval_node()
-            iszero(den) && return zero(T)
-            return num / den
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp - 1] = pdiv(stack[i, sp], stack[i, sp - 1]) end
+            sp -= 1
         elseif primitive == EXP
-            return exp(eval_node())
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp] = exp(stack[i, sp]) end
         elseif primitive == LOGABS
-            return log(abs(eval_node()))
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp] = log(abs(stack[i, sp])) end
         elseif primitive == POWABS
-            return abs(eval_node()) ^ eval_node()
+            @simd for i in axes(stack)[1] @inbounds stack[i, sp - 1] = abs(stack[i, sp]) ^ stack[i, sp - 1] end
         else
             error("unknown operator $primitive")
         end
+        pc -= 1
     end
-    
-    eval_node()
+    @view stack[:, 1]
 end
 
 
@@ -248,54 +260,52 @@ function mean_squared_error(y::AbstractArray{T}, ypred::AbstractArray{TE}) where
 end
 
 
-#=
-# demo task distribution for allocating one buffer for each thread
-# to implement later
 
-ntasks = Thraeds.nthraeds()  # use a larger values if `do_stuff!` contains I/O
-@sync begin
-    workqueue = Channel{Tuple{Int,Float64}}(Inf)
+# simple interface to predict the output of a program for a dataset X
+function predict(prog, X) 
+    p = extractparam(prog)
+    numobs = size(X, 1)
+    numvars = size(X, 2)
 
-    # Do this after `@spawn`s if computing work itself is CPU-intensive
-    for (i, x) in enumerate(xs)
-        put!(workqueue, (i, x))
-    end
-    close(workqueue)  # signal the end of work
-
-    for _ in 1:ntasks
-        @spawn begin
-            local matrix = zeros(2, 2)  # allocate the buffer, and don't share
-            for (i, x) in workqueue
-                out[i] = do_stuff!(matrix, x)
-            end
-        end
-    end
+    predict!(InterpreterBuffers(eltype(X), numobs, numvars, length(prog)), prog, X, p)
 end
-=#
 
-
-# predict with parameters stored in solution
-predict(prog, X) = predict!(DiffCache(eltype(X)), prog, X)
-predict!(ypred, prog, X) = predict!(ypred, prog, X, extractparam(prog))
-
+# uses pre-allocated buffers
 # predict with parameter values explicitly given
-predict(prog, X, p) = predict!(DiffCache(eltype(X)), prog, X, p)
-function predict!(ypred, prog, X, p)
-    for i in axes(X, 1)
-        xi = @view X[i, :]
-        ypred[i] = run_program(prog, xi, p)
+function predict!(buffers::InterpreterBuffers, prog, X, p::AbstractArray{T}) where {T <: Real}
+    ypred = get_tmp(buffers.ypred_buffer, T)
+    stack = get_tmp(buffers.stack_buffer, T)
+    x_buffer = buffers.x_buffer
+    numobs = size(X, 1)
+    numvars = size(X, 2)
+    startidx = 1
+    _batchsize = batchsize(buffers)
+    
+    while startidx + _batchsize - 1 <= numobs
+        batch = startidx:(startidx+_batchsize-1)
+        copyto!(x_buffer, 1:length(batch), 1:numvars, 'N', X, batch, 1:numvars)
+        ypred[batch] .= run_program(prog, x_buffer, p, stack)
+        startidx += _batchsize
     end
+    
+    # remaining rows
+    batch = startidx:numobs
+    if !isempty(batch)
+        copyto!(x_buffer, 1:length(batch), 1:numvars, 'N', X, batch, 1:numvars)
+        
+        res = run_program(prog, x_buffer, p, stack)
+        copyto!(ypred, startidx, res, 1, length(batch)) # cannot use broadcast because we copy partially
+    end
+    
     ypred
 end
 
 # must be thread-safe
-function fitness_function(gp, prog; optimize=false)
-    ypred_buffer = DiffCache(similar(gp.y)) # TODO preallocate once per thread
-
-    function loss(p)
-        gp.fevals += 1
-        ypred = get_tmp(ypred_buffer, p)
-        predict!(ypred, prog, gp.X, p)
+function fitness_function(prog, buffers, gp; optimize=false)
+    fevals = 0
+    function loss(p::AbstractArray{T}) where {T <: Real}
+        fevals += 1
+        ypred = predict!(buffers, prog, gp.X, p)
         mse = mean_squared_error(gp.y, ypred)
         (isnan(mse) || mse > 1e100) && return floatmax(eltype(p))
         
@@ -307,6 +317,7 @@ function fitness_function(gp, prog; optimize=false)
     if length(param) > 0 && optimize
         try
             res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
+            # fevals += f_calls(res)
             # println(summary(res))
             # update parameters in the solution if an improvement is found
             if isnan(fit) || isinf(fit) || Optim.minimum(res) < fit
@@ -319,8 +330,8 @@ function fitness_function(gp, prog; optimize=false)
             @warn ex
         end
     end
-    (isnan(fit) || isinf(fit)) && return -floatmax(T)
-    -fit
+    (isnan(fit) || isinf(fit)) && return -floatmax(T),fevals
+    -fit, fevals
 end
 
 function print_indiv(io::IO, prog, pos=1)
@@ -468,9 +479,50 @@ function print_parms(gp)
             PMUT_PER_NODE, gp.generations, gp.tournamentsize)
 end
 
-function evolve!(gp; iter_callback=nothing)
+function start_fitness_eval_workers(gp::Algorithm{T}, workqueue, resultqueue) where {T}
+    # fitness evaluation is done in thread-parallel workers with pre-allocated buffers
+    for _ in 1:Threads.nthreads()
+        Threads.@spawn begin
+            try 
+                buffers = InterpreterBuffers(T, length(gp.y), varnumber(gp), gp.maxlen)
+                for (i,indiv) in workqueue
+                    f,fevals = fitness_function(indiv, buffers, gp, optimize = true)
+                    put!(resultqueue, (i, f, fevals))
+                end
+            catch ex
+                @show ex
+                for (exc, bt) in current_exceptions()
+                    showerror(stdout, exc, bt)
+                    println(stdout)
+                end
+            end
+        end
+    end
+end
+
+function evolve!(gp::Algorithm{T}; iter_callback=nothing) where {T}
+    fitnessevalqueue = Channel{Tuple{Int64,Vector{Instruction}}}(Inf)
+    resultqueue = Channel{Tuple{Int64,T,Int64}}(Inf)
+    start_fitness_eval_workers(gp, fitnessevalqueue, resultqueue)
+
+    # create random pop
+    Threads.@threads for i in eachindex(gp.pop) 
+        gp.pop[i] = create_random_indiv(gp, DEPTH)
+        put!(fitnessevalqueue, (i, gp.pop[i]))
+    end
+    begin
+        # collect results
+        waitingresults = length(gp.pop)
+        while waitingresults > 0
+            i, fit, fevals = take!(resultqueue)
+            gp.fitness[i] = fit
+            gp.fevals += fevals
+            waitingresults -= 1
+        end
+    end
+
     update_stats!(gp, 1)
-    
+
     isnothing(iter_callback) || iter_callback()
     
     popsize = length(gp.pop)
@@ -500,10 +552,17 @@ function evolve!(gp; iter_callback=nothing)
         @assert length(newpop) == length(gp.pop)
         
         # also evaluate the elite again (for dynamic fitness function or parameter optimization)
-        @timeit gp.to "fitness" Threads.@threads for i in eachindex(newpop)
-            newfitness[i] = fitness_function(gp, newpop[i], optimize=true)
+        for i in eachindex(newfitness)
+            put!(fitnessevalqueue, (i, newpop[i]))
         end
-        
+        # collect results
+        waitingresults = length(newfitness)
+        while waitingresults > 0
+            i, fit, fevals = take!(resultqueue)
+            newfitness[i] = fit
+            gp.fevals += fevals
+            waitingresults -= 1
+        end
         
         copyto!(gp.pop, newpop)
         copyto!(gp.fitness, newfitness)
@@ -511,6 +570,8 @@ function evolve!(gp; iter_callback=nothing)
         
         isnothing(iter_callback) || iter_callback()
     end
+    
+    close(fitnessevalqueue) # signal for workers to stop
 end
 
 function main(args)
@@ -530,7 +591,6 @@ function main(args)
     gp = Algorithm{Float64}(trainingfilename, targetname, 
         generations=generations, popsize=popsize, maxlen=25, tournamentsize=tsize)
 
-    ypred_test = similar(y_test)
     println("gen,fevals,mse_train,mse_test,avg_len,best_expr")
     gen = 0
     callback = () -> begin
@@ -539,12 +599,12 @@ function main(args)
         buf = IOBuffer()
         print_indiv(buf, gp.pop[bestidx])
         best_expr_str = String(take!(buf))
-        predict!(ypred_test, gp.pop[bestidx], X_test)
+        ypred_test = predict(gp.pop[bestidx], X_test)
         println("$gen,$(gp.fevals),$(-bestfitness),$(mean_squared_error(y_test, ypred_test)),$(gp.avg_len),$(best_expr_str)")
         
     end
     evolve!(gp, iter_callback = callback)
-    print_timer(gp.to)
+    # print_timer(gp.to)
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
