@@ -3,11 +3,11 @@ module TinyGP
 
 
 # TODO 
-# - read from CSV (and automatically determine num vars and num obs)
 # - postfix instead of prefix
 # - batched evaluation and preallocation of buffers 
 # - likelihoods
 # - dl
+# - better command line argument parsing
 
 
 using TimerOutputs
@@ -73,14 +73,17 @@ mutable struct Algorithm{T}
     const maxlen::Int32
     const tournamentsize::Int32
     const to::TimerOutput
+    const print_trace::Bool
 end
 
 varnumber(gp) = size(gp.X, 2)
 
-function Algorithm{T}(fname::AbstractString; seed=-1, generations=GENERATIONS, popsize=POPSIZE, maxlen=MAX_LEN, tournamentsize=TSIZE) where {T <: AbstractFloat}
+function Algorithm{T}(fname::AbstractString, targetname; 
+    seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
+    maxlen=MAX_LEN, tournamentsize=TSIZE,print_trace=false) where {T <: AbstractFloat}
     rng = seed >= 0 ? MersenneTwister(seed) : MersenneTwister()
     
-    X, y = setup_fitness(T, fname)
+    X, y = load_dataset(T, fname, targetname)
     
     varnumber = size(X, 2)
     varnumber < FSET_START || error("too many variables")
@@ -88,17 +91,23 @@ function Algorithm{T}(fname::AbstractString; seed=-1, generations=GENERATIONS, p
     fitness = Vector{T}(undef, popsize)
     pop = Vector{Vector{Instruction}}(undef, popsize)
     
-    gp = Algorithm{T}(fitness, pop, rng, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, tournamentsize, TimerOutput())
+    gp = Algorithm{T}(fitness, pop, rng, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, tournamentsize, TimerOutput(), print_trace)
+    
+    print_parms(gp)
+   
     create_random_pop!(gp, popsize, DEPTH)
     return gp
 end
 
-# last column is target
-# all other columns are inputs
-function setup_fitness(::Type{T}, filename::AbstractString) where {T <: AbstractFloat}
+# all columns except for the target are allowed input
+function load_dataset(::Type{T}, filename::AbstractString, targetname) where {T <: AbstractFloat}
     data,varnames = readdlm(filename, ',', header=true)
-    X = data[:, 1:end-1]
-    y = data[:, end]
+    
+    targetidx = findfirst((==)(targetname), varnames[1, :])
+    isnothing(targetidx) && error("Could not find variable $targetname in $filename (with varnames: $varnames)")
+    
+    X = data[:, setdiff(1:end, targetidx)]
+    y = data[:, targetidx]
     X, y
 end
 
@@ -158,10 +167,10 @@ end
 function create_random_pop!(gp, popsize, depth)
     for i in 1:popsize
         gp.pop[i] = create_random_indiv!(gp, depth)
-        # print_indiv(gp, gp.pop[i]); println() # debugging
+        # print_indiv(gp.pop[i]); println() # debugging
     end
     Threads.@threads for i in eachindex(gp.fitness) 
-        gp.fitness[i] = fitness_function(gp, gp.pop[i])
+        gp.fitness[i] = fitness_function(gp, gp.pop[i], optimize=true)
     end
     
     gp.pop
@@ -269,100 +278,100 @@ ntasks = Thraeds.nthraeds()  # use a larger values if `do_stuff!` contains I/O
 end
 =#
 
+
+# predict with parameters stored in solution
+predict(prog, X) = predict!(DiffCache(eltype(X)), prog, X)
+predict!(ypred, prog, X) = predict!(ypred, prog, X, extractparam(prog))
+
+# predict with parameter values explicitly given
+predict(prog, X, p) = predict!(DiffCache(eltype(X)), prog, X, p)
+function predict!(ypred, prog, X, p)
+    for i in axes(X, 1)
+        xi = @view X[i, :]
+        ypred[i] = run_program(prog, xi, p)
+    end
+    ypred
+end
+
 # must be thread-safe
-function fitness_function(gp::Algorithm{T}, prog; optimize=true) where {T}
+function fitness_function(gp, prog; optimize=false)
     ypred_buffer = DiffCache(similar(gp.y)) # TODO preallocate once per thread
 
     function loss(p)
         gp.fevals += 1
         ypred = get_tmp(ypred_buffer, p)
-
-        for i in axes(gp.X, 1)
-            xi = @view gp.X[i, :]
-            ypred[i] = run_program(prog, xi, p)
-        end
+        predict!(ypred, prog, gp.X, p)
         mse = mean_squared_error(gp.y, ypred)
         (isnan(mse) || mse > 1e100) && return floatmax(eltype(p))
         
         mse
     end
 
-    try
-        param = extractparam(prog)
-        fit = loss(param)
-        if length(param) > 0 && optimize
-            try
-                res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
-                # println(summary(res))
-                # update parameters in the solution if an improvement is found
-                if isnan(fit) || isinf(fit) || Optim.minimum(res) < fit
-                    param = Optim.minimizer(res)
-                    updateparam!(prog, param)
-                    fit = Optim.minimum(res)
-                end
-            catch ex
-                # ignore exceptions from Optim
-                @show ex
+    param = extractparam(prog)
+    fit = loss(param)
+    if length(param) > 0 && optimize
+        try
+            res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
+            # println(summary(res))
+            # update parameters in the solution if an improvement is found
+            if isnan(fit) || isinf(fit) || Optim.minimum(res) < fit
+                param = Optim.minimizer(res)
+                updateparam!(prog, param)
+                fit = Optim.minimum(res)
             end
+        catch ex
+            # ignore exceptions from Optim
+            @warn ex
         end
-
-        (isnan(fit) || isinf(fit)) && return -floatmax(T)
-        -fit
-    catch ex
-        @show prog
-        print_indiv(gp, prog)
-        rethrow()
     end
+    (isnan(fit) || isinf(fit)) && return -floatmax(T)
+    -fit
 end
 
-function print_indiv(gp, buffer, pos=1)
-    primitive = buffer[pos].opcode
+function print_indiv(io::IO, prog, pos=1)
+    primitive = prog[pos].opcode
     if primitive < FSET_START
-        if primitive <= varnumber(gp)
-            print("X", primitive)
-        else
-            print(gp.x[primitive])
-        end
+        print(io, "X", primitive)
         return pos
     elseif primitive == PARAM
-        print(buffer[pos].val)
+        print(io, prog[pos].val)
         return pos
     elseif ARITY[primitive] == 1
         if primitive == EXP
-            print("exp(")
-            endpos = print_indiv(gp, buffer, pos + 1)
-            print(")")
+            print(io, "exp(")
+            endpos = print_indiv(io, prog, pos + 1)
+            print(io, ")")
         elseif primitive == LOGABS
-            print("log(abs(")
-            endpos = print_indiv(gp, buffer, pos + 1)
-            print(")")
+            print(io, "log(abs(")
+            endpos = print_indiv(io, prog, pos + 1)
+            print(io, ")")
         end
         return endpos
     elseif ARITY[primitive] == 2
         if primitive in (ADD, SUB, MUL)
-            print("(")
-            nextpos = print_indiv(gp, buffer, pos + 1)
+            print(io, "(")
+            nextpos = print_indiv(io, prog, pos + 1)
             if primitive == ADD
-                print(" + ")
+                print(io, " + ")
             elseif primitive == SUB
-                print(" - ")
+                print(io, " - ")
             elseif primitive == MUL
-                print(" * ")
+                print(io, " * ")
             end
-            endpos = print_indiv(gp, buffer, nextpos + 1)
-            print(")")
+            endpos = print_indiv(io, prog, nextpos + 1)
+            print(io, ")")
         elseif primitive == DIV
-            print("pdiv(")
-            nextpos = print_indiv(gp, buffer, pos + 1)
-            print(", ")
-            endpos = print_indiv(gp, buffer, nextpos + 1)
-            print(")")
+            print(io, "pdiv(")
+            nextpos = print_indiv(io, prog, pos + 1)
+            print(io, ", ")
+            endpos = print_indiv(io, prog, nextpos + 1)
+            print(io, ")")
         elseif primitive == POWABS
-            print("(abs(")
-            nextpos = print_indiv(gp, buffer, pos + 1)
-            print(") ^ ")
-            endpos = print_indiv(gp, buffer, nextpos + 1)
-            print(")")
+            print(io, "(abs(")
+            nextpos = print_indiv(io, prog, pos + 1)
+            print(io, ") ^ ")
+            endpos = print_indiv(io, prog, nextpos + 1)
+            print(io, ")")
         end
 
         return endpos
@@ -449,10 +458,11 @@ function update_stats!(gp::Algorithm{T}, gen) where {T}
     end
     gp.avg_len = node_count / popsize
     gp.favgpop /= popsize
-    @printf "Generation=%d Fitness evaluations=%d Avg Fitness=%f Best Fitness=%f Avg Size=%f\nBest Individual: " gen gp.fevals gp.favgpop gp.fbestpop gp.avg_len
-    print_indiv(gp, gp.pop[bestidx])
-    println()
-    flush(stdout)
+    if gp.print_trace 
+        @printf "Generation=%d Fitness evaluations=%d Avg Fitness=%f Best Fitness=%f Avg Size=%f\nBest Individual: " gen gp.fevals gp.favgpop gp.fbestpop gp.avg_len
+        print_indiv(stdout, gp.pop[bestidx])
+        println()
+    end
 end
 
 function print_parms(gp)
@@ -465,11 +475,13 @@ function print_parms(gp)
             PMUT_PER_NODE, gp.generations, gp.tournamentsize)
 end
 
-function evolve!(gp)
-    print_parms(gp)
-    update_stats!(gp, 0)
+function evolve!(gp; iter_callback=nothing)
+    update_stats!(gp, 1)
+    
+    isnothing(iter_callback) || iter_callback()
+    
     popsize = length(gp.pop)
-    @timeit gp.to "generation loop" for gen in 1:gp.generations - 1
+    @timeit gp.to "generation loop" for gen in 2:gp.generations
         # generational replacement
         newpop = Vector{Vector{Instruction}}()
         sizehint!(newpop, popsize)
@@ -492,27 +504,49 @@ function evolve!(gp)
 
         # also evaluate the elite again (for dynamic fitness function or parameter optimization)
         @timeit gp.to "fitness" Threads.@threads for i in eachindex(newpop)
-            newfitness[i] = fitness_function(gp, newpop[i])
+            newfitness[i] = fitness_function(gp, newpop[i], optimize=true)
         end
 
         
         copyto!(gp.pop, newpop)
         copyto!(gp.fitness, newfitness)
         update_stats!(gp, gen)
+        
+        isnothing(iter_callback) || iter_callback()
     end
 end
 
 function main(args)
-    fname = "problem.dat"
-    seed = -1
-    if length(args) == 2
-        seed = parse(Int, args[1])
-        fname = args[2]
-    elseif length(args) == 1
-        fname = args[1]
+     if length(args) < 5 || length(args) > 6
+        println("Usage: tinyGP.jl trainingdata.csv targetvariable generations popsize tournamentsize [ testdataset ]")
+        return 
     end
-    gp = Algorithm{Float64}(fname, seed)
-    evolve!(gp)
+    trainingfilename = args[1]
+    targetname = args[2]
+    generations = parse(Int, args[3])
+    popsize = parse(Int, args[4])
+    tsize = parse(Int, args[5])
+    testdataset = length(args) == 6 ? args[6] : trainingfilename
+    
+    X_test, y_test = load_dataset(Float64, testdataset, targetname)
+    
+    gp = Algorithm{Float64}(trainingfilename, targetname, 
+        generations=generations, popsize=popsize, maxlen=25, tournamentsize=tsize)
+
+    ypred_test = similar(y_test)
+    println("gen,fevals,mse_train,mse_test,avg_len,best_expr")
+    gen = 0
+    callback = () -> begin
+        gen += 1
+        bestfitness,bestidx = findmax(gp.fitness)
+        buf = IOBuffer()
+        print_indiv(buf, gp.pop[bestidx])
+        best_expr_str = String(take!(buf))
+        predict!(ypred_test, gp.pop[bestidx], X_test)
+        println("$gen,$(gp.fevals),$(-bestfitness),$(mean_squared_error(y_test, ypred_test)),$(gp.avg_len),$(best_expr_str)")
+        
+    end
+    evolve!(gp, iter_callback = callback)
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__
@@ -520,9 +554,9 @@ if abspath(PROGRAM_FILE) == @__FILE__
 end
 
 # only for testing
-gp = Algorithm{Float64}("problem.csv", seed=3141, generations=10, popsize=1000, maxlen=25)
-@time evolve!(gp)
-print_timer(gp.to)
-@assert (@show gp.fbestpop) ≈  -0.0038802605687494776
+#gp = Algorithm{Float64}("problem.csv", "y", seed=3141, generations=10, popsize=1000, maxlen=25)
+#@time evolve!(gp)
+#print_timer(gp.to)
+#@assert (@show gp.fbestpop) ≈  -0.0038802605687494776
 
 end # module
