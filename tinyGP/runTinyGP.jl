@@ -51,7 +51,7 @@ function main(argv)
     X_test, y_test = TinyGP.load_dataset(Float64, testdataset, targetname)
 
     loss_func = paramopt_loss_func = TinyGP.mean_squared_error # default
-    @show objective
+    
     if objective == "mse"
         loss_func = paramopt_loss_func = TinyGP.mean_squared_error
     elseif objective == "r2"
@@ -62,7 +62,7 @@ function main(argv)
         loss_func = paramopt_loss_func = TinyGP.negloglik
     elseif objective == "dl"
         paramopt_loss_func = TinyGP.negloglik
-        loss_func = ((-) ∘ TinyGP.description_length)
+        loss_func = TinyGP.description_length
     else
         error("unknown objective function value (allowed values are mse, r2, dl)")
     end

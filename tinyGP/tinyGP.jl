@@ -349,15 +349,20 @@ function negloglik(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
     # calculate MSE TODO this should be a user-specified parameter or optimized as well
     sumsq = zero(T)
     for i in eachindex(gp.y)
-        sumsq += (gp.y[i] - ypred[i])^2
+        sumsq += (ypred[i] - gp.y[i])^2
     end
     σ2_err = sumsq / n
-    nll = T(1/2) * (n * log(T(2 * pi) * σ2_err) + sum((ypred .- y).^2) / σ2_err)
+    nll = T(1/2) * (n * log(T(2 * pi) * σ2_err) + sumsq / σ2_err)
+    (isnan(nll) || isinf(nll)) && return floatmax(T)
     nll
 end
 
 function description_length(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
-    negloglik(param, prog, gp, buffers) + @show func_compl(prog) + @show param_compl(param, prog, gp, buffers)
+    p_compl = param_compl(param, prog, gp, buffers) # this potentially updates the parameters
+    p_compl == floatmax(T) && return p_compl # failed to optimize parameters
+
+    f_compl = func_compl(prog)
+    negloglik(param, prog, gp, buffers) + f_compl + p_compl
 end
 
 function func_compl(prog)
@@ -371,17 +376,29 @@ function func_compl(prog)
 end
 
 function param_compl(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+    length(param) == 0 && return zero(T)
+    
     # make sure we are at a local optimum
     loss = (p) -> negloglik(p, prog, gp, buffers)
-    res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward) # TODO tunable iterations
-    summary(res)
-    if Optim.converged(res)
-        param = Optim.minimizer(res)
-        updateparam!(prog, param)
+
+    try
+        res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=1000)) # TODO tunable iterations
+        # println(res)
+        if Optim.converged(res)
+            param = Optim.minimizer(res)
+            updateparam!(prog, param)
+        else
+            return floatmax(T)
+        end
+    catch ex
+        @warn ex
+        return floatmax(T)
     end
     
-    fim = ForwardDiff.hessian(p -> negloglik(p, prog, gp, buffers), param)
-    display(fim)
+    fim = ForwardDiff.hessian(loss, param)
+    # display(fim)
+    any(isnan, fim) && return floatmax(T)
+
     # clean up numerical errors
     fim = T(1/2) *(fim + fim')
     
