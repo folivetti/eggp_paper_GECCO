@@ -4,9 +4,10 @@ module TinyGP
 
 # TODO 
 # - postfix instead of prefix
-# - likelihoods
+# - likelihoods (probably via abstract type)
 # - dl
-# - better command line argument parsing
+# - likelihood parameters
+# - symbols: neg, inv, aq, sin, cos, tanh, ...
 
 
 using TimerOutputs
@@ -19,6 +20,8 @@ using DelimitedFiles
 # TODO check if this has an effect
 using ForwardDiff, Preferences
 set_preferences!(ForwardDiff, "nansafe_mode" => true) 
+
+using LinearAlgebra # for svd in DL
 
 struct Instruction 
     opcode::UInt8
@@ -70,13 +73,16 @@ mutable struct Algorithm{T}
     const tournamentsize::Int32
     const to::TimerOutput
     const print_trace::Bool
+    const paramopt_loss_func::Function
+    const loss_func::Function
 end
 
 varnumber(gp) = size(gp.X, 2)
 
 function Algorithm{T}(fname::AbstractString, targetname; 
     seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
-    maxlen=MAX_LEN, tournamentsize=TSIZE,print_trace=false) where {T <: AbstractFloat}
+    maxlen=MAX_LEN, tournamentsize=TSIZE, print_trace=false, 
+    paramopt_loss_func = mean_squared_error, loss_func = mean_squared_error) where {T <: AbstractFloat}
     seed >= 0 && seed!(seed)
     
     X, y = load_dataset(T, fname, targetname)
@@ -87,7 +93,9 @@ function Algorithm{T}(fname::AbstractString, targetname;
     fitness = Vector{T}(undef, popsize)
     pop = Vector{Vector{Instruction}}(undef, popsize)
     
-    gp = Algorithm{T}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, tournamentsize, TimerOutput(), print_trace)
+    gp = Algorithm{T}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, 
+        tournamentsize, TimerOutput(), print_trace, 
+        paramopt_loss_func, loss_func)
     
     print_parms(gp)
    
@@ -252,17 +260,6 @@ function run_program(prog, x, param::AbstractVector{T}, stack::AbstractMatrix{T}
 end
 
 
-function mean_squared_error(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
-    @assert length(y) == length(ypred)
-    sumsq = zero(TE)
-    for i in eachindex(y)
-        sumsq += (y[i] - ypred[i])^2
-    end
-    sumsq / length(y)
-end
-
-
-
 # simple interface to predict the output of a program for a dataset X
 function predict(prog, X) 
     p = extractparam(prog)
@@ -302,41 +299,149 @@ function predict!(buffers::InterpreterBuffers, prog, X, p::AbstractArray{T}) whe
     ypred
 end
 
-# must be thread-safe
-function fitness_function(prog, buffers, gp; optimize=false)
+
+# TODO not true for now
+# Probably need to introduce a likelihood + model class
+# All loss functions have the interface (y, ypred::AbstractArray{T}, prog::Union{Nothing,Vector{Instruction}})::T where {T}.
+# The third parameter is the program represented in prefix form and can be used to calculate a program complexity penality
+# as demonstrated in the description_length() loss function.
+# The loss functions are allowed to update the program e.g. to optimize parameters or even to simplify expressions.
+
+function mean_squared_error(y::AbstractArray{T},ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
+    @assert length(ypred) == length(y)
+    sumsq = zero(TE)
+    @inbounds for i in eachindex(y)
+        sumsq += (y[i] - ypred[i])^2
+    end
+    sumsq / length(y)
+end
+
+function mean_squared_error(param::AbstractArray{TE}, prog, gp, buffers) where {TE <: Real}
+    ypred = predict!(buffers, prog, gp.X, param)
+    mean_squared_error(gp.y, ypred)
+end
+
+function r2_score(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
+    @assert length(ypred) == length(y)
+    mean_y = sum(y) / length(y)
+    ss_tot = zero(TE)
+    ss_res = zero(TE)
+    @inbounds for i in eachindex(y)
+        diff = y[i] - ypred[i]
+        ss_res += diff^2
+        ss_tot += (y[i] - mean_y)^2
+    end
+    
+    iszero(ss_tot) ? one(TE) : one(TE) - ss_res / ss_tot
+end
+
+function r2_score(param, prog, gp, buffers)
+    ypred = predict!(buffers, prog, gp.X, param)
+    r2_score(gp.y, ypred)
+end
+
+# for Gaussian likelihood with fixed noise variance σ²_err = empirical MSE
+function negloglik(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+    ypred = predict!(buffers, prog, gp.X, param)
+    y = gp.y
+    n = length(y)
+
+    # calculate MSE TODO this should be a user-specified parameter or optimized as well
+    sumsq = zero(T)
+    for i in eachindex(gp.y)
+        sumsq += (gp.y[i] - ypred[i])^2
+    end
+    σ2_err = sumsq / n
+    nll = T(1/2) * (n * log(T(2 * pi) * σ2_err) + sum((ypred .- y).^2) / σ2_err)
+    nll
+end
+
+function description_length(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+    negloglik(param, prog, gp, buffers) + @show func_compl(prog) + @show param_compl(param, prog, gp, buffers)
+end
+
+function func_compl(prog)
+    freq = Dict{UInt8, Int32}()
+    # different variables are different symbols, parameters are all the same symbol
+    for i in eachindex(prog)
+        curval = get!(freq, prog[i].opcode, 0)
+        freq[prog[i].opcode] = curval + 1
+    end
+    sum(values(freq)) * log(length(freq)) # length * sym_code_length
+end
+
+function param_compl(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+    # make sure we are at a local optimum
+    loss = (p) -> negloglik(p, prog, gp, buffers)
+    res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward) # TODO tunable iterations
+    summary(res)
+    if Optim.converged(res)
+        param = Optim.minimizer(res)
+        updateparam!(prog, param)
+    end
+    
+    fim = ForwardDiff.hessian(p -> negloglik(p, prog, gp, buffers), param)
+    display(fim)
+    # clean up numerical errors
+    fim = T(1/2) *(fim + fim')
+    
+    # calculate parameter complexity in rotated space
+    fim_fact = svd(fim)
+    param_proj = (fim_fact.Vt * param)
+    
+    prec = fim_fact.S
+    # prevent negative contribution by uncertain parameters abs|p| / sqrt(12/prec) < 1
+    sum(max(zero(T), T(1/2) * (log(prec[i]) - T(log(3))) + log(abs(param_proj[i]))) for i in eachindex(param_proj))
+end
+
+# optimizes parameters and updates the prog and p0 if successful
+# returns the number of function evaluations
+# must not make changes to gp (thread-safety)
+function optimize!(prog, p0, buffers, gp::Algorithm)
     fevals = 0
+    
     function loss(p::AbstractArray{T}) where {T <: Real}
         fevals += 1
-        ypred = predict!(buffers, prog, gp.X, p)
-        mse = mean_squared_error(gp.y, ypred)
-        (isnan(mse) || mse > 1e100) && return floatmax(eltype(p))
-        
-        mse
+        val = gp.paramopt_loss_func(p, prog, gp, buffers) # TODO cleanup interface
+        (isnan(val) || isinf(val)) && return floatmax(T)
+
+        val
     end
+    
+    try
+        # TODO automatically use LM / LsqFit when we have a quadratic loss function
+        loss0 = loss(p0)
+        # minimize loss function
+        res = Optim.optimize(loss, p0, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
+        # update parameters in the solution if an improvement is found
+        if isnan(loss0) || isinf(loss0) || Optim.minimum(res) < loss0
+            copyto!(p0, Optim.minimizer(res))
+            updateparam!(prog, p0)
+        end
+    catch ex
+        (ex isa InterruptException) && rethrow()
+        # warn about exceptions from Optim
+        @warn ex
+    end
+    
+    fevals
+end
+
+# must not make changes to gp (thread-safety)
+# potentially changes prog, definitely changes buffers
+function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) where {T <: AbstractFloat}
+    fevals = 1
 
     param = extractparam(prog)
-    fit = loss(param)
-    if length(param) > 0 && optimize
-        try
-            res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
-            # fevals += f_calls(res)
-            # println(summary(res))
-            # update parameters in the solution if an improvement is found
-            if isnan(fit) || isinf(fit) || Optim.minimum(res) < fit
-                param = Optim.minimizer(res)
-                updateparam!(prog, param)
-                fit = Optim.minimum(res)
-            end
-        catch ex
-            if ex isa InterruptException
-                rethrow()
-            end
-            # ignore exceptions from Optim
-            @warn ex
-        end
+    if optimize && !isempty(param) 
+        fevals += optimize!(prog, param, buffers, gp)
     end
-    (isnan(fit) || isinf(fit)) && return -floatmax(T),fevals
-    -fit, fevals
+    
+    loss = gp.loss_func(param, prog, gp, buffers)
+    
+    # fitness is negative loss
+    (isnan(loss) || isinf(loss)) && return -floatmax(T),fevals
+    -loss, fevals
 end
 
 function tostring(prog)
@@ -344,6 +449,7 @@ function tostring(prog)
     print_indiv(buf, prog)
     String(take!(buf))
 end
+
 function print_indiv(io::IO, prog, pos=1)
     primitive = prog[pos].opcode
     if primitive < FSET_START
@@ -490,7 +596,7 @@ function start_fitness_eval_workers(gp::Algorithm{T}, workqueue, resultqueue) wh
             try 
                 buffers = InterpreterBuffers(T, length(gp.y), varnumber(gp), gp.maxlen)
                 for (i,indiv) in workqueue
-                    f,fevals = fitness_function(indiv, buffers, gp, optimize = true)
+                    f,fevals = fitness_function!(indiv, buffers, gp, optimize = true)
                     put!(resultqueue, (i, f, fevals))
                 end
             catch ex

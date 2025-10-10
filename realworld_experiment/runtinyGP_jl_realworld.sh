@@ -9,5 +9,7 @@ LEN=50
 
 for i in {1..30}; 
 do 
-    { time ~/julia/julia -t 6 --project=../tinyGP/ -L ../tinyGP/tinyGP.jl  ../tinyGP/runTinyGP.jl datasets/$1_train.csv target $GEN $POP $TSIZE $LEN datasets/$1_test.csv > results/tinyGP_jl/$1/run_${i}.csv; } 2> results/tinyGP_jl/$1/time
-done
+    { time ~/julia/julia -t 6 --project=../tinyGP/ ../tinyGP/runTinyGP.jl datasets/$1_train.csv target \
+      -g $GEN -p $POP -t $TSIZE -m $LEN --test datasets/$1_test.csv \
+      > results/tinyGP_jl/$1/run_${i}.csv; }
+done  2> results/tinyGP_jl/$1/time
