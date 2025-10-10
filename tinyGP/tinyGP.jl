@@ -341,15 +341,13 @@ function r2_score(param, prog, gp, buffers)
 end
 
 # for Gaussian likelihood with fixed noise variance σ²_err = empirical MSE
-function negloglik(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
-    ypred = predict!(buffers, prog, gp.X, param)
-    y = gp.y
+function negloglik(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
     n = length(y)
 
-    # calculate MSE TODO this should be a user-specified parameter or optimized as well
+    # TODO σ2_err should be a user-specified parameter or optimized as well
     sumsq = zero(T)
-    for i in eachindex(gp.y)
-        sumsq += (ypred[i] - gp.y[i])^2
+    for i in eachindex(y)
+        sumsq += (ypred[i] -y[i])^2
     end
     σ2_err = sumsq / n
     nll = T(1/2) * (n * log(T(2 * pi) * σ2_err) + sumsq / σ2_err)
@@ -357,9 +355,14 @@ function negloglik(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
     nll
 end
 
+function negloglik(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+    ypred = predict!(buffers, prog, gp.X, param)
+    negloglik(gp.y, ypred)
+end
+
 function description_length(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
     p_compl = param_compl(param, prog, gp, buffers) # this potentially updates the parameters
-    p_compl == floatmax(T) && return p_compl # failed to optimize parameters
+    p_compl == floatmax(T) && return p_compl
 
     f_compl = func_compl(prog)
     negloglik(param, prog, gp, buffers) + f_compl + p_compl

@@ -70,14 +70,21 @@ function main(argv)
         generations=generations, popsize=popsize, maxlen=maxlen, tournamentsize=tsize, 
         loss_func=loss_func, paramopt_loss_func=paramopt_loss_func)
 
-    println("gen,fevals,mse_train,mse_test,avg_len,best_expr")
+    println("gen,fevals,best_fitness,mse_train,mse_test,r2_train,r2_test,nll_train,nll_test,avg_len,best_len,best_expr")
     gen = 0
     callback = () -> begin
         gen += 1
         bestfitness,bestidx = findmax(gp.fitness)
         best_expr_str = TinyGP.tostring(gp.pop[bestidx])
-        ypred_test = TinyGP.predict(gp.pop[bestidx], X_test)
-        println("$gen,$(gp.fevals),$(-bestfitness),$(TinyGP.mean_squared_error(y_test, ypred_test)),$(gp.avg_len),$(best_expr_str)")
+        ypred_train = TinyGP.predict(gp.pop[bestidx], gp.X) 
+        ypred_test  = TinyGP.predict(gp.pop[bestidx], X_test)
+        mse_train   = TinyGP.mean_squared_error(gp.y, ypred_train)
+        mse_test    = TinyGP.mean_squared_error(y_test, ypred_test)
+        r2_train    = TinyGP.r2_score(gp.y, ypred_train)
+        r2_test     = TinyGP.r2_score(y_test, ypred_test)
+        nll_train   = TinyGP.negloglik(gp.y, ypred_train)
+        nll_test    = TinyGP.negloglik(y_test, ypred_test)
+        println("$gen,$(gp.fevals),$(-bestfitness),$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(gp.pop[bestidx])),$(best_expr_str)")
     end
     TinyGP.evolve!(gp, iter_callback = callback)
     # print_timer(gp.to)
