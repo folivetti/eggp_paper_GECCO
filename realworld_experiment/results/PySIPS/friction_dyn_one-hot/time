@@ -32473,3 +32473,486 @@ OverflowError: Python int too large to convert to C long
 real	0m46,842s
 user	0m56,217s
 sys	0m0,122s
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+0.00%|          | phi: 0.00000/1.0 [00:00<?[ mutation ratio: 0: : 0.00%|          | phi: 0.00000/1.0 [00:00<?/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/paths.py:99: RuntimeWarning: invalid value encountered in multiply
+  log_like * phi,
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+[ mutation ratio: 1.0: : 0.00%|          | phi: 0.00000/1.0 [00:13<?[ mutation ratio: 1.0: : 0.00%|          | phi: 0.00000/1.0 [00:13<2050513596:52:02/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/mcmc/vector_mcmc.py:146: RuntimeWarning: invalid value encountered in subtract
+  return np.exp(new_log_post - old_log_post).reshape(-1, 1)
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/mcmc/vector_mcmc.py:146: RuntimeWarning: invalid value encountered in subtract
+  return np.exp(new_log_post - old_log_post).reshape(-1, 1)
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/mcmc/vector_mcmc.py:146: RuntimeWarning: invalid value encountered in subtract
+  return np.exp(new_log_post - old_log_post).reshape(-1, 1)
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/mcmc/vector_mcmc.py:146: RuntimeWarning: invalid value encountered in subtract
+  return np.exp(new_log_post - old_log_post).reshape(-1, 1)
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+[ mutation ratio: 0.982: : 0.00%|          | phi: 0.00000/1.0 [00:30<2050513596:52:02[ mutation ratio: 0.982: : 0.03%|          | phi: 0.00026/1.0 [00:30<27:46:49        /home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/mcmc/vector_mcmc.py:146: RuntimeWarning: invalid value encountered in subtract
+  return np.exp(new_log_post - old_log_post).reshape(-1, 1)
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+[ mutation ratio: 0.894: : 0.03%|          | phi: 0.00026/1.0 [00:52<27:46:49[ mutation ratio: 0.894: : 0.06%|          | phi: 0.00056/1.0 [00:52<23:33:12/home/olivetti/.local/pyenv/lib/python3.13/site-packages/smcpy/smc/updater.py:162: UserWarning: Resampled to less than 1.0% of particles; 
+  warnings.warn(
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: invalid value encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/scipy/optimize/_minpack_py.py:498: RuntimeWarning: overflow encountered in matmul
+  cov_x = invR @ invR.T
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/bingo/evaluation/fitness_function.py:33: RuntimeWarning: overflow encountered in square
+  mse = np.mean(np.square(vector))
+[ mutation ratio: 0.754: : 0.06%|          | phi: 0.00056/1.0 [01:34<23:33:12[ mutation ratio: 0.754: : 100.00%|██████████| phi: 1.00000/1.0 [01:34<00:00 [ mutation ratio: 0.754: : 100.00%|██████████| phi: 1.00000/1.0 [01:34<00:00
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/sklearn/metrics/_regression.py:584: RuntimeWarning: overflow encountered in square
+  output_errors = _average((y_true - y_pred) ** 2, axis=0, weights=sample_weight)
+/home/olivetti/.local/pyenv/lib/python3.13/site-packages/sklearn/metrics/_regression.py:1292: RuntimeWarning: overflow encountered in square
+  numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
