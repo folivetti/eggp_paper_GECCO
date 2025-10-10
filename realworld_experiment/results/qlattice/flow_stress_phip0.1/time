@@ -244,3 +244,7 @@ real	14m32,353s
 user	14m40,196s
 sys	0m0,169s
 [INFO: feyn] - This version of Feyn and the QLattice is available for academic, personal, and non-commercial use. By using the community version of this software you agree to the terms and conditions which can be found at https://abzu.ai/eula.
+
+real	11m15,367s
+user	11m24,668s
+sys	0m0,151s
