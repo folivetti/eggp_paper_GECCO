@@ -16,9 +16,13 @@ using Optim # gradient-based optimization of parameters
 using PreallocationTools 
 using DelimitedFiles
 
-# TODO check if this has an effect (probably not since the docs mention that we would have to reload ForwardDiff)
-using ForwardDiff, Preferences
-set_preferences!(ForwardDiff, "nansafe_mode" => true) 
+# https://juliadiff.org/ForwardDiff.jl/stable/user/advanced/
+# In the future, we plan on allowing users and downstream library authors to dynamically enable NaN-safe mode via the AbstractConfig API.
+# nansafe_mode option must be set for ForwardDiff before loading the package
+using Preferences,UUIDs
+set_preferences!(UUID("f6369f11-7733-5829-9624-2563aa707210"), "nansafe_mode" => true) # ForwardDiff package UUID
+
+using ForwardDiff
 
 using LinearAlgebra # for svd in DL
 
