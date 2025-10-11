@@ -3463,3 +3463,57 @@ user	7m38,249s
 sys	0m2,465s
 /home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
   warnings.warn(
+
+real	55m13,319s
+user	27m32,302s
+sys	0m2,135s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	18m32,613s
+user	9m14,231s
+sys	0m2,178s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	41m12,486s
+user	20m34,246s
+sys	0m2,087s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	12m33,610s
+user	6m14,920s
+sys	0m1,986s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	13m20,862s
+user	6m38,533s
+sys	0m1,995s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	11m22,109s
+user	5m39,115s
+sys	0m2,052s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	12m11,285s
+user	6m4,007s
+sys	0m1,732s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	8m52,144s
+user	4m25,054s
+sys	0m1,111s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	12m13,797s
+user	6m5,803s
+sys	0m1,198s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
