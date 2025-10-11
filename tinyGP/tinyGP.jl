@@ -431,7 +431,7 @@ function optimize!(prog, p0, buffers, gp)
 
     function loss(p)
         val = gp.paramopt_loss_func(p, prog, gp, buffers) # TODO cleanup interface
-        (isnan(val) || isinf(val)) && return floatmax(val)
+        (isnan(val) || isinf(val)) && return floatmax(eltype(p))
 
         val
     end
@@ -454,6 +454,12 @@ function optimize!(prog, p0, buffers, gp)
         (ex isa InterruptException) && rethrow()
         # warn about exceptions from Optim
         @warn ex
+        
+        # debugging
+        # for (exc, bt) in current_exceptions()
+        #             showerror(stdout, exc, bt)
+        #             println(stdout)
+        # end
     end
     
     fevals
@@ -472,7 +478,7 @@ function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) wher
     loss = gp.loss_func(param, prog, gp, buffers)
     
     # fitness is negative loss
-    (isnan(loss) || isinf(loss)) && return -floatmax(loss),fevals
+    (isnan(loss) || isinf(loss)) && return -floatmax(T),fevals
     -loss, fevals
 end
 
