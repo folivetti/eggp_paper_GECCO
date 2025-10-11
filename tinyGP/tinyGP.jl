@@ -6,8 +6,9 @@ module TinyGP
 # - postfix instead of prefix
 # - likelihoods (probably via abstract type)
 # - dl
-# - likelihood parameters
+# - likelihood parameters. an individual should also include the likelihood parameters (at the root level). They should be optimized
 # - symbols: neg, inv, aq, sin, cos, tanh, ...
+# - Test speedup / accuracy with Float32
 
 
 using TimerOutputs
@@ -17,7 +18,7 @@ using Optim # gradient-based optimization of parameters
 using PreallocationTools 
 using DelimitedFiles
 
-# TODO check if this has an effect
+# TODO check if this has an effect (probably not since the docs mention that we would have to reload ForwardDiff)
 using ForwardDiff, Preferences
 set_preferences!(ForwardDiff, "nansafe_mode" => true) 
 
@@ -58,7 +59,7 @@ const TSIZE = 2
 const PMUT_PER_NODE = 0.05
 const CROSSOVER_PROB = 0.9 # (1 - CROSSOVER_PROB) individuals are mutated, and each node has PMUT_PER_NODE probability
 
-mutable struct Algorithm{T}
+mutable struct Algorithm{T,F1,F2}
     const fitness::Vector{T}
     const pop::Vector{Vector{Instruction}}
     const X::Matrix{T}
@@ -73,8 +74,8 @@ mutable struct Algorithm{T}
     const tournamentsize::Int32
     const to::TimerOutput
     const print_trace::Bool
-    const paramopt_loss_func::Function
-    const loss_func::Function
+    const paramopt_loss_func::F1
+    const loss_func::F2
 end
 
 varnumber(gp) = size(gp.X, 2)
@@ -82,7 +83,7 @@ varnumber(gp) = size(gp.X, 2)
 function Algorithm{T}(fname::AbstractString, targetname; 
     seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
     maxlen=MAX_LEN, tournamentsize=TSIZE, print_trace=false, 
-    paramopt_loss_func = mean_squared_error, loss_func = mean_squared_error) where {T <: AbstractFloat}
+    paramopt_loss_func::F1 = mean_squared_error, loss_func::F2 = mean_squared_error) where {T <: AbstractFloat, F1,F2}
     seed >= 0 && seed!(seed)
     
     X, y = load_dataset(T, fname, targetname)
@@ -93,7 +94,7 @@ function Algorithm{T}(fname::AbstractString, targetname;
     fitness = Vector{T}(undef, popsize)
     pop = Vector{Vector{Instruction}}(undef, popsize)
     
-    gp = Algorithm{T}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, 
+    gp = Algorithm{T,F1,F2}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, 
         tournamentsize, TimerOutput(), print_trace, 
         paramopt_loss_func, loss_func)
     
@@ -102,12 +103,13 @@ function Algorithm{T}(fname::AbstractString, targetname;
     return gp
 end
 
-# for pre-allocation of buffers for fitness evaluation
+# pre-allocated of buffers for fitness evaluation in a thread
 struct InterpreterBuffers{T}
-    x_buffer::AbstractMatrix{T}
+    x_buffer::Matrix{T}
     ypred_buffer::DiffCache
     stack_buffer::DiffCache
     batchsize::Int64
+    symfreq::Dict{UInt8, Int32} # for calculating function complexity
 end
 batchsize(buffers::InterpreterBuffers) = buffers.batchsize
 
@@ -115,12 +117,13 @@ function InterpreterBuffers(::Type{T}, numobs, numvars, max_stack_size, batchsiz
     x_buffer = Matrix{T}(undef, batchsize, numvars)
     ypred_buffer = DiffCache(Vector{T}(undef, numobs))
     stack_buffer = DiffCache(Matrix{T}(undef, batchsize, max_stack_size))
-    InterpreterBuffers(x_buffer, ypred_buffer, stack_buffer, batchsize)
+    sym_freq = Dict{UInt8, Int32}() # for calculating function complexity
+    InterpreterBuffers(x_buffer, ypred_buffer, stack_buffer, batchsize, sym_freq)
 end
 
 # all columns except for the target are allowed input
 function load_dataset(::Type{T}, filename::AbstractString, targetname) where {T <: AbstractFloat}
-    data,varnames = readdlm(filename, ',', header=true)
+    data,varnames = readdlm(filename, ',', T, header=true)
     
     targetidx = findfirst((==)(targetname), varnames[1, :])
     isnothing(targetidx) && error("Could not find variable $targetname in $filename (with varnames: $varnames)")
@@ -217,9 +220,9 @@ function updateparam!(prog, param)
     param
 end
 
-pdiv(a::T,b::T)  where {T <: Number} = iszero(b) ? zero(T) : a / b
+pdiv(a,b) = iszero(b) ? zero(a) : a / b
 
-function run_program(prog, x, param::AbstractVector{T}, stack::AbstractMatrix{T})::AbstractVector{T}  where {T <: Real}
+function run_program(prog, x, param, stack)
     pc = length(prog)
     paramidx = length(param)
     sp = 0
@@ -269,34 +272,25 @@ function predict(prog, X)
     predict!(InterpreterBuffers(eltype(X), numobs, numvars, length(prog)), prog, X, p)
 end
 
-# uses pre-allocated buffers
 # predict with parameter values explicitly given
-function predict!(buffers::InterpreterBuffers, prog, X, p::AbstractArray{T}) where {T <: Real}
-    ypred = get_tmp(buffers.ypred_buffer, T)
+# uses pre-allocated buffers
+function predict!(buffers::InterpreterBuffers, prog, X, p)
+    T = eltype(p)
+    ypred = get_tmp(buffers.ypred_buffer, T) # TODO: not type stable, is this an issue? 
     stack = get_tmp(buffers.stack_buffer, T)
     x_buffer = buffers.x_buffer
-    numobs = size(X, 1)
-    numvars = size(X, 2)
-    startidx = 1
-    _batchsize = batchsize(buffers)
-    
-    while startidx + _batchsize - 1 <= numobs
-        batch = startidx:(startidx+_batchsize-1)
-        copyto!(x_buffer, 1:length(batch), 1:numvars, 'N', X, batch, 1:numvars)
-        ypred[batch] .= run_program(prog, x_buffer, p, stack)
-        startidx += _batchsize
-    end
-    
-    # remaining rows
-    batch = startidx:numobs
-    if !isempty(batch)
-        copyto!(x_buffer, 1:length(batch), 1:numvars, 'N', X, batch, 1:numvars)
-        
+
+    r1 = axes(X, 1)
+    r2 = axes(X, 2)
+
+    # Use Iterators.partition to handle batching, including the last partial batch
+    for batch in Iterators.partition(r1, batchsize(buffers))
+        copyto!(x_buffer, 1:length(batch), r2, 'N', X, batch, r2)
         res = run_program(prog, x_buffer, p, stack)
-        copyto!(ypred, startidx, res, 1, length(batch)) # cannot use broadcast because we copy partially
+        copyto!(ypred, batch[1], res, 1, length(batch))
     end
     
-    ypred
+    ypred # TODO: return type is not stable, is this an issue?
 end
 
 
@@ -307,32 +301,31 @@ end
 # as demonstrated in the description_length() loss function.
 # The loss functions are allowed to update the program e.g. to optimize parameters or even to simplify expressions.
 
-function mean_squared_error(y::AbstractArray{T},ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
-    @assert length(ypred) == length(y)
-    sumsq = zero(TE)
+function mean_squared_error(y,ypred)
+    @assert axes(ypred) == axes(y)
+    sumsq = zero(eltype(ypred))
     @inbounds for i in eachindex(y)
-        sumsq += (y[i] - ypred[i])^2
+        sumsq += (ypred[i] - y[i])^2
     end
     sumsq / length(y)
 end
 
-function mean_squared_error(param::AbstractArray{TE}, prog, gp, buffers) where {TE <: Real}
+function mean_squared_error(param, prog, gp, buffers)
     ypred = predict!(buffers, prog, gp.X, param)
     mean_squared_error(gp.y, ypred)
 end
 
-function r2_score(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
-    @assert length(ypred) == length(y)
+function r2_score(y, ypred)
+    @assert axes(ypred) == axes(y)
     mean_y = sum(y) / length(y)
-    ss_tot = zero(TE)
-    ss_res = zero(TE)
+    ss_tot = zero(eltype(ypred))
+    ss_res = zero(eltype(ypred))
     @inbounds for i in eachindex(y)
-        diff = y[i] - ypred[i]
-        ss_res += diff^2
+        ss_res += (ypred[i] - y[i])^2
         ss_tot += (y[i] - mean_y)^2
     end
-    
-    iszero(ss_tot) ? one(TE) : one(TE) - ss_res / ss_tot
+
+    iszero(ss_tot) ? one(eltype(ypred)) : one(eltype(ypred)) - ss_res / ss_tot
 end
 
 function r2_score(param, prog, gp, buffers)
@@ -341,13 +334,13 @@ function r2_score(param, prog, gp, buffers)
 end
 
 # for Gaussian likelihood with fixed noise variance σ²_err = empirical MSE
-function negloglik(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Real, TE <: Real}
+function negloglik(y, ypred)
     n = length(y)
-
+    T = eltype(ypred)
     # TODO σ2_err should be a user-specified parameter or optimized as well
     sumsq = zero(T)
     for i in eachindex(y)
-        sumsq += (ypred[i] -y[i])^2
+        sumsq += (ypred[i] - y[i])^2
     end
     σ2_err = sumsq / n
     nll = T(1/2) * (n * log(T(2 * pi) * σ2_err) + sumsq / σ2_err)
@@ -355,37 +348,40 @@ function negloglik(y::AbstractArray{T}, ypred::AbstractArray{TE}) where {T <: Re
     nll
 end
 
-function negloglik(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
-    ypred = predict!(buffers, prog, gp.X, param)
-    negloglik(gp.y, ypred)
+function negloglik(param, prog, gp, buffers)
+    @timeit gp.to "predict" ypred = predict!(buffers, prog, gp.X, param)
+    @timeit gp.to "negloglik" negloglik(gp.y, ypred)
 end
 
-function description_length(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+function description_length(param, prog, gp, buffers)
+    T = eltype(param)
     p_compl = param_compl(param, prog, gp, buffers) # this potentially updates the parameters
     p_compl == floatmax(T) && return p_compl
 
-    f_compl = func_compl(prog)
-    negloglik(param, prog, gp, buffers) + f_compl + p_compl
+    f_compl = func_compl(prog, buffers.symfreq)
+    negloglik(param, prog, gp, buffers) + T(f_compl) + p_compl
 end
 
-function func_compl(prog)
-    freq = Dict{UInt8, Int32}()
+function func_compl(prog, symfreq)
+    empty!(symfreq)
     # different variables are different symbols, parameters are all the same symbol
     for i in eachindex(prog)
-        curval = get!(freq, prog[i].opcode, 0)
-        freq[prog[i].opcode] = curval + 1
+        curval = get!(symfreq, prog[i].opcode, 0)
+        symfreq[prog[i].opcode] = curval + 1
     end
-    sum(values(freq)) * log(length(freq)) # length * sym_code_length
+    sum(values(symfreq)) * log(length(symfreq)) # length * sym_code_length
 end
 
-function param_compl(param::AbstractArray{T}, prog, gp, buffers) where {T <: Real}
+function param_compl(param, prog, gp, buffers)
+    T = eltype(param)    
     length(param) == 0 && return zero(T)
-    
     # make sure we are at a local optimum
     loss = (p) -> negloglik(p, prog, gp, buffers)
-
+    
+    gradCfg = ForwardDiff.GradientConfig(loss, param, ForwardDiff.Chunk{min(length(param), 4)}())
+    grad!(g, p) = ForwardDiff.gradient!(g, loss, p, gradCfg)
     try
-        res = Optim.optimize(loss, param, LBFGS(), autodiff = :forward, Optim.Options(iterations=1000)) # TODO tunable iterations
+        @timeit gp.to "optimize" res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(iterations=1000)) # TODO tunable iterations
         # println(res)
         if Optim.converged(res)
             param = Optim.minimizer(res)
@@ -398,12 +394,12 @@ function param_compl(param::AbstractArray{T}, prog, gp, buffers) where {T <: Rea
         return floatmax(T)
     end
     
-    fim = ForwardDiff.hessian(loss, param)
+    fim = ForwardDiff.hessian(loss, param)::Matrix{T}
     # display(fim)
     any(isnan, fim) && return floatmax(T)
 
     # clean up numerical errors
-    fim = T(1/2) *(fim + fim')
+    fim = T(1/2) * (fim + fim')
     
     # calculate parameter complexity in rotated space
     fim_fact = svd(fim)
@@ -411,28 +407,37 @@ function param_compl(param::AbstractArray{T}, prog, gp, buffers) where {T <: Rea
     
     prec = fim_fact.S
     # prevent negative contribution by uncertain parameters abs|p| / sqrt(12/prec) < 1
-    sum(max(zero(T), T(1/2) * (log(prec[i]) - T(log(3))) + log(abs(param_proj[i]))) for i in eachindex(param_proj))
+    p_compl = zero(T)
+    @inbounds for i in eachindex(param_proj)
+        pi_compl = T(1/2) * (log(prec[i]) - T(log(3))) + log(abs(param_proj[i]))
+        p_compl += max(zero(T), pi_compl)
+    end
+    p_compl
 end
 
 # optimizes parameters and updates the prog and p0 if successful
 # returns the number of function evaluations
 # must not make changes to gp (thread-safety)
-function optimize!(prog, p0, buffers, gp::Algorithm)
+function optimize!(prog, p0, buffers, gp)
     fevals = 0
-    
-    function loss(p::AbstractArray{T}) where {T <: Real}
+
+    function loss(p)
         fevals += 1
-        val = gp.paramopt_loss_func(p, prog, gp, buffers) # TODO cleanup interface
-        (isnan(val) || isinf(val)) && return floatmax(T)
+        @timeit gp.to "paramopt_loss_func" val = gp.paramopt_loss_func(p, prog, gp, buffers) # TODO cleanup interface
+        (isnan(val) || isinf(val)) && return floatmax(val)
 
         val
     end
+
+    chunk_size = min(length(p0), 4)
+    @timeit gp.to "FWD.GradientConfig" gradCfg = ForwardDiff.GradientConfig(loss, p0, ForwardDiff.Chunk{chunk_size}())
+    grad!(g, p) = @timeit gp.to "FWD.gradient!" ForwardDiff.gradient!(g, loss, p, gradCfg)
     
     try
         # TODO automatically use LM / LsqFit when we have a quadratic loss function
         loss0 = loss(p0)
         # minimize loss function
-        res = Optim.optimize(loss, p0, LBFGS(), autodiff = :forward, Optim.Options(iterations=10)) # TODO tunable iterations
+        @timeit gp.to "Optim.optimize" res = Optim.optimize(loss, grad!, p0, LBFGS(), Optim.Options(iterations=10)) # TODO tunable iterations
         # update parameters in the solution if an improvement is found
         if isnan(loss0) || isinf(loss0) || Optim.minimum(res) < loss0
             copyto!(p0, Optim.minimizer(res))
@@ -449,7 +454,7 @@ end
 
 # must not make changes to gp (thread-safety)
 # potentially changes prog, definitely changes buffers
-function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) where {T <: AbstractFloat}
+function fitness_function!(prog, buffers, gp; optimize=false)
     fevals = 1
 
     param = extractparam(prog)
@@ -460,7 +465,7 @@ function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) wher
     loss = gp.loss_func(param, prog, gp, buffers)
     
     # fitness is negative loss
-    (isnan(loss) || isinf(loss)) && return -floatmax(T),fevals
+    (isnan(loss) || isinf(loss)) && return -floatmax(loss),fevals
     -loss, fevals
 end
 
