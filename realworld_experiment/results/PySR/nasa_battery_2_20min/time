@@ -2758,3 +2758,41 @@ sys	0m2,046s
   warnings.warn(
 /home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
   warnings.warn(
+
+real	33m35,057s
+user	17m55,722s
+sys	0m6,115s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	191m14,957s
+user	75m14,785s
+sys	0m1,906s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+<lambdifygenerated-26>:2: RuntimeWarning: invalid value encountered in log
+  return log(735.719609075325 + 863.73083242495/(-x2 + 1.5383929 + 36.422062/(x3 + 17.002151)) - 0.737928608958495/(x3 + 2.0063617))
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 47, in <module>
+    mse_test  = mean_squared_error(y_test, y_hat_test)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 580, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 209, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, sample_weight, multioutput = _check_reg_targets(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 116, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1105, in check_array
+    _assert_all_finite(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+real	38m11,926s
+user	18m27,433s
+sys	0m9,613s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
