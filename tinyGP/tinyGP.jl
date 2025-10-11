@@ -20,6 +20,7 @@ using DelimitedFiles
 # In the future, we plan on allowing users and downstream library authors to dynamically enable NaN-safe mode via the AbstractConfig API.
 # nansafe_mode option must be set for ForwardDiff before loading the package
 using Preferences,UUIDs
+# TODO: test effect
 set_preferences!(UUID("f6369f11-7733-5829-9624-2563aa707210"), "nansafe_mode" => true) # ForwardDiff package UUID
 
 using ForwardDiff
@@ -83,17 +84,14 @@ end
 
 varnumber(gp) = size(gp.X, 2)
 
-function Algorithm{T}(fname::AbstractString, targetname; 
+function Algorithm(X::AbstractMatrix{T}, y::AbstractVector{T}; 
     seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
     maxlen=MAX_LEN, tournamentsize=TSIZE, print_trace=false, 
     paramopt_loss_func::F1 = mean_squared_error, loss_func::F2 = mean_squared_error, 
     threads=0) where {T <: AbstractFloat, F1,F2}
     seed >= 0 && seed!(seed)
-
     threads <= 0 && (threads = Threads.nthreads())
 
-    X, y = load_dataset(T, fname, targetname)
-    
     varnumber = size(X, 2)
     varnumber < FSET_START || error("too many variables")
     
@@ -301,13 +299,6 @@ function predict!(buffers::InterpreterBuffers, prog, X, p)
 end
 
 
-# TODO not true for now
-# Probably need to introduce a likelihood + model class
-# All loss functions have the interface (y, ypred::AbstractArray{T}, prog::Union{Nothing,Vector{Instruction}})::T where {T}.
-# The third parameter is the program represented in prefix form and can be used to calculate a program complexity penality
-# as demonstrated in the description_length() loss function.
-# The loss functions are allowed to update the program e.g. to optimize parameters or even to simplify expressions.
-
 function mean_squared_error(y,ypred)
     @assert axes(ypred) == axes(y)
     sumsq = zero(eltype(ypred))
@@ -340,6 +331,7 @@ function r2_score(param, prog, gp, buffers)
     r2_score(gp.y, ypred)
 end
 
+
 # for Gaussian likelihood with fixed noise variance σ²_err = empirical MSE
 function negloglik(y, ypred)
     n = length(y)
@@ -355,6 +347,7 @@ function negloglik(y, ypred)
     nll
 end
 
+# The loss functions are allowed to update the parameters and the program e.g. to optimize parameters or even to simplify expressions.
 function negloglik(param, prog, gp, buffers)
     ypred = predict!(buffers, prog, gp.X, param)
     negloglik(gp.y, ypred)
@@ -387,15 +380,17 @@ function param_compl(param, prog, gp, buffers)
 
     length(param) == 0 && return zero(T)
 
-    # make sure we are at a local optimum
     loss = (p) -> negloglik(p, prog, gp, buffers)
+    
+    # make sure we are at a local optimum
 
     gradCfg = ForwardDiff.GradientConfig(loss, param, get_chunk(param))
     grad! = (g,p) -> ForwardDiff.gradient!(g, loss, p, gradCfg)
     try
-        res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-4, f_reltol=1e-8)) # TODO tunable iterations
+        loss0 = loss(param)
+        res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-5)) # TODO tunable iterations
         # println(res)
-        if Optim.converged(res)
+        if Optim.converged(res) || loss0 < Optim.minimum(res)
             param .= Optim.minimizer(res)
             updateparam!(prog, param)
         else

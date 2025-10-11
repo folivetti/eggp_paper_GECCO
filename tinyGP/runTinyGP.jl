@@ -54,6 +54,7 @@ function main(argv)
     nthreads = parsed["threads"]
     testdataset = parsed["test"] == "" ? trainingfilename : parsed["test"]
 
+    X, y = TinyGP.load_dataset(Float32, trainingfilename, targetname)
     X_test, y_test = TinyGP.load_dataset(Float32, testdataset, targetname)
 
     loss_func = paramopt_loss_func = TinyGP.mean_squared_error # default
@@ -72,7 +73,7 @@ function main(argv)
     else
         error("unknown objective function value (allowed values are mse, r2, dl)")
     end
-    gp = TinyGP.Algorithm{Float32}(trainingfilename, targetname,
+    gp = TinyGP.Algorithm(X, y,
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize, 
         loss_func = loss_func, paramopt_loss_func = paramopt_loss_func, threads = nthreads)
 
