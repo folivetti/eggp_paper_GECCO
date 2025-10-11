@@ -77,12 +77,12 @@ elif [ "${1,,}" == "qlattice" ]; then
    done
 elif [ "${1,,}" == "gomea" ]; then
    echo "running gomea..."
-   #for key in "${!datasets30[@]}"; do
-   #  ./runGOMEA_realworld.sh ${datasets30[$key]} &
-   #done
-   for key in "${!datasets20[@]}"; do
-     ./runGOMEA_realworld.sh ${datasets20[$key]} &
+   for key in "${!datasets30[@]}"; do
+     ./runGOMEA_realworld.sh ${datasets30[$key]} &
    done
+   #for key in "${!datasets20[@]}"; do
+   #  ./runGOMEA_realworld.sh ${datasets20[$key]} &
+   #done
 else
    echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo]"
 fi
