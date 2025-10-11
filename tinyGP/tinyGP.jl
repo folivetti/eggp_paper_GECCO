@@ -1,14 +1,12 @@
 module TinyGP
 
-
-
 # TODO 
 # - postfix instead of prefix
 # - likelihoods (probably via abstract type)
-# - dl
 # - likelihood parameters. an individual should also include the likelihood parameters (at the root level). They should be optimized
 # - symbols: neg, inv, aq, sin, cos, tanh, ...
 # - Test speedup / accuracy with Float32
+# - threads kwarg only sets the number of evaluation threads (other parts still use all threads)
 
 
 using TimerOutputs
@@ -76,6 +74,7 @@ mutable struct Algorithm{T,F1,F2}
     const print_trace::Bool
     const paramopt_loss_func::F1
     const loss_func::F2
+    const nthreads::Int32
 end
 
 varnumber(gp) = size(gp.X, 2)
@@ -83,9 +82,12 @@ varnumber(gp) = size(gp.X, 2)
 function Algorithm{T}(fname::AbstractString, targetname; 
     seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
     maxlen=MAX_LEN, tournamentsize=TSIZE, print_trace=false, 
-    paramopt_loss_func::F1 = mean_squared_error, loss_func::F2 = mean_squared_error) where {T <: AbstractFloat, F1,F2}
+    paramopt_loss_func::F1 = mean_squared_error, loss_func::F2 = mean_squared_error, 
+    threads=0) where {T <: AbstractFloat, F1,F2}
     seed >= 0 && seed!(seed)
-    
+
+    threads <= 0 && (threads = Threads.nthreads())
+
     X, y = load_dataset(T, fname, targetname)
     
     varnumber = size(X, 2)
@@ -96,7 +98,7 @@ function Algorithm{T}(fname::AbstractString, targetname;
     
     gp = Algorithm{T,F1,F2}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, 
         tournamentsize, TimerOutput(), print_trace, 
-        paramopt_loss_func, loss_func)
+        paramopt_loss_func, loss_func, threads)
     
     print_parms(gp)
    
@@ -622,7 +624,7 @@ end
 
 function start_fitness_eval_workers(gp, workqueue, resultqueue)
     # fitness evaluation is done in thread-parallel workers with pre-allocated buffers
-    for _ in 1:Threads.nthreads()
+    for _ in 1:gp.nthreads
         Threads.@spawn begin
             try 
                 buffers = InterpreterBuffers(eltype(gp.y), length(gp.y), varnumber(gp), gp.maxlen)

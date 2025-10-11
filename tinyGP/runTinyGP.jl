@@ -29,6 +29,10 @@ function main(argv)
         "--objective", "-o"
             help = "Objective"
             default = "mse"
+        "--threads"
+            help = "Maximum number of parallel threads"
+            arg_type = Int
+            default = -1
         "--test"
             help = "Test dataset file in CSV format (defaults to training file)"
             default = ""
@@ -47,6 +51,7 @@ function main(argv)
     tsize = parsed["tournamentsize"]
     maxlen = parsed["maxlen"]
     objective = parsed["objective"]
+    nthreads = parsed["threads"]
     testdataset = parsed["test"] == "" ? trainingfilename : parsed["test"]
 
     X_test, y_test = TinyGP.load_dataset(Float32, testdataset, targetname)
@@ -68,8 +73,8 @@ function main(argv)
         error("unknown objective function value (allowed values are mse, r2, dl)")
     end
     gp = TinyGP.Algorithm{Float32}(trainingfilename, targetname,
-        generations=generations, popsize=popsize, maxlen=maxlen, tournamentsize=tsize, 
-        loss_func=loss_func, paramopt_loss_func=paramopt_loss_func)
+        generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize, 
+        loss_func = loss_func, paramopt_loss_func = paramopt_loss_func, threads = nthreads)
 
     println("gen,fevals,best_fitness,mse_train,mse_test,r2_train,r2_test,nll_train,nll_test,avg_len,best_len,best_expr")
     gen = 0
