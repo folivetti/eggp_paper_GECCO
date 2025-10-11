@@ -77,7 +77,7 @@ function main(argv)
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize, 
         loss_func = loss_func, paramopt_loss_func = paramopt_loss_func, threads = nthreads)
 
-    println("gen,fevals,best_fitness,mse_train,mse_test,r2_train,r2_test,nll_train,nll_test,avg_len,best_len,best_expr")
+    println("gen,fevals,best_fitness,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,size,Expression")
     gen = 0
     callback = () -> begin
         gen += 1
@@ -91,7 +91,7 @@ function main(argv)
         r2_test     = TinyGP.r2_score(y_test, ypred_test)
         nll_train   = TinyGP.negloglik(gp.y, ypred_train)
         nll_test    = TinyGP.negloglik(y_test, ypred_test)
-        println("$gen,$(gp.fevals),$(-bestfitness),$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(gp.pop[bestidx])),$(best_expr_str)")
+        println("$gen,$(gp.fevals),$(-bestfitness),$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(gp.pop[bestidx])),\"$(best_expr_str)\"")
     end
     # TimerOutputs.disable_timer!(gp.to)
     @time TinyGP.evolve!(gp, iter_callback = callback)

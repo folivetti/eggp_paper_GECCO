@@ -1,12 +1,13 @@
 module TinyGP
 
 # TODO 
-# - postfix instead of prefix
 # - likelihoods (probably via abstract type)
 # - likelihood parameters. an individual should also include the likelihood parameters (at the root level). They should be optimized
 # - symbols: neg, inv, aq, sin, cos, tanh, ...
 # - Test speedup / accuracy with Float32
 # - threads kwarg only sets the number of evaluation threads (other parts still use all threads)
+# - automatically use LM / LsqFit when we have a quadratic loss function
+# - postfix instead of prefix
 
 
 using TimerOutputs
@@ -440,10 +441,9 @@ function optimize!(prog, p0, buffers, gp)
     grad!(g, p) = ForwardDiff.gradient!(g, loss, p, gradCfg) 
     
     try
-        # TODO automatically use LM / LsqFit when we have a quadratic loss function
         loss0 = loss(p0)
         # minimize loss function
-        res = Optim.optimize(loss, grad!, p0, LBFGS(), Optim.Options(iterations=10)) # TODO tunable iterations
+        res = Optim.optimize(loss, grad!, p0, LBFGS(), Optim.Options(iterations=100)) # TODO tunable iterations
         # update parameters in the solution if an improvement is found
         fevals += Optim.f_calls(res)
         if isnan(loss0) || isinf(loss0) || Optim.minimum(res) < loss0
