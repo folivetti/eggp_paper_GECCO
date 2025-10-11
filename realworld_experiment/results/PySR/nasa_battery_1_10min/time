@@ -3841,3 +3841,25 @@ user	5m9,686s
 sys	0m1,148s
 /home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
   warnings.warn(
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/PySR_realworld_wrapper.py", line 6, in <module>
+    juliapkg.require_julia("~1.10")
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 704, in require_julia
+    deps = load_cur_deps(target=target)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/juliapkg/deps.py", line 653, in load_cur_deps
+    deps = json.load(fp)
+  File "/usr/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+real	0m0,823s
+user	0m0,752s
+sys	0m0,057s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(

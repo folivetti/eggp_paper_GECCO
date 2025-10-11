@@ -13,12 +13,12 @@ if [ "${1,,}" == "operon" ]; then
    done
 elif [ "${1,,}" == "pysr" ]; then
    echo "running PySR..."
-   #for key in "${!datasets30[@]}"; do
-   #  ./runPySR_realworld.sh ${datasets30[$key]} $key &
-   #done
-   for key in "${!datasets20[@]}"; do
-     ./runPySR_realworld.sh ${datasets20[$key]} $key &
+   for key in "${!datasets30[@]}"; do
+     ./runPySR_realworld.sh ${datasets30[$key]} $key &
    done
+   #for key in "${!datasets20[@]}"; do
+   #  ./runPySR_realworld.sh ${datasets20[$key]} $key &
+   #done
 elif [ "${1,,}" == "tinygp" ]; then
    echo "running tinyGP..."
    for key in "${!datasets30[@]}"; do
@@ -80,9 +80,9 @@ elif [ "${1,,}" == "gomea" ]; then
    for key in "${!datasets30[@]}"; do
      ./runGOMEA_realworld.sh ${datasets30[$key]} &
    done
-   #for key in "${!datasets20[@]}"; do
-   #  ./runGOMEA_realworld.sh ${datasets20[$key]} &
-   #done
+   for key in "${!datasets20[@]}"; do
+     ./runGOMEA_realworld.sh ${datasets20[$key]} &
+   done
 else
    echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo]"
 fi

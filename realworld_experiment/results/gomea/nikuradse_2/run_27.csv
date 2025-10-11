@@ -1,0 +1,14 @@
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+[!] Warning: failed to evaluate sympy model, returning NaN as prediction
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,1.80595000000000,1,0.05341109749999999,0.0750182975617284,0.05341109749999999,0.0750182975617284,0.0,-0.0042128095701505774
