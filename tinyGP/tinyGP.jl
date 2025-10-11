@@ -104,10 +104,10 @@ function Algorithm{T}(fname::AbstractString, targetname;
 end
 
 # pre-allocated of buffers for fitness evaluation in a thread
-struct InterpreterBuffers{T}
+struct InterpreterBuffers{T,DV,DM}
     x_buffer::Matrix{T}
-    ypred_buffer::DiffCache
-    stack_buffer::DiffCache
+    ypred_buffer::DV # DiffCache Vector
+    stack_buffer::DM # DiffCache Matrix
     batchsize::Int64
     symfreq::Dict{UInt8, Int32} # for calculating function complexity
 end
@@ -115,8 +115,9 @@ batchsize(buffers::InterpreterBuffers) = buffers.batchsize
 
 function InterpreterBuffers(::Type{T}, numobs, numvars, max_stack_size, batchsize=1024) where {T}
     x_buffer = Matrix{T}(undef, batchsize, numvars)
-    ypred_buffer = DiffCache(Vector{T}(undef, numobs))
-    stack_buffer = DiffCache(Matrix{T}(undef, batchsize, max_stack_size))
+    max_chunk_size = 4
+    ypred_buffer = DiffCache(Vector{T}(undef, numobs), max_chunk_size, levels=2)
+    stack_buffer = DiffCache(Matrix{T}(undef, batchsize, max_stack_size), max_chunk_size, levels=2)
     sym_freq = Dict{UInt8, Int32}() # for calculating function complexity
     InterpreterBuffers(x_buffer, ypred_buffer, stack_buffer, batchsize, sym_freq)
 end
@@ -276,7 +277,7 @@ end
 # uses pre-allocated buffers
 function predict!(buffers::InterpreterBuffers, prog, X, p)
     T = eltype(p)
-    ypred = get_tmp(buffers.ypred_buffer, T) # TODO: not type stable, is this an issue? 
+    ypred = get_tmp(buffers.ypred_buffer, T)
     stack = get_tmp(buffers.stack_buffer, T)
     x_buffer = buffers.x_buffer
 
@@ -290,7 +291,7 @@ function predict!(buffers::InterpreterBuffers, prog, X, p)
         copyto!(ypred, batch[1], res, 1, length(batch))
     end
     
-    ypred # TODO: return type is not stable, is this an issue?
+    ypred
 end
 
 
@@ -349,8 +350,8 @@ function negloglik(y, ypred)
 end
 
 function negloglik(param, prog, gp, buffers)
-    @timeit gp.to "predict" ypred = predict!(buffers, prog, gp.X, param)
-    @timeit gp.to "negloglik" negloglik(gp.y, ypred)
+    ypred = predict!(buffers, prog, gp.X, param)
+    negloglik(gp.y, ypred)
 end
 
 function description_length(param, prog, gp, buffers)
@@ -372,19 +373,24 @@ function func_compl(prog, symfreq)
     sum(values(symfreq)) * log(length(symfreq)) # length * sym_code_length
 end
 
+# only allow chunk sizes up to 4 (we don't want to compile predict for many different chunk sizes)
+get_chunk(p) = ForwardDiff.Chunk{min(length(p),4)}()
+
 function param_compl(param, prog, gp, buffers)
     T = eltype(param)    
+
     length(param) == 0 && return zero(T)
+
     # make sure we are at a local optimum
     loss = (p) -> negloglik(p, prog, gp, buffers)
-    
-    gradCfg = ForwardDiff.GradientConfig(loss, param, ForwardDiff.Chunk{min(length(param), 4)}())
-    grad!(g, p) = ForwardDiff.gradient!(g, loss, p, gradCfg)
+
+    gradCfg = ForwardDiff.GradientConfig(loss, param, get_chunk(param))
+    grad! = (g,p) -> ForwardDiff.gradient!(g, loss, p, gradCfg)
     try
-        @timeit gp.to "optimize" res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(iterations=1000)) # TODO tunable iterations
+        @timeit gp.to "Optim.optimize" res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-4, f_reltol=1e-8)) # TODO tunable iterations
         # println(res)
         if Optim.converged(res)
-            param = Optim.minimizer(res)
+            param .= Optim.minimizer(res)
             updateparam!(prog, param)
         else
             return floatmax(T)
@@ -394,12 +400,13 @@ function param_compl(param, prog, gp, buffers)
         return floatmax(T)
     end
     
-    fim = ForwardDiff.hessian(loss, param)::Matrix{T}
-    # display(fim)
+    hessianCfg = ForwardDiff.HessianConfig(loss, param, get_chunk(param))
+    fim = ForwardDiff.hessian(loss, param, hessianCfg)::Matrix{T}
+    
     any(isnan, fim) && return floatmax(T)
 
     # clean up numerical errors
-    fim = T(1/2) * (fim + fim')
+    fim = T(1/2) .* (fim .+ fim')
     
     # calculate parameter complexity in rotated space
     fim_fact = svd(fim)
@@ -422,23 +429,22 @@ function optimize!(prog, p0, buffers, gp)
     fevals = 0
 
     function loss(p)
-        fevals += 1
-        @timeit gp.to "paramopt_loss_func" val = gp.paramopt_loss_func(p, prog, gp, buffers) # TODO cleanup interface
+        val = gp.paramopt_loss_func(p, prog, gp, buffers) # TODO cleanup interface
         (isnan(val) || isinf(val)) && return floatmax(val)
 
         val
     end
 
-    chunk_size = min(length(p0), 4)
-    @timeit gp.to "FWD.GradientConfig" gradCfg = ForwardDiff.GradientConfig(loss, p0, ForwardDiff.Chunk{chunk_size}())
-    grad!(g, p) = @timeit gp.to "FWD.gradient!" ForwardDiff.gradient!(g, loss, p, gradCfg)
+    gradCfg = ForwardDiff.GradientConfig(loss, p0, get_chunk(p0))
+    grad!(g, p) = ForwardDiff.gradient!(g, loss, p, gradCfg) 
     
     try
         # TODO automatically use LM / LsqFit when we have a quadratic loss function
         loss0 = loss(p0)
         # minimize loss function
-        @timeit gp.to "Optim.optimize" res = Optim.optimize(loss, grad!, p0, LBFGS(), Optim.Options(iterations=10)) # TODO tunable iterations
+        res = Optim.optimize(loss, grad!, p0, LBFGS(), Optim.Options(iterations=10)) # TODO tunable iterations
         # update parameters in the solution if an improvement is found
+        fevals += Optim.f_calls(res)
         if isnan(loss0) || isinf(loss0) || Optim.minimum(res) < loss0
             copyto!(p0, Optim.minimizer(res))
             updateparam!(prog, p0)
@@ -641,18 +647,20 @@ function evolve!(gp::Algorithm{T}; iter_callback=nothing) where {T}
     start_fitness_eval_workers(gp, fitnessevalqueue, resultqueue)
 
     # create random pop
-    Threads.@threads for i in eachindex(gp.pop) 
-        gp.pop[i] = create_random_indiv(gp, DEPTH)
-        put!(fitnessevalqueue, (i, gp.pop[i]))
-    end
-    begin
-        # collect results
-        waitingresults = length(gp.pop)
-        while waitingresults > 0
-            i, fit, fevals = take!(resultqueue)
-            gp.fitness[i] = fit
-            gp.fevals += fevals
-            waitingresults -= 1
+    @timeit gp.to "initial population" begin
+        Threads.@threads for i in eachindex(gp.pop) 
+            gp.pop[i] = create_random_indiv(gp, DEPTH)
+            put!(fitnessevalqueue, (i, gp.pop[i]))
+        end
+        begin
+            # collect results
+            waitingresults = length(gp.pop)
+            while waitingresults > 0
+                i, fit, fevals = take!(resultqueue)
+                gp.fitness[i] = fit
+                gp.fevals += fevals
+                waitingresults -= 1
+            end
         end
     end
 
