@@ -191,8 +191,8 @@ function create_random_indiv(gp, depth)
 end
 
 
-function extractparam(prog)
-    param = Float64[]
+function extractparam(::Type{T}, prog) where {T}
+    param = T[]
 
     function extract(instruction)
         if instruction.opcode == PARAM
@@ -266,7 +266,7 @@ end
 
 # simple interface to predict the output of a program for a dataset X
 function predict(prog, X) 
-    p = extractparam(prog)
+    p = extractparam(eltype(X), prog)
     numobs = size(X, 1)
     numvars = size(X, 2)
 
@@ -387,7 +387,7 @@ function param_compl(param, prog, gp, buffers)
     gradCfg = ForwardDiff.GradientConfig(loss, param, get_chunk(param))
     grad! = (g,p) -> ForwardDiff.gradient!(g, loss, p, gradCfg)
     try
-        @timeit gp.to "Optim.optimize" res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-4, f_reltol=1e-8)) # TODO tunable iterations
+        res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-4, f_reltol=1e-8)) # TODO tunable iterations
         # println(res)
         if Optim.converged(res)
             param .= Optim.minimizer(res)
@@ -460,10 +460,10 @@ end
 
 # must not make changes to gp (thread-safety)
 # potentially changes prog, definitely changes buffers
-function fitness_function!(prog, buffers, gp; optimize=false)
+function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) where {T}
     fevals = 1
 
-    param = extractparam(prog)
+    param = extractparam(T, prog)
     if optimize && !isempty(param) 
         fevals += optimize!(prog, param, buffers, gp)
     end
@@ -620,12 +620,12 @@ function print_parms(gp)
             PMUT_PER_NODE, gp.generations, gp.tournamentsize)
 end
 
-function start_fitness_eval_workers(gp::Algorithm{T}, workqueue, resultqueue) where {T}
+function start_fitness_eval_workers(gp, workqueue, resultqueue)
     # fitness evaluation is done in thread-parallel workers with pre-allocated buffers
     for _ in 1:Threads.nthreads()
         Threads.@spawn begin
             try 
-                buffers = InterpreterBuffers(T, length(gp.y), varnumber(gp), gp.maxlen)
+                buffers = InterpreterBuffers(eltype(gp.y), length(gp.y), varnumber(gp), gp.maxlen)
                 for (i,indiv) in workqueue
                     f,fevals = fitness_function!(indiv, buffers, gp, optimize = true)
                     put!(resultqueue, (i, f, fevals))
