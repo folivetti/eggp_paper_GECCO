@@ -47,7 +47,8 @@ elif grid == "pysips":
     ref = "PySIPS"
     base_dir = "PySIPS_grid/"
 else:
-    algs = ["symregg","eggp_mo",  "PySIPS", "random", "operon", "qlattice", "gomea"] # "qlattice", "gpzgd", "Random", "RF"]
+    algs = ["symregg","eggp_mo",  "PySIPS", "random", "operon", "qlattice", "gomea", "gpzgd", "PySR" ] # "qlattice", "gpzgd", "Random", "RF"]
+    algs = ["eggp_mo", "symregg", "random" ] # "qlattice", "gpzgd", "Random", "RF"]
     ref = "eggp_mo"
     base_dir = ""
 
