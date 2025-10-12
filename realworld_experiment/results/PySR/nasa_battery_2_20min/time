@@ -2880,3 +2880,170 @@ user	21m17,523s
 sys	0m2,222s
 /home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
   warnings.warn(
+
+real	74m8,817s
+user	36m52,960s
+sys	0m11,358s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	53m15,008s
+user	31m31,433s
+sys	0m2,365s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	6m7,971s
+user	6m5,734s
+sys	0m2,206s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	21m22,568s
+user	21m21,351s
+sys	0m1,134s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	45m53,991s
+user	45m46,845s
+sys	0m6,987s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	4m40,712s
+user	4m35,300s
+sys	0m5,392s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	7m46,857s
+user	7m42,877s
+sys	0m3,940s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	58m26,754s
+user	58m21,146s
+sys	0m5,448s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	78m20,572s
+user	78m16,216s
+sys	0m4,152s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	63m8,696s
+user	63m4,293s
+sys	0m4,222s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	7m41,239s
+user	7m35,277s
+sys	0m5,921s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+real	22m26,680s
+user	22m25,686s
+sys	0m0,865s
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
+
+[517392] signal (15): Terminado
+in expression starting at none:0
+gc_try_claim_and_push at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:1836 [inlined]
+gc_mark_obj8 at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:1856
+gc_mark_outrefs at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:2634 [inlined]
+gc_mark_loop_serial_ at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:2690
+gc_mark_loop_serial at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:2713
+gc_mark_loop at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:2894 [inlined]
+_jl_gc_collect at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:3227
+ijl_gc_collect at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:3524
+maybe_collect at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:937 [inlined]
+jl_gc_pool_alloc_inner at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:1293 [inlined]
+ijl_gc_pool_alloc at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gc.c:1341
+Node at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/Node.jl:130 [inlined]
+default_allocator at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/Node.jl:196 [inlined]
+node_factory at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/Node.jl:235 [inlined]
+#_#62 at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/Node.jl:219 [inlined]
+AbstractExpressionNode at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/Node.jl:207 [inlined]
+AbstractExpressionNode at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/Node.jl:207 [inlined]
+leaf_copy at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:479 [inlined]
+call_mapreducer at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:130
+call_mapreducer at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:134
+#tree_mapreduce#6 at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:108 [inlined]
+tree_mapreduce at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:87 [inlined]
+#copy_node#53 at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:475 [inlined]
+copy_node at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:472 [inlined]
+#copy#54 at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:497 [inlined]
+copy at /home/olivetti/.julia/packages/DynamicExpressions/cYbpm/src/base.jl:496 [inlined]
+crossover_trees at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/MutationFunctions.jl:435
+crossover_trees at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/MutationFunctions.jl:422 [inlined]
+crossover_trees at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/MutationFunctions.jl:417 [inlined]
+#crossover_generation#22 at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/Mutate.jl:647
+crossover_generation at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/Mutate.jl:634 [inlined]
+reg_evol_cycle at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/RegularizedEvolution.jl:84
+#s_r_cycle#1 at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SingleIteration.jl:43
+s_r_cycle at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SingleIteration.jl:19 [inlined]
+#_dispatch_s_r_cycle#69 at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:1115
+_dispatch_s_r_cycle at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:1098 [inlined]
+macro expansion at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:959 [inlined]
+macro expansion at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SearchUtils.jl:262 [inlined]
+_main_search_loop! at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:957
+_equation_search at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:571
+unknown function (ip: 0x744365d6af0f)
+_jl_invoke at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:3077
+#equation_search#26 at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:561
+equation_search at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:542 [inlined]
+#equation_search#23 at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:511 [inlined]
+equation_search at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:456 [inlined]
+#equation_search#24 at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:535 [inlined]
+equation_search at /home/olivetti/.julia/packages/SymbolicRegression/L5TJa/src/SymbolicRegression.jl:532
+unknown function (ip: 0x744365d5777f)
+_jl_invoke at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:3077
+jl_apply at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/julia.h:1982 [inlined]
+do_apply at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/builtins.c:768
+pyjlany_call at /home/olivetti/.julia/packages/PythonCall/avYrV/src/JlWrap/any.jl:44
+_jl_invoke at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:3077
+_pyjl_callmethod at /home/olivetti/.julia/packages/PythonCall/avYrV/src/JlWrap/base.jl:73
+_pyjl_callmethod at /home/olivetti/.julia/packages/PythonCall/avYrV/src/JlWrap/C.jl:63
+unknown function (ip: 0x744365d0f1d1)
+_jl_invoke at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:2895 [inlined]
+ijl_apply_generic at /cache/build/builder-amdci5-7/julialang/julia-release-1-dot-10/src/gf.c:3077
+jlcapi__pyjl_callmethod_9216 at /home/olivetti/.julia/compiled/v1.10/PythonCall/WdXsa_JZ5po.so (unknown line)
+unknown function (ip: 0x5d6413b4e987)
+_PyObject_MakeTpCall at python (unknown line)
+_PyEval_EvalFrameDefault at python (unknown line)
+_PyFunction_Vectorcall at python (unknown line)
+_PyObject_FastCallDictTstate at python (unknown line)
+_PyObject_Call_Prepend at python (unknown line)
+unknown function (ip: 0x5d6413c616b3)
+PyObject_Call at python (unknown line)
+_PyEval_EvalFrameDefault at python (unknown line)
+unknown function (ip: 0x5d6413b5c310)
+_PyEval_EvalFrameDefault at python (unknown line)
+_PyFunction_Vectorcall at python (unknown line)
+_PyEval_EvalFrameDefault at python (unknown line)
+unknown function (ip: 0x5d6413c1e565)
+PyEval_EvalCode at python (unknown line)
+unknown function (ip: 0x5d6413c44ed7)
+unknown function (ip: 0x5d6413c3f6de)
+unknown function (ip: 0x5d6413c44c74)
+_PyRun_SimpleFileObject at python (unknown line)
+_PyRun_AnyFileObject at python (unknown line)
+Py_RunMain at python (unknown line)
+Py_BytesMain at python (unknown line)
+unknown function (ip: 0x744381229d8f)
+__libc_start_main at /lib/x86_64-linux-gnu/libc.so.6 (unknown line)
+_start at python (unknown line)
+unknown function (ip: (nil))
+Allocations: 1501426447 (Pool: 1444056696; Big: 57369751); GC: 7253
+/home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
+  warnings.warn(
