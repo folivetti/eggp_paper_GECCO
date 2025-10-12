@@ -39,3 +39,7 @@ find . -maxdepth 2 -type f -name "*.csv" | while IFS= read -r file; do
 done
 
 echo "Script complete."
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1130da74b6f613525046262a74526ede7632721
