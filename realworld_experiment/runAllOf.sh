@@ -64,9 +64,9 @@ elif [ "${1,,}" == "random" ]; then
    for key in "${!datasets30[@]}"; do
      ./runRandom_realworld.sh ${datasets30[$key]} &
    done
-   for key in "${!datasets20[@]}"; do
-     ./runRandom_realworld.sh ${datasets20[$key]} &
-   done
+   #for key in "${!datasets20[@]}"; do
+   #  ./runRandom_realworld.sh ${datasets20[$key]} &
+   #done
 elif [ "${1,,}" == "qlattice" ]; then
    echo "running qlattice..."
    for key in "${!datasets30[@]}"; do
