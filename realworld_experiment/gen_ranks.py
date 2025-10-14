@@ -32,6 +32,11 @@ if args.criteria == "R2":
     criteria = 'r2_test'
     df.replace([np.inf, -np.inf, np.nan], 0, inplace=True)
     minobj = False
+elif "P@" in args.criteria:
+    k = float(args.criteria.split("@")[1])
+    criteria = f'mse_test'
+    df.replace([np.inf, -np.inf, np.nan], 0, inplace=True)
+    minobj = True
 else:
     criteria = 'mse_test'
     df.replace([np.inf, -np.inf, np.nan], 1e10, inplace=True)
@@ -39,6 +44,12 @@ else:
 
 tbl = df.groupby(["dataset","algorithm"])[criteria].apply(args.agg).unstack()
 #tbl.round(2)
+if "P@" in args.criteria:
+    for ds in tbl.index:
+        minmse = tbl.loc[ds].min()
+        tbl.loc[ds] = (tbl.loc[ds] / minmse) - 1
+        # convert to 0 every entry of tbl.loc[ds] < k/100 
+        tbl.loc[ds] = tbl.loc[ds].clip(lower=k/100)
 
 ranks = tbl.rank(axis=1, ascending=minobj!=args.pct, pct=args.pct)
 

@@ -16,16 +16,20 @@ if (length(args) > 2) {
   grid <- ""
 }
 
-fname <- sprintf("perf%s.csv",grid)
+fname <- sprintf("perf%s_pivoted.csv",grid)
 my_data <- read.csv(fname)
-df <- my_data %>% group_by(dataset, algorithm) %>% summarize( score=case_when(criteria == "R2" & aggfun == "mean" ~ mean(r2_test, na.rm=TRUE), criteria == "R2" & aggfun == "median" ~ median(r2_test, na.rm=TRUE), criteria == "MSE" & aggfun == "mean" ~ mean(-mse_test, na.rm=TRUE), TRUE ~ median(-mse_test, na.rm=TRUE)), .groups='drop') %>% pivot_wider(names_from=algorithm, values_from=score)
-
-numeric_cols <- sapply(df, is.numeric)
 
 options(mc.cores = parallel::detectCores(logical = FALSE))
 options(bbtcomp.dir = "~/.bbtcomp")
-x <- bbtcomp(df)
+
+x <- bbtcomp(my_data)
 my_plot <- plot_pwin(x)
 
 fname <- sprintf("plots/ranks/bbt_%s_%s%s.eps",criteria, aggfun, grid)
+ggsave(my_plot, file=fname, device="eps")
+
+x <- bbtcomp(my_data,lrope=T, paired=F)
+my_plot <- plot_pwin(x)
+
+fname <- sprintf("plots/ranks/bbt_%s_%s%s_rope.eps",criteria, aggfun, grid)
 ggsave(my_plot, file=fname, device="eps")

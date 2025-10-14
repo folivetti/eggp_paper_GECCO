@@ -20,7 +20,7 @@ reg.update_priors(priors)
 n_models = 0
 models = []
 while n_models < int(sys.argv[2]):
-    new_sample = reg.sample_models(df, 'target', 'regression', None, 10, None) #, ["add", "multiply", "pow", "exp", "sine", "log", "sqrt"])
+    new_sample = reg.sample_models(df, 'target', 'regression', None, 10, None, ["add", "multiply", "squared", "exp", "inverse", "log"])
     n_models += len(new_sample)
     models += new_sample
     models = feyn.fit_models(models, data=df, threads=1)

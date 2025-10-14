@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument('--grid', nargs='?', default="")
 parser.add_argument('--thr', nargs='?', default=1.0)
+parser.add_argument('--size', nargs='?', default=50)
 
 args = parser.parse_args()
 
@@ -47,8 +48,10 @@ elif grid == "pysips":
     ref = "PySIPS"
     base_dir = "PySIPS_grid/"
 else:
-    algs = ["symregg","eggp_mo",  "PySIPS", "random", "operon", "qlattice", "gomea", "gpzgd", "PySR" ] # "qlattice", "gpzgd", "Random", "RF"]
-    algs = ["eggp_mo", "symregg", "random" ] # "qlattice", "gpzgd", "Random", "RF"]
+    algs = ["symregg","eggp_mo",  "PySIPS", "operon", "qlattice", "gomea", "gpzgd", "PySR", "random"] # "qlattice", "gpzgd", "Random", "RF"]
+    #algs = ["eggp_mo", "gomea", "PySR", "PySIPS", "symregg", "random" ] # "qlattice", "gpzgd", "Random", "RF"]
+    #algs = ["symregg", "random", "random5k"]
+    #algs = ["eggp_mo", "PySIPS", "gomea", "symregg"]
     ref = "eggp_mo"
     base_dir = ""
 
@@ -74,7 +77,8 @@ for d in datasets:
             try:
                 dfi = pd.read_csv(f)
                 msecol = 'loss' if "loss_train" in list(dfi.columns) else 'MSE'
-                useval = 'train' if 'eggp' in alg or 'symregg' in alg else 'train'
+                msecolt = 'loss' if "loss_train" in list(dfi.columns) else 'MSE'
+                useval = 'train' if 'eggp' in alg or 'symregg' in alg or 'random' in alg else 'train'
 
                 # get the two objectives from the Pareto front
                 # r2s will be used to calculate the hypervolume
@@ -86,13 +90,12 @@ for d in datasets:
                 hv = HV(ref_point=np.array([0.0, 50]))
                 hyp = hv(r2s)
 
-                # if the algorithm is Operon
-                if alg == "Operon":
-                    # assign a low score for expressions larger than the maximum size
-                    dfi.loc[dfi['size'] > 50, "R2_train"] = 0
-                    dfi.loc[dfi['size'] > 50, "R2_test"] = 0
-                    dfi.loc[dfi['size'] > 50, f"{msecol}_train"] = np.inf
-                    dfi.loc[dfi['size'] > 50, f"{msecol}_test"] = np.inf
+
+                # assign a low score for expressions larger than the maximum size
+                dfi.loc[dfi['size'] > int(args.size), "R2_train"] = 0
+                dfi.loc[dfi['size'] > int(args.size), "R2_test"] = 0
+                dfi.loc[dfi['size'] > int(args.size), f"{msecol}_train"] = np.inf
+                dfi.loc[dfi['size'] > int(args.size), f"{msecol}_test"] = np.inf
                 dfi.dropna(inplace=True, how='any') # tinyGP sometimes fails
 
                 r2max = dfi.R2_train.max()
@@ -107,7 +110,7 @@ for d in datasets:
                 ixmse = dfi[dfi[f"{msecol}_{useval}"] <= (2 - thr)*msemin]['size'].idxmin()
                 # ixmse = dfi[f"{msecol}_{useval}"].idxmin()
                 # ixmse = dfi[f"{msecol}_test"].idxmin()
-                vmse = dfi.loc[ixmse, f"{msecol}_test"]
+                vmse = dfi.loc[ixmse, f"{msecolt}_test"]
                 #vmse = np.round(np.log2(dfi.loc[ixmse, f"{msecol}_test"]))
                 vsmse = dfi.loc[ixmse, 'size']
 
