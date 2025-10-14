@@ -3047,3 +3047,8 @@ unknown function (ip: (nil))
 Allocations: 1501426447 (Pool: 1444056696; Big: 57369751); GC: 7253
 /home/olivetti/.local/pyenv/lib/python3.10/site-packages/pysr/sr.py:1469: UserWarning: Note: Using a large maxsize for the equation search will be exponentially slower and use significant memory.
   warnings.warn(
+./runPySR_realworld.sh, linha 8: 517392 Morto                   taskset -c $2 python PySR_realworld_wrapper.py $1 $GEN $POP > results/PySR/$1/run_${i}.csv
+
+real	2943m46,462s
+user	6m56,333s
+sys	0m5,822s
