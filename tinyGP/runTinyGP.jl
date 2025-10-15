@@ -93,9 +93,9 @@ function main(argv)
         nll_test    = TinyGP.negloglik(y_test, ypred_test)
         println("$gen,$(gp.fevals),$(-bestfitness),$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(gp.pop[bestidx])),\"$(best_expr_str)\"")
     end
-    # TimerOutputs.disable_timer!(gp.to)
+    TimerOutputs.disable_timer!(gp.to)
     @time TinyGP.evolve!(gp, iter_callback = callback)
-    TimerOutputs.print_timer(gp.to)
+    # TimerOutputs.print_timer(gp.to)
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__

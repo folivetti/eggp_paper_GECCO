@@ -10,6 +10,9 @@ module TinyGP
 # - postfix instead of prefix
 
 
+include("likelihoods.jl")
+include("lossfunctions.jl")
+
 using TimerOutputs
 using Random
 using Printf
@@ -28,11 +31,6 @@ using ForwardDiff
 
 using LinearAlgebra # for svd in DL
 
-struct Instruction 
-    opcode::UInt8
-    val::Float32
-end
-Instruction(opcode) = Instruction(opcode, 0.0f0)
 
 const ADD::UInt8 = 110
 const SUB::UInt8 = 111
@@ -63,11 +61,24 @@ const TSIZE = 2
 const PMUT_PER_NODE = 0.05
 const CROSSOVER_PROB = 0.9 # (1 - CROSSOVER_PROB) individuals are mutated, and each node has PMUT_PER_NODE probability
 
-mutable struct Algorithm{T,F1,F2}
+struct Instruction 
+    opcode::UInt8
+    val::Float32
+end
+Instruction(opcode) = Instruction(opcode, 0.0f0)
+
+
+# New Individual type to store both program and a likelihood object
+struct Individual{T <: Likelihood}
+    program::Vector{Instruction}
+    likelihood::T
+end
+
+
+mutable struct Algorithm{T,L <: Likelihood{T},F2}
+    const likelihood::L # this is what is used for parameter optimization
     const fitness::Vector{T}
-    const pop::Vector{Vector{Instruction}}
-    const X::Matrix{T}
-    const y::Vector{T}
+    const pop::Vector{Individual{T}} 
     fbestpop::T
     favgpop::T
     avg_len::T
@@ -78,30 +89,30 @@ mutable struct Algorithm{T,F1,F2}
     const tournamentsize::Int32
     const to::TimerOutput
     const print_trace::Bool
-    const paramopt_loss_func::F1
-    const loss_func::F2
+    const loss_func::F2 # the function used to determine fitness (negative fitness), does not have to be a likelihood as it could be DL # TODO rename?
     const nthreads::Int32
 end
 
-varnumber(gp) = size(gp.X, 2)
 
-function Algorithm(X::AbstractMatrix{T}, y::AbstractVector{T}; 
+# this is a simple interface to for Gaussian likelihood where sigma_err is optimized (= least squares)
+Algorithm(X::AbstractMatrix, y::AbstractVector; kwargs...) = Algorithm(GaussianLikelihood(X, y), kwargs...)
+    
+function Algorithm(likelihood::LT;
     seed=-1, generations=GENERATIONS, popsize=POPSIZE, 
     maxlen=MAX_LEN, tournamentsize=TSIZE, print_trace=false, 
-    paramopt_loss_func::F1 = mean_squared_error, loss_func::F2 = mean_squared_error, 
-    threads=0) where {T <: AbstractFloat, F1,F2}
+    threads=0) where {T <: AbstractFloat, LT <: Likelihood{T},F2}
+    
     seed >= 0 && seed!(seed)
     threads <= 0 && (threads = Threads.nthreads())
 
-    varnumber = size(X, 2)
-    varnumber < FSET_START || error("too many variables")
+    varnumber(likelihood) < FSET_START || error("too many variables")
     
     fitness = Vector{T}(undef, popsize)
-    pop = Vector{Vector{Instruction}}(undef, popsize)
+    pop = Vector{Individual{LT}}(undef, popsize)
     
-    gp = Algorithm{T,F1,F2}(fitness, pop, X, y, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, 
+    gp = Algorithm{T,LT,F2}(likelihood, fitness, pop, 0.0, 0.0, 0.0, 0, seed, generations, maxlen, 
         tournamentsize, TimerOutput(), print_trace, 
-        paramopt_loss_func, loss_func, threads)
+        loss_func, threads)
     
     print_parms(gp)
    
@@ -127,6 +138,7 @@ function InterpreterBuffers(::Type{T}, numobs, numvars, max_stack_size, batchsiz
     InterpreterBuffers(x_buffer, ypred_buffer, stack_buffer, batchsize, sym_freq)
 end
 
+# TODO can be moved into runTinyGP script
 # all columns except for the target are allowed input
 function load_dataset(::Type{T}, filename::AbstractString, targetname) where {T <: AbstractFloat}
     data,varnames = readdlm(filename, ',', T, header=true)
@@ -192,9 +204,12 @@ function create_random_indiv(gp, depth)
 
     @assert length(buffer) == traverse(buffer, 1)
     
-    buffer
+    Individual(randomize_parameters!(copy(gp.likelihood)), buffer)
 end
 
+function extractparam(::Type{T}, indiv::Individual{T}) where {T}
+    [extractparam(indiv.likelihood)..., extractparam(T, indiv.program)...] # TODO could reduce allocations here
+end
 
 function extractparam(::Type{T}, prog) where {T}
     param = T[]
@@ -209,6 +224,11 @@ function extractparam(::Type{T}, prog) where {T}
     traverse(prog, 1, update = extract)
 
     param
+end
+
+function updateparam!(indiv::Individual{T}, param) where {T}
+    updateparam!(indiv.likelihood, @view param[1:numparam(indiv.likelihood)])
+    updateparam!(indiv.program, @view param[numparam(indiv.likelihood)+1:end])
 end
 
 function updateparam!(prog, param)
@@ -270,6 +290,7 @@ end
 
 
 # simple interface to predict the output of a program for a dataset X
+predict(indiv::Individual, X) = predict(indiv.program, X)
 function predict(prog, X) 
     p = extractparam(eltype(X), prog)
     numobs = size(X, 1)
@@ -300,68 +321,24 @@ function predict!(buffers::InterpreterBuffers, prog, X, p)
 end
 
 
-function mean_squared_error(y,ypred)
-    @assert axes(ypred) == axes(y)
-    sumsq = zero(eltype(ypred))
-    @inbounds for i in eachindex(y)
-        sumsq += (ypred[i] - y[i])^2
-    end
-    sumsq / length(y)
-end
-
-function mean_squared_error(param, prog, gp, buffers)
-    ypred = predict!(buffers, prog, gp.X, param)
-    mean_squared_error(gp.y, ypred)
-end
-
-function r2_score(y, ypred)
-    @assert axes(ypred) == axes(y)
-    mean_y = sum(y) / length(y)
-    ss_tot = zero(eltype(ypred))
-    ss_res = zero(eltype(ypred))
-    @inbounds for i in eachindex(y)
-        ss_res += (ypred[i] - y[i])^2
-        ss_tot += (y[i] - mean_y)^2
-    end
-
-    iszero(ss_tot) ? one(eltype(ypred)) : one(eltype(ypred)) - ss_res / ss_tot
-end
-
-function r2_score(param, prog, gp, buffers)
-    ypred = predict!(buffers, prog, gp.X, param)
-    r2_score(gp.y, ypred)
-end
-
-
-# for Gaussian likelihood with fixed noise variance σ²_err = empirical MSE
-function negloglik(y, ypred)
-    n = length(y)
-    T = eltype(ypred)
-    # TODO σ2_err should be a user-specified parameter or optimized as well
-    sumsq = zero(T)
-    for i in eachindex(y)
-        sumsq += (ypred[i] - y[i])^2
-    end
-    σ2_err = sumsq / n
-    nll = T(1/2) * (n * log(T(2 * pi) * σ2_err) + sumsq / σ2_err)
-    (isnan(nll) || isinf(nll)) && return floatmax(T)
-    nll
-end
-
-# The loss functions are allowed to update the parameters and the program e.g. to optimize parameters or even to simplify expressions.
-function negloglik(param, prog, gp, buffers)
-    ypred = predict!(buffers, prog, gp.X, param)
-    negloglik(gp.y, ypred)
-end
-
-function description_length(param, prog, gp, buffers)
+function description_length(param, indiv::Individual, gp, buffers)
     T = eltype(param)
-    p_compl = param_compl(param, prog, gp, buffers) # this potentially updates the parameters
+    p_compl = param_compl(param, indiv, buffers) # this potentially updates the parameters
     p_compl == floatmax(T) && return p_compl
 
-    f_compl = func_compl(prog, buffers.symfreq)
-    negloglik(param, prog, gp, buffers) + T(f_compl) + p_compl
+    f_compl = func_compl(indiv.program, buffers.symfreq)
+    negloglik(param, indiv, gp, buffers) + T(f_compl) + p_compl
 end
+
+# function description_length(param, prog, gp, buffers)
+#     T = eltype(param)
+#     p_compl = param_compl(param, prog, gp, buffers) # this potentially updates the parameters
+#     p_compl == floatmax(T) && return p_compl
+
+# 
+#     f_compl = func_compl(prog, buffers.symfreq)
+#     negloglik(param, prog, gp, buffers) + T(f_compl) + p_compl
+# end
 
 function func_compl(prog, symfreq)
     empty!(symfreq)
@@ -376,12 +353,12 @@ end
 # only allow chunk sizes up to 4 (we don't want to compile predict for many different chunk sizes)
 get_chunk(p) = ForwardDiff.Chunk{min(length(p),4)}()
 
-function param_compl(param, prog, gp, buffers)
+function param_compl(param, indiv, buffers)
     T = eltype(param)    
 
     length(param) == 0 && return zero(T)
 
-    loss = (p) -> negloglik(p, prog, gp, buffers)
+    loss = (p) -> evaluate_nll(indiv.likelihood, indiv.prog, p, buffers)
     
     # make sure we are at a local optimum
 
@@ -423,6 +400,9 @@ function param_compl(param, prog, gp, buffers)
     end
     p_compl
 end
+
+
+XXX CONTINUE HERE
 
 # optimizes parameters and updates the prog and p0 if successful
 # returns the number of function evaluations
@@ -467,25 +447,39 @@ end
 
 # must not make changes to gp (thread-safety)
 # potentially changes prog, definitely changes buffers
-function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) where {T}
+function fitness_function!(indiv::Individual, buffers, gp::Algorithm{T}; optimize=false) where {T}
     fevals = 1
 
-    param = extractparam(T, prog)
+    param = extractparam(T, indiv)
     if optimize && !isempty(param) 
-        fevals += optimize!(prog, param, buffers, gp)
+        fevals += optimize!(indiv, param, buffers, gp)
     end
     
-    loss = gp.loss_func(param, prog, gp, buffers)
+    loss = gp.loss_func(param, indiv, gp, buffers)
     
     # fitness is negative loss
-    (isnan(loss) || isinf(loss)) && return -floatmax(T),fevals
+    (isnan(loss) || isinf(loss)) && return -floatmax(T), fevals
     -loss, fevals
+end
+
+function fitness_function!(prog, buffers, gp::Algorithm{T}; optimize=false) where {T}
+    # Create a temporary Individual for compatibility with older code
+    indiv = Individual(prog, eltype(gp.fitness))
+    fitness_function!(indiv, buffers, gp, optimize=optimize)
+end
+
+function tostring(indiv::Individual)
+    tostring(indiv.program)
 end
 
 function tostring(prog)
     buf = IOBuffer()
     print_indiv(buf, prog)
     String(take!(buf))
+end
+
+function print_indiv(io::IO, indiv::Individual, pos=1)
+    print_indiv(io, indiv.program, pos)
 end
 
 function print_indiv(io::IO, prog, pos=1)
@@ -544,35 +538,69 @@ function tournament(gp::Algorithm{T}) where {T}
     group[bestidx]
 end
 
-function crossover(gp, parent1, parent2)
-    len1 = traverse(parent1, 1)
-    len2 = traverse(parent2, 1)
+# Updated crossover function to handle Individual type
+function crossover(gp, parent1::Individual, parent2::Individual)
+    prog1, prog2 = parent1.program, parent2.program
+    
+    len1 = traverse(prog1, 1)
+    len2 = traverse(prog2, 1)
     
     # this is the part we cut out of p1
     xo1start = rand(0:len1 - 1)
-    xo1end = traverse(parent1, xo1start + 1)
+    xo1end = traverse(prog1, xo1start + 1)
     
     p1len = xo1start 
     p3len = len1 - xo1end
     
     # this is the part we use from p2
     xo2start = rand(0:len2 - 1)
-    xo2end = traverse(parent2, xo2start + 1)
+    xo2end = traverse(prog2, xo2start + 1)
     p2len = xo2end - xo2start
     while p1len + p2len + p3len > gp.maxlen
         xo2start = rand(0:len2 - 1)
-        xo2end = traverse(parent2, xo2start + 1)
+        xo2end = traverse(prog2, xo2start + 1)
         p2len = xo2end - xo2start
     end
 
-    offspring = Vector{Instruction}(undef,  p1len + p2len + p3len)
-    copyto!(offspring, 1,                 parent1, 1, p1len)
-    copyto!(offspring, 1 + p1len,         parent2, xo2start + 1, p2len)
-    copyto!(offspring, 1 + p1len + p2len, parent1, xo1end + 1, p3len)
+    offspring_prog = Vector{Instruction}(undef,  p1len + p2len + p3len)
+    copyto!(offspring_prog, 1,                 prog1, 1, p1len)
+    copyto!(offspring_prog, 1 + p1len,         prog2, xo2start + 1, p2len)
+    copyto!(offspring_prog, 1 + p1len + p2len, prog1, xo1end + 1, p3len)
 
-    @assert length(offspring) <= gp.maxlen
+    @assert length(offspring_prog) <= gp.maxlen
 
-    offspring
+    # Copy likelihood parameters from parent1 (arbitrary choice)
+    T = eltype(gp.fitness) # FIXME perf
+    likelihood_params = Dict{Symbol, T}()
+    for (k, v) in parent1.likelihood_params
+        likelihood_params[k] = v
+    end
+    
+    Individual(offspring_prog, likelihood_params)
+end
+
+# For backward compatibility
+function crossover(gp, parent1, parent2)
+    # Create temporary Individuals
+    indiv1 = Individual(parent1, eltype(gp.fitness))
+    indiv2 = Individual(parent2, eltype(gp.fitness))
+    offspring = crossover(gp, indiv1, indiv2)
+    offspring.program
+end
+
+# Updated mutate! to handle Individual type
+function mutate!(indiv::Individual, pmut, numvars)
+    mutate!(indiv.program, pmut, numvars)
+    
+    # Also mutate likelihood parameters if they're not fixed
+    for (k, v) in indiv.likelihood_params
+        if !haskey(gp.fixed_likelihood_params, k) && rand() < pmut
+            # Add random Gaussian noise to the parameter
+            indiv.likelihood_params[k] = max(1e-6, v + 0.1*randn()*v) # FIXME
+        end
+    end
+    
+    indiv
 end
 
 function mutate!(indiv, pmut, numvars)
@@ -605,7 +633,7 @@ function update_stats!(gp::Algorithm{T}, gen) where {T}
     gp.favgpop = zero(T)
     node_count = 0
     for i in 1:popsize
-        node_count += traverse(gp.pop[i], 1)
+        node_count += traverse(gp.pop[i].program, 1)
         gp.favgpop += gp.fitness[i]
     end
     gp.avg_len = node_count / popsize
@@ -649,7 +677,7 @@ function start_fitness_eval_workers(gp, workqueue, resultqueue)
 end
 
 function evolve!(gp::Algorithm{T}; iter_callback=nothing) where {T}
-    fitnessevalqueue = Channel{Tuple{Int64,Vector{Instruction}}}(Inf)
+    fitnessevalqueue = Channel{Tuple{Int64,Individual{T}}}(Inf)  # Updated type
     resultqueue = Channel{Tuple{Int64,T,Int64}}(Inf)
     start_fitness_eval_workers(gp, fitnessevalqueue, resultqueue)
 
@@ -678,7 +706,7 @@ function evolve!(gp::Algorithm{T}; iter_callback=nothing) where {T}
     popsize = length(gp.pop)
     @timeit gp.to "generation loop" for gen in 2:gp.generations
         # generational replacement
-        newpop = Vector{Vector{Instruction}}()
+        newpop = Vector{Individual{T}}()
         sizehint!(newpop, popsize)
         newfitness = similar(gp.fitness)
         
@@ -692,7 +720,13 @@ function evolve!(gp::Algorithm{T}; iter_callback=nothing) where {T}
                 child = crossover(gp, gp.pop[parent1idx], gp.pop[parent2idx])
             else
                 local parentidx = tournament(gp)
-                child = copy(gp.pop[parentidx])
+                # Deep copy the parent including likelihood parameters
+                prog_copy = copy(gp.pop[parentidx].program)
+                params_copy = Dict{Symbol,T}() # FIXME pref
+                for (k,v) in gp.pop[parentidx].likelihood_params
+                    params_copy[k] = v
+                end
+                child = Individual(prog_copy, params_copy)
                 mutate!(child, PMUT_PER_NODE, varnumber(gp))
             end
             child
