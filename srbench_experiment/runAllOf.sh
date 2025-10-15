@@ -37,6 +37,11 @@ elif [ "${1,,}" == "slim" ]; then
    for key in "${!datasets[@]}"; do
      ./runSlim_srbench.sh ${datasets[$key]} &
    done
+elif [ "${1,,}" == "qlattice" ]; then
+   echo "running qlattice..."
+   for key in "${!datasets[@]}"; do
+     ./runQLattice_srbench.sh ${datasets[$key]} &
+   done
 else
    echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo|pysips]"
 fi
