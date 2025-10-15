@@ -2,6 +2,7 @@ include("tinyGP.jl")
 
 using ArgParse
 using TimerOutputs
+using DelimitedFiles
 
 function main(argv)
     s = ArgParseSettings()
@@ -54,48 +55,74 @@ function main(argv)
     nthreads = parsed["threads"]
     testdataset = parsed["test"] == "" ? trainingfilename : parsed["test"]
 
-    X, y = TinyGP.load_dataset(Float32, trainingfilename, targetname)
-    X_test, y_test = TinyGP.load_dataset(Float32, testdataset, targetname)
+    X, y = load_dataset(Float32, trainingfilename, targetname)
+    X_test, y_test = load_dataset(Float32, testdataset, targetname)
 
-    loss_func = paramopt_loss_func = TinyGP.mean_squared_error # default
-    
     if objective == "mse"
-        loss_func = paramopt_loss_func = TinyGP.mean_squared_error
+        likelihood = TinyGP.GaussianLikelihood(X, y, 1.0f0)
+        likelihood_test = TinyGP.GaussianLikelihood(X_test, y_test, 1.0f0)
+        loss_func = TinyGP.mean_squared_error
     elseif objective == "r2"
-        loss_func = paramopt_loss_func = ((-) ∘ TinyGP.r2_score)
+        likelihood = TinyGP.GaussianLikelihood(X, y, 1.0f0)
+        likelihood_test = TinyGP.GaussianLikelihood(X_test, y_test, 1.0f0)
+        loss_func = ((-) ∘ TinyGP.r2_score)
     elseif objective == "nll"
-        # TODO allow specification of different likelihoods
-        # For now we only support Gaussian likelihood with fixed sigma
-        loss_func = paramopt_loss_func = TinyGP.negloglik
+        # TODO allow specification of different likelihoods and likelihood parameters
+        likelihood = TinyGP.GaussianLikelihood(X, y) # optimize sigma
+        likelihood_test = TinyGP.GaussianLikelihood(X_test, y_test)
+        loss_func = TinyGP.negloglik
     elseif objective == "dl"
-        paramopt_loss_func = TinyGP.negloglik
+        # TODO allow specification of different likelihoods
+        likelihood = TinyGP.GaussianLikelihood(X, y) # optimize sigma
+        likelihood_test = TinyGP.GaussianLikelihood(X_test, y_test)
         loss_func = TinyGP.description_length
     else
         error("unknown objective function value (allowed values are mse, r2, dl)")
     end
-    gp = TinyGP.Algorithm(X, y,
+    gp = TinyGP.Algorithm(likelihood,
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize, 
-        loss_func = loss_func, paramopt_loss_func = paramopt_loss_func, threads = nthreads)
+        loss_func = loss_func, threads = nthreads)
 
-    println("gen,fevals,best_fitness,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,size,Expression")
+    println("gen,fevals,best_fitness,dl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,size,Expression")
     gen = 0
     callback = () -> begin
         gen += 1
         bestfitness,bestidx = findmax(gp.fitness)
-        best_expr_str = TinyGP.tostring(gp.pop[bestidx])
-        ypred_train = TinyGP.predict(gp.pop[bestidx], gp.X) 
-        ypred_test  = TinyGP.predict(gp.pop[bestidx], X_test)
-        mse_train   = TinyGP.mean_squared_error(gp.y, ypred_train)
+        bestindiv = gp.pop[bestidx]
+        best_expr_str = TinyGP.tostring(bestindiv)
+        ypred_train = TinyGP.predict(bestindiv, likelihood.X) 
+        ypred_test  = TinyGP.predict(bestindiv, X_test)
+        mse_train   = TinyGP.mean_squared_error(likelihood.y, ypred_train)
         mse_test    = TinyGP.mean_squared_error(y_test, ypred_test)
-        r2_train    = TinyGP.r2_score(gp.y, ypred_train)
+        r2_train    = TinyGP.r2_score(likelihood.y, ypred_train)
         r2_test     = TinyGP.r2_score(y_test, ypred_test)
-        nll_train   = TinyGP.negloglik(gp.y, ypred_train)
-        nll_test    = TinyGP.negloglik(y_test, ypred_test)
-        println("$gen,$(gp.fevals),$(-bestfitness),$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(gp.pop[bestidx])),\"$(best_expr_str)\"")
+        nll_train   = TinyGP.negloglik(likelihood, ypred_train, bestindiv.likelihood.sigma_err)
+        nll_test    = TinyGP.negloglik(likelihood_test, ypred_test, bestindiv.likelihood.sigma_err)
+        
+        # for evaluation of DL we use the likelihood with optimized sigma
+        dl_likelihood = TinyGP.GaussianLikelihood(bestindiv.likelihood.X, bestindiv.likelihood.y, bestindiv.likelihood.sigma_err)
+        bestindv_copy   = TinyGP.Individual(copy!(similar(bestindiv.program),bestindiv.program) , dl_likelihood) # copy to avoid modifying the original individual
+        dl          = TinyGP.description_length(bestindv_copy)
+        
+        println("$gen,$(gp.fevals),$(-bestfitness),$dl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(bestindiv.program)),\"$(best_expr_str)\"")
+        nothing
     end
     TimerOutputs.disable_timer!(gp.to)
     @time TinyGP.evolve!(gp, iter_callback = callback)
     # TimerOutputs.print_timer(gp.to)
+end
+
+
+# all columns except for the target are allowed input
+function load_dataset(::Type{T}, filename::AbstractString, targetname) where {T <: AbstractFloat}
+    data,varnames = readdlm(filename, ',', T, header=true)
+    
+    targetidx = findfirst((==)(targetname), varnames[1, :])
+    isnothing(targetidx) && error("Could not find variable $targetname in $filename (with varnames: $varnames)")
+    
+    X = data[:, setdiff(1:end, targetidx)]
+    y = data[:, targetidx]
+    X, y
 end
 
 if abspath(PROGRAM_FILE) == @__FILE__

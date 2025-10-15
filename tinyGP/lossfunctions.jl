@@ -1,4 +1,4 @@
-
+# Not used for now
 
 function mean_squared_error(y,ypred)
     @assert axes(ypred) == axes(y)
@@ -9,13 +9,11 @@ function mean_squared_error(y,ypred)
     sumsq / length(y)
 end
 
-function mean_squared_error(param, indiv::Individual, gp, buffers)
-    mean_squared_error(param, indiv.program, gp, buffers)
-end
-
-function mean_squared_error(param, prog, gp, buffers)
-    ypred = predict!(buffers, prog, gp.X, param)
-    mean_squared_error(gp.y, ypred)
+# can be used as a loss function and must have the signature
+# (::Likelihood, program::Vector{Instruction}, param::AbstractVector{T <: Real}, buffers::InterpreterBuffers)
+function mean_squared_error(lik::Likelihood, prog, param, buffers)
+    ypred = predict!(buffers, prog, lik.X, param)
+    mean_squared_error(lik.y, ypred)
 end
 
 function r2_score(y, ypred)
@@ -31,11 +29,7 @@ function r2_score(y, ypred)
     iszero(ss_tot) ? one(eltype(ypred)) : one(eltype(ypred)) - ss_res / ss_tot
 end
 
-function r2_score(param, indiv::Individual, gp, buffers)
-    r2_score(param, indiv.program, gp, buffers)
-end
-
-function r2_score(param, prog, gp, buffers)
-    ypred = predict!(buffers, prog, gp.X, param)
-    r2_score(gp.y, ypred)
+function r2_score(lik::Likelihood, prog, param, buffers)
+    ypred = predict!(buffers, prog, lik.X, param)
+    r2_score(lik.y, ypred)
 end
