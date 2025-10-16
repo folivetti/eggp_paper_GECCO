@@ -1,13 +1,10 @@
 module TinyGP
 
 # TODO 
-# - likelihoods (probably via abstract type)
-# - likelihood parameters. an individual should also include the likelihood parameters (at the root level). They should be optimized
 # - symbols: neg, inv, aq, sin, cos, tanh, ...
 # - Test speedup / accuracy with Float32
 # - threads kwarg only sets the number of evaluation threads (other parts still use all threads)
 # - automatically use LM / LsqFit when we have a quadratic loss function
-# - postfix instead of prefix
 
 
 include("likelihoods.jl")
