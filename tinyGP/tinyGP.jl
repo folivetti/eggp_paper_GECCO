@@ -371,8 +371,8 @@ function param_compl(lik::Likelihood, param, prog, buffers)
     
     hessianCfg = ForwardDiff.HessianConfig(loss, param, get_chunk(param))
     fim = ForwardDiff.hessian(loss, param, hessianCfg)::Matrix{T}
-    
-    any(isnan, fim) && return floatmax(T)
+
+    (any(isnan, fim) || any(isinf, fim)) && return floatmax(T)
 
     # clean up numerical errors
     fim = T(1/2) .* (fim .+ fim')
