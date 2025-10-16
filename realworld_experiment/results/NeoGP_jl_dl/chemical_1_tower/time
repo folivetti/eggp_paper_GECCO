@@ -1,0 +1,3146 @@
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	10m27.949s
+user	400m45.549s
+sys	0m38.713s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	16m31.052s
+user	494m45.597s
+sys	0m37.916s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	13m25.747s
+user	339m30.638s
+sys	0m36.354s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	16m31.997s
+user	592m32.880s
+sys	0m37.952s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	17m44.779s
+user	539m12.586s
+sys	0m37.527s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	16m13.198s
+user	521m37.795s
+sys	0m37.324s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("slopes[ib] >= zeroT")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	19m58.657s
+user	591m20.926s
+sys	0m38.916s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("slopes[ib] >= zeroT")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	29m37.564s
+user	889m9.630s
+sys	0m39.663s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("slopes[ib] >= zeroT")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	18m26.049s
+user	533m12.962s
+sys	0m36.237s
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_d) && isfinite(gphi)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: Terminated early due to NaN in gradient.
+└ @ Optim ~/.julia/packages/Optim/7krni/src/multivariate/optimize/optimize.jl:117
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+┌ Warning: AssertionError("isfinite(phi_c) && isfinite(dphi_c)")
+└ @ NeoGP ~/.julia/dev/NeoGP.jl/src/NeoGP.jl:248
+
+real	13m7.823s
+user	400m12.663s
+sys	0m36.226s
