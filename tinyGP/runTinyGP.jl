@@ -100,9 +100,10 @@ function main(argv)
         nll_test    = TinyGP.negloglik(likelihood_test, ypred_test, bestindiv.likelihood.sigma_err)
         
         # for evaluation of DL we use the likelihood with optimized sigma
-        dl_likelihood = TinyGP.GaussianLikelihood(bestindiv.likelihood.X, bestindiv.likelihood.y, bestindiv.likelihood.sigma_err)
-        bestindv_copy   = TinyGP.Individual(copy!(similar(bestindiv.program),bestindiv.program) , dl_likelihood) # copy to avoid modifying the original individual
-        dl          = TinyGP.description_length(bestindv_copy)
+        # dl_likelihood = TinyGP.GaussianLikelihood(bestindiv.likelihood.X, bestindiv.likelihood.y, bestindiv.likelihood.sigma_err)
+        # bestindv_copy = TinyGP.Individual(copy!(similar(bestindiv.program),bestindiv.program) , dl_likelihood) # copy to avoid modifying the original individual
+        
+        dl            = TinyGP.description_length(TinyGP.copy(bestindiv))
         
         println("$gen,$(gp.fevals),$(-bestfitness),$dl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(bestindiv.program)),\"$(best_expr_str)\"")
         nothing

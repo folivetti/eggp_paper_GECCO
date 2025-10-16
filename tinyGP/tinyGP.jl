@@ -64,6 +64,7 @@ struct Instruction
     opcode::UInt8
     val::Float32
 end
+
 Instruction(opcode) = Instruction(opcode, 0.0f0)
 
 
@@ -73,8 +74,7 @@ struct Individual{T <: Likelihood}
     likelihood::T
 end
 
-# TODO use copy! instead
-Base.copy(indiv::Individual) = Individual(copy(indiv.program), copy(indiv.likelihood))
+copy(indiv::Individual) = Individual(deepcopy(indiv.program), copy(indiv.likelihood))
 
 
 mutable struct Algorithm{T,L <: Likelihood{T},F2}

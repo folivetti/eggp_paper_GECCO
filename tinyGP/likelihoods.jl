@@ -5,7 +5,7 @@ abstract type Likelihood{T} end
 
 # likelihoods have to implement these parameters
 function negloglik(::Likelihood) error("negloglik not implemented for this likelihood") end
-function Base.copy(::Likelihood) error("copy not implemented for this likelihood") end
+function copy(::Likelihood) error("copy not implemented for this likelihood") end
 function randomize_parameters!(lik::Likelihood) lik end # if the likelihood has parameters to optimize
 function numvar(lik::Likelihood) size(lik.X, 2) end
 function numobs(lik::Likelihood) size(lik.X, 1) end
@@ -23,7 +23,6 @@ mutable struct GaussianLikelihood{T} <: Likelihood{T}
     const sigma_y::T
     sigma_err::Union{T,Vector{T}}
     const optimize_sigma::Bool
-
 end
 
 GaussianLikelihood(X::Matrix{T}, y::Vector{T}, sigma_err=nothing) where {T} =  
@@ -79,7 +78,7 @@ end
 
 numparam(lik::GaussianLikelihood{T}) where {T} = lik.optimize_sigma ? 1 : 0
 
-function Base.copy(lik::GaussianLikelihood{T}) where {T}
+function copy(lik::GaussianLikelihood{T}) where {T}
     if lik.optimize_sigma
         GaussianLikelihood{T}(lik.X, lik.y, lik.sigma_y, lik.sigma_err, true)
     else
