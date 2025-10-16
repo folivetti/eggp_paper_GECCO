@@ -1,8 +1,7 @@
 [deps]
 ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
-ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
-Optim = "429524aa-4258-5aef-a3af-852621145aeb"
-PreallocationTools = "d236fae5-4411-538c-8e31-a6e3d9e00b46"
-Preferences = "21216c6a-2e73-6563-6e65-726566657250"
+NeoGP = "fe65fcaf-0a20-4e9a-99a2-9f417ca4b589"
 TimerOutputs = "a759f4b9-e2f1-59dc-863e-4aeb61b1ea8f"
-UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+
+[extras]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
