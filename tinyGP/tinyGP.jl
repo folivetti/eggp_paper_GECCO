@@ -352,22 +352,22 @@ function param_compl(lik::Likelihood, param, prog, buffers)
     
     # make sure we are at a local optimum
 
-    gradCfg = ForwardDiff.GradientConfig(loss, param, get_chunk(param))
-    grad! = (g,p) -> ForwardDiff.gradient!(g, loss, p, gradCfg)
-    try
-        loss0 = loss(param)
-        res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-5)) # TODO tunable iterations
-        # println(res)
-        if Optim.converged(res) || loss0 < Optim.minimum(res)
-            param .= Optim.minimizer(res)
-            updateparam!(prog, param)
-        else
-            return floatmax(T)
-        end
-    catch ex
-        @warn ex
-        return floatmax(T)
-    end
+    # gradCfg = ForwardDiff.GradientConfig(loss, param, get_chunk(param))
+    # grad! = (g,p) -> ForwardDiff.gradient!(g, loss, p, gradCfg)
+    # try
+    #     loss0 = loss(param)
+    #     res = Optim.optimize(loss, grad!, param, LBFGS(), Optim.Options(f_abstol=1e-5)) # TODO tunable iterations
+    #     # println(res)
+    #     if Optim.converged(res) || loss0 < Optim.minimum(res)
+    #         param .= Optim.minimizer(res)
+    #         updateparam!(prog, param)
+    #     else
+    #         return floatmax(T)
+    #     end
+    # catch ex
+    #     @warn ex
+    #     return floatmax(T)
+    # end
     
     hessianCfg = ForwardDiff.HessianConfig(loss, param, get_chunk(param))
     fim = ForwardDiff.hessian(loss, param, hessianCfg)::Matrix{T}
