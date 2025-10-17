@@ -174,7 +174,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/chemical_2_competition/run_'.i.'.csv' skip 11 us
      keyentry title "obj: " . objfunc with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange [-100:400]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/chemical_2_competition/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
