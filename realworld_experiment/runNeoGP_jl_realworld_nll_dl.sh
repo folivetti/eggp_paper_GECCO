@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p results/NeoGP_jl_nll_dl/$1
+mkdir -p results/NeoGP_jl_nll_dl_woparam/$1
 
 GEN=50
 POP=500
@@ -11,5 +11,5 @@ for i in {1..10};
 do
     (time ~/julia/julia -t 12 --project=../NeoGP/ ../NeoGP/runNeoGP.jl datasets/$1_train.csv target \
       -g $GEN -p $POP -t $TSIZE -m $LEN --objective=nll-dl --threads=1 --test=datasets/$1_test.csv \
-      > results/NeoGP_jl_nll_dl/$1/run_${i}.csv) &
-done  2> results/NeoGP_jl_nll_dl/$1/time
+      > results/NeoGP_jl_nll_dl_woparam/$1/run_${i}.csv) &
+done  2> results/NeoGP_jl_nll_dl_woparam/$1/time

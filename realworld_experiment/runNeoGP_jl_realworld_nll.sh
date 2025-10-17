@@ -5,7 +5,7 @@ mkdir -p results/NeoGP_jl_nll/$1
 GEN=50
 POP=500
 TSIZE=3
-LEN=50
+LEN=100
 
 for i in {1..10};
 do
