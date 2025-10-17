@@ -87,7 +87,7 @@ function main(argv)
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize,
         loss_func = loss_func, threads = nthreads)
 
-    println("gen,fevals,best_fitness,dl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,size,Expression")
+    println("gen,fevals,best_fitness,dl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,avg_fitness,size,Expression")
     gen = 0
     callback = () -> begin
         gen += 1
@@ -109,7 +109,7 @@ function main(argv)
         
         dl            = NeoGP.description_length(NeoGP.copy(bestindiv))
         
-        println("$gen,$(gp.fevals),$(-bestfitness),$dl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(length(bestindiv.program)),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$dl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(-gp.favgpop),$(length(bestindiv.program)),\"$(best_expr_str)\"")
         nothing
     end
     TimerOutputs.disable_timer!(gp.to)
