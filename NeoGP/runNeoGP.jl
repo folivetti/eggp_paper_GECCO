@@ -75,6 +75,11 @@ function main(argv)
         likelihood = NeoGP.GaussianLikelihood(X, y) # optimize sigma
         likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
         loss_func = NeoGP.description_length
+    elseif objective == "nll-dl"
+        # TODO allow specification of different likelihoods
+        likelihood = NeoGP.GaussianLikelihood(X, y) # optimize sigma
+        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
+        loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
     else
         error("unknown objective function value (allowed values are mse, r2, dl)")
     end
