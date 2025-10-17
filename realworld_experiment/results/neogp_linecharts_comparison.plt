@@ -34,7 +34,7 @@ unset logscale y
 set yrange [-600:0]
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/nikuradse_1/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_1/run_'.i.'.csv'  skip 11 every ::::49 using 1:3 lc 2 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_1/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -77,7 +77,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/nikuradse_2/run_'.i.'.csv' skip 11 using 1:5 lc 
      keyentry title "obj: " . objfunc with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange [-400:0]
 
 unset logscale
 set xlabel "Generations"
