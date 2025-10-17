@@ -124,7 +124,8 @@ plot for [i=1:30] 'NeoGP_jl_nll/chemical_1_tower/run_'.i.'.csv' skip 11 using 1:
      keyentry title "obj: DL"  with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+unset yrange
+# set yrange [-1000:1000]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/chemical_1_tower/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
@@ -202,7 +203,6 @@ plot for [i=1:30] 'NeoGP_jl_nll/chemical_2_competition/run_'.i.'.csv' skip 11 us
 ### Flow stress
 set title "Flow stress"
 
-
 set logscale y
 unset yrange
 set ylabel "MSE (test)"
@@ -216,7 +216,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/flow_stress_phip0.1/run_'.i.'.csv' skip 11 using
      keyentry title "obj: DL"  with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange [6000:18000]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/flow_stress_phip0.1/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
@@ -261,7 +261,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/friction_dyn_one-hot/run_'.i.'.csv' skip 11 usin
      keyentry title "obj: DL"  with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange[-4000:-3000]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/friction_dyn_one-hot/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
@@ -306,7 +306,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/friction_stat_one-hot/run_'.i.'.csv' skip 11 usi
      keyentry title "obj: DL"  with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange[-3600:-2800]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/friction_stat_one-hot/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
@@ -351,7 +351,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/nasa_battery_1_10min/run_'.i.'.csv' skip 11 usin
      keyentry title "obj: DL"  with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange [2000:3500]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/nasa_battery_1_10min/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
@@ -397,7 +397,7 @@ plot for [i=1:30] 'NeoGP_jl_nll/nasa_battery_2_20min/run_'.i.'.csv' skip 11 usin
      keyentry title "obj: DL"  with lines lc 2
 
 set ylabel "DL"
-set yrange [-1000:1000]
+set yrange [-3000:0]
 unset logscale
 set xlabel "Generations"
 plot for [i=1:30] 'NeoGP_jl_nll/nasa_battery_2_20min/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
