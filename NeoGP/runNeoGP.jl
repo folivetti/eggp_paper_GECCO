@@ -81,7 +81,7 @@ function main(argv)
         likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
         loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
     else
-        error("unknown objective function value (allowed values are mse, r2, dl)")
+        error("unknown objective function value (allowed values are mse, r2, nll, dl)")
     end
     gp = NeoGP.Algorithm(likelihood,
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize,
