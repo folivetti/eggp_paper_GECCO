@@ -1,0 +1,138 @@
+
+real	0m29,466s
+user	0m29,374s
+sys	0m0,091s
+
+real	0m22,927s
+user	0m22,813s
+sys	0m0,113s
+
+real	0m18,392s
+user	0m18,285s
+sys	0m0,106s
+
+real	0m27,707s
+user	0m27,606s
+sys	0m0,100s
+
+real	0m27,165s
+user	0m27,060s
+sys	0m0,103s
+
+real	0m27,771s
+user	0m27,667s
+sys	0m0,103s
+
+real	0m28,022s
+user	0m27,911s
+sys	0m0,110s
+
+real	0m24,680s
+user	0m24,578s
+sys	0m0,101s
+
+real	0m24,824s
+user	0m24,712s
+sys	0m0,111s
+
+real	0m28,475s
+user	0m28,373s
+sys	0m0,101s
+
+real	0m22,164s
+user	0m22,061s
+sys	0m0,102s
+
+real	0m23,469s
+user	0m23,358s
+sys	0m0,098s
+
+real	0m25,336s
+user	0m25,223s
+sys	0m0,112s
+
+real	0m16,316s
+user	0m16,218s
+sys	0m0,097s
+
+real	0m16,408s
+user	0m16,319s
+sys	0m0,088s
+
+real	0m20,827s
+user	0m20,709s
+sys	0m0,117s
+
+real	0m26,671s
+user	0m26,563s
+sys	0m0,095s
+
+real	0m20,856s
+user	0m20,762s
+sys	0m0,093s
+
+real	0m22,247s
+user	0m22,150s
+sys	0m0,096s
+
+real	0m15,042s
+user	0m14,919s
+sys	0m0,122s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eqsat-symreg/experiments/GECCO/runOperon_srbench.py", line 58, in <module>
+    print(f"0,{model['model']},{model['tree'].Length + n},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains infinity or a value too large for dtype('float64').
+
+real	0m50,129s
+user	0m50,040s
+sys	0m0,086s
+
+real	0m29,027s
+user	0m28,936s
+sys	0m0,090s
+
+real	0m29,217s
+user	0m29,096s
+sys	0m0,120s
+
+real	0m29,282s
+user	0m29,174s
+sys	0m0,107s
+
+real	0m26,075s
+user	0m25,981s
+sys	0m0,093s
+
+real	0m23,351s
+user	0m23,254s
+sys	0m0,095s
+
+real	0m26,123s
+user	0m26,027s
+sys	0m0,095s
+
+real	0m24,419s
+user	0m24,316s
+sys	0m0,102s
+
+real	0m37,954s
+user	0m37,838s
+sys	0m0,114s
+
+real	0m27,383s
+user	0m27,275s
+sys	0m0,107s

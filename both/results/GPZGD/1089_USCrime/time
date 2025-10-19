@@ -1,0 +1,250 @@
+
+real	0m4,209s
+user	0m6,321s
+sys	0m0,209s
+
+real	0m4,850s
+user	0m9,419s
+sys	0m0,248s
+
+real	0m4,447s
+user	0m10,589s
+sys	0m0,222s
+
+real	0m4,920s
+user	0m10,103s
+sys	0m0,256s
+
+real	0m4,706s
+user	0m11,007s
+sys	0m0,258s
+
+real	0m5,159s
+user	0m11,451s
+sys	0m0,276s
+
+real	0m6,029s
+user	0m12,258s
+sys	0m0,323s
+
+real	0m5,870s
+user	0m11,545s
+sys	0m0,326s
+
+real	0m6,043s
+user	0m11,227s
+sys	0m0,306s
+
+real	0m6,185s
+user	0m13,268s
+sys	0m0,306s
+
+real	0m5,757s
+user	0m12,050s
+sys	0m0,340s
+
+real	0m6,394s
+user	0m11,695s
+sys	0m0,350s
+
+real	0m6,585s
+user	0m12,173s
+sys	0m0,287s
+
+real	0m5,944s
+user	0m11,467s
+sys	0m0,334s
+
+real	0m6,659s
+user	0m12,229s
+sys	0m0,364s
+
+real	0m5,934s
+user	0m11,797s
+sys	0m0,329s
+
+real	0m6,572s
+user	0m11,720s
+sys	0m0,371s
+
+real	0m6,988s
+user	0m13,314s
+sys	0m0,408s
+
+real	0m4,889s
+user	0m11,533s
+sys	0m0,330s
+
+real	0m6,789s
+user	0m12,440s
+sys	0m0,365s
+
+real	0m7,750s
+user	0m12,551s
+sys	0m0,391s
+
+real	0m6,702s
+user	0m13,285s
+sys	0m0,387s
+
+real	0m6,969s
+user	0m13,929s
+sys	0m0,342s
+
+real	0m7,633s
+user	0m13,458s
+sys	0m0,345s
+
+real	0m6,269s
+user	0m11,489s
+sys	0m0,380s
+
+real	0m7,262s
+user	0m12,692s
+sys	0m0,374s
+
+real	0m6,136s
+user	0m14,120s
+sys	0m0,382s
+
+real	0m7,284s
+user	0m12,245s
+sys	0m0,371s
+
+real	0m6,560s
+user	0m12,235s
+sys	0m0,394s
+
+real	0m6,086s
+user	0m10,582s
+sys	0m0,346s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/srbench_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/srbench_experiment/GPZD.py", line 120, in fit
+    ans = subprocess.check_output([ "gpzgd_regressor", f"{fname}", f"{cname}" ], cwd=cwd, universal_newlines=True)
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['gpzgd_regressor', 'tmp/tmpdata', 'tmp/config']' died with <Signals.SIGSEGV: 11>.
+
+real	0m2,527s
+user	0m3,275s
+sys	0m0,061s
+
+real	0m22,652s
+user	0m51,546s
+sys	0m0,190s
+
+real	0m28,380s
+user	1m2,730s
+sys	0m0,250s
+
+real	0m28,764s
+user	1m15,724s
+sys	0m0,244s
+
+real	0m30,840s
+user	1m18,037s
+sys	0m0,312s
+
+real	0m31,042s
+user	1m11,707s
+sys	0m0,315s
+
+real	0m31,312s
+user	1m16,005s
+sys	0m0,313s
+
+real	0m28,577s
+user	1m5,234s
+sys	0m0,302s
+
+real	0m32,553s
+user	1m19,469s
+sys	0m0,282s
+
+real	0m30,219s
+user	1m6,283s
+sys	0m0,329s
+
+real	0m35,998s
+user	1m31,428s
+sys	0m0,298s
+
+real	0m27,664s
+user	1m5,972s
+sys	0m0,274s
+
+real	0m30,932s
+user	1m17,036s
+sys	0m0,319s
+
+real	0m30,716s
+user	1m16,221s
+sys	0m0,326s
+
+real	0m34,202s
+user	1m26,085s
+sys	0m0,290s
+
+real	0m29,296s
+user	1m9,550s
+sys	0m0,333s
+
+real	0m33,481s
+user	1m25,231s
+sys	0m0,338s
+
+real	0m30,340s
+user	1m17,027s
+sys	0m0,299s
+
+real	0m33,405s
+user	1m28,047s
+sys	0m0,290s
+
+real	0m29,241s
+user	1m13,045s
+sys	0m0,317s
+
+real	0m35,823s
+user	1m31,598s
+sys	0m0,297s
+
+real	0m32,516s
+user	1m25,016s
+sys	0m0,297s
+
+real	0m35,108s
+user	1m36,656s
+sys	0m0,299s
+
+real	0m31,469s
+user	1m12,530s
+sys	0m0,302s
+
+real	0m31,646s
+user	1m18,643s
+sys	0m0,297s
+
+real	0m34,148s
+user	1m27,755s
+sys	0m0,293s
+
+real	0m32,105s
+user	1m11,298s
+sys	0m0,296s
+
+real	0m30,576s
+user	1m18,470s
+sys	0m0,322s
+
+real	0m32,187s
+user	1m12,853s
+sys	0m0,270s
+
+real	0m35,200s
+user	1m26,389s
+sys	0m0,288s

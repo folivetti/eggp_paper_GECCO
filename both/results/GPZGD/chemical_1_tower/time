@@ -1,0 +1,420 @@
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,729s
+user	0m4,120s
+sys	0m0,099s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,582s
+user	0m8,013s
+sys	0m0,118s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,636s
+user	0m4,707s
+sys	0m0,096s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,791s
+user	0m5,353s
+sys	0m0,096s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,879s
+user	0m8,110s
+sys	0m0,118s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,742s
+user	0m6,641s
+sys	0m0,110s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,874s
+user	0m7,565s
+sys	0m0,133s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,743s
+user	0m8,830s
+sys	0m0,123s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,724s
+user	0m7,579s
+sys	0m0,143s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m2,033s
+user	0m9,388s
+sys	0m0,175s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,860s
+user	0m9,340s
+sys	0m0,140s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,797s
+user	0m9,228s
+sys	0m0,132s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,776s
+user	0m7,557s
+sys	0m0,118s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m2,082s
+user	0m8,239s
+sys	0m0,135s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,781s
+user	0m8,930s
+sys	0m0,132s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,765s
+user	0m6,762s
+sys	0m0,130s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,727s
+user	0m6,942s
+sys	0m0,120s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,676s
+user	0m8,055s
+sys	0m0,120s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,648s
+user	0m6,065s
+sys	0m0,115s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,884s
+user	0m6,218s
+sys	0m0,145s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,886s
+user	0m8,381s
+sys	0m0,149s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,695s
+user	0m6,169s
+sys	0m0,141s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,768s
+user	0m5,912s
+sys	0m0,101s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,602s
+user	0m6,192s
+sys	0m0,112s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m2,057s
+user	0m7,071s
+sys	0m0,128s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,590s
+user	0m5,855s
+sys	0m0,119s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,868s
+user	0m5,439s
+sys	0m0,129s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,792s
+user	0m5,754s
+sys	0m0,121s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,673s
+user	0m8,370s
+sys	0m0,121s
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZDG_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/GPZD.py", line 90, in fit
+    with open(cname, "w") as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'tmp/config'
+
+real	0m1,571s
+user	0m5,630s
+sys	0m0,113s
+
+real	15m9,874s
+user	100m48,224s
+sys	0m0,535s
+
+real	15m7,219s
+user	101m29,278s
+sys	0m0,654s
+
+real	13m19,693s
+user	88m39,902s
+sys	0m0,565s
+
+real	14m43,369s
+user	97m2,962s
+sys	0m0,642s
+
+real	13m19,173s
+user	89m3,955s
+sys	0m0,632s
+
+real	13m44,288s
+user	91m11,419s
+sys	0m0,622s
+
+real	13m41,539s
+user	91m24,612s
+sys	0m0,616s
+
+real	16m54,393s
+user	113m37,596s
+sys	0m0,669s
+
+real	13m26,294s
+user	91m44,331s
+sys	0m0,643s
+
+real	11m27,659s
+user	96m43,606s
+sys	0m0,650s
+
+real	11m35,612s
+user	98m22,837s
+sys	0m0,657s
+
+real	10m16,018s
+user	89m23,028s
+sys	0m1,170s
+
+real	7m17,695s
+user	97m55,667s
+sys	0m0,688s
+
+real	5m46,593s
+user	105m23,509s
+sys	0m0,578s
+
+real	4m44,276s
+user	84m51,298s
+sys	0m0,528s
+
+real	4m16,968s
+user	76m52,059s
+sys	0m0,539s
+
+real	4m53,004s
+user	88m5,690s
+sys	0m0,535s
+
+real	5m7,784s
+user	92m57,264s
+sys	0m0,570s
+
+real	4m22,027s
+user	78m16,340s
+sys	0m0,540s
+
+real	4m6,088s
+user	73m41,354s
+sys	0m0,531s
+
+real	4m19,503s
+user	77m24,862s
+sys	0m0,588s
+
+real	4m56,996s
+user	89m12,701s
+sys	0m0,500s
+
+real	4m39,674s
+user	84m12,612s
+sys	0m0,548s
+
+real	5m18,875s
+user	95m59,239s
+sys	0m0,523s
+
+real	5m0,647s
+user	90m33,730s
+sys	0m0,546s
+
+real	8m21,325s
+user	93m45,731s
+sys	0m0,612s
+
+real	21m50,990s
+user	104m13,452s
+sys	0m0,777s
+
+real	17m5,439s
+user	79m2,806s
+sys	0m0,647s
+
+real	17m41,131s
+user	82m4,147s
+sys	0m0,598s
+
+real	18m3,476s
+user	99m33,214s
+sys	0m0,721s
