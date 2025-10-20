@@ -29,6 +29,9 @@ function main(argv)
         "--objective", "-o"
             help = "Objective"
             default = "mse"
+        "--sigma" # TODO support different likelihoods
+            help = "Sigma value for Gaussian likelihood (only used if applicable, e.g., nll or dl objective)"
+            arg_type = Float32
         "--threads"
             help = "Maximum number of parallel threads"
             arg_type = Int
@@ -51,6 +54,7 @@ function main(argv)
     tsize = parsed["tournamentsize"]
     maxlen = parsed["maxlen"]
     objective = parsed["objective"]
+    sigma = parsed["sigma"]
     nthreads = parsed["threads"]
     testdataset = parsed["test"] == "" ? trainingfilename : parsed["test"]
 
@@ -58,27 +62,33 @@ function main(argv)
     X_test, y_test = load_dataset(Float32, testdataset, targetname)
 
     if objective == "mse"
-        likelihood = NeoGP.GaussianLikelihood(X, y, 1.0f0)
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, 1.0f0)
+        if !isnothing(sigma)
+            @warn "sigma argument is ignored when using mse objective"
+        end
+        likelihood = NeoGP.GaussianLikelihood(X, y)
+        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
         loss_func = NeoGP.mean_squared_error
     elseif objective == "r2"
-        likelihood = NeoGP.GaussianLikelihood(X, y, 1.0f0)
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, 1.0f0)
+        if !isnothing(sigma)
+            @warn "sigma argument is ignored when using mse objective"
+        end
+        likelihood = NeoGP.GaussianLikelihood(X, y)
+        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
         loss_func = ((-) ∘ NeoGP.r2_score)
     elseif objective == "nll"
-        # TODO allow specification of different likelihoods and likelihood parameters
-        likelihood = NeoGP.GaussianLikelihood(X, y) # optimize sigma
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
+        # TODO allow specification of different likelihoods
+        likelihood = NeoGP.GaussianLikelihood(X, y, sigma) # optimize sigma
+        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, sigma)
         loss_func = NeoGP.negloglik
     elseif objective == "dl"
         # TODO allow specification of different likelihoods
-        likelihood = NeoGP.GaussianLikelihood(X, y) # optimize sigma
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
+        likelihood = NeoGP.GaussianLikelihood(X, y, sigma) # optimize sigma
+        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, sigma)
         loss_func = NeoGP.description_length
     elseif objective == "nll-dl"
         # TODO allow specification of different likelihoods
-        likelihood = NeoGP.GaussianLikelihood(X, y) # optimize sigma
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
+        likelihood = NeoGP.GaussianLikelihood(X, y, sigma) # optimize sigma
+        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, sigma)
         loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
     else
         error("unknown objective function value (allowed values are mse, r2, nll, dl)")
