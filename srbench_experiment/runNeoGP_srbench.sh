@@ -1,7 +1,6 @@
 #!/bin/bash
 
 PNAME=$1
-SIGMA=$2
 mkdir -p results/neogp/$PNAME
 
 GEN=200
@@ -18,5 +17,5 @@ NJOBS=10
 
 parallel -j$NJOBS ~/julia/julia -t 6 --project=NeoGP/ \
 	NeoGP/runNeoGP.jl datasets/${PNAME}_train{2}.csv target -g $GEN -p $POP -t $TSIZE -m $LEN \
-	  --objective=nll --sigma $SIGMA --test=datasets/${PNAME}_test{2}.csv \
+	  --objective=mse --test=datasets/${PNAME}_test{2}.csv \
 	"> results/neogp/${PNAME}/run_{2}_{1}.csv" ::: $(seq 1 10) ::: $(seq 0 2)

@@ -42,6 +42,11 @@ elif [ "${1,,}" == "qlattice" ]; then
    for key in "${!datasets[@]}"; do
      ./runQLattice_srbench.sh ${datasets[$key]} &
    done
+elif [ "${1,,}" == "neogp" ]; then
+   echo "running neogp..."
+   for key in "${!datasets[@]}"; do
+     ./runNeoGP_srbench.sh ${datasets[$key]} &
+   done
 else
-   echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo|pysips]"
+   echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo|pysips|neogp]"
 fi
