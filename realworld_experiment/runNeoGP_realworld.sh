@@ -20,4 +20,4 @@ NJOBS=10
 parallel -j$NJOBS ~/julia/julia -t 6 --project=NeoGP/ \
 	NeoGP/runNeoGP.jl datasets/${PNAME}_train.csv target -g $GEN -p $POP -t $TSIZE -m $LEN \
 	  --objective=nll --sigma 1.0 --test=datasets/${PNAME}_test.csv \
-	"> results/neogp/${PNAME}/run_{1}.csv" ::: $(seq 1 10)
+	"> results/neogp/${PNAME}/run_{1}.csv" ::: $(seq 1 30)
