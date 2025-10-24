@@ -96,7 +96,7 @@ function main(argv)
     gp = NeoGP.Algorithm(likelihood,
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize,
         loss_func = loss_func, threads = nthreads, 
-        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOG, NeoGP.SQRT, NeoGP.POW]))
+        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS]))
 
     println("gen,fevals,best_fitness,dl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,avg_fitness,size,Expression")
     gen = 0
