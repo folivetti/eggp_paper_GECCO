@@ -20,7 +20,7 @@ do for [ds in "nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competition f
    } else if (ds eq "chemical_1_tower") {
      set yrange [500:10000]
    } else if (ds eq "chemical_2_competition") {
-     set yrange [0.1:1]
+     set yrange [0.01:1]
    }
    
    set xlabel "Generations"
