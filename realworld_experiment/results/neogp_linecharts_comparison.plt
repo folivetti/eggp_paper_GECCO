@@ -4,9 +4,90 @@ set datafile separator comma
 set datafile missing
 
 
-do for [objfunc in "nll dl_fixedsigma dl nll_dl "] {
+set output "neogp_linecharts_nll_vs_dl.pdf"
+do for [ds in "nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competition flow_stress_phip0.1 friction_dyn_one-hot friction_stat_one-hot nasa_battery_1_10min"] {
+  set title ds
+
+# gen,MSE_train_median,MSE_train_p5,MSE_train_p95,MSE_test_median,MSE_test_p5,MSE_test_p95,nll_train_median,nll_train_p5,nll_train_p95,dl_median,dl_p5,dl_p95,size_median,size_p5,size_p95
+
+   set key top right
+   set logscale y
+   # set yrange [0.00001:0.01]
+   if (ds eq "nikuradse_1") {
+     set yrange [0.00001:0.01]
+   } else if (ds eq "nikuradse_2") {
+     set yrange [0.001:0.01]
+   } else if (ds eq "chemical_1_tower") {
+     set yrange [500:10000]
+   } else if (ds eq "chemical_2_competition") {
+     set yrange [0.1:1]
+   }
+   
+   set xlabel "Generations"
+
+   set ylabel "MSE (train)"
+   plot 'NeoGP_jl_nll_fixedsigma/'.ds.'/stats.csv' using "gen":"MSE_train_p5":"MSE_train_p95" lc 1 with filledcurves fs transparent solid 0.3 title "obj NLL",\
+        '' using "gen":"MSE_train_median" lc 1 with lines notitle,\
+        'NeoGP_jl_dl_fixedsigma/'.ds.'/stats.csv'  using "gen":"MSE_train_p5":"MSE_train_p95" lc 2 with filledcurves fs transparent solid 0.3 title "obj DL",\
+        '' using "gen":"MSE_train_median" lc 2 with lines notitle
+   
+   set ylabel "MSE (test)"
+   plot 'NeoGP_jl_nll_fixedsigma/'.ds.'/stats.csv' using "gen":"MSE_test_p5":"MSE_test_p95" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL",\
+        '' using "gen":"MSE_test_median" lc 1 with lines notitle,\
+        'NeoGP_jl_dl_fixedsigma/'.ds.'/stats.csv'  using "gen":"MSE_test_p5":"MSE_test_p95" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL",\
+        '' using "gen":"MSE_test_median" lc 2 with lines notitle,\
+   
+
+   unset logscale y
+      
+   if (ds eq "nikuradse_1") {
+     set yrange [-1000:8000]
+   } else if (ds eq "nikuradse_2") {
+     set yrange [-500:1000]
+   } else if (ds eq "chemical_1_tower") {
+     set yrange [15000:40000]
+   } else if (ds eq "chemical_2_competition") {
+     set yrange [-500:1500]
+   } else if (ds eq "flow_stress_phip0.1") {
+     set yrange [5000:40000]
+   } else if (ds eq "friction_dyn_one-hot") {
+     set yrange [-5000:5000]
+   } else if (ds eq "friction_stat_one-hot") {
+     set yrange [-5000:5000]
+   } else if (ds eq "nasa_battery_1_10min") {
+     set yrange [1000:10000]
+   }
+
+   set ylabel "NLL"
+   plot 'NeoGP_jl_nll_fixedsigma/'.ds.'/stats.csv' using "gen":"nll_train_p5":"nll_train_p95" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL",\
+        '' using "gen":"nll_train_median" lc 1 with lines notitle,\
+        'NeoGP_jl_dl_fixedsigma/'.ds.'/stats.csv'  using "gen":"nll_train_p5":"nll_train_p95" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL",\
+        '' using "gen":"nll_train_median" lc 2 with lines notitle,\
+   
+
+
+   set ylabel "DL"
+   plot 'NeoGP_jl_nll_fixedsigma/'.ds.'/stats.csv' using "gen":"dl_p10":"dl_p90" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL",\
+        '' using "gen":"dl_median" lc 1 with lines notitle,\
+        'NeoGP_jl_dl_fixedsigma/'.ds.'/stats.csv'  using "gen":"dl_p10":"dl_p90" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL",\
+        '' using "gen":"dl_median" lc 2 with lines notitle,\
+   
+   unset yrange
+   set ylabel "Best size"
+   set key bottom right
+   plot 'NeoGP_jl_nll_fixedsigma/'.ds.'/stats.csv' using "gen":"size_p5":"size_p95" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL",\
+        '' using "gen":"size_median" lc 1 with lines notitle,\
+        'NeoGP_jl_dl_fixedsigma/'.ds.'/stats.csv'  using "gen":"size_p5":"size_p95" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL",\
+        '' using "gen":"size_median" lc 2 with lines notitle,\
+   
+   
+}
+
+do for [objfunc in "dl_fixedsigma"] {
 
 set output "neogp_linecharts".objfunc.".pdf"
+
+
 
 ### Niku 1
 set title "Nikuradse 1"
@@ -17,8 +98,8 @@ set yrange [0.00001:0.01]
 set ylabel "MSE (train)"
 
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_1/run_'.i.'.csv' skip 10 using 1:5 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_'.objfunc.'/nikuradse_1/run_'.i.'.csv'  skip 10 using 1:5 lc 2 with lines notitle,\
+plot for [i=1:30] '< cat NeoGP_jl_nll_fixedsigma/nikuradse_1/run_'.i.'.csv | head -n+11 | tail -n 201' using 1:5 lc 1 with lines notitle,\
+     for [i=1:30] '< cat NeoGP_jl_'.objfunc.'/nikuradse_1/run_'.i.'.csv | head -n+11 | tail -n 201'  using 1:5 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: ".objfunc  with lines lc 2
 
@@ -37,8 +118,8 @@ set ylabel "NLL"
 set yrange[-1000:1000]
 unset logscale y
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_1/run_'.i.'.csv' skip 10 every ::::49 using 1:"nll_train" lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_1/run_'.i.'.csv'  skip 10 every ::::49 using 1:"nll_train" lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_1/run_'.i.'.csv' skip 10 using 1:"nll_train" lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_1/run_'.i.'.csv'  skip 10 using 1:"nll_train" lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -47,8 +128,8 @@ set ylabel "DL"
 unset logscale y
 set yrange[-1000:1000]
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_1/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_1/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_1/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_1/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -95,8 +176,8 @@ set yrange [-400:0]
 
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_2/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_2/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nikuradse_2/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nikuradse_2/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -145,8 +226,8 @@ unset yrange
 # set yrange [-1000:1000]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/chemical_1_tower/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/chemical_1_tower/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/chemical_1_tower/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/chemical_1_tower/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -191,8 +272,8 @@ set ylabel "DL"
 set yrange [-100:400]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/chemical_2_competition/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/chemical_2_competition/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/chemical_2_competition/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/chemical_2_competition/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -236,8 +317,8 @@ set ylabel "DL"
 set yrange [6000:18000]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/flow_stress_phip0.1/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/flow_stress_phip0.1/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/flow_stress_phip0.1/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/flow_stress_phip0.1/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -281,8 +362,8 @@ set ylabel "DL"
 set yrange[-4000:-3000]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/friction_dyn_one-hot/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/friction_dyn_one-hot/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/friction_dyn_one-hot/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/friction_dyn_one-hot/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -326,8 +407,8 @@ set ylabel "DL"
 set yrange[-3600:-2800]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/friction_stat_one-hot/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/friction_stat_one-hot/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/friction_stat_one-hot/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/friction_stat_one-hot/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -371,8 +452,8 @@ set ylabel "DL"
 set yrange [2000:3500]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nasa_battery_1_10min/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nasa_battery_1_10min/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nasa_battery_1_10min/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nasa_battery_1_10min/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
@@ -417,8 +498,8 @@ set ylabel "DL"
 set yrange [-3000:0]
 unset logscale
 set xlabel "Generations"
-plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nasa_battery_2_20min/run_'.i.'.csv' skip 11 every ::::49 using 1:4 lc 1 with lines notitle,\
-     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nasa_battery_2_20min/run_'.i.'.csv'  skip 11 every ::::49 using 1:4 lc 2 with lines notitle,\
+plot for [i=1:30] 'NeoGP_jl_nll_fixedsigma/nasa_battery_2_20min/run_'.i.'.csv' skip 11 using 1:4 lc 1 with lines notitle,\
+     for [i=1:30] 'NeoGP_jl_' . objfunc .'/nasa_battery_2_20min/run_'.i.'.csv'  skip 11 using 1:4 lc 2 with lines notitle,\
      keyentry title "obj: NLL (fixed sigma)" with lines lc 1,\
      keyentry title "obj: " . objfunc with lines lc 2
 
