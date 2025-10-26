@@ -98,7 +98,7 @@ function main(argv)
         loss_func = loss_func, threads = nthreads, 
         functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS]))
 
-    println("gen,fevals,best_fitness,dl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,avg_fitness,size,Expression")
+    println("gen,fevals,best_fitness,dl,func_compl,param_compl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,avg_fitness,size,Expression")
     gen = 0
     callback = () -> begin
         gen += 1
@@ -114,13 +114,11 @@ function main(argv)
         nll_train   = NeoGP.negloglik(likelihood, ypred_train, bestindiv.likelihood.sigma_err)
         nll_test    = NeoGP.negloglik(likelihood_test, ypred_test, bestindiv.likelihood.sigma_err)
         
-        # for evaluation of DL we use the likelihood with optimized sigma
-        # dl_likelihood = NeoGP.GaussianLikelihood(bestindiv.likelihood.X, bestindiv.likelihood.y, bestindiv.likelihood.sigma_err)
-        # bestindv_copy = NeoGP.Individual(copy!(similar(bestindiv.program),bestindiv.program) , dl_likelihood) # copy to avoid modifying the original individual
+        # this is just to produce the terms of the description_length (TODO: simplify)
+        (nll, func_compl, param_compl) = NeoGP.description_length_terms(NeoGP.copy(bestindiv))
+        dl = nll + func_compl + param_compl
         
-        dl            = NeoGP.description_length(NeoGP.copy(bestindiv))
-        
-        println("$gen,$(gp.fevals),$(-bestfitness),$dl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(-gp.favgpop),$(length(bestindiv.program)),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$dl,$func_compl,$param_compl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(-gp.favgpop),$(length(bestindiv.program)),\"$(best_expr_str)\"")
         nothing
     end
     TimerOutputs.disable_timer!(gp.to)
