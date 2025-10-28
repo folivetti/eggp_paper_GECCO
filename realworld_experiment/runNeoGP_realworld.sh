@@ -1,8 +1,8 @@
 #!/bin/bash
 
 PNAME=$1
-mkdir -p results/neogp_nll/$PNAME
-mkdir -p results/neogp_dl/$PNAME
+mkdir -p results/neogp_nll_freesigma/$PNAME
+mkdir -p results/neogp_dl_freesigma/$PNAME
 
 GEN=200
 POP=500
@@ -26,10 +26,10 @@ SIGMA=${sigmas[$PNAME]}
 
 parallel -j$NJOBS ~/julia/julia -t 6 --project=NeoGP/ \
 	NeoGP/runNeoGP.jl datasets/${PNAME}_train.csv target -g $GEN -p $POP -t $TSIZE -m $LEN \
-	  --objective=nll --sigma $SIGMA --test=datasets/${PNAME}_test.csv \
-	"> results/neogp_nll/${PNAME}/run_{1}.csv" ::: $(seq 1 100)
+	  --objective=nll --test=datasets/${PNAME}_test.csv \
+	"> results/neogp_nll_freesigma/${PNAME}/run_{1}.csv" ::: $(seq 1 100)
 
 parallel -j$NJOBS ~/julia/julia -t 6 --project=NeoGP/ \
 	NeoGP/runNeoGP.jl datasets/${PNAME}_train.csv target -g $GEN -p $POP -t $TSIZE -m $LEN \
-	  --objective=dl --sigma $SIGMA --test=datasets/${PNAME}_test.csv \
-	"> results/neogp_dl/${PNAME}/run_{1}.csv" ::: $(seq 1 100)
+	  --objective=dl --test=datasets/${PNAME}_test.csv \
+	"> results/neogp_dl_freesigma/${PNAME}/run_{1}.csv" ::: $(seq 1 100)
