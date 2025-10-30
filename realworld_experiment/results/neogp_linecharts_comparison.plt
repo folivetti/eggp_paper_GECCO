@@ -5,16 +5,16 @@ set datafile missing
 
 
 set output "neogp_linecharts_nll_vs_dl.pdf"
-do for [ds in "nikuradse_1 nikuradse_2 friction_stat_one-hot friction_dyn_one-hot chemical_1_tower chemical_2_competition nasa_battery_1_10min flow_stress_phip0.1 "] {
+do for [ds in "nikuradse_1 nikuradse_2 friction_stat_one-hot chemical_1_tower chemical_2_competition nasa_battery_1_10min flow_stress_phip0.1 friction_dyn_one-hot "] {
   set title ds
-
+     print ds
 # gen,MSE_train_median,MSE_train_p5,MSE_train_p95,MSE_test_median,MSE_test_p5,MSE_test_p95,nll_train_median,nll_train_p5,nll_train_p95,dl_median,dl_p5,dl_p95,size_median,size_p5,size_p95
 
    set key top right
    set logscale y
    # set yrange [0.00001:0.01]
    if (ds eq "nikuradse_1") {
-     set yrange [0.0001:0.02]
+     set yrange [0.00001:0.02]
    } else if (ds eq "nikuradse_2") {
      set yrange [0.001:0.01]
    } else if (ds eq "chemical_1_tower") {
@@ -117,6 +117,47 @@ do for [ds in "nikuradse_1 nikuradse_2 friction_stat_one-hot friction_dyn_one-ho
  
    unset multiplot
    
+   unset yrange
+   set multiplot layout 1,2 margins 0.15,0.95,0.1,0.9 spacing 0.01
+   set ylabel "Function complexity"
+   set ytics format "%g"
+
+   plot 'neogp_nll/'.ds.'/stats.csv' using "gen":"func_compl_p10":"func_compl_p90" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL (sigma fixed)",\
+        '' using "gen":"func_compl_median" lc 1 with lines notitle,\
+        'neogp_dl/'.ds.'/stats.csv'  using "gen":"func_compl_p10":"func_compl_p90" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL (sigma fixed)",\
+        '' using "gen":"func_compl_median" lc 2 with lines notitle,\
+
+ #    unset ylabel
+#   set ytics format ""
+
+   plot 'neogp_nll_freesigma/'.ds.'/stats.csv' using "gen":"func_compl_p10":"func_compl_p90" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL (sigma opt.)",\
+        '' using "gen":"func_compl_median" lc 1 with lines notitle,\
+        'neogp_dl_freesigma/'.ds.'/stats.csv'  using "gen":"func_compl_p10":"func_compl_p90" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL (sigma opt.)",\
+        '' using "gen":"func_compl_median" lc 2 with lines notitle
+ 
+   unset multiplot
+   
+   set multiplot layout 1,2 margins 0.15,0.95,0.1,0.9 spacing 0.01
+   set ylabel "Parameter complexity"
+   set ytics format "%g"
+
+     set yrange[0:500]
+   plot 'neogp_nll/'.ds.'/stats.csv' using "gen":"param_compl_p10":"param_compl_p90" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL (sigma fixed)",\
+        '' using "gen":"param_compl_median" lc 1 with lines notitle,\
+        'neogp_dl/'.ds.'/stats.csv'  using "gen":"param_compl_p10":"param_compl_p90" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL (sigma fixed)",\
+        '' using "gen":"param_compl_median" lc 2 with lines notitle,\
+
+#     unset ylabel
+#   set ytics format ""
+
+   plot 'neogp_nll_freesigma/'.ds.'/stats.csv' using "gen":"param_compl_p10":"param_compl_p90" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL (sigma opt.)",\
+        '' using "gen":"param_compl_median" lc 1 with lines notitle,\
+        'neogp_dl_freesigma/'.ds.'/stats.csv'  using "gen":"param_compl_p10":"param_compl_p90" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL (sigma opt.)",\
+        '' using "gen":"param_compl_median" lc 2 with lines notitle
+ 
+   unset multiplot
+
+   
    set multiplot layout 1,2 margins 0.15,0.95,0.1,0.9 spacing 0.01
    set ylabel "Best size"
    set yrange [0:100]
@@ -137,8 +178,28 @@ do for [ds in "nikuradse_1 nikuradse_2 friction_stat_one-hot friction_dyn_one-ho
    
    unset multiplot
    
+   set multiplot layout 1,2 margins 0.15,0.95,0.1,0.9 spacing 0.01
+   set ylabel "Average size"
+   set yrange [0:100]
+   set ytics format "%g"
+
+   set key bottom right
+   plot 'neogp_nll/'.ds.'/stats.csv' using "gen":"size_p5":"size_p95" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL (sigma fixed)",\
+        '' using "gen":"size_median" lc 1 with lines notitle,\
+        'neogp_dl/'.ds.'/stats.csv'  using "gen":"size_p5":"size_p95" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL (sigma fixed)",\
+        '' using "gen":"size_median" lc 2 with lines notitle,\
+     
+   #  unset ylabel
+   # set ytics format ""
+   plot 'neogp_nll_freesigma/'.ds.'/stats.csv' using "gen":"avg_len_p5":"avg_len_p95" lc 1 with  filledcurves fs transparent solid 0.3  title "obj NLL (sigma opt.)",\
+        '' using "gen":"avg_len_median" lc 1 with lines notitle,\
+        'neogp_dl_freesigma/'.ds.'/stats.csv'  using "gen":"avg_len_p5":"avg_len_p95" lc 2 with  filledcurves fs transparent solid 0.3  title "obj DL (sigma opt.)",\
+        '' using "gen":"avg_len_median" lc 2 with lines notitle,\
+   
+   unset multiplot
+   
    unset yrange
-   set ytics auto
+   set ytics format "%g"
 }
 
 do for [objfunc in "dl_fixedsigma"] {
