@@ -1,0 +1,7 @@
+[deps]
+ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
+NeoGP = "fe65fcaf-0a20-4e9a-99a2-9f417ca4b589"
+TimerOutputs = "a759f4b9-e2f1-59dc-863e-4aeb61b1ea8f"
+
+[extras]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"

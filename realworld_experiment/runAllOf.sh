@@ -91,6 +91,14 @@ elif [ "${1,,}" == "gpzdg" ]; then
    for key in "${!datasets20[@]}"; do
      ./runGPZDG_realworld.sh ${datasets20[$key]} &
    done
+elif [ "${1,,}" == "neogp" ]; then
+   echo "running neogp..."
+   for key in "${!datasets30[@]}"; do
+     ./runNeoGP_realworld.sh ${datasets30[$key]}
+   done
+   for key in "${!datasets20[@]}"; do
+     ./runNeoGP_realworld.sh ${datasets20[$key]}
+   done
 else
-   echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo]"
+   echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo|neogp]"
 fi

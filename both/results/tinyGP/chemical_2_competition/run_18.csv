@@ -1,0 +1,2 @@
+id,Expression,theta,size,MSE_train,MSE_test,R2_train,R2_test
+0,(((Abs(Sin(Log(Exp(Log(Sqrt(Abs(x30))))))) ^ t0) - Sqrt(Abs(((Sin(((Log(x41) / Exp(t1)) - x5)) - Sqrt(Abs(x4))) / (Abs(x11) ^ t2))))) / Log(x34)),-1.903077783044737;-1.2697658254488091;-0.11760020675092546,28,4.6661684434096795e-2,7.103752078954245e-2,0.5888414036142766,0.49269940070713414

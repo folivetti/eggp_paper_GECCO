@@ -1,0 +1,2 @@
+id,Expression,theta,size,MSE_train,MSE_test,R2_train,R2_test
+0,Sin(Log(Exp(Sin(x3)))),,5,0.666462478112608,0.6416985954238906,0.3222102033413172,0.3731409820500795

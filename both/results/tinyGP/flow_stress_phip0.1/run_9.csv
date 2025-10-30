@@ -1,0 +1,2 @@
+id,Expression,theta,size,MSE_train,MSE_test,R2_train,R2_test
+0,(Sqrt(Abs((Abs((Sqrt(Abs(x1)) * x0)) ^ Sin(Sin(Sin(Sin(Sin(Sin(Sin(Log(Sqrt(Abs((t0 * x0)))))))))))))) * t1),1.062532836706469;29.786756801659877,20,12.914859829546002,13.97127644874544,0.9898942269972423,0.9843711785799704

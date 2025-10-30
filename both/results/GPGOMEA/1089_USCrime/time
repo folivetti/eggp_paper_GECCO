@@ -1,0 +1,152 @@
+
+real	2m12,477s
+user	2m15,085s
+sys	0m0,280s
+
+real	2m9,025s
+user	2m18,193s
+sys	0m0,289s
+
+real	2m6,625s
+user	2m15,836s
+sys	0m0,268s
+
+real	1m32,228s
+user	1m41,386s
+sys	0m0,292s
+
+real	2m49,681s
+user	2m58,835s
+sys	0m0,326s
+
+real	2m11,374s
+user	2m20,530s
+sys	0m0,319s
+
+real	3m50,267s
+user	3m59,376s
+sys	0m0,367s
+
+real	2m7,284s
+user	2m16,464s
+sys	0m0,290s
+
+real	3m21,368s
+user	3m30,501s
+sys	0m0,320s
+
+real	1m44,751s
+user	1m54,327s
+sys	0m0,307s
+
+real	2m54,773s
+user	3m4,282s
+sys	0m0,360s
+
+real	2m25,340s
+user	2m34,939s
+sys	0m0,287s
+
+real	2m25,202s
+user	2m34,774s
+sys	0m0,306s
+
+real	2m28,234s
+user	2m37,821s
+sys	0m0,295s
+<lambdifygenerated-1>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.28849*x_12 - 0.57698*x_12/(x_8 + x_9) - 0.28849*x_3 - 0.28849*x_4 + 0.28849*x_8 - 0.28849*(x_12 - x_3)/(x_5 - x_9) + 0.28849*(x_1*x_10*numpy.sin(x_6) - x_2*x_9/numpy.sin(x_5))/(-7.423502*x_1/(x_3 - x_5) + x_12 + 1.67422381668663*x_8) + 398.988983 + 0.28849*(x_8 - 7.584729)/(x_1 - x_10)
+<lambdifygenerated-5>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.288029*x_12 - 0.576058*x_12/(x_8 + x_9) - 0.288029*x_3 - 0.288029*x_4 + 0.288029*x_8 - 0.288029*(x_12 - x_3)/(x_5 - x_9) + 0.288029*(x_1*x_10*numpy.sin(x_6) - x_9/numpy.sin(x_5))/(-7.35517*x_1/(x_3 - x_5) + x_12 + x_8) + 398.657074 + 0.288029*(x_8 - 9.736176)/(x_1 - x_10)
+<lambdifygenerated-7>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.28722*x_12 - 0.57444*x_12/(x_8 + x_9) - 0.28722*x_3 - 0.28722*x_4 + 0.28722*x_8 - 0.28722*(x_12 - x_3)/(x_5 - x_9) + 398.055786 + 0.28722*(x_1*x_10*numpy.sin(x_6) - x_9/numpy.sin(x_5))/(-7.235701*x_1/(x_3 - x_5) + x_12) + 0.28722*(x_8 - 14.417372)/(x_1 - x_10)
+<lambdifygenerated-16>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.288415*x_12 - 0.57683*x_12/(x_8 + x_9) - 0.288415*x_3 - 0.288415*x_4 + 0.288415*x_8 - 0.288415*(x_12 - x_3)/(x_5 - x_9) + 0.288415*(x_1*x_10*numpy.sin(x_6) - x_2*x_9/numpy.sin(x_5))/(-7.402928*x_1/(x_3 - x_5) + x_12 + 1.49725926691192*x_8) + 398.931213 + 0.288415*(x_8 - 8.524271)/(x_1 - x_10)
+<lambdifygenerated-28>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.288072*x_12 - 0.576144*x_12/(x_8 + x_9) - 0.288072*x_3 - 0.288072*x_4 + 0.288072*x_8 - 0.288072*(x_12 - x_3)/(x_5 - x_9) + 0.288072*(x_1*x_10*numpy.sin(x_6) - x_2*x_9/numpy.sin(x_5))/(-7.3444*x_1/(x_3 - x_5) + x_12 + x_8) + 398.674561 + 0.288072*(x_8 - 9.985802)/(x_1 - x_10)
+<lambdifygenerated-39>:2: RuntimeWarning: divide by zero encountered in divide
+  return -0.28849*x_12 - 0.57698*x_12/(x_8 + x_9) - 0.28849*x_3 - 0.28849*x_4 + 0.28849*x_8 - 0.28849*(x_12 - x_3)/(x_5 - x_9) + 0.28849*(x_1*x_10*numpy.sin(x_6) - x_2*x_9/numpy.sin(x_5))/(-7.423502*x_1/(x_3 - x_5) + x_12 + 1.67422381668663*x_8) + 398.988983 + 0.28849*(x_8 - 7.584729)/(x_1 - x_10)
+
+real	3m23,450s
+user	3m33,025s
+sys	0m0,305s
+
+real	3m53,180s
+user	4m2,743s
+sys	0m0,307s
+
+real	3m19,729s
+user	3m29,252s
+sys	0m0,351s
+
+real	2m54,279s
+user	3m3,865s
+sys	0m0,295s
+
+real	2m47,086s
+user	2m56,637s
+sys	0m0,332s
+<lambdifygenerated-27>:2: RuntimeWarning: divide by zero encountered in divide
+  return 0.0512797025219379*x_1*numpy.sin(x_6) - 0.14891*x_10 - 0.29782*x_12 - 0.14891*x_2*x_8 + 0.29782*x_5/(x_10 - x_5) + 0.14891*x_6 + 0.14891*x_8 - 0.14891*(numpy.sin(x_10)*numpy.sin(x_3) + (x_1 + x_10)/x_3)*(x_1/x_8 - x_10*x_2 + numpy.sin(4.769869*x_12)) + 265.673676
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/srbench_experiment/GOMEA_srbench_wrapper.py", line 33, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 580, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 209, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, sample_weight, multioutput = _check_reg_targets(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/metrics/_regression.py", line 116, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 1105, in check_array
+    _assert_all_finite(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains infinity or a value too large for dtype('float64').
+
+real	1m25,269s
+user	1m34,879s
+sys	0m0,282s
+
+real	2m58,098s
+user	3m7,618s
+sys	0m0,292s
+
+real	2m2,902s
+user	2m12,477s
+sys	0m0,311s
+
+real	1m49,643s
+user	1m59,172s
+sys	0m0,289s
+
+real	1m23,427s
+user	1m33,066s
+sys	0m0,243s
+
+real	1m42,408s
+user	1m51,993s
+sys	0m0,291s
+
+real	2m2,303s
+user	2m11,871s
+sys	0m0,301s
+
+real	2m1,642s
+user	2m11,221s
+sys	0m0,299s
+
+real	3m3,779s
+user	3m13,305s
+sys	0m0,348s
+
+real	2m55,715s
+user	3m5,308s
+sys	0m0,291s
+
+real	2m54,634s
+user	3m4,168s
+sys	0m0,358s
