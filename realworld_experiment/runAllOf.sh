@@ -30,11 +30,11 @@ elif [ "${1,,}" == "tinygp" ]; then
 elif [ "${1,,}" == "eggp_so" ]; then
    echo "running eggp_so..."
    for key in "${!datasets30[@]}"; do
-     ./runEggp_so_realworld.sh ${datasets30[$key]} &
+     ./runEggp_so_realworld_red.sh ${datasets30[$key]} &
    done
-   for key in "${!datasets20[@]}"; do
-     ./runEggp_so_realworld.sh ${datasets20[$key]} &
-   done
+   #for key in "${!datasets20[@]}"; do
+   #  ./runEggp_so_realworld_red.sh ${datasets20[$key]} &
+   #done
 elif [ "${1,,}" == "eggp_mo" ]; then
    echo "running eggp_mo..."
    for key in "${!datasets30[@]}"; do
