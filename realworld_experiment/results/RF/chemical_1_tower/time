@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/RF_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 486, in fit
+    trees = Parallel(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 82, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/joblib/parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 147, in __call__
+    return self.function(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 188, in _parallel_build_trees
+    tree._fit(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/tree/_classes.py", line 472, in _fit
+    builder.build(self.tree_, X, y, sample_weight, missing_values_in_feature_mask)
+KeyboardInterrupt
+
+real	21m30,531s
+user	21m23,740s
+sys	0m1,534s
+
+real	16m56,989s
+user	17m4,828s
+sys	0m1,210s
+
+real	14m32,065s
+user	14m41,156s
+sys	0m1,170s
+
+real	13m47,403s
+user	13m56,770s
+sys	0m1,266s
+
+real	13m19,457s
+user	13m28,802s
+sys	0m1,340s
+
+real	13m31,369s
+user	13m40,877s
+sys	0m1,166s
+
+real	15m4,118s
+user	15m13,200s
+sys	0m1,271s
+
+real	19m2,818s
+user	19m10,222s
+sys	0m1,659s
