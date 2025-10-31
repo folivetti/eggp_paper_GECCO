@@ -1,13 +1,13 @@
 #!/bin/bash
 
 PNAME=$1
-mkdir -p results/neogp/$PNAME
+mkdir -p results/neogp_nll/$PNAME
 
 GEN=200
 POP=500
 TSIZE=2
 LEN=50
-NJOBS=10
+NJOBS=1
 
 # without parallel for testing
 # ~/julia/julia -t 6 --project=NeoGP/ \
@@ -19,5 +19,10 @@ NJOBS=10
 
 parallel -j$NJOBS ~/julia/julia -t 6 --project=NeoGP/ \
 	NeoGP/runNeoGP.jl datasets/${PNAME}_train{2}.csv target -g $GEN -p $POP -t $TSIZE -m $LEN \
-	  --objective=nll --sigma 1.0 --test=datasets/${PNAME}_test{2}.csv \
-	"> results/neogp/${PNAME}/run_{2}_{1}.csv" ::: $(seq 1 10) ::: $(seq 0 2)
+	  --objective=nll --test=datasets/${PNAME}_test{2}.csv \
+	"> results/neogp_nll/${PNAME}/run_{2}_{1}.csv" ::: $(seq 1 10) ::: $(seq 0 2)
+
+parallel -j$NJOBS ~/julia/julia -t 6 --project=NeoGP/ \
+	NeoGP/runNeoGP.jl datasets/${PNAME}_train{2}.csv target -g $GEN -p $POP -t $TSIZE -m $LEN \
+	  --objective=dl --test=datasets/${PNAME}_test{2}.csv \
+	"> results/neogp_dl/${PNAME}/run_{2}_{1}.csv" ::: $(seq 1 10) ::: $(seq 0 2)
