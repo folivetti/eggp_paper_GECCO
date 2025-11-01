@@ -1,68 +1,120 @@
 
-real	40m34,906s
-user	40m30,294s
-sys	0m5,251s
+real	3m12,054s
+user	3m9,665s
+sys	0m4,302s
 
-real	39m35,045s
-user	39m37,136s
-sys	0m5,215s
+real	3m19,222s
+user	3m26,056s
+sys	0m1,343s
 
-real	36m13,671s
-user	36m16,989s
-sys	0m4,995s
+real	3m17,820s
+user	3m22,249s
+sys	0m3,763s
 
-real	34m36,330s
-user	34m40,722s
-sys	0m4,628s
+real	3m18,672s
+user	3m24,769s
+sys	0m1,291s
 
-real	35m10,270s
-user	35m13,848s
-sys	0m4,597s
+real	3m16,214s
+user	3m23,141s
+sys	0m1,336s
 
-real	35m18,622s
-user	35m2,829s
-sys	0m24,820s
+real	3m16,115s
+user	3m22,687s
+sys	0m1,345s
 
-real	35m10,465s
-user	35m14,267s
-sys	0m4,567s
+real	3m14,558s
+user	3m21,643s
+sys	0m1,347s
 
-real	34m11,904s
-user	33m48,427s
-sys	0m32,485s
+real	3m20,569s
+user	3m27,588s
+sys	0m1,404s
 
-real	35m7,145s
-user	35m11,324s
-sys	0m4,666s
+real	3m21,076s
+user	3m28,384s
+sys	0m1,414s
 
-real	34m57,999s
-user	35m3,457s
-sys	0m4,617s
+real	3m19,740s
+user	3m26,007s
+sys	0m1,337s
 
-real	35m2,435s
-user	34m27,320s
-sys	0m42,095s
+real	3m15,064s
+user	3m20,365s
+sys	0m2,949s
 
-real	34m35,132s
-user	34m30,209s
-sys	0m11,303s
+real	3m17,255s
+user	3m24,714s
+sys	0m1,357s
 
-real	34m43,702s
-user	34m49,027s
-sys	0m4,559s
+real	3m21,726s
+user	3m27,768s
+sys	0m1,450s
 
-real	35m4,565s
-user	35m7,929s
-sys	0m5,086s
+real	3m15,163s
+user	3m21,185s
+sys	0m1,296s
 
-real	34m48,332s
-user	34m52,511s
-sys	0m4,605s
+real	3m15,603s
+user	3m22,446s
+sys	0m1,456s
 
-real	35m8,198s
-user	35m12,113s
-sys	0m4,680s
+real	3m16,957s
+user	3m24,115s
+sys	0m1,359s
 
-real	34m56,195s
-user	34m58,792s
-sys	0m4,838s
+real	3m14,452s
+user	3m20,351s
+sys	0m2,614s
+
+real	3m16,265s
+user	3m23,551s
+sys	0m1,417s
+
+real	3m18,562s
+user	3m25,621s
+sys	0m1,441s
+
+real	2m52,610s
+user	2m59,235s
+sys	0m1,213s
+
+real	2m55,096s
+user	3m2,965s
+sys	0m1,242s
+
+real	2m55,911s
+user	3m2,586s
+sys	0m1,296s
+
+real	2m55,637s
+user	3m1,569s
+sys	0m1,301s
+
+real	2m21,118s
+user	2m28,100s
+sys	0m1,208s
+
+real	2m21,641s
+user	2m28,713s
+sys	0m1,251s
+
+real	2m18,769s
+user	2m25,734s
+sys	0m1,222s
+
+real	2m21,131s
+user	2m28,448s
+sys	0m1,164s
+
+real	2m21,136s
+user	2m28,331s
+sys	0m1,362s
+
+real	2m23,220s
+user	2m30,468s
+sys	0m1,167s
+
+real	2m19,406s
+user	2m26,606s
+sys	0m1,253s
