@@ -61,12 +61,12 @@ elif [ "${1,,}" == "symregg" ]; then
     done
 elif [ "${1,,}" == "random" ]; then
    echo "running random..."
-   for key in "${!datasets30[@]}"; do
-     ./runRandom_realworld.sh ${datasets30[$key]} &
-   done
-   #for key in "${!datasets20[@]}"; do
-   #  ./runRandom_realworld.sh ${datasets20[$key]} &
+   #for key in "${!datasets30[@]}"; do
+   #  ./runRandom_realworld.sh ${datasets30[$key]} &
    #done
+   for key in "${!datasets20[@]}"; do
+     ./runRandom_realworld.sh ${datasets20[$key]} &
+   done
 elif [ "${1,,}" == "qlattice" ]; then
    echo "running qlattice..."
    for key in "${!datasets30[@]}"; do
@@ -94,10 +94,26 @@ elif [ "${1,,}" == "gpzdg" ]; then
 elif [ "${1,,}" == "neogp" ]; then
    echo "running neogp..."
    for key in "${!datasets30[@]}"; do
-     ./runNeoGP_realworld.sh ${datasets30[$key]}
+     ./runNeoGP_realworld.sh ${datasets30[$key]} &
    done
    for key in "${!datasets20[@]}"; do
-     ./runNeoGP_realworld.sh ${datasets20[$key]}
+     ./runNeoGP_realworld.sh ${datasets20[$key]} &
+   done
+elif [ "${1,,}" == "rf" ]; then
+   echo "running random forest..."
+   for key in "${!datasets30[@]}"; do
+     ./runRF_realworld.sh ${datasets30[$key]} &
+   done
+   for key in "${!datasets20[@]}"; do
+     ./runRF_realworld.sh ${datasets20[$key]} &
+   done
+elif [ "${1,,}" == "gsgp" ]; then
+   echo "running slim gsgp..."
+   for key in "${!datasets30[@]}"; do
+     ./runSlim_realworld.sh ${datasets30[$key]} &
+   done
+   for key in "${!datasets20[@]}"; do
+     ./runSlim_realworld.sh ${datasets20[$key]} &
    done
 else
    echo "Invalid algorithm. Usage: ./runAllOf.sh [operon|pysr|tinygp|eggp_so|eggp_mo|neogp]"
