@@ -2,12 +2,13 @@
 
 PNAME=$1
 mkdir -p results/neogp_nll/$PNAME
+mkdir -p results/neogp_dl/$PNAME
 
 GEN=200
 POP=500
 TSIZE=2
 LEN=50
-NJOBS=1
+NJOBS=2
 
 # without parallel for testing
 # ~/julia/julia -t 6 --project=NeoGP/ \
