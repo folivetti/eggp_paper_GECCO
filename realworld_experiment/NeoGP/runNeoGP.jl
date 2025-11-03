@@ -3,6 +3,8 @@ using TimerOutputs
 using DelimitedFiles
 using NeoGP
 
+include("CCIndividual.jl")
+
 function main(argv)
     s = ArgParseSettings()
     @add_arg_table s begin
@@ -30,8 +32,10 @@ function main(argv)
             help = "Objective"
             default = "mse"
         "--sigma" # TODO support different likelihoods
-            help = "Sigma value for Gaussian likelihood (only used if applicable, e.g., nll or dl objective)"
-            arg_type = Float32
+            help = "Sigma value for Gaussian likelihood (only used if applicable, e.g., nll or dl objective). Can be a double value or a variable from the datasets"
+        "--likelihood" # TODO support different likelihoods
+            help = "Likelihood type (gaussian, laplace)"
+            default = "gaussian"
         "--threads"
             help = "Maximum number of parallel threads"
             arg_type = Int
@@ -54,49 +58,95 @@ function main(argv)
     tsize = parsed["tournamentsize"]
     maxlen = parsed["maxlen"]
     objective = parsed["objective"]
-    sigma = parsed["sigma"]
+    sigmastr = parsed["sigma"]
     nthreads = parsed["threads"]
+    likelihoodstr = parsed["likelihood"]
     testdataset = parsed["test"] == "" ? trainingfilename : parsed["test"]
 
-    X, y = load_dataset(Float32, trainingfilename, targetname)
-    X_test, y_test = load_dataset(Float32, testdataset, targetname)
+
+    if !isnothing(sigmastr)
+        sigma_val = tryparse(Float32, sigmastr)
+        if isnothing(sigma_val)
+            X, y, sigma = load_dataset(Float32, trainingfilename, targetname, sigmastr)
+            X_test, y_test, sigma_test = load_dataset(Float32, testdataset, targetname, sigmastr)
+
+            nll_offset_train = 0.5 * sum(log.((2.0 * π) .* sigma.^2))
+            nll_offset_test = 0.5 * sum(log.((2.0 * π) .* sigma_test.^2))
+        else
+            sigma = sigma_test = sigma_val
+            X, y = load_dataset(Float32, trainingfilename, targetname)
+            X_test, y_test = load_dataset(Float32, testdataset, targetname)
+
+            nll_offset_train = length(y) / 2 * log(2.0 * π .* sigma^2)
+            nll_offset_test =  length(y_test) / 2 * log(2.0 * π .* sigma_test^2)
+        end
+    else
+        sigma = sigma_test = nothing
+        X, y = load_dataset(Float32, trainingfilename, targetname)
+        X_test, y_test = load_dataset(Float32, testdataset, targetname)
+        nll_offset_train = 0.0
+        nll_offset_test = 0.0
+    end
+    
+    if likelihoodstr == "gaussian"
+        likelihood_type = NeoGP.GaussianLikelihood
+        indiv_type = NeoGP.Individual{NeoGP.GaussianLikelihood}
+        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
+    elseif likelihoodstr == "laplace"
+        likelihood_type = NeoGP.LaplaceLikelihood
+        indiv_type = NeoGP.Individual{NeoGP.LaplaceLikelihood}
+        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
+    elseif likelihoodstr == "cosmic_chronometers"
+        likelihood_type = NeoGP.GaussianLikelihood
+        indiv_type = CCIndividual
+        # x = z + 1
+        X .= X .+ 1.0
+        X_test .= X_test .+ 1.0
+        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.INV, NeoGP.POWABS])
+    else
+        error("unknown likelihood type (allowed values are gaussian, laplace, cosmic_chronometers)")
+    end
 
     if objective == "mse"
         if !isnothing(sigma)
             @warn "sigma argument is ignored when using mse objective"
         end
-        likelihood = NeoGP.GaussianLikelihood(X, y)
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
+        @assert likelihood_type == NeoGP.GaussianLikelihood "MSE objective is only supported with Gaussian likelihood"
+        likelihood = likelihood_type(X, y)
+        likelihood_test = likelihood_type(X_test, y_test)
         loss_func = NeoGP.mean_squared_error
     elseif objective == "r2"
         if !isnothing(sigma)
             @warn "sigma argument is ignored when using mse objective"
         end
-        likelihood = NeoGP.GaussianLikelihood(X, y)
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test)
+        @assert likelihood_type == NeoGP.GaussianLikelihood "R2 objective is only supported with Gaussian likelihood"
+        likelihood = likelihood_type(X, y)
+        likelihood_test = likelihood_type(X_test, y_test)
         loss_func = ((-) ∘ NeoGP.r2_score)
     elseif objective == "nll"
         # TODO allow specification of different likelihoods
-        likelihood = NeoGP.GaussianLikelihood(X, y, sigma) # optimize sigma
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, sigma)
+        likelihood = likelihood_type(X, y, sigma) # optimize sigma
+        likelihood_test = likelihood_type(X_test, y_test, sigma)
         loss_func = NeoGP.negloglik
     elseif objective == "dl"
         # TODO allow specification of different likelihoods
-        likelihood = NeoGP.GaussianLikelihood(X, y, sigma) # optimize sigma
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, sigma)
+        likelihood = likelihood_type(X, y, sigma) # optimize sigma
+        likelihood_test = likelihood_type(X_test, y_test, sigma)
         loss_func = NeoGP.description_length
     elseif objective == "nll-dl"
         # TODO allow specification of different likelihoods
-        likelihood = NeoGP.GaussianLikelihood(X, y, sigma) # optimize sigma
-        likelihood_test = NeoGP.GaussianLikelihood(X_test, y_test, sigma)
+        likelihood = likelihood_type(X, y, sigma) # optimize sigma
+        likelihood_test = likelihood_type(X_test, y_test, sigma)
         loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
     else
         error("unknown objective function value (allowed values are mse, r2, nll, dl)")
     end
+
     gp = NeoGP.Algorithm(likelihood,
         generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize,
         loss_func = loss_func, threads = nthreads, 
-        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS]))
+        functionset = functionset,
+        individual_type = indiv_type)
 
     println("gen,fevals,best_fitness,dl,func_compl,param_compl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,avg_fitness,size,Expression")
     gen = 0
@@ -111,14 +161,15 @@ function main(argv)
         mse_test    = NeoGP.mean_squared_error(y_test, ypred_test)
         r2_train    = NeoGP.r2_score(likelihood.y, ypred_train)
         r2_test     = NeoGP.r2_score(y_test, ypred_test)
-        nll_train   = NeoGP.negloglik(likelihood, ypred_train, bestindiv.likelihood.sigma_err)
-        nll_test    = NeoGP.negloglik(likelihood_test, ypred_test, bestindiv.likelihood.sigma_err)
+        likparam    = NeoGP.extractparam(NeoGP.getlikelihood(bestindiv))
+        nll_train   = NeoGP.negloglik(likelihood, ypred_train, likparam)
+        nll_test    = NeoGP.negloglik(likelihood_test, ypred_test, likparam)
         
         # this is just to produce the terms of the description_length (TODO: simplify)
         (nll, func_compl, param_compl) = NeoGP.description_length_terms(NeoGP.copy(bestindiv))
         dl = nll + func_compl + param_compl
         
-        println("$gen,$(gp.fevals),$(-bestfitness),$dl,$func_compl,$param_compl,$mse_train,$mse_test,$r2_train,$r2_test,$nll_train,$nll_test,$(gp.avg_len),$(-gp.favgpop),$(length(bestindiv.program)),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$(dl-nll_offset_train),$func_compl,$param_compl,$mse_train,$mse_test,$r2_train,$r2_test,$(nll_train-nll_offset_train),$(nll_test-nll_offset_test),$(gp.avg_len),$(-gp.favgpop),$(NeoGP.node_count(bestindiv))),\"$(best_expr_str)\"")
         nothing
     end
     TimerOutputs.disable_timer!(gp.to)
@@ -138,6 +189,23 @@ function load_dataset(::Type{T}, filename::AbstractString, targetname) where {T 
     y = data[:, targetidx]
     X, y
 end
+
+# all columns except for the target and target error are allowed input
+function load_dataset(::Type{T}, filename::AbstractString, targetname, targeterrorname) where {T <: AbstractFloat}
+    data,varnames = readdlm(filename, ',', T, header=true)
+    
+    targetidx = findfirst((==)(targetname), varnames[1, :])
+    isnothing(targetidx) && error("Could not find variable $targetname in $filename (with varnames: $varnames)")
+
+    targeterroridx = findfirst((==)(targeterrorname), varnames[1, :])
+    isnothing(targeterroridx) && error("Could not find variable $targeterrorname in $filename (with varnames: $varnames)")
+    
+    X = data[:, setdiff(1:end, [targetidx, targeterroridx])]
+    y = data[:, targetidx]
+    y_err = data[:, targeterroridx]
+    X, y, y_err
+end
+
 
 if abspath(PROGRAM_FILE) == @__FILE__
     main(ARGS)
