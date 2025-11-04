@@ -49,6 +49,8 @@ if len(sys.argv) > 3:
         grid = "symregg"
     elif "pysips" in sys.argv[3].lower():
         grid = "pysips"
+    elif "red" in sys.argv[3].lower():
+        grid = "withred"
 
 if grid == "eggp":
     algref = "eggp_mo_i50"
@@ -59,13 +61,23 @@ elif grid == "symregg":
 elif grid == "pysips":
     algref = "PySIPS"
     base_dir = "PySIPS_grid/"
+elif grid == "withred":
+    algref = "eggp_red"
+    base_dir = ""
 else:
     algref = "eggp"
     base_dir = ""
 
+print(f"perf{'_'+grid if len(grid) else ''}.csv")
+
 df = pd.read_csv(f"perf{'_'+grid if len(grid) else ''}.csv")
-algs = sorted(np.unique(df.algorithm.values))
-algs = ["eggp", "QLattice", "Operon", "PySR"]
+
+if grid == "withred":
+    algs = ["PySIPS", "PySR_red","Operon_red", "eggp_red"]
+else:
+    algs = sorted(np.unique(df.algorithm.values))
+    algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp"]
+
 df = df[df.algorithm.isin(algs)]
 
 criteria = 'r2_test' if sys.argv[1] == "R2" else 'mse_test' # MSE, R2
@@ -96,6 +108,7 @@ else:
     pfun = partial(prob, n, ref, maxobj)
     aggreg = pfun
 
+    
 if isinstance(aggreg, list):
     tbl = df.groupby(["dataset","algorithm"])[criteria].agg(aggreg).unstack()
 else:
@@ -127,8 +140,11 @@ print()
 print("\n====Size====")
 tbl_sz = df.groupby(["dataset","algorithm"])['size'].mean().unstack()
 tbl_sz.loc["mean"] = tbl_sz.mean()
-s = tbl_sz[algs].style.highlight_min(axis=1, props="mathbf:--rwrap")
-s.format("{:.2f}")
+# replace "_" with "\_" in the dataset and algorithm names for LaTeX compatibility
+algs_sz = [alg for alg in algs if alg not in ['RF', 'random']]
+tbl_sz.index = tbl_sz.index.str.replace("_", "\\_")
+s = tbl_sz[algs_sz].style.highlight_min(axis=1, props="mathbf:--rwrap")
+s.format("{:.0f}")
 print(s.to_latex())
 
 ranks = tbl.rank(axis=1, ascending=False if maxobj else True, pct=False)

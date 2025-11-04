@@ -38,10 +38,15 @@ elif "P@" in args.criteria:
     criteria = f'mse_test'
     df.replace([np.inf, -np.inf, np.nan], 0, inplace=True)
     minobj = True
-else:
+elif 'MSE' in args.criteria:
     criteria = 'mse_test'
     df.replace([np.inf, -np.inf, np.nan], 1e10, inplace=True)
     minobj = True
+else:
+    criteria = 'size'
+    minobj = True
+    algs = [alg for alg in algs if alg not in ['random', 'RF']]
+    df= df[~df.algorithm.isin(['random', 'RF'])]
 
 tbl = df.groupby(["dataset","algorithm"])[criteria].apply(args.agg).unstack()
 #tbl.round(2)

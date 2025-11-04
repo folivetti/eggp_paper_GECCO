@@ -1,0 +1,530 @@
+Traceback (most recent call last):
+  File "/home/olivetti/projects/eggp_paper_GECCO/realworld_experiment/RF_srbench_wrapper.py", line 17, in <module>
+    reg.fit(X_train, y_train)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 486, in fit
+    trees = Parallel(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 82, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/joblib/parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/parallel.py", line 147, in __call__
+    return self.function(*args, **kwargs)
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/ensemble/_forest.py", line 188, in _parallel_build_trees
+    tree._fit(
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/tree/_classes.py", line 472, in _fit
+    builder.build(self.tree_, X, y, sample_weight, missing_values_in_feature_mask)
+KeyboardInterrupt
+
+real	21m30,531s
+user	21m23,740s
+sys	0m1,534s
+
+real	16m56,989s
+user	17m4,828s
+sys	0m1,210s
+
+real	14m32,065s
+user	14m41,156s
+sys	0m1,170s
+
+real	13m47,403s
+user	13m56,770s
+sys	0m1,266s
+
+real	13m19,457s
+user	13m28,802s
+sys	0m1,340s
+
+real	13m31,369s
+user	13m40,877s
+sys	0m1,166s
+
+real	15m4,118s
+user	15m13,200s
+sys	0m1,271s
+
+real	19m2,818s
+user	19m10,222s
+sys	0m1,659s
+
+real	19m12,106s
+user	19m19,628s
+sys	0m1,561s
+
+real	19m22,819s
+user	19m30,365s
+sys	0m1,510s
+
+real	19m8,491s
+user	19m15,964s
+sys	0m1,551s
+
+real	19m7,358s
+user	19m14,785s
+sys	0m1,688s
+
+real	17m43,864s
+user	17m51,826s
+sys	0m1,492s
+
+real	17m45,003s
+user	17m52,638s
+sys	0m1,825s
+
+real	17m52,337s
+user	18m0,418s
+sys	0m1,565s
+
+real	17m45,876s
+user	17m53,732s
+sys	0m1,600s
+
+real	17m45,012s
+user	17m52,826s
+sys	0m1,642s
+
+real	17m55,459s
+user	18m3,471s
+sys	0m1,443s
+
+real	17m45,404s
+user	17m53,545s
+sys	0m1,323s
+
+real	17m45,054s
+user	17m52,910s
+sys	0m1,596s
+
+real	17m48,736s
+user	17m56,166s
+sys	0m2,035s
+
+real	17m48,963s
+user	17m57,089s
+sys	0m1,326s
+
+real	17m46,652s
+user	17m54,517s
+sys	0m1,583s
+
+real	17m51,223s
+user	17m59,061s
+sys	0m1,625s
+
+real	17m57,371s
+user	18m5,126s
+sys	0m1,538s
+
+real	17m49,022s
+user	17m56,684s
+sys	0m1,797s
+
+real	17m48,797s
+user	17m56,617s
+sys	0m1,618s
+
+real	17m48,176s
+user	17m56,280s
+sys	0m1,415s
+
+real	17m43,108s
+user	17m50,747s
+sys	0m1,907s
+
+real	17m56,093s
+user	18m4,080s
+sys	0m1,468s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.645s
+user	0m2.041s
+sys	0m0.609s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.184s
+user	0m1.953s
+sys	0m0.250s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.188s
+user	0m1.961s
+sys	0m0.191s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.449s
+user	0m2.584s
+sys	0m0.206s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.183s
+user	0m2.353s
+sys	0m0.168s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.250s
+user	0m2.229s
+sys	0m0.173s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.090s
+user	0m2.024s
+sys	0m0.168s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.266s
+user	0m2.511s
+sys	0m0.180s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.140s
+user	0m2.190s
+sys	0m0.206s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.296s
+user	0m2.151s
+sys	0m0.176s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.110s
+user	0m2.234s
+sys	0m0.149s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.367s
+user	0m2.558s
+sys	0m0.122s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.174s
+user	0m2.215s
+sys	0m0.161s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.277s
+user	0m2.277s
+sys	0m0.229s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.310s
+user	0m2.490s
+sys	0m0.158s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.286s
+user	0m2.421s
+sys	0m0.182s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.341s
+user	0m2.420s
+sys	0m0.177s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.429s
+user	0m2.650s
+sys	0m0.163s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.428s
+user	0m2.517s
+sys	0m0.147s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.472s
+user	0m2.370s
+sys	0m0.202s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.287s
+user	0m2.632s
+sys	0m0.179s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.541s
+user	0m2.563s
+sys	0m0.181s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.362s
+user	0m2.331s
+sys	0m0.171s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.516s
+user	0m2.495s
+sys	0m0.203s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.246s
+user	0m2.242s
+sys	0m0.163s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.315s
+user	0m2.597s
+sys	0m0.193s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.257s
+user	0m2.517s
+sys	0m0.165s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.362s
+user	0m2.452s
+sys	0m0.192s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.219s
+user	0m2.414s
+sys	0m0.152s
+Traceback (most recent call last):
+  File "/home/gkronber/eggp_paper_GECCO_srbench/realworld_experiment/RF_realworld_wrapper.py", line 16, in <module>
+    df = pd.read_csv(f"datasets/{sys.argv[1]}_train{sys.argv[2]}.csv")
+                                                    ~~~~~~~~^^^
+IndexError: list index out of range
+
+real	0m2.037s
+user	0m2.457s
+sys	0m0.159s
+
+real	18m59.798s
+user	18m14.506s
+sys	0m3.831s
+
+real	18m11.791s
+user	18m2.766s
+sys	0m2.933s
+
+real	17m9.833s
+user	16m58.531s
+sys	0m2.458s
+
+real	15m14.125s
+user	15m13.140s
+sys	0m1.374s
+
+real	12m39.883s
+user	12m40.621s
+sys	0m0.660s
+
+real	12m48.766s
+user	12m48.786s
+sys	0m1.380s
+
+real	12m52.683s
+user	12m53.223s
+sys	0m0.941s
+
+real	12m19.029s
+user	12m19.657s
+sys	0m1.044s
+
+real	12m11.567s
+user	12m12.693s
+sys	0m0.524s
+
+real	12m28.046s
+user	12m28.999s
+sys	0m0.640s
+
+real	12m5.342s
+user	12m6.288s
+sys	0m0.764s
+
+real	12m4.162s
+user	12m5.378s
+sys	0m0.548s
+
+real	11m48.162s
+user	11m49.303s
+sys	0m0.708s
+
+real	11m50.278s
+user	11m51.610s
+sys	0m0.472s
+
+real	11m44.258s
+user	11m45.128s
+sys	0m0.996s
+
+real	11m44.756s
+user	11m45.453s
+sys	0m1.104s
+
+real	12m2.455s
+user	11m59.693s
+sys	0m1.600s
+
+real	13m15.281s
+user	13m15.215s
+sys	0m1.373s
+
+real	12m3.125s
+user	12m3.767s
+sys	0m0.792s
+
+real	11m28.550s
+user	11m29.755s
+sys	0m0.580s
+
+real	11m28.906s
+user	11m29.778s
+sys	0m1.024s
+
+real	11m40.609s
+user	11m41.700s
+sys	0m0.928s
+
+real	11m50.402s
+user	11m51.644s
+sys	0m0.832s
+
+real	11m52.855s
+user	11m53.933s
+sys	0m0.876s
+
+real	11m53.591s
+user	11m54.524s
+sys	0m0.968s
+
+real	11m46.429s
+user	11m47.366s
+sys	0m0.988s
+
+real	11m45.953s
+user	11m47.612s
+sys	0m0.416s
+
+real	11m33.133s
+user	11m34.235s
+sys	0m0.796s
+
+real	11m26.992s
+user	11m28.152s
+sys	0m0.804s
+
+real	11m34.212s
+user	11m35.325s
+sys	0m0.892s

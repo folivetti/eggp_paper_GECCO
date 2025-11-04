@@ -4,6 +4,14 @@ import glob
 import sys
 from pymoo.indicators.hv import HV
 import argparse
+import sympy as sym 
+
+def model_size(expr):
+    """Compute the size of a sympy expression."""
+    if expr.is_Atom:
+        return 1
+    else:
+        return 1 + sum(model_size(arg) for arg in expr.args)
 
 parser = argparse.ArgumentParser(
                     prog='gen_dataframe',
@@ -28,7 +36,7 @@ grid = args.grid
 thr = float(args.thr)
 
 # list of datasets and algorithms
-datasets = ["1028_SWD", "1193_BNG_lowbwt", "192_vineyard", "522_pm10", "579_fri_c0_250_5", "650_fri_c0_500_50", "1089_USCrime", "1199_BNG_echoMonths", "210_cloud", "557_analcatdata_apnea1", "606_fri_c2_1000_10", "678_visualizing_environmental", "chemical_1_tower", "flow_stress_phip0.1", "friction_stat_one-hot", "nasa_battery_2_20min", "nikuradse_2", "chemical_2_competition",  "riction_dyn_one-hot", "nasa_battery_1_10min", "nikuradse_1"]
+datasets = ["1028_SWD", "1193_BNG_lowbwt", "192_vineyard", "522_pm10", "579_fri_c0_250_5", "650_fri_c0_500_50", "1089_USCrime", "1199_BNG_echoMonths", "210_cloud", "557_analcatdata_apnea1", "606_fri_c2_1000_10", "678_visualizing_environmental", "chemical_1_tower", "flow_stress_phip0.1", "friction_stat_one-hot", "nasa_battery_2_20min", "nikuradse_2", "chemical_2_competition",  "friction_dyn_one-hot", "nasa_battery_1_10min", "nikuradse_1"]
 
 
 if grid == "eggp":
@@ -48,7 +56,7 @@ elif grid == "pysips":
     ref = "PySIPS"
     base_dir = "PySIPS_grid/"
 else:
-    algs = ["SymRegg","eggp",  "PySIPS", "Operon", "QLattice", "GPGOMEA", "GPZGD", "PySR"] #, "random"] # "qlattice", "gpzgd", "Random", "RF"]
+    algs = ["SymRegg","eggp",  "PySIPS", "Operon", "QLattice", "GPGOMEA", "PySR", "neogp", "random", "GPZGD", "slim_gsgp", "RF"] #, "random"] # "qlattice", "gpzgd", "Random", "RF"]
     #algs = ["eggp_mo", "gomea", "PySR", "PySIPS", "symregg", "random" ] # "qlattice", "gpzgd", "Random", "RF"]
     #algs = ["symregg", "random", "random5k"]
     #algs = ["eggp_mo", "PySIPS", "gomea", "symregg"]
@@ -60,6 +68,7 @@ dfalgs    = []
 ds        = []
 r2_tests  = []
 mse_tests = []
+mse_trains = []
 runs      = []
 hyps      = []
 sizes     = []
@@ -75,16 +84,19 @@ for d in datasets:
 
         for i,f in enumerate(glob.glob(directory)):
             try:
-                dfi = pd.read_csv(f)
+                if alg == "neogp":
+                    dfi = pd.read_csv(f, skiprows=10, skipfooter=1, engine='python')
+                else:
+                    dfi = pd.read_csv(f)
                 msecol = 'loss' if "loss_train" in list(dfi.columns) else 'MSE'
                 msecolt = 'loss' if "loss_train" in list(dfi.columns) else 'MSE'
                 useval = 'train' if 'eggp' in alg or 'symregg' in alg or 'random' in alg else 'train'
-
                 # get the two objectives from the Pareto front
                 # r2s will be used to calculate the hypervolume
-                r2s = dfi[[f'R2_{useval}', 'size']].values
-                r2s[r2s[:,0] < 0, 0] = 0 # R^2 < 0 turns to 0
-                r2s[r2s[:,1] > 50, 1] = 50 # size > 50 (max) turns to 50
+                r2s = dfi[['R2_train', 'max_samples']].values if alg == "RF" else dfi[[f'R2_{useval}', 'size']].values
+                if alg != "slim_gsgp" and alg != "GPGOMEA" and alg != 'RF':
+                    r2s[r2s[:,0] < 0, 0] = 0 # R^2 < 0 turns to 0
+                    r2s[r2s[:,1] > 50, 1] = 50 # size > 50 (max) turns to 50
                 r2s[:,0] = -r2s[:,0]
                 # calculate the hypervolume
                 hv = HV(ref_point=np.array([0.0, 50]))
@@ -92,27 +104,35 @@ for d in datasets:
 
 
                 # assign a low score for expressions larger than the maximum size
-                dfi.loc[dfi['size'] > int(args.size), "R2_train"] = 0
-                dfi.loc[dfi['size'] > int(args.size), "R2_test"] = 0
-                dfi.loc[dfi['size'] > int(args.size), f"{msecol}_train"] = np.inf
-                dfi.loc[dfi['size'] > int(args.size), f"{msecol}_test"] = np.inf
-                dfi.dropna(inplace=True, how='any') # tinyGP sometimes fails
+                msize = int(args.size) if alg not in ["slim_gsgp", "GPGOMEA", "GPZGD", "PySIPS"] else 2000
+                if alg != "RF":
+                    dfi.loc[dfi['size'] > msize, "R2_train"] = 0
+                    dfi.loc[dfi['size'] > msize, "R2_test"] = 0
+                    dfi.loc[dfi['size'] > msize, f"{msecol}_train"] = np.inf
+                    dfi.loc[dfi['size'] > msize, f"{msecol}_test"] = np.inf
+                    dfi.dropna(inplace=True, how='any') # tinyGP sometimes fails
 
                 r2max = dfi.R2_train.max()
-                ix = dfi[dfi.R2_train >= thr*r2max]['size'].idxmin()
+                ix = dfi.OOB_score.idxmin() if alg == "RF" else dfi[dfi.R2_train >= thr*r2max]['size'].idxmin()
 
                 # ix = dfi.R2_train.idxmax()
                 # ix = dfi.R2_test.idxmax()
                 v = dfi.loc[ix, 'R2_test']
-                vs = dfi.loc[ix, 'size']
+                vs = 10000 if alg == "RF" else dfi.loc[ix, 'size']
 
                 msemin = dfi[f"{msecol}_{useval}"].min()
-                ixmse = dfi[dfi[f"{msecol}_{useval}"] <= (2 - thr)*msemin]['size'].idxmin()
+                mse_trains.append(msemin)
+                if alg == "neogp":
+                    ixmse = 199
+                elif alg == "RF":
+                    imxse = ix
+                else:
+                    ixmse = dfi[dfi[f"{msecol}_{useval}"] <= (2 - thr)*msemin]['size'].idxmin()
                 # ixmse = dfi[f"{msecol}_{useval}"].idxmin()
                 # ixmse = dfi[f"{msecol}_test"].idxmin()
                 vmse = dfi.loc[ixmse, f"{msecolt}_test"]
                 #vmse = np.round(np.log2(dfi.loc[ixmse, f"{msecol}_test"]))
-                vsmse = dfi.loc[ixmse, 'size']
+                vsmse = 100000 if alg == "RF" else dfi.loc[ixmse, 'size']
 
 
                 # append all the values
@@ -131,6 +151,6 @@ for d in datasets:
                 print(f"ERROR IN {f} - {e}")
 
 # create the dataframe and save it
-df = pd.DataFrame({"run":runs, "algorithm": dfalgs, "dataset": ds, "r2_test": r2_tests, "mse_test": mse_tests, "hypervolume": hyps, 'size':sizes, 'size_mse':sizesmse})
+df = pd.DataFrame({"run":runs, "algorithm": dfalgs, "dataset": ds, "r2_test": r2_tests, "mse_train" : mse_trains, "mse_test": mse_tests, "hypervolume": hyps, 'size':sizes, 'size_mse':sizesmse})
 outname = f"perf_{grid}.csv" if grid!="" else "perf.csv"
 df.to_csv(outname, index=False)

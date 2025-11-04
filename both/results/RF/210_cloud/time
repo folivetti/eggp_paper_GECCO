@@ -1,0 +1,510 @@
+
+real	0m10,970s
+user	0m12,747s
+sys	0m0,111s
+
+real	0m11,683s
+user	0m20,353s
+sys	0m0,128s
+
+real	0m12,975s
+user	0m20,664s
+sys	0m0,133s
+
+real	0m15,855s
+user	0m22,505s
+sys	0m0,126s
+
+real	0m16,151s
+user	0m22,952s
+sys	0m0,125s
+
+real	0m17,532s
+user	0m24,266s
+sys	0m0,200s
+
+real	0m19,766s
+user	0m26,591s
+sys	0m0,198s
+
+real	0m17,601s
+user	0m24,335s
+sys	0m0,148s
+
+real	0m17,645s
+user	0m24,465s
+sys	0m0,139s
+
+real	0m21,858s
+user	0m28,828s
+sys	0m0,169s
+
+real	0m19,253s
+user	0m25,980s
+sys	0m0,197s
+
+real	0m18,767s
+user	0m25,158s
+sys	0m0,220s
+
+real	0m18,163s
+user	0m24,393s
+sys	0m0,177s
+
+real	0m25,420s
+user	0m30,485s
+sys	0m0,228s
+
+real	0m18,693s
+user	0m25,354s
+sys	0m0,157s
+
+real	0m21,693s
+user	0m28,401s
+sys	0m0,185s
+
+real	0m18,167s
+user	0m23,467s
+sys	0m0,150s
+
+real	0m21,704s
+user	0m28,220s
+sys	0m0,164s
+
+real	0m18,653s
+user	0m24,430s
+sys	0m0,211s
+
+real	0m18,350s
+user	0m24,604s
+sys	0m0,159s
+
+real	0m21,764s
+user	0m28,604s
+sys	0m0,242s
+
+real	0m21,986s
+user	0m27,490s
+sys	0m0,209s
+
+real	0m18,961s
+user	0m24,804s
+sys	0m0,228s
+
+real	0m20,123s
+user	0m26,687s
+sys	0m0,194s
+
+real	0m24,492s
+user	0m31,353s
+sys	0m0,204s
+
+real	0m18,459s
+user	0m25,193s
+sys	0m0,146s
+
+real	0m20,207s
+user	0m27,013s
+sys	0m0,168s
+
+real	0m20,924s
+user	0m27,312s
+sys	0m0,196s
+
+real	0m21,821s
+user	0m28,777s
+sys	0m0,187s
+
+real	0m17,646s
+user	0m24,961s
+sys	0m0,179s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.056s
+user	0m0.001s
+sys	0m0.008s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.058s
+user	0m0.000s
+sys	0m0.007s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.055s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.055s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.054s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.050s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.054s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.003s
+sys	0m0.004s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.057s
+user	0m0.003s
+sys	0m0.003s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.052s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.054s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.050s
+user	0m0.000s
+sys	0m0.004s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.056s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.052s
+user	0m0.000s
+sys	0m0.004s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.050s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.003s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.048s
+user	0m0.000s
+sys	0m0.004s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.054s
+user	0m0.000s
+sys	0m0.004s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.059s
+user	0m0.000s
+sys	0m0.005s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.066s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.063s
+user	0m0.000s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.059s
+user	0m0.000s
+sys	0m0.008s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.049s
+user	0m0.001s
+sys	0m0.006s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.053s
+user	0m0.003s
+sys	0m0.004s
+./runRF_srbench.sh: line 9: python: command not found
+
+real	0m0.042s
+user	0m0.001s
+sys	0m0.003s
+
+real	1m11.500s
+user	1m8.584s
+sys	0m0.589s
+
+real	1m8.660s
+user	1m7.660s
+sys	0m0.467s
+
+real	1m11.705s
+user	1m9.919s
+sys	0m0.542s
+
+real	1m9.153s
+user	1m8.236s
+sys	0m0.588s
+
+real	1m13.512s
+user	1m11.722s
+sys	0m0.507s
+
+real	1m12.016s
+user	1m10.222s
+sys	0m0.532s
+
+real	1m13.142s
+user	1m11.439s
+sys	0m0.650s
+
+real	1m11.207s
+user	1m10.312s
+sys	0m0.555s
+
+real	1m11.940s
+user	1m10.481s
+sys	0m0.546s
+
+real	1m9.505s
+user	1m8.336s
+sys	0m0.447s
+
+real	1m18.723s
+user	1m16.674s
+sys	0m0.775s
+
+real	1m11.238s
+user	1m9.425s
+sys	0m0.578s
+
+real	1m12.822s
+user	1m10.725s
+sys	0m0.399s
+
+real	1m10.812s
+user	1m9.474s
+sys	0m0.486s
+
+real	1m15.174s
+user	1m12.478s
+sys	0m0.851s
+
+real	1m8.950s
+user	1m8.270s
+sys	0m0.412s
+
+real	1m13.198s
+user	1m10.875s
+sys	0m0.577s
+
+real	1m11.721s
+user	1m10.651s
+sys	0m0.379s
+
+real	1m12.855s
+user	1m10.641s
+sys	0m0.612s
+
+real	1m9.445s
+user	1m8.754s
+sys	0m0.436s
+
+real	1m16.358s
+user	1m13.292s
+sys	0m0.881s
+
+real	1m10.769s
+user	1m9.773s
+sys	0m0.494s
+
+real	1m13.470s
+user	1m11.298s
+sys	0m0.604s
+
+real	1m8.051s
+user	1m7.170s
+sys	0m0.451s
+
+real	0m57.688s
+user	0m58.364s
+sys	0m0.308s
+
+real	0m56.342s
+user	0m57.000s
+sys	0m0.296s
+
+real	0m55.793s
+user	0m56.568s
+sys	0m0.264s
+
+real	0m55.888s
+user	0m56.388s
+sys	0m0.368s
+
+real	0m56.727s
+user	0m57.414s
+sys	0m0.304s
+
+real	0m50.635s
+user	0m51.406s
+sys	0m0.368s
+
+real	1m11.793s
+user	1m11.574s
+sys	0m0.606s
+
+real	1m15.323s
+user	1m15.748s
+sys	0m0.421s
+
+real	1m17.889s
+user	1m18.579s
+sys	0m0.393s
+
+real	1m20.805s
+user	1m21.214s
+sys	0m0.477s
+
+real	1m14.101s
+user	1m14.669s
+sys	0m0.372s
+
+real	1m14.838s
+user	1m15.323s
+sys	0m0.388s
+
+real	1m14.284s
+user	1m14.859s
+sys	0m0.389s
+
+real	1m18.384s
+user	1m18.901s
+sys	0m0.371s
+
+real	1m14.679s
+user	1m15.348s
+sys	0m0.333s
+
+real	1m15.095s
+user	1m15.715s
+sys	0m0.432s
+
+real	1m16.048s
+user	1m16.579s
+sys	0m0.385s
+
+real	1m13.744s
+user	1m14.269s
+sys	0m0.360s
+
+real	1m14.832s
+user	1m15.375s
+sys	0m0.329s
+
+real	1m14.506s
+user	1m15.072s
+sys	0m0.329s
+
+real	1m16.315s
+user	1m16.867s
+sys	0m0.357s
+
+real	1m17.342s
+user	1m17.816s
+sys	0m0.450s
+
+real	1m14.323s
+user	1m15.008s
+sys	0m0.373s
+
+real	1m15.576s
+user	1m16.014s
+sys	0m0.393s
+
+real	1m17.418s
+user	1m18.034s
+sys	0m0.349s
+
+real	1m15.006s
+user	1m15.614s
+sys	0m0.369s
+
+real	1m10.659s
+user	1m11.204s
+sys	0m0.404s
+
+real	1m10.406s
+user	1m10.994s
+sys	0m0.344s
+
+real	1m9.451s
+user	1m9.791s
+sys	0m0.612s
+
+real	1m11.271s
+user	1m11.784s
+sys	0m0.458s
+
+real	1m10.229s
+user	1m10.835s
+sys	0m0.332s
+
+real	1m12.177s
+user	1m12.694s
+sys	0m0.360s
+
+real	1m10.663s
+user	1m11.286s
+sys	0m0.356s
+
+real	1m11.667s
+user	1m12.345s
+sys	0m0.300s
+
+real	1m12.906s
+user	1m13.539s
+sys	0m0.289s
+
+real	1m5.375s
+user	1m6.066s
+sys	0m0.296s

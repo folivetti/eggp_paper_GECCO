@@ -1,120 +1,244 @@
+symregg: hs_symregg_main: interrupted
 
-real	1m11,510s
-user	1m12,325s
-sys	0m0,679s
+real	0m28,072s
+user	0m36,477s
+sys	0m0,430s
+./runRandom.sh, linha 10: 1357665 Morto                   symregg -d datasets/$1_train${FOLD}.csv --test datasets/$1_test${FOLD}.csv -g $GEN -s 50 -k 2 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,power,sqrt --Simplify -a OnlyRandom > results/random/$1/run_${FOLD}_${i}.csv
 
-real	1m12,459s
-user	1m13,244s
-sys	0m0,734s
+real	0m32,923s
+user	0m42,918s
+sys	0m0,429s
+./runRandom.sh, linha 10: 1357809 Morto                   symregg -d datasets/$1_train${FOLD}.csv --test datasets/$1_test${FOLD}.csv -g $GEN -s 50 -k 2 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,power,sqrt --Simplify -a OnlyRandom > results/random/$1/run_${FOLD}_${i}.csv
 
-real	1m10,026s
-user	1m10,457s
-sys	0m0,774s
+real	0m13,505s
+user	0m23,852s
+sys	0m0,233s
+./runRandom.sh, linha 10: 1357912 Morto                   symregg -d datasets/$1_train${FOLD}.csv --test datasets/$1_test${FOLD}.csv -g $GEN -s 50 -k 2 --loss MSE --opt-iter 50 --opt-retries 2 --non-terminals add,sub,mul,div,exp,log,sin,power,sqrt --Simplify -a OnlyRandom > results/random/$1/run_${FOLD}_${i}.csv
 
-real	1m8,346s
-user	1m9,336s
-sys	0m0,660s
+real	0m11,023s
+user	0m21,409s
+sys	0m0,234s
 
-real	1m8,926s
-user	1m9,953s
-sys	0m0,723s
+real	1m2,771s
+user	1m12,227s
+sys	0m0,620s
 
-real	1m8,711s
-user	1m9,632s
-sys	0m0,645s
+real	1m2,576s
+user	1m12,187s
+sys	0m0,624s
 
-real	1m8,271s
-user	1m9,141s
-sys	0m0,739s
+real	1m2,762s
+user	1m11,901s
+sys	0m0,730s
 
-real	1m9,558s
-user	1m10,299s
-sys	0m0,702s
+real	1m3,142s
+user	1m12,167s
+sys	0m0,757s
 
-real	1m9,439s
-user	1m10,240s
-sys	0m0,698s
+real	1m3,515s
+user	1m12,873s
+sys	0m0,662s
 
-real	1m9,203s
-user	1m10,235s
-sys	0m0,655s
+real	1m3,484s
+user	1m12,610s
+sys	0m0,732s
 
-real	1m8,468s
-user	1m9,199s
-sys	0m0,820s
+real	1m0,708s
+user	1m11,108s
+sys	0m0,437s
 
-real	1m8,749s
-user	1m9,707s
-sys	0m0,628s
+real	1m1,893s
+user	1m11,865s
+sys	0m0,532s
 
-real	1m8,592s
-user	1m9,523s
-sys	0m0,653s
+real	1m2,046s
+user	1m11,728s
+sys	0m0,539s
 
-real	1m8,231s
-user	1m9,234s
-sys	0m0,675s
+real	1m3,331s
+user	1m12,610s
+sys	0m0,684s
 
-real	1m8,976s
-user	1m9,786s
-sys	0m0,658s
+real	1m3,875s
+user	1m12,980s
+sys	0m0,673s
 
-real	1m8,569s
-user	1m9,425s
-sys	0m0,650s
+real	1m2,578s
+user	1m12,170s
+sys	0m0,559s
 
-real	1m8,856s
-user	1m9,813s
-sys	0m0,707s
+real	1m1,290s
+user	1m11,677s
+sys	0m0,480s
 
-real	1m8,628s
-user	1m9,466s
+real	1m3,772s
+user	1m12,959s
+sys	0m0,631s
+
+real	1m3,661s
+user	1m12,716s
 sys	0m0,736s
 
-real	1m8,794s
-user	1m9,758s
-sys	0m0,653s
+real	1m2,151s
+user	1m12,129s
+sys	0m0,554s
 
-real	1m8,383s
-user	1m9,347s
-sys	0m0,677s
+real	1m1,694s
+user	1m11,570s
+sys	0m0,558s
 
-real	1m8,676s
-user	1m9,634s
-sys	0m0,625s
+real	1m2,940s
+user	1m12,264s
+sys	0m0,620s
 
-real	1m9,166s
-user	1m10,180s
-sys	0m0,569s
+real	1m1,832s
+user	1m12,169s
+sys	0m0,468s
 
-real	1m9,462s
-user	1m9,870s
-sys	0m0,616s
+real	1m2,646s
+user	1m11,950s
+sys	0m0,618s
 
-real	1m8,412s
-user	1m9,490s
-sys	0m0,616s
+real	1m3,377s
+user	1m12,721s
+sys	0m0,613s
 
-real	1m9,869s
-user	1m10,772s
-sys	0m0,721s
+real	1m2,431s
+user	1m11,774s
+sys	0m0,759s
 
-real	1m8,804s
-user	1m9,688s
-sys	0m0,609s
+real	1m1,521s
+user	1m12,015s
+sys	0m0,481s
 
-real	1m8,614s
-user	1m9,383s
-sys	0m0,864s
+real	1m3,546s
+user	1m12,756s
+sys	0m0,707s
 
-real	1m9,038s
-user	1m9,855s
-sys	0m0,663s
+real	1m2,143s
+user	1m12,167s
+sys	0m0,577s
 
-real	1m8,484s
-user	1m9,426s
-sys	0m0,668s
+real	1m3,783s
+user	1m12,831s
+sys	0m0,658s
 
-real	1m8,886s
-user	1m9,885s
-sys	0m0,615s
+real	3m25,609s
+user	3m25,877s
+sys	0m1,215s
+
+real	3m23,767s
+user	3m29,053s
+sys	0m1,653s
+
+real	3m21,264s
+user	3m26,426s
+sys	0m1,182s
+
+real	3m13,639s
+user	3m19,271s
+sys	0m1,258s
+
+real	3m7,382s
+user	3m12,647s
+sys	0m1,359s
+
+real	3m10,763s
+user	3m16,290s
+sys	0m1,156s
+
+real	3m9,689s
+user	3m15,593s
+sys	0m1,128s
+
+real	3m25,220s
+user	3m30,540s
+sys	0m1,217s
+
+real	3m21,802s
+user	3m27,153s
+sys	0m1,229s
+
+real	3m22,056s
+user	3m27,561s
+sys	0m1,186s
+
+real	3m18,595s
+user	3m24,464s
+sys	0m1,174s
+
+real	3m19,057s
+user	3m24,238s
+sys	0m1,186s
+
+real	3m19,573s
+user	3m23,644s
+sys	0m1,268s
+
+real	3m8,120s
+user	3m13,546s
+sys	0m1,243s
+
+real	3m13,690s
+user	3m19,112s
+sys	0m1,262s
+
+real	3m17,106s
+user	3m23,075s
+sys	0m1,183s
+
+real	3m12,157s
+user	3m17,577s
+sys	0m1,188s
+
+real	3m21,691s
+user	3m27,303s
+sys	0m1,221s
+
+real	3m10,118s
+user	3m15,819s
+sys	0m1,123s
+
+real	3m20,903s
+user	3m26,145s
+sys	0m1,206s
+
+real	3m18,794s
+user	3m24,187s
+sys	0m1,275s
+
+real	3m32,203s
+user	3m38,427s
+sys	0m1,216s
+
+real	3m25,854s
+user	3m31,042s
+sys	0m1,155s
+
+real	3m15,823s
+user	3m21,418s
+sys	0m1,191s
+
+real	2m50,751s
+user	2m57,017s
+sys	0m1,067s
+
+real	2m45,607s
+user	2m51,474s
+sys	0m1,118s
+
+real	2m41,115s
+user	2m47,250s
+sys	0m1,146s
+
+real	2m38,494s
+user	2m44,974s
+sys	0m1,130s
+
+real	2m37,326s
+user	2m43,340s
+sys	0m1,115s
+
+real	2m42,620s
+user	2m49,041s
+sys	0m1,040s

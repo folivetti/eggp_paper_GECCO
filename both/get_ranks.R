@@ -22,14 +22,8 @@ my_data <- read.csv(fname)
 options(mc.cores = parallel::detectCores(logical = FALSE))
 options(bbtcomp.dir = "~/.bbtcomp")
 
-x <- bbtcomp(my_data)
-my_plot <- plot_pwin(x)
-
-fname <- sprintf("plots/ranks/bbt_%s_%s%s.eps",criteria, aggfun, grid)
-ggsave(my_plot, file=fname, device="eps")
-
 x <- bbtcomp(my_data,lrope=T, paired=F)
-my_plot <- plot_pwin(x)
+my_plot <- plot_pwin(x,control='eggp')
 
 fname <- sprintf("plots/ranks/bbt_%s_%s%s_rope.eps",criteria, aggfun, grid)
 ggsave(my_plot, file=fname, device="eps")
