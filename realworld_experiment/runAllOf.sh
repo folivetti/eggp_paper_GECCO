@@ -107,6 +107,14 @@ elif [ "${1,,}" == "rf" ]; then
    for key in "${!datasets20[@]}"; do
      ./runRF_realworld.sh ${datasets20[$key]} &
    done
+elif [ "${1,,}" == "tabpfn" ]; then
+   echo "running tabpfn..."
+   for key in "${!datasets30[@]}"; do
+     ./runTab_realworld.sh ${datasets30[$key]}
+   done
+   for key in "${!datasets20[@]}"; do
+     ./runTab_realworld.sh ${datasets20[$key]}
+   done
 elif [ "${1,,}" == "gsgp" ]; then
    echo "running slim gsgp..."
    for key in "${!datasets30[@]}"; do
