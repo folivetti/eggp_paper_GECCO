@@ -1,26 +1,142 @@
-# eggp_paper_GECCO
-Repository with all data, scripts and instructions on how to replicate the eggp paper
+# eggp_papers
+
+Repository with all data, scripts and instructions on how to replicate the papers benchmarking `eggp`.
 
 ## Setup and Install
 
-1. To install `eggp` and `tinyGP`, follow the instructions available at:
+Most algorithms are installed via pip, some of them require additional steps:
 
-- https://github.com/folivetti/srtree/blob/main/apps/eggp/README.md
-- https://github.com/folivetti/srtree/blob/main/apps/tinygp/README.md
-
-Compiling from source is recommended to ensure compatibility with the NLOpt library installed in your system.
-
-2. To run `Operon, PySR` and generate the reports, install the Python requirements: 
+1. [Optional] Create a new environment:
 
 ```bash
 python -m venv eggp_experiments
 source eggp_experiments/bin/activate
+```
+
+2. Install the requirements and part of the algorithms:
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Performance plots and tables
+3. Install GOMEA:
 
-In either `srbench_experiment` or `realworld_experiment` folder, run `python perfplot.py` to generate the performance plots and LaTeX tables. 
+- Install the following requirements: make, cmake, eigen, python-devtools, pybind11
+- Clone the repository and install:
+
+```bash
+git clone https://github.com/marcovirgolin/gpg
+cd gpg
+make
+```
+
+4. Install GPZGD:
+
+- get the fixed gpzgd code from [https://github.com/cavalab/srbench/tree/master/algorithms/gpzgd](https://github.com/cavalab/srbench/tree/master/algorithms/gpzgd)
+- run:
+
+```bash
+cd gpzgd
+make
+sudo cp dist/regressor /usr/local/bin/gpzgd_regressor
+```
+
+6. NeoGP
+
+TBD
+
+## Running the experiments 
+
+The experiments folder contains an individual bash script for each algorithm and a `runAllOfRW.sh` and `runAllOfSRBench.sh` scripts to run all experiments for a single algorithm for that particular benchmark. **Note that the results may differ slightly from the paper since we are not fixing the random seed AND some of the algorithms may have been updated in the meantime.**
+
+The syntax for each script are:
+
+```bash
+./runAllOfRW.sh <NAME>
+./runAllOfSRBench.sh <NAME>
+./run<ALGORITHM>_srbench.sh <DATASET NAME> <PROCESSOR>
+./run<ALGORITHM>_srbench.sh <DATASET NAME> <PROCESSOR> srbench
+```
+
+where 
+
+`<NAME>` is one of `operon,pysr,eggp,pysips,symregg,random,qlattice,gomea,gpzdg,neogp,rf,gsgp`
+`<ALGORITHM>` is one of the algorithm names (see `experiments` folder)
+`<DATASET NAME>` is the dataset name (see datasets folder)
+`<PROCESSOR>` is a processor number to assign, only valid for PySR which sometimes misbehaves with multithread
+A last argument called "srbench" should be passed to run the experiments for SRBench.
+
+The results will be stored in the folder `report/results`.
+
+**WARNING:** after running experiments with PySIPS, run `fix_pysips.py` script in the `report` folder to fix the size values of the generated expressions.
+
+## Plots and Tables
+
+In the folder `report`, you should first generate the tabulated results with the command:
+
+```bash
+python gen_dataframe.py --thr 1.0 --size 50  
+```
+
+The argument `thr` is the threshold for picking from the Pareto front. A value of 1.0 means it will peek the most accurate model w.r.t. the training set. A value of $p < 1.0$ means that it will peek the smallest model within $p\%$ of the best MSE.
+The argument`size` removes any expression with size larger than that value.
+
+To obtain the LaTeX table of the MSE values, model sizes, and ranks, run:
+
+```bash
+python gen_acc_tables.py <METRIC> <AGG>
+```
+
+where `<METRIC>`  can be R2 or MSE, and `<AGG>` can be mean, median, min.
+
+```bash
+python gen_ranks.py <METRIC> <AGG>
+```
+
+where `<METRIC>` can be R2, MSE, or size, and `<AGG>` can be mean, median, min, max.
+
+To generate the boxplots run:
+
+```bash
+python gen_boxplots.py
+```
+
+To generate the ELO score plot run:
+
+```bash
+python gen_elo.py <METRIC> <AGG>
+```
+
+where `<METRIC>` can be R2, MSE, and `<AGG>` can be mean, median, min, max.
+
+
+To run the dominance analysis w.r.t. PySIPS, first run:
+
+```bash
+python gen_dominance.py --n <ITER>
+```
+
+where `<ITER>` is the iteration numbers of the bootstrapping (10000 in the paper).
+Then run:
+
+```bash
+python gen_perc_dominance.py 
+```
+which will display the LaTeX table.
+
+To create the BBT plot, first run:
+
+```bash
+python pivot.py <METRIC>
+```
+
+where `<METRIC>` is either MSE or R2, open the file `perf_pivoted.csv` and replace any `inf` with a very large value.
+Then run:
+
+```bash
+Rscript get_ranks.R <METRIC> <AGG>
+```
+where `<METRIC>` can be R2, MSE, and `<AGG>` can be mean, median, min, max.
 
 ## Runtime analysis
 
@@ -28,69 +144,13 @@ First parse the runtime with:
 
 ```bash
 echo "dataset,algorithm,time" > time.csv
-cd srbench_experiment
-./parseTime.zsh >> ../time.csv
-cd ../realworld_experiment
-./parseTime.zsh >> ../time.csv
-cd ..
+./parseTime.zsh >> time.csv
 python processTime.py
 ```
 
-## To rerun the experiments 
-
-To run the experiments, each folder contains an individual bash script for each algorithm and a `runAllOf.sh` script to run all experiments for a single algorithm. **Note that the results may differ slightly from the paper since we are not fixing the random seed AND the algorithms may have been updated in the meantime.**
-
-The syntax for each script (using `srbench` folder as an example) are:
-
-```bash
-./runAllOf.sh [eggp_mo|eggp_so|pysr|operon|tinygp]
-./runOperon_srbench.sh <DATASET NAME> <PROCESSOR>
-./runPySR_srbench.sh <DATASET NAME> <PROCESSOR>
-./runTinyGP_srbench.sh <DATASET NAME>
-./runEggp_so_srbench.sh <DATASET NAME>
-./runEggp_mo_srbench.sh <DATASET NAME>
-```
-
-where `<DATASET NAME>` is the name of the dataset (see `runAllOf.sh` script) and `<PROCESSOR>` is which processor to assign (and enforce single thread mode).
-For the `realworld` experiment, the commands are analogous but with an additional argument `<MAX SIZE>` right after `<DATASET NAME>` with the maximum model size: 
-
-
-```bash
-./runAllOf.sh [eggp_mo|eggp_so|pysr|operon|tinygp]
-./runOperon_realworld.sh <DATASET NAME> <MAX SIZE> <PROCESSOR>
-./runPySR_realworld.sh <DATASET NAME> <MAX SIZE> <PROCESSOR>
-./runTinyGP_realworld.sh <DATASET NAME> <MAX SIZE>
-./runEggp_so_realworld.sh <DATASET NAME> <MAX SIZE>
-./runEggp_mo_realworld.sh <DATASET NAME> <MAX SIZE>
-```
-
-To enable multi-threading for `Operon` and `PySR`, just change the `runOperon_*.sh` and `runPySR_*.sh` scripts removing the `taskset -c $3` part of the command line.
 
 ## CITING
 
 ```bibtex
-@inproceedings{eggp,
-author = {de Franca, Fabricio Olivetti and Kronberger, Gabriel},
-title = {Improving Genetic Programming for Symbolic Regression with Equality Graphs},
-year = {2025},
-isbn = {9798400714658},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3712256.3726383},
-doi = {10.1145/3712256.3726383},
-abstract = {The search for symbolic regression models with genetic programming (GP) has a tendency of revisiting expressions in their original or equivalent forms. Repeatedly evaluating equivalent expressions is inefficient, as it does not immediately lead to better solutions.
-However, evolutionary algorithms require diversity and should allow the accumulation of inactive building blocks that can play an important role at a later point. 
-The equality graph is a data structure capable of compactly storing expressions and their equivalent forms allowing an efficient verification of whether an expression has been visited in any of their stored equivalent forms.
-We exploit the e-graph to adapt the subtree operators to reduce the chances of revisiting expressions. Our adaptation, called eggp, stores every visited expression in the e-graph, allowing us to filter out from the available selection of subtrees all the combinations that would create already visited expressions. 
-Results show that, for small expressions, this approach improves the performance of a simple GP algorithm to compete with PySR and Operon without increasing computational cost. As a highlight, eggp was capable of reliably delivering short and at the same time accurate models for a selected set of benchmarks from SRBench and a set of real-world datasets.},
-booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
-pages = {},
-numpages = {9},
-keywords = {Symbolic regression, Genetic programming, Equality saturation, Equality graphs},
-location = {Malaga, Spain},
-series = {GECCO '25},
-archivePrefix = {arXiv},
-       eprint = {2501.17848},
- primaryClass = {cs.LG}, 
-}
+
 ```

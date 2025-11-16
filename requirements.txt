@@ -5,6 +5,7 @@ scikit-learn
 sympy
 matplotlib
 pymoo
+scikit_posthocs
 
 # pysr
 juliapkg
@@ -12,3 +13,18 @@ pysr
 
 # operon
 pyoperon
+
+# eggp
+eggp
+
+# SymRegg
+symregg
+
+# pySIPS
+pysips
+
+# QLattice
+feyn
+
+# slim GSGP
+slim_gsgp
