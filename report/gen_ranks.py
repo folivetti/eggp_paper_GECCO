@@ -63,4 +63,4 @@ test_results = sp.posthoc_conover_friedman(df_ungrouped, melted=True, block_col=
 plt.figure(figsize=(10, 2), dpi=100)
 plt.title('Critical difference diagram of average score ranks')
 sp.critical_difference_diagram(ranks.mean(), test_results)
-plt.savefig(f'plots/ranks/diagram_{args.criteria}_{args.agg}{'_pct' if args.pct else ''}{'_'+args.ext if len(args.ext) else args.ext}.eps')
+plt.savefig(f'plots/ranks/diagram_{args.criteria}_{args.agg}{"_pct" if args.pct else ""}{"_" +args.ext if len(args.ext) else args.ext}.eps')
