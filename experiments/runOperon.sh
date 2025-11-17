@@ -2,7 +2,7 @@
 
 mkdir -p ../report/results/operon/$1
 
-if [ $2 = "srbench" ]; then
+if [ "$2" = "srbench" ]; then
     for FOLD in {0..2};
     do
         for i in {1..10};
