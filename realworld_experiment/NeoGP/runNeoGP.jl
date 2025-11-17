@@ -90,15 +90,15 @@ function main(argv)
     
     if likelihoodstr == "gaussian"
         likelihood_type = NeoGP.GaussianLikelihood
-        indiv_type = NeoGP.Individual{NeoGP.GaussianLikelihood}
+        indiv_type = NeoGP.Individual{NeoGP.GaussianLikelihood{Float32}}
         functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
     elseif likelihoodstr == "laplace"
         likelihood_type = NeoGP.LaplaceLikelihood
-        indiv_type = NeoGP.Individual{NeoGP.LaplaceLikelihood}
+        indiv_type = NeoGP.Individual{NeoGP.LaplaceLikelihood{Float32}}
         functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
     elseif likelihoodstr == "cosmic_chronometers"
         likelihood_type = NeoGP.GaussianLikelihood
-        indiv_type = CCIndividual
+        indiv_type = CCIndividual{NeoGP.GaussianLikelihood{Float32}}
         # x = z + 1
         X .= X .+ 1.0
         X_test .= X_test .+ 1.0
@@ -114,7 +114,7 @@ function main(argv)
         @assert likelihood_type == NeoGP.GaussianLikelihood "MSE objective is only supported with Gaussian likelihood"
         likelihood = likelihood_type(X, y)
         likelihood_test = likelihood_type(X_test, y_test)
-        loss_func = NeoGP.mean_squared_error
+        loss_func = NeoGP.loss
     elseif objective == "r2"
         if !isnothing(sigma)
             @warn "sigma argument is ignored when using mse objective"
@@ -122,12 +122,12 @@ function main(argv)
         @assert likelihood_type == NeoGP.GaussianLikelihood "R2 objective is only supported with Gaussian likelihood"
         likelihood = likelihood_type(X, y)
         likelihood_test = likelihood_type(X_test, y_test)
-        loss_func = ((-) ∘ NeoGP.r2_score)
+        loss_func = NeoGP.loss
     elseif objective == "nll"
         # TODO allow specification of different likelihoods
         likelihood = likelihood_type(X, y, sigma) # optimize sigma
         likelihood_test = likelihood_type(X_test, y_test, sigma)
-        loss_func = NeoGP.negloglik
+        loss_func = NeoGP.loss
     elseif objective == "dl"
         # TODO allow specification of different likelihoods
         likelihood = likelihood_type(X, y, sigma) # optimize sigma
@@ -135,9 +135,9 @@ function main(argv)
         loss_func = NeoGP.description_length
     elseif objective == "nll-dl"
         # TODO allow specification of different likelihoods
-        likelihood = likelihood_type(X, y, sigma) # optimize sigma
-        likelihood_test = likelihood_type(X_test, y_test, sigma)
-        loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
+        # likelihood = likelihood_type(X, y, sigma) # optimize sigma
+        # likelihood_test = likelihood_type(X_test, y_test, sigma)
+        # loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
     else
         error("unknown objective function value (allowed values are mse, r2, nll, dl)")
     end
@@ -148,7 +148,7 @@ function main(argv)
         functionset = functionset,
         individual_type = indiv_type)
 
-    println("gen,fevals,best_fitness,dl,func_compl,param_compl,MSE_train,MSE_test,R2_train,R2_test,nll_train,nll_test,avg_len,avg_fitness,size,Expression")
+    println("gen,fevals,best_fitness,nll,dl,func_compl,param_compl,MSE_train,MSE_test,R2_train,R2_test,avg_len,avg_fitness,size,expression")
     gen = 0
     callback = () -> begin
         gen += 1
@@ -161,20 +161,26 @@ function main(argv)
         mse_test    = NeoGP.mean_squared_error(y_test, ypred_test)
         r2_train    = NeoGP.r2_score(likelihood.y, ypred_train)
         r2_test     = NeoGP.r2_score(y_test, ypred_test)
-        likparam    = NeoGP.extractparam(NeoGP.getlikelihood(bestindiv))
-        nll_train   = NeoGP.negloglik(likelihood, ypred_train, likparam)
-        nll_test    = NeoGP.negloglik(likelihood_test, ypred_test, likparam)
+        # likparam    = NeoGP.extractparam(NeoGP.getlossfunction(bestindiv))
+        #nll_train   = NeoGP.negloglik(likelihood, ypred_train, likparam)
+        #nll_test    = NeoGP.negloglik(likelihood_test, ypred_test, likparam)
         
         # this is just to produce the terms of the description_length (TODO: simplify)
-        (nll, func_compl, param_compl) = NeoGP.description_length_terms(NeoGP.copy(bestindiv))
+        (nll, func_compl, param_compl) = NeoGP.description_length_terms(NeoGP.copy_indiv(bestindiv))
         dl = nll + func_compl + param_compl
         
-        println("$gen,$(gp.fevals),$(-bestfitness),$(dl-nll_offset_train),$func_compl,$param_compl,$mse_train,$mse_test,$r2_train,$r2_test,$(nll_train-nll_offset_train),$(nll_test-nll_offset_test),$(gp.avg_len),$(-gp.favgpop),$(NeoGP.node_count(bestindiv))),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$(nll-nll_offset_train),$(dl-nll_offset_train),$func_compl,$param_compl,$mse_train,$mse_test,$r2_train,$r2_test,,$(gp.avg_len),$(-gp.favgpop),$(NeoGP.individual_length(bestindiv)),\"$(best_expr_str)\"")
         nothing
     end
+    
     TimerOutputs.disable_timer!(gp.to)
+    if nthreads != 1
+        TimerOutputs.disable_timer!(NeoGP.global_timer)
+    end
     @time NeoGP.evolve!(gp, iter_callback = callback)
-    # TimerOutputs.print_timer(gp.to)
+    
+    nthreads == 1 && TimerOutputs.print_timer(NeoGP.global_timer)
+    nothing
 end
 
 
