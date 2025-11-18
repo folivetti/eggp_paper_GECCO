@@ -22,8 +22,14 @@ args = parser.parse_args()
 base_dir = ""
 
 df = pd.read_csv(f"perf.csv")
-algs = sorted(np.unique(df.algorithm.values))
+
+# Order to display
+algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp", "RF"]
+
 df = df[df.algorithm.isin(algs)]
+
+# algs = sorted(np.unique(df.algorithm.values))
+# df = df[df.algorithm.isin(algs)]
 
 if args.criteria == "R2":
     criteria = 'r2_test'
@@ -53,7 +59,7 @@ if "P@" in args.criteria:
         tbl.loc[ds] = tbl.loc[ds].clip(lower=k/100)
 
 ranks = tbl.rank(axis=1, ascending=minobj!=args.pct, pct=args.pct)
-
+print(ranks)
 print(ranks.mean())
 print(ss.friedmanchisquare(*tbl.values.T))
 df_ungrouped = tbl.reset_index().melt(id_vars='dataset', value_vars=algs, var_name='algorithm', value_name='score')

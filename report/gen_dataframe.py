@@ -4,7 +4,7 @@ import glob
 import sys
 from pymoo.indicators.hv import HV
 import argparse
-import sympy as sym 
+import sympy as sym
 
 def model_size(expr):
     """Compute the size of a sympy expression."""
