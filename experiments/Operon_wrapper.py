@@ -42,8 +42,22 @@ reg.fit(X_train, y_train)
 
 print("Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test")
 for i, model in enumerate(reg.pareto_front_):
-        print(X_train.shape, model['model'])
-        y_hat = reg.evaluate_model(model['tree'], X_train)
-        y_hat_test = reg.evaluate_model(model['tree'], X_test)
-
-        print(f"0,{model['model']},{model['complexity']},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+    print(X_train.shape, model['model'])
+    y_hat = reg.evaluate_model(model['tree'], X_train)
+    y_hat_test = reg.evaluate_model(model['tree'], X_test)
+    
+    mse_train = mse_test = r2_train = r2_test = 0.0
+    if np.any(np.isnan(y_hat)):
+        mse_train = np.inf
+        r2_train = np.inf
+    else:
+        mse_train = mean_squared_error(y_train, y_hat)
+        r2_train = r2_score(y_train,y_hat)
+    
+    if np.any(np.isnan(y_hat_test)):
+        mse_test = np.inf
+        r2_test = np.inf
+    else:
+        mse_test = mean_squared_error(y_test,y_hat_test)
+        r2_test = r2_score(y_test,y_hat_test)
+    print(f"0,{model['model']},{model['complexity']},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
