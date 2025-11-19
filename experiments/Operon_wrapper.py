@@ -47,18 +47,17 @@ for i, model in enumerate(reg.pareto_front_):
     y_hat_test = reg.evaluate_model(model['tree'], X_test)
 
     mse_train = mse_test = r2_train = r2_test = 0.0
-    if np.any(np.isnan(y_hat)):
-        mse_train = np.inf
-        r2_train = np.inf
-    else:
+    if np.all(np.isfinite(y_hat)):
         mse_train = mean_squared_error(y_train, y_hat)
         r2_train = r2_score(y_train,y_hat)
-
-    if np.any(np.isnan(y_hat_test)):
-        mse_test = np.inf
-        r2_test = np.inf
     else:
+        mse_train = np.inf
+
+    if np.all(np.isfinite(y_hat_test)):
         mse_test = mean_squared_error(y_test,y_hat_test)
         r2_test = r2_score(y_test,y_hat_test)
+    else:
+        mse_test = np.inf
+
     print(f"0,{model['model']},{model['complexity']},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
 
