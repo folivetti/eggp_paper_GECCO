@@ -133,7 +133,7 @@ function main(argv)
         likelihood = likelihood_type(X, y, sigma) # optimize sigma
         likelihood_test = likelihood_type(X_test, y_test, sigma)
         loss_func = NeoGP.description_length
-    elseif objective == "nll-dl"
+    # elseif objective == "nll-dl"
         # TODO allow specification of different likelihoods
         # likelihood = likelihood_type(X, y, sigma) # optimize sigma
         # likelihood_test = likelihood_type(X_test, y_test, sigma)

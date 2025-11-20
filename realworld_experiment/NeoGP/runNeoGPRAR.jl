@@ -56,19 +56,17 @@ function main(argv)
     if likelihoodstr == "unif"
         data, varnames = load_RAR_data(Float32, trainingfilename)
         likelihood = RARLikelihood(data, varnames)
-        indiv_type = RARIndividual
+        indiv_type = RARIndividual{RARLikelihood{Float32}}
         # TODO
-        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.SIN, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
+        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
     else
         error("unknown likelihood type (allowed values are gaussian, laplace, cosmic_chronometers)")
     end
 
     if objective == "nll"
-        loss_func = NeoGP.negloglik
+        loss_func = NeoGP.loss
     elseif objective == "dl"
         loss_func = NeoGP.description_length
-    elseif objective == "nll-dl"
-        loss_func = (params...) -> gp.gen < 0.35 * gp.maxgenerations ? NeoGP.negloglik(params...) : NeoGP.description_length(params...)
     else
         error("unknown objective function value")
     end
@@ -78,7 +76,8 @@ function main(argv)
         loss_func = loss_func, threads = nthreads, 
         functionset = functionset,
         individual_type = indiv_type)
-
+    
+    
     println("gen,fevals,best_fitness,dl,func_compl,param_compl,nll_train,avg_len,avg_fitness,size,expression")
     gen = 0
     callback = () -> begin
@@ -86,15 +85,11 @@ function main(argv)
         bestfitness,bestidx = findmax(gp.fitness)
         bestindiv = gp.pop[bestidx]
         best_expr_str = NeoGP.tostring(bestindiv)
-        ypred_train = NeoGP.predict(bestindiv, likelihood.X) 
-        likparam    = NeoGP.extractparam(NeoGP.getlikelihood(bestindiv))
-        nll_train   = NeoGP.negloglik(likelihood, ypred_train, likparam)
         
-        # this is just to produce the terms of the description_length (TODO: simplify)
-        (nll, func_compl, param_compl) = NeoGP.description_length_terms(NeoGP.copy(bestindiv))
+        (nll, func_compl, param_compl) = NeoGP.description_length_terms(bestindiv)
         dl = nll + func_compl + param_compl
         
-        println("$gen,$(gp.fevals),$(-bestfitness),$(dl-nll_offset_train),$func_compl,$param_compl,$(nll_train-nll_offset_train),$(gp.avg_len),$(-gp.favgpop),$(NeoGP.node_count(bestindiv))),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$(dl),$(nll),$func_compl,$param_compl,$(gp.avg_len),$(-gp.favgpop),$(NeoGP.individual_length(bestindiv))),\"$(best_expr_str)\"")
         nothing
     end
     
@@ -130,6 +125,35 @@ function load_RAR_data(::Type{T}, filename::AbstractString) where {T <: Abstract
     data, varnames
 end
 
+
+
+function check_rar()
+    data, varnames = load_RAR_data(Float32, "datasets/RAR.csv")
+    likelihood = RARLikelihood(data, varnames)
+    # p0 * (abs(t1 + x)^t2 + x)
+    code = NeoGP.Instruction[
+        NeoGP.Instruction(NeoGP.MUL),   # p1 * (abs(p2 + x)^p3 + x)
+        NeoGP.Instruction(NeoGP.PARAM, 0.84, 1), # p1
+        NeoGP.Instruction(NeoGP.ADD),   # abs(p2 + x)^p3 + x
+        NeoGP.Instruction(NeoGP.POWABS),# abs(p2 + x)^p3
+        NeoGP.Instruction(NeoGP.ADD),   # p2 + x
+        NeoGP.Instruction(NeoGP.PARAM, -0.02, 1), # p2
+        NeoGP.Instruction(UInt(1)),     # x
+        NeoGP.Instruction(NeoGP.PARAM, 0.38, 1), # p3
+        NeoGP.Instruction(UInt(1))      # x
+    ]
+    
+    indiv = NeoGP.Individual(code, likelihood)
+    rarindiv = RARIndividual(indiv)
+    buffers = NeoGP.InterpreterBuffers(Float32, NeoGP.numobs(likelihood), NeoGP.numvar(likelihood), length(code))
+    @show NeoGP.optimize!(rarindiv, buffers)
+    @show NeoGP.extractparam(Float32, rarindiv)
+    @show NeoGP.description_length_terms(rarindiv)
+end
+
+
+
 if abspath(PROGRAM_FILE) == @__FILE__
+    check_rar()
     main(ARGS)
 end

@@ -6,7 +6,7 @@ mutable struct CCIndividual{T} <: NeoGP.AbstractIndividual{T}
 end
 
 NeoGP.copy_indiv(indiv::CCIndividual{T}) where T = CCIndividual{T}(NeoGP.copy_indiv(indiv.inner))
-NeoGP.extractparam(indiv::CCIndividual) = NeoGP.extractparam(indiv.inner)
+NeoGP.extractparam(::Type{T}, indiv::CCIndividual) where {T <: AbstractFloat} = NeoGP.extractparam(T, indiv.inner)
 NeoGP.updateparam!(indiv::CCIndividual, param::AbstractVector) = NeoGP.updateparam!(indiv.inner, param)
 NeoGP.getlossfunction(indiv::CCIndividual) = NeoGP.getlossfunction(indiv.inner)
 NeoGP.getprogram(indiv::CCIndividual) = NeoGP.getprogram(indiv.inner)
