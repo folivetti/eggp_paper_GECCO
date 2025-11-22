@@ -5,7 +5,7 @@ set datafile missing
 
 
 set output "neogp_linecharts_nll_vs_dl.pdf"
-do for [ds in "cosmic_chrono nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competition friction_stat_one-hot friction_dyn_one-hot nasa_battery_1_10min flow_stress_phip0.1 "] {
+do for [ds in "RAR cosmic_chrono nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competition friction_stat_one-hot friction_dyn_one-hot nasa_battery_1_10min flow_stress_phip0.1"] {
    print ds
    set title ds
    set key top right
