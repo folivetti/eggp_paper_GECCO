@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for dir in neogp_*/RAR; do
+for dir in neogp_*/RAR*; do
 # gen,fevals,best_fitness,dl,func_compl,param_compl,nll_train,avg_len,avg_fitness,size,expression
 # 1,24879,-1238.6631,-1200.368,-1238.6631,32.95837,5.336665,6.15,Inf,15),"exp(log(abs((((-0.8458461 - -0.8458461) / log(abs(X1))) - (sqrt(abs(X1)) + (X1 * 0.7142719)))))) RARLikelihood{Float32}"
     mlr --csv --fs ',' --hi --prepipe "(tail -n+15 | head -n 100)" \
