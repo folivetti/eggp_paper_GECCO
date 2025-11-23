@@ -179,12 +179,12 @@ end
 function NeoGP.negloglik(lik::RARMNRLikelihood{T}, indiv, param::AbstractArray{TE}, buffers::NeoGP.InterpreterBuffers) where {T <: AbstractFloat, TE <: Real}
     # jacx = zeros(TE, NeoGP.numobs(lik), NeoGP.numvar(lik)) # TODO allocation
     jacx = get_tmp(buffers.jacx_buffer, TE)
-    ypred = NeoGP.predict!(indiv, lik.X, param, buffers, nothing, jacx)
+    ypred = NeoGP.predict!(indiv, lik.X, (@view param[NeoGP.numparam(lik)+1:end]), buffers, nothing, jacx)
     jacx .*= lik.X .* T(log(10.0)) # chain rule to get d(pred)/d(log10(gbar))
-    _negloglik(lik, ypred, @view jacx[:, 1])
+    _negloglik(lik, ypred, (@view jacx[:, 1]), (@view param[1:NeoGP.numparam(lik)]))
 end
 
-function _negloglik(lik::RARMNRLikelihood{T}, f, df) where {T <: AbstractFloat}
+function _negloglik(lik::RARMNRLikelihood{T}, f, df, param) where {T <: AbstractFloat}
    # from ROXY (https://github.com/DeaglanBartlett/roxy/tree/main)
     # Computes the negative log-likelihood under the assumption of an uncorrelated
     # Gaussian likelihood with a Gaussian prior on the true x positions.
@@ -205,9 +205,9 @@ function _negloglik(lik::RARMNRLikelihood{T}, f, df) where {T <: AbstractFloat}
     )
     =#
     
-    sig2 = lik.sig2
-    mugauss = lik.mugauss
-    wgauss2 = lik.wgauss2
+    sig2    = param[1]^2
+    mugauss = param[2]
+    wgauss2 = param[3]^2
 
     nll = zero(eltype(f))
     @inbounds for i in eachindex(f)
@@ -226,7 +226,7 @@ function _negloglik(lik::RARMNRLikelihood{T}, f, df) where {T <: AbstractFloat}
         t3 = s2 * (xobs - mugauss)^2
         den = (ai * ai) * (wgauss2 * xerr2) + s2 * (wgauss2 + xerr2)
         
-        nll += log(den) + (t1 + (t2 + t3)) / den
+        nll += log(den) + (t1 + t2 + t3) / den
     end
     
     T(0.5) * nll + T(length(f)) / T(2.0) * log(T(2.0 * π))
