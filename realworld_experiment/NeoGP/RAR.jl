@@ -13,8 +13,6 @@ mutable struct RARLikelihood{T} <: NeoGP.AbstractLikelihood{T}
     const e_log_gobs2::Vector{T}
 end
 
-Base.show(io::IO, ::RARLikelihood{T}) where {T} = print(io, "RARLikelihood with $(length(lik.log_gobs)) observations")
-
 function RARLikelihood(data::Matrix{T}, varnames) where {T}
     RARLikelihood{T}(data[:, 1:1], data[:, 2], data[:, 3], data[:, 4], data[:, 5])
 end
@@ -118,4 +116,118 @@ function NeoGP.description_length_terms(indiv::RARIndividual, buffers::NeoGP.Int
     f_compl = NeoGP.func_compl(prog, buffers.symfreq)
     
     (likelihood(indiv, param, buffers), T(f_compl), p_compl)
+end
+
+
+#############################
+# ROXY MNR likelihood for RAR
+#############################
+
+# ROXY (regression with errors in x and y) likelihood for NeoGP
+
+####### Likelihood
+mutable struct RARMNRLikelihood{T} <: NeoGP.AbstractLikelihood{T} 
+    const X::Matrix{T} # gbar
+    const log_gbar::Vector{T}
+    const e_log_gbar2::Vector{T} 
+    const log_gobs::Vector{T}
+    const e_log_gobs2::Vector{T}
+    
+    sig2::T
+    mugauss::T
+    wgauss2::T
+end
+
+function RARMNRLikelihood(data::Matrix{T}, varnames) where {T}
+    sig2 = T(0.1)^2
+    mugauss = sum(data[:, 2]) / size(data, 1) # mean of gbar as initial guess
+    wgauss2 = sum(abs2, data[:, 2] .- mugauss) / size(data, 1) # variance of gbar as initial guess
+    RARMNRLikelihood{T}(data[:, 1:1], data[:, 2], data[:, 3], data[:, 4], data[:, 5], sig2, mugauss, wgauss2)
+end
+
+(lik::RARMNRLikelihood)(indiv::NeoGP.AbstractIndividual, param::AbstractVector, buffers::NeoGP.InterpreterBuffers) = NeoGP.negloglik(lik, indiv, param, buffers)
+NeoGP.numvar(lik::RARMNRLikelihood) = 1
+NeoGP.numobs(lik::RARMNRLikelihood) = length(lik.log_gobs)
+
+function NeoGP.copy_lossfunction(lik::RARMNRLikelihood{T}) where {T}
+    RARMNRLikelihood{T}(lik.X, lik.log_gbar, lik.e_log_gbar2, lik.log_gobs, lik.e_log_gobs2, lik.sig2, lik.mugauss, lik.wgauss2)
+end
+
+NeoGP.numparam(lik::RARMNRLikelihood) = 3 # sig, mugauss, wgauss
+
+function NeoGP.randomize_parameters!(lik::RARMNRLikelihood{T}) where {T}
+    lik.sig2 = rand(T) * lik.sig2
+    lik.mugauss = randn(T) * T(10.0) + lik.mugauss
+    lik.wgauss2 = rand(T) * T(10.0) + lik.wgauss2
+    lik
+end
+
+function NeoGP.extractparam(lik::RARMNRLikelihood{T}) where {T}
+    [sqrt(lik.sig2), lik.mugauss, sqrt(lik.wgauss2)]
+end
+
+function NeoGP.updateparam!(lik::RARMNRLikelihood{T}, param::AbstractVector{T}) where {T}
+    @assert length(param) == NeoGP.numparam(lik)
+    lik.sig2    = param[1]^2
+    lik.mugauss = param[2]
+    lik.wgauss2 = param[3]^2
+    
+    nothing
+end
+
+
+function NeoGP.negloglik(lik::RARMNRLikelihood{T}, indiv, param::AbstractArray{TE}, buffers::NeoGP.InterpreterBuffers) where {T <: AbstractFloat, TE <: Real}
+    # jacx = zeros(TE, NeoGP.numobs(lik), NeoGP.numvar(lik)) # TODO allocation
+    jacx = get_tmp(buffers.jacx_buffer, TE)
+    ypred = NeoGP.predict!(indiv, lik.X, param, buffers, nothing, jacx)
+    jacx .*= lik.X .* T(log(10.0)) # chain rule to get d(pred)/d(log10(gbar))
+    _negloglik(lik, ypred, @view jacx[:, 1])
+end
+
+function _negloglik(lik::RARMNRLikelihood{T}, f, df) where {T <: AbstractFloat}
+   # from ROXY (https://github.com/DeaglanBartlett/roxy/tree/main)
+    # Computes the negative log-likelihood under the assumption of an uncorrelated
+    # Gaussian likelihood with a Gaussian prior on the true x positions.
+    # 
+    #= ROXY nll_mnr:
+    Ai = fprime
+    Bi = f - Ai * xobs
+    
+    s2 = yerr ** 2 + sig ** 2
+    den = Ai ** 2 * w_gauss ** 2 * xerr ** 2 + s2 * (w_gauss ** 2 + xerr ** 2)
+    
+    neglogP = (
+        N / 2 * jnp.log(2 * jnp.pi)
+        + 1/2 * jnp.sum(jnp.log(den))
+        + 1/2 * jnp.sum(w_gauss ** 2 * (Ai * xobs + Bi - yobs) ** 2 / den)
+        + 1/2 * jnp.sum(xerr ** 2 * (Ai * mu_gauss + Bi - yobs) ** 2 / den)
+        + 1/2 * jnp.sum(s2 * (xobs - mu_gauss) ** 2 / den)
+    )
+    =#
+    
+    sig2 = lik.sig2
+    mugauss = lik.mugauss
+    wgauss2 = lik.wgauss2
+
+    nll = zero(eltype(f))
+    @inbounds for i in eachindex(f)
+        xobs = lik.log_gbar[i]
+        xerr2 = lik.e_log_gbar2[i]
+        yobs = lik.log_gobs[i]
+        yerr2 = lik.e_log_gobs2[i]
+    
+        ai = df[i]
+        bi = f[i] - ai * xobs[i]
+        
+        s2 = yerr2 + sig2
+
+        t1 = wgauss2 * (ai * xobs    + bi - yobs)^2
+        t2 = xerr2 *   (ai * mugauss + bi - yobs)^2
+        t3 = s2 * (xobs - mugauss)^2
+        den = (ai * ai) * (wgauss2 * xerr2) + s2 * (wgauss2 + xerr2)
+        
+        nll += log(den) + (t1 + (t2 + t3)) / den
+    end
+    
+    T(0.5) * nll + T(length(f)) / T(2.0) * log(T(2.0 * π))
 end

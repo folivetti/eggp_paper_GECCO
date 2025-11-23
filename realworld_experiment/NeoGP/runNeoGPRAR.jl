@@ -53,12 +53,16 @@ function main(argv)
     likelihoodstr = parsed["likelihood"]
     objective = parsed["objective"]
 
+    data, varnames = load_RAR_data(Float32, trainingfilename)
+    functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
     if likelihoodstr == "unif"
-        data, varnames = load_RAR_data(Float32, trainingfilename)
         likelihood = RARLikelihood(data, varnames)
+        NeoGP.print_lossfunction(stdout,likelihood); println()
         indiv_type = RARIndividual{RARLikelihood{Float32}}
-        # TODO
-        functionset = Set([NeoGP.ADD, NeoGP.SUB, NeoGP.MUL, NeoGP.DIV, NeoGP.EXP, NeoGP.LOGABS, NeoGP.SQRTABS, NeoGP.POWABS])
+    elseif likelihoodstr == "mnr"
+        likelihood = RARMNRLikelihood(data, varnames)
+        NeoGP.print_lossfunction(stdout,likelihood); println()
+        indiv_type = RARIndividual{RARMNRLikelihood{Float32}}
     else
         error("unknown likelihood type (allowed values are gaussian, laplace, cosmic_chronometers)")
     end
@@ -78,7 +82,7 @@ function main(argv)
         individual_type = indiv_type)
     
     
-    println("gen,fevals,best_fitness,dl,func_compl,param_compl,nll_train,avg_len,avg_fitness,size,expression")
+    println("gen,fevals,best_fitness,dl,nll,func_compl,param_compl,avg_len,avg_fitness,size,expression")
     gen = 0
     callback = () -> begin
         gen += 1
@@ -89,7 +93,7 @@ function main(argv)
         (nll, func_compl, param_compl) = NeoGP.description_length_terms(bestindiv)
         dl = nll + func_compl + param_compl
         
-        println("$gen,$(gp.fevals),$(-bestfitness),$(dl),$(nll),$func_compl,$param_compl,$(gp.avg_len),$(-gp.favgpop),$(NeoGP.individual_length(bestindiv))),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$(dl),$(nll),$func_compl,$param_compl,$(gp.avg_len),$(-gp.favgpop),$(NeoGP.individual_length(bestindiv)),\"$(best_expr_str)\"")
         nothing
     end
     

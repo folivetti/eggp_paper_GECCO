@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PNAME="RAR"
+PNAME="RAR_mnr"
 mkdir -p results/neogp_nll/${PNAME}
 mkdir -p results/neogp_dl/${PNAME}
 
@@ -13,14 +13,14 @@ NTHREADS=4
 
 #~/julia/julia -t 6 --project=NeoGP/ \
 #	NeoGP/runNeoGPRAR.jl datasets/RAR.csv -g $GEN -p $POP -t $TSIZE -m $LEN \
-#	  --objective=nll --likelihood=unif --threads=$NTHREADS
+#	  --objective=nll --likelihood=mnr --threads=$NTHREADS
 
 parallel -j$NJOBS ~/julia/julia -t 4 --project=NeoGP/ \
 	NeoGP/runNeoGPRAR.jl datasets/RAR.csv -g $GEN -p $POP -t $TSIZE -m $LEN \
-	  --objective=nll --likelihood=unif --threads=$NTHREADS \
+	  --objective=nll --likelihood=mnr --threads=$NTHREADS \
 	"> results/neogp_nll/${PNAME}/run_{1}.csv" ::: $(seq 1 100)
 
 parallel -j$NJOBS ~/julia/julia -t 4 --project=NeoGP/ \
 	NeoGP/runNeoGPRAR.jl datasets/RAR.csv -g $GEN -p $POP -t $TSIZE -m $LEN \
-	  --objective=dl --likelihood=unif --threads=$NTHREADS \
+	  --objective=dl --likelihood=mnr --threads=$NTHREADS \
 	"> results/neogp_dl/${PNAME}/run_{1}.csv" ::: $(seq 1 100)
