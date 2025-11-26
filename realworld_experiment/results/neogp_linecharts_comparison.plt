@@ -6,12 +6,12 @@ set datafile missing
 
 set output "neogp_linecharts_nll_vs_dl.pdf"
 
-do for [ds in "RAR nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competition friction_stat_one-hot friction_dyn_one-hot nasa_battery_1_10min flow_stress_phip0.1"] {
+do for [ds in "RAR RAR_mnr nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competition friction_stat_one-hot friction_dyn_one-hot nasa_battery_1_10min flow_stress_phip0.1"] {
    print ds
    set title ds
    set key top right
    
-   if (ds ne "RAR") {
+   if (ds ne "RAR" && ds ne "RAR_mnr") {
        set logscale y
        # set yrange [0.00001:0.01]
        if (ds eq "nikuradse_1") {
@@ -47,6 +47,8 @@ do for [ds in "RAR nikuradse_1 nikuradse_2 chemical_1_tower chemical_2_competiti
    ymax=1
    if (ds eq "RAR") {
      ymin=-1600; ymax=-1000
+   } else if (ds eq "RAR_mnr") {
+     ymin=-1100; ymax=-800
    } else if (ds eq "nikuradse_1") {
      ymin=-1000; ymax=0
    } else if (ds eq "nikuradse_2") {
