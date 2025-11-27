@@ -14,8 +14,8 @@ function main(argv)
             help = "Number of generations"
             arg_type = Int
             default = 100
-        "--popsize", "-p"
-            help = "Population size"
+        "--batchsize", "-b"
+            help = "Batch size"
             arg_type = Int
             default = 100
         "--tournamentsize", "-t"
@@ -40,13 +40,13 @@ function main(argv)
     
     parsed = parse_args(argv, s; as_symbols=false)
     if !haskey(parsed, "training")
-        println("Usage: NeoGP.jl trainingdata.csv [--generations N] [--popsize N] [--tournamentsize N] [--maxlen N] [--objective OBJ] [--testdataset FILE]")
+        println("Usage: NeoGP.jl trainingdata.csv [--generations N] [--batchsize N] [--tournamentsize N] [--maxlen N] [--objective OBJ] [--testdataset FILE]")
         return
     end
 
     trainingfilename = parsed["training"]
     generations = parsed["generations"]
-    popsize = parsed["popsize"]
+    batchsize = parsed["batchsize"]
     tsize = parsed["tournamentsize"]
     maxlen = parsed["maxlen"]
     nthreads = parsed["threads"]
@@ -76,7 +76,7 @@ function main(argv)
     end
 
     gp = NeoGP.Algorithm(likelihood,
-        generations = generations, popsize = popsize, maxlen = maxlen, tournamentsize = tsize,
+        generations = generations, batchsize = batchsize, maxlen = maxlen, tournamentsize = tsize,
         loss_func = loss_func, threads = nthreads, 
         functionset = functionset,
         individual_type = indiv_type)
@@ -86,23 +86,35 @@ function main(argv)
     gen = 0
     callback = () -> begin
         gen += 1
-        bestfitness,bestidx = findmax(gp.fitness)
-        bestindiv = gp.pop[bestidx]
+        bestfitness = gp.bestfitness
+        bestindiv = gp.bestindividual
         best_expr_str = NeoGP.tostring(bestindiv)
         
         (nll, func_compl, param_compl) = NeoGP.description_length_terms(bestindiv)
         dl = nll + func_compl + param_compl
         
-        println("$gen,$(gp.fevals),$(-bestfitness),$(dl),$(nll),$func_compl,$param_compl,$(gp.avg_len),$(-gp.favgpop),$(NeoGP.individual_length(bestindiv)),\"$(best_expr_str)\"")
+        println("$gen,$(gp.fevals),$(-bestfitness),$(dl),$(nll),$func_compl,$param_compl,$(gp.avglen),$(-gp.avgfitness),$(NeoGP.individual_length(bestindiv)),\"$(best_expr_str)\"")
         nothing
     end
     
-    TimerOutputs.disable_timer!(gp.to)
     if nthreads != 1
         TimerOutputs.disable_timer!(NeoGP.global_timer)
     end
-    @time NeoGP.evolve!(gp, iter_callback = callback)
+    stats = @timed NeoGP.evolve!(gp, iter_callback = callback)
     
+    # produce the final map
+    println()
+    println()
+    println("Final MAP:")
+    for (key,val) in sort(gp.map.dict)
+        indiv = val[1]
+        (nll, func_compl, param_compl) = NeoGP.description_length_terms(indiv)
+        dl = nll + func_compl + param_compl
+
+        println("$gen,$(gp.fevals),$(key[1]),$(key[2]),$(-val[2]),$(dl),$(nll),$(func_compl),$(param_compl),$(NeoGP.tostring(indiv))")
+    end
+
+    println("Time stats: $stats\n\n")
     nthreads == 1 && TimerOutputs.print_timer(NeoGP.global_timer)
     nothing
 end
