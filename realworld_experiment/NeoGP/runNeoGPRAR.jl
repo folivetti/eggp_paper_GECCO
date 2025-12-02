@@ -170,6 +170,6 @@ end
 
 
 if abspath(PROGRAM_FILE) == @__FILE__
-    check_rar()
+    # check_rar()
     main(ARGS)
 end
