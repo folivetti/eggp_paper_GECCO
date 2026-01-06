@@ -139,6 +139,7 @@ function main(argv)
     println("gen,fevals,|bestfront|,bestloss,obj,nll,dl,func_compl,param_compl,FBF,MSE_train,MSE_test,R2_train,R2_test,size,expression")
 
     buffers = NeoGP.InterpreterBuffers(Float32, size(X, 1), size(X, 2), maxlen)
+    buffers_test = NeoGP.InterpreterBuffers(Float32, size(X_test, 1), size(X_test, 2), maxlen)
     callback = () -> begin
         gen += 1
         
@@ -154,7 +155,7 @@ function main(argv)
         mse_train   = NeoGP.mean_squared_error(y, ypred_train)
         r2_train    = NeoGP.r2_score(y, ypred_train)
 
-        ypred_test  = NeoGP.predict!(bestindiv, X_test, param, buffers)
+        ypred_test  = NeoGP.predict!(bestindiv, X_test, param, buffers_test)
         mse_test    = NeoGP.mean_squared_error(y_test, ypred_test)
         r2_test     = NeoGP.r2_score(y_test, ypred_test)
         
