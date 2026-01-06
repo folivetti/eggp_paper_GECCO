@@ -1,0 +1,210 @@
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m54.825s
+user	2m53.686s
+sys	0m1.104s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m54.076s
+user	2m52.980s
+sys	0m1.075s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m54.545s
+user	2m53.427s
+sys	0m1.097s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m55.978s
+user	2m54.843s
+sys	0m1.089s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m54.013s
+user	2m52.901s
+sys	0m1.090s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m54.252s
+user	2m53.147s
+sys	0m1.083s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m54.015s
+user	2m52.902s
+sys	0m1.092s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m56.044s
+user	2m54.915s
+sys	0m1.107s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	2m52.440s
+user	2m51.378s
+sys	0m1.041s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	3m0.403s
+user	2m59.283s
+sys	0m1.073s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	3m12.421s
+user	3m11.268s
+sys	0m1.110s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	3m3.146s
+user	3m2.070s
+sys	0m1.053s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m33.614s
+user	4m32.364s
+sys	0m1.211s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	5m1.193s
+user	4m59.372s
+sys	0m1.774s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m59.221s
+user	4m57.409s
+sys	0m1.761s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m58.300s
+user	4m56.499s
+sys	0m1.763s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m53.184s
+user	4m51.382s
+sys	0m1.753s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m58.621s
+user	4m56.824s
+sys	0m1.760s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m56.151s
+user	4m54.316s
+sys	0m1.785s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	5m0.729s
+user	4m58.980s
+sys	0m1.709s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m55.511s
+user	4m53.697s
+sys	0m1.758s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m52.020s
+user	4m50.272s
+sys	0m1.707s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m48.742s
+user	4m46.990s
+sys	0m1.711s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m45.576s
+user	4m43.772s
+sys	0m1.749s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m42.739s
+user	4m40.980s
+sys	0m1.716s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m41.443s
+user	4m39.692s
+sys	0m1.714s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m41.744s
+user	4m39.965s
+sys	0m1.742s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m42.601s
+user	4m40.915s
+sys	0m1.647s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m39.958s
+user	4m38.272s
+sys	0m1.644s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+
+real	4m43.586s
+user	4m41.811s
+sys	0m1.733s

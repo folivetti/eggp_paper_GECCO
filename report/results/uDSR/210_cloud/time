@@ -1,0 +1,240 @@
+
+real	0m38.175s
+user	0m37.817s
+sys	0m3.253s
+
+real	0m46.572s
+user	0m46.744s
+sys	0m8.488s
+
+real	0m46.787s
+user	0m46.827s
+sys	0m8.718s
+
+real	0m50.287s
+user	0m50.901s
+sys	0m8.717s
+
+real	0m49.037s
+user	0m50.050s
+sys	0m8.787s
+
+real	0m51.453s
+user	0m51.254s
+sys	0m9.007s
+
+real	0m50.032s
+user	0m50.713s
+sys	0m8.908s
+
+real	0m49.955s
+user	0m50.548s
+sys	0m8.188s
+
+real	0m50.375s
+user	0m51.167s
+sys	0m8.731s
+
+real	0m49.164s
+user	0m49.868s
+sys	0m8.506s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m49.980s
+user	0m51.006s
+sys	0m8.616s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m49.235s
+user	0m50.083s
+sys	0m8.617s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m49.631s
+user	0m50.321s
+sys	0m8.688s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m47.561s
+user	0m48.528s
+sys	0m8.049s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m49.353s
+user	0m50.063s
+sys	0m8.940s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m48.779s
+user	0m49.539s
+sys	0m8.847s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m49.397s
+user	0m50.232s
+sys	0m9.015s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m48.381s
+user	0m48.238s
+sys	0m6.749s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m48.334s
+user	0m48.972s
+sys	0m8.744s
+Traceback (most recent call last):
+  File "uDSR_wrapper.py", line 40, in <module>
+    print(f"0,{md},{sz},{mean_squared_error(y_train,y_hat)},{mean_squared_error(y_test,y_hat_test)},{mean_squared_error(y_train, y_hat)},{mean_squared_error(y_test,y_hat_test)},{r2_score(y_train,y_hat)},{r2_score(y_test,y_hat_test)}")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 439, in mean_squared_error
+    y_true, y_pred, multioutput
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/metrics/_regression.py", line 96, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+
+real	0m48.893s
+user	0m49.439s
+sys	0m8.133s
+
+real	0m48.501s
+user	0m49.124s
+sys	0m8.217s
+
+real	0m48.457s
+user	0m49.106s
+sys	0m8.547s
+
+real	0m47.602s
+user	0m48.311s
+sys	0m8.426s
+
+real	0m49.578s
+user	0m50.383s
+sys	0m8.359s
+
+real	0m48.839s
+user	0m49.342s
+sys	0m8.544s
+
+real	0m47.364s
+user	0m48.310s
+sys	0m8.662s
+
+real	0m49.610s
+user	0m50.790s
+sys	0m8.639s
+
+real	0m47.515s
+user	0m48.761s
+sys	0m8.777s
+
+real	0m48.514s
+user	0m48.939s
+sys	0m8.614s
+
+real	0m44.517s
+user	0m45.487s
+sys	0m8.229s

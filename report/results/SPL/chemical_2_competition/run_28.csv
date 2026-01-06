@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,log(log(-log(x30)/2 + log(x30)**(log(x48)/2)/2**(log(x48)/2))/sin(log(-log(x30)/2 + log(x30)**(log(x48)/2)/2**(log(x48)/2)))),45,0.09024972881358284,0.13454028611252966,0.09024972881358284,0.13454028611252966,0.20476613150146128,0.03920678797158372

@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,(-4.561092872179115)(sin(0.14731315613413898 - (X_0 + X_1 + sqrt((X_1)(X_0 - (exp(X_0))))))) - ((-2.1836841793827064)^(exp(sin(X_3)))),27,inf,inf,inf,inf,-inf,-inf

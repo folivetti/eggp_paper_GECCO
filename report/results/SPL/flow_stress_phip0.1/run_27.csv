@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,2*sqrt(x0) + sqrt(x1) - sqrt(8*sqrt(x0) + 4*sqrt(x1) - 4*sin(x0) - 4*sin(sin(x0)) + 2*sqrt(2)*x1/sqrt(x0))*sin(x0)/2 - sin(sin(x0)) + sqrt(2)*x1/(2*sqrt(x0)),58,1568.0558478485405,1151.8664823741174,1568.0558478485405,1151.8664823741174,-0.22699097498150267,-0.28852332274617165

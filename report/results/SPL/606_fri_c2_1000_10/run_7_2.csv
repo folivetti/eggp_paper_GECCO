@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,-sin(sin(sin(sin(x0) - sin(sin(sin(exp(-1)*sin(x4))))))),18,0.6987308846728792,0.7168758617030314,0.6987308846728792,0.7168758617030314,0.30650517041011427,0.2698883208850609

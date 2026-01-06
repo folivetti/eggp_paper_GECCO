@@ -22,8 +22,13 @@ args = parser.parse_args()
 base_dir = ""
 
 df = pd.read_csv(f"perf.csv")
-algs = sorted(np.unique(df.algorithm.values))
+# Order to display
+algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp", "RF"]
+
 df = df[df.algorithm.isin(algs)]
+
+# algs = sorted(np.unique(df.algorithm.values))
+# df = df[df.algorithm.isin(algs)]
 
 if args.criteria == "R2":
     criteria = 'r2_test'
@@ -53,14 +58,14 @@ if "P@" in args.criteria:
         tbl.loc[ds] = tbl.loc[ds].clip(lower=k/100)
 
 ranks = tbl.rank(axis=1, ascending=minobj!=args.pct, pct=args.pct)
-
+print(ranks)
 print(ranks.mean())
 print(ss.friedmanchisquare(*tbl.values.T))
-df_ungrouped = tbl.reset_index().melt(id_vars='dataset', value_vars=algs, var_name='algorithm', value_name='score')
+df_ungrouped = tbl.reset_index().melt(id_vars='dataset', value_vars=algs, var_name='algorithm', value_name='score').fillna(np.random.rand()*1e+10)
 print(df_ungrouped)
 test_results = sp.posthoc_conover_friedman(df_ungrouped, melted=True, block_col='dataset', group_col='algorithm', y_col='score', block_id_col='dataset')
 
 plt.figure(figsize=(10, 2), dpi=100)
 plt.title('Critical difference diagram of average score ranks')
 sp.critical_difference_diagram(ranks.mean(), test_results)
-plt.savefig(f'plots/ranks/diagram_{args.criteria}_{args.agg}{'_pct' if args.pct else ''}{'_'+args.ext if len(args.ext) else args.ext}.eps')
+plt.savefig(f'plots/ranks/diagram_{args.criteria}_{args.agg}{"_pct" if args.pct else ""}{"_" +args.ext if len(args.ext) else args.ext}.eps')

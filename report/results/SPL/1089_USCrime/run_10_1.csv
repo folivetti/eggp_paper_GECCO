@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,2*x1 - x5 - exp(exp(sin(2*x1 - x5 + log(x4)*sin(x6) + log(x8) + sin(sin(sin(x6)))))) + log(x4)*sin(x6) + log(x8) + sin(sin(sin(x6))),41,700.5188038199966,1338.186699303797,700.5188038199966,1338.186699303797,0.5555406540729537,0.046185600389315073

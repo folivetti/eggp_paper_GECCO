@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,2*x5 - x8 - x8/sqrt(exp(sqrt(x19 + x24))) - 2*x9 + log(exp(-x9)*exp(sqrt(exp(sqrt(x19 + x24))))) - exp(sqrt(x19 + x24))*log(x4)**sin(log(x14))/sqrt(exp(sqrt(x19 + x24))),58,5448.10059274792,4326.522278590931,5448.10059274792,4326.522278590931,0.33269633645314733,0.37368353278586763

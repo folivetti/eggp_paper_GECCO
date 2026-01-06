@@ -1,0 +1,1164 @@
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	1m13.887s
+user	1m13.772s
+sys	0m4.321s
+
+real	18m57.842s
+user	19m37.390s
+sys	1m8.922s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	2m56.325s
+user	3m1.499s
+sys	0m10.619s
+
+real	18m0.719s
+user	18m35.968s
+sys	1m4.399s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	11m49.365s
+user	12m15.548s
+sys	0m42.978s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	13m42.418s
+user	14m7.295s
+sys	0m49.673s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	2m58.860s
+user	3m4.109s
+sys	0m10.885s
+
+real	17m37.630s
+user	18m12.455s
+sys	1m4.821s
+
+real	15m52.450s
+user	16m27.863s
+sys	1m4.040s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	5m33.890s
+user	5m46.356s
+sys	0m21.594s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	1m17.300s
+user	1m18.987s
+sys	0m4.311s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	0m55.978s
+user	0m57.969s
+sys	0m4.172s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	15m41.856s
+user	16m13.692s
+sys	1m0.228s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	17m7.641s
+user	17m42.866s
+sys	1m6.581s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	9m16.024s
+user	9m34.685s
+sys	0m38.039s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	4m11.443s
+user	4m20.404s
+sys	0m17.983s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	13m44.901s
+user	14m15.069s
+sys	0m55.686s
+
+real	16m1.458s
+user	16m32.500s
+sys	1m3.290s
+
+real	14m38.077s
+user	15m9.059s
+sys	1m9.432s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	3m27.663s
+user	3m33.900s
+sys	0m14.684s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	5m11.456s
+user	5m22.966s
+sys	0m21.943s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	5m36.512s
+user	5m47.894s
+sys	0m25.931s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	8m39.274s
+user	8m58.224s
+sys	0m38.974s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	7m22.208s
+user	7m36.862s
+sys	0m32.401s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	10m7.435s
+user	10m27.524s
+sys	0m43.749s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	0m29.402s
+user	0m29.995s
+sys	0m2.051s
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 83, in sym_pp
+    W = filter_mat(sp.Matrix(W), threshold=threshold)  # Pruning
+                   ~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 558, in __new__
+    return cls._new(*args, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/repmatrix.py", line 569, in _new
+    rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3870, in _handle_creation_inputs
+    return cls._handle_ndarray(args[0])
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/matrices/matrixbase.py", line 3789, in _handle_ndarray
+    flat_list = [cls._sympify(i) for i in arr.ravel()]
+                 ~~~~~~~~~~~~^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 411, in sympify
+    return _convert_numpy_types(a, locals=locals,
+        convert_xor=convert_xor, strict=strict, rational=rational,
+        evaluate=evaluate)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/sympify.py", line 93, in _convert_numpy_types
+    p, q = a.as_integer_ratio()
+           ~~~~~~~~~~~~~~~~~~^^
+ValueError: cannot convert NaN to integer ratio
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 64, in <module>
+    eq, R2, error, relative_error = reg.solve_environment()  # return results
+                                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 203, in solve_environment
+    error, R2, eq, log_probs, entropies, num_layers, num_func_layer, funcs_per_layer_name = self.play_episodes()  # play an episode
+                                                                                            ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 437, in play_episodes
+    error_test, r2_test, eq = self.train(self.config.trials)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/SymbolicRegression.py", line 654, in train
+    expr = pretty_print.network(weights, self.funcs_per_layer, self.vars_name, self.threshold, self.add_bias, biases)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 123, in network
+    expr = sym_pp(weights[:-1], sp_funcs, var_names, threshold=threshold, n_double=n_double, add_bias=add_bias)
+  File "/root/anaconda3/lib/python3.13/site-packages/DySymNet/scripts/pretty_print.py", line 87, in sym_pp
+    pdb.set_trace()
+    ~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 116, in trace_dispatch
+    return self.dispatch_opcode(frame, arg)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/bdb.py", line 216, in dispatch_opcode
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit
+
+real	10m29.505s
+user	10m51.016s
+sys	0m45.055s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	15m42.005s
+user	16m17.413s
+sys	1m10.752s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	14m11.813s
+user	14m40.859s
+sys	1m0.786s
+
+real	13m52.180s
+user	14m28.707s
+sys	1m13.769s

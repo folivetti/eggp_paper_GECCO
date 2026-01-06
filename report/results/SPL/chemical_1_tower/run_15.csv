@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,-x11 - sqrt(x15) + 2*x18 + x7 + x9**(sqrt(x9)) + log(x14**x2) - log(-x11 - sqrt(x15) + x18 + x7 + x9**(sqrt(x9)) + log(x14**x2) + x22/x15 + x6*x9/sqrt(x13)) + x22/x15 + x6*x9/sqrt(x13),67,4908.667298964194,3873.874099558055,4908.667298964194,3873.874099558055,0.39876813653337784,0.4392098354668079

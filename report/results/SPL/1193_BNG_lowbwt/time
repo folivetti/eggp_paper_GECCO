@@ -1,0 +1,180 @@
+
+real	1m23.780s
+user	1m23.350s
+sys	0m0.999s
+
+real	1m40.789s
+user	1m40.182s
+sys	0m1.567s
+
+real	1m14.474s
+user	1m13.816s
+sys	0m1.761s
+
+real	1m36.266s
+user	1m35.683s
+sys	0m1.620s
+
+real	2m46.061s
+user	2m45.452s
+sys	0m1.664s
+
+real	0m50.406s
+user	0m50.035s
+sys	0m1.008s
+
+real	0m29.531s
+user	0m29.145s
+sys	0m1.016s
+
+real	0m33.070s
+user	0m32.713s
+sys	0m0.881s
+
+real	0m46.286s
+user	0m45.876s
+sys	0m1.024s
+
+real	0m33.178s
+user	0m32.815s
+sys	0m0.998s
+
+real	0m36.333s
+user	0m35.931s
+sys	0m1.000s
+
+real	0m37.831s
+user	0m37.500s
+sys	0m1.016s
+
+real	1m45.180s
+user	1m44.839s
+sys	0m0.911s
+
+real	0m33.210s
+user	0m32.868s
+sys	0m0.876s
+
+real	0m43.819s
+user	0m43.480s
+sys	0m0.887s
+
+real	2m9.507s
+user	2m9.115s
+sys	0m0.895s
+
+real	0m22.402s
+user	0m22.098s
+sys	0m0.917s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 53, in <module>
+    y_hat = eval_model(eq, vars_name, X_train)
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 22, in eval_model
+    curr_expr = sp.sympify(curr_expr).subs(j, X[i, idx])
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1123, in subs
+    rv = rv._subs(old, new, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1237, in _subs
+    rv = fallback(self, old, new)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1209, in fallback
+    arg = arg._subs(old, new, **hints)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1237, in _subs
+    rv = fallback(self, old, new)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1209, in fallback
+    arg = arg._subs(old, new, **hints)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1237, in _subs
+    rv = fallback(self, old, new)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1209, in fallback
+    arg = arg._subs(old, new, **hints)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1237, in _subs
+    rv = fallback(self, old, new)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1209, in fallback
+    arg = arg._subs(old, new, **hints)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1237, in _subs
+    rv = fallback(self, old, new)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1209, in fallback
+    arg = arg._subs(old, new, **hints)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1237, in _subs
+    rv = fallback(self, old, new)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/basic.py", line 1214, in fallback
+    rv = self.func(*args)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/function.py", line 472, in __new__
+    result = result.evalf(prec_to_dps(pr))
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/evalf.py", line 1648, in evalf
+    result = evalf(self, prec + 4, options)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/evalf.py", line 1483, in evalf
+    r = rf(x, prec, options)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/evalf.py", line 893, in evalf_exp
+    return evalf_pow(Pow(S.Exp1, expr.exp, evaluate=False), prec, options)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/evalf.py", line 854, in evalf_pow
+    return mpf_exp(yre, target_prec), None, target_prec, None
+           ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/mpmath/libmp/libelefun.py", line 1173, in mpf_exp
+    t = man << offset
+        ~~~~^^~~~~~~~
+OverflowError: int too big to convert
+
+real	0m7.783s
+user	0m7.389s
+sys	0m0.868s
+
+real	0m28.442s
+user	0m28.124s
+sys	0m0.848s
+
+real	0m19.620s
+user	0m19.260s
+sys	0m0.835s
+
+real	1m12.480s
+user	1m12.086s
+sys	0m0.977s
+
+real	0m44.298s
+user	0m44.000s
+sys	0m0.811s
+
+real	0m55.416s
+user	0m55.050s
+sys	0m0.900s
+
+real	2m35.188s
+user	2m34.849s
+sys	0m0.793s
+
+real	2m41.087s
+user	2m40.790s
+sys	0m0.867s
+
+real	1m6.316s
+user	1m5.994s
+sys	0m0.706s
+
+real	1m8.844s
+user	1m8.537s
+sys	0m0.720s
+
+real	0m20.211s
+user	0m19.799s
+sys	0m0.816s
+
+real	0m27.203s
+user	0m26.810s
+sys	0m0.756s
+
+real	0m36.337s
+user	0m36.058s
+sys	0m0.626s

@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sqrt(x1) + sqrt(x1)/exp(x0)**x5 + x3**x8 + x6/(x7*exp(x0)**x5) - x7*x8 + x7 - x8,36,161.32063567353367,156.13061542396773,161.32063567353367,156.13061542396773,0.34895830689365726,0.37629557837438055

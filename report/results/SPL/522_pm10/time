@@ -1,0 +1,148 @@
+
+real	0m13.871s
+user	0m13.371s
+sys	0m1.392s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/score.py", line 82, in score_with_est
+    f_pred = eval(eq)
+  File "<string>", line 1, in <module>
+NameError: name 'E' is not defined. Did you mean: 'e'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 42, in <module>
+    all_eqs, success_rate, all_times = run_spl(sys.argv[1],
+                                       ~~~~~~~^^^^^^^^^^^^^
+                                               fold=-1 if len(sys.argv) <= 2 else sys.argv[2],
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                               data_dir=data_dir,
+                                               ^^^^^^^^^^^^^^^^^^
+                                               num_run=1,
+                                               ^^^^^^^^^^
+                                               transplant_step=200, num_transplant=20)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_train.py", line 129, in run_spl
+    test_score = score_with_est(simplify_eq(best_solution[0]), 0, test_sample, eta = eta)[0]
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/score.py", line 104, in score_with_est
+    except e:
+        print(e, eq)
+        return 0, eq
+TypeError: catching classes that do not inherit from BaseException is not allowed
+
+real	0m5.002s
+user	0m4.728s
+sys	0m0.670s
+
+real	0m20.447s
+user	0m19.899s
+sys	0m1.775s
+
+real	0m15.208s
+user	0m14.583s
+sys	0m1.932s
+
+real	0m25.376s
+user	0m24.802s
+sys	0m1.834s
+
+real	0m18.335s
+user	0m17.740s
+sys	0m1.812s
+
+real	0m23.844s
+user	0m23.217s
+sys	0m1.777s
+
+real	0m19.316s
+user	0m18.624s
+sys	0m1.862s
+
+real	0m32.700s
+user	0m31.993s
+sys	0m1.958s
+
+real	0m17.030s
+user	0m16.335s
+sys	0m1.983s
+
+real	0m20.610s
+user	0m19.907s
+sys	0m1.891s
+
+real	0m14.174s
+user	0m13.448s
+sys	0m1.984s
+
+real	0m18.728s
+user	0m18.141s
+sys	0m1.816s
+
+real	0m19.713s
+user	0m19.044s
+sys	0m1.986s
+
+real	0m18.103s
+user	0m17.505s
+sys	0m1.852s
+
+real	0m15.290s
+user	0m14.688s
+sys	0m1.814s
+
+real	0m21.697s
+user	0m21.051s
+sys	0m1.954s
+
+real	0m15.421s
+user	0m14.731s
+sys	0m2.032s
+
+real	0m12.267s
+user	0m11.631s
+sys	0m1.879s
+
+real	0m21.890s
+user	0m21.279s
+sys	0m1.681s
+
+real	0m13.324s
+user	0m12.630s
+sys	0m1.867s
+
+real	0m17.048s
+user	0m16.420s
+sys	0m1.768s
+
+real	0m13.623s
+user	0m12.975s
+sys	0m1.780s
+
+real	0m15.525s
+user	0m14.952s
+sys	0m1.788s
+
+real	0m16.205s
+user	0m15.573s
+sys	0m1.832s
+
+real	0m17.032s
+user	0m16.396s
+sys	0m1.882s
+
+real	0m15.927s
+user	0m15.264s
+sys	0m1.874s
+
+real	0m18.092s
+user	0m17.665s
+sys	0m1.550s
+
+real	0m11.367s
+user	0m10.973s
+sys	0m1.423s
+
+real	0m11.809s
+user	0m11.420s
+sys	0m1.283s

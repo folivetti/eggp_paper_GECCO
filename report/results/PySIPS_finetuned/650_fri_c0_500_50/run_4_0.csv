@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,log(sqrt((exp(X_1))(exp(X_0 + X_3 + sin(X_4))))),13,0.2828384446496479,0.3531918379795889,0.2828384446496479,0.3531918379795889,0.7247064161357406,0.6203106705230068

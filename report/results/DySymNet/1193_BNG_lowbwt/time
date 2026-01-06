@@ -1,0 +1,360 @@
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.226s
+user	0m4.649s
+sys	0m0.545s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.768s
+user	0m4.309s
+sys	0m0.450s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.499s
+user	0m4.911s
+sys	0m0.573s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.736s
+user	0m5.181s
+sys	0m0.553s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.702s
+user	0m4.250s
+sys	0m0.435s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.008s
+user	0m4.544s
+sys	0m0.444s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.926s
+user	0m4.383s
+sys	0m0.536s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.494s
+user	0m4.936s
+sys	0m0.548s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.231s
+user	0m4.679s
+sys	0m0.521s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.529s
+user	0m4.081s
+sys	0m0.430s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m6.109s
+user	0m5.472s
+sys	0m0.625s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.318s
+user	0m3.927s
+sys	0m0.385s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.679s
+user	0m4.140s
+sys	0m0.512s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.172s
+user	0m4.642s
+sys	0m0.499s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.815s
+user	0m4.292s
+sys	0m0.524s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.311s
+user	0m3.868s
+sys	0m0.428s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.281s
+user	0m3.825s
+sys	0m0.425s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.647s
+user	0m4.119s
+sys	0m0.510s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.717s
+user	0m4.204s
+sys	0m0.501s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.432s
+user	0m3.981s
+sys	0m0.431s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.581s
+user	0m4.137s
+sys	0m0.429s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.245s
+user	0m3.778s
+sys	0m0.444s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.545s
+user	0m4.090s
+sys	0m0.452s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.550s
+user	0m4.102s
+sys	0m0.435s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.747s
+user	0m4.261s
+sys	0m0.479s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.507s
+user	0m4.950s
+sys	0m0.541s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.351s
+user	0m3.864s
+sys	0m0.456s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.193s
+user	0m3.751s
+sys	0m0.433s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m4.860s
+user	0m4.344s
+sys	0m0.498s
+Traceback (most recent call last):
+  File "/root/DySymNet/DySymNet_wrapper.py", line 79, in <module>
+    print(f"{ix},{eq},{model_size(eq)},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}")
+                       ~~~~~~~~~~^^^^
+  File "/root/DySymNet/DySymNet_wrapper.py", line 14, in model_size
+    if expr.is_Atom:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_Atom'
+
+real	0m5.042s
+user	0m4.520s
+sys	0m0.521s

@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x0 + x1 + sqrt(exp(sqrt(x1))) + log(x1)*sin(sqrt(x0)) + sin(x0)**2 + sin(x1)*sin(2*x0 + x1 + sqrt(exp(sqrt(x1))) + log(x1)*sin(sqrt(x0)) + sin(x0) + sin(x1)) + sin(x1),48,6.114854756876284,26.430937849841108,6.114854756876284,26.430937849841108,0.7406133602100715,-2.1254259568756466

@@ -23,3 +23,10 @@ my_plot <- plot_pwin(x,control='eggp') +
 
 fname <- sprintf("plots/ranks/bbt_%s_%s_rope.eps",criteria, aggfun)
 ggsave(my_plot, file=fname, device="eps", width = 15, height = 5)
+
+x <- bbtcomp(my_data,lrope=T, paired=F)
+my_plot <- plot_pwin(x) +
+  theme_minimal(base_size = 20)
+
+fname <- sprintf("plots/ranks/bbt_%s_%s_rope_full.eps",criteria, aggfun)
+ggsave(my_plot, file=fname, device="eps", width = 15, height = 20)

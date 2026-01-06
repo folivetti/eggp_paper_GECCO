@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(sin(x3) + sin(sin(sin(sin(sin(sin(sin(sin(x1))))/exp(sin(sin(x1)))**(1/4)))))),20,0.499227413290809,0.6330024860242922,0.499227413290809,0.6330024860242922,0.49109398953233785,0.38592856953293087

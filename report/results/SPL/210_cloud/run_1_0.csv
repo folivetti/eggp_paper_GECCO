@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sqrt(x2) - sqrt(log(exp(x3))) + log(exp(x3)),14,0.21082831245682043,0.1285741008274022,0.21082831245682043,0.1285741008274022,0.8478483170752613,0.7965656150663505

@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x24 + x9 - sqrt(log(x20**x6) + sin(x24)) - sqrt(x24 - sqrt(log(x20**x6) + sin(x24)) + log(x20**x6) - sin(x23) + sin(log(x20**x6)))*sin(x23) + log(x20**x6) + sin(log(x20**x6)),55,5058.940598987916,4082.675372041826,5058.940598987916,4082.675372041826,0.380362102736464,0.40898332398460147

@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,3*x0 - sqrt(x1) + x1*sin(sin(log(4*x0 - x0/x1 + x1 - 1 - 1/sqrt(x1)))) + x1,32,5.906401534821031,10.82293164424726,5.906401534821031,10.82293164424726,0.7129924501767653,-0.09396209342121908

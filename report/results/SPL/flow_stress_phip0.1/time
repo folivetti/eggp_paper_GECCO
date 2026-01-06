@@ -1,0 +1,165 @@
+
+real	0m25.046s
+user	0m24.600s
+sys	0m0.799s
+
+real	0m16.763s
+user	0m16.238s
+sys	0m1.005s
+
+real	0m22.203s
+user	0m21.722s
+sys	0m0.936s
+
+real	0m23.347s
+user	0m22.661s
+sys	0m1.194s
+
+real	0m20.342s
+user	0m19.791s
+sys	0m1.090s
+
+real	0m30.349s
+user	0m29.814s
+sys	0m0.978s
+
+real	0m24.398s
+user	0m23.948s
+sys	0m0.793s
+
+real	0m23.152s
+user	0m22.635s
+sys	0m1.070s
+
+real	0m29.685s
+user	0m29.077s
+sys	0m1.127s
+
+real	0m26.922s
+user	0m26.364s
+sys	0m1.104s
+
+real	0m22.555s
+user	0m21.983s
+sys	0m1.043s
+
+real	0m30.613s
+user	0m30.003s
+sys	0m1.157s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 57, in <module>
+    mse_train = np.inf if has_nan else mean_squared_error(y_train, y_hat)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        array,
+        ^^^^^^
+    ...<2 lines>...
+        allow_nan=ensure_all_finite == "allow-nan",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<4 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+real	0m48.714s
+user	0m48.110s
+sys	0m1.142s
+
+real	0m42.043s
+user	0m41.394s
+sys	0m1.171s
+
+real	0m26.614s
+user	0m26.058s
+sys	0m1.052s
+
+real	0m33.126s
+user	0m32.546s
+sys	0m1.024s
+
+real	0m21.059s
+user	0m20.553s
+sys	0m0.916s
+
+real	0m14.749s
+user	0m14.204s
+sys	0m0.932s
+
+real	0m31.067s
+user	0m30.536s
+sys	0m0.863s
+
+real	0m26.205s
+user	0m25.658s
+sys	0m0.857s
+
+real	0m30.525s
+user	0m30.067s
+sys	0m0.670s
+
+real	0m20.279s
+user	0m19.807s
+sys	0m0.747s
+
+real	0m17.889s
+user	0m17.291s
+sys	0m0.885s
+
+real	0m22.234s
+user	0m21.670s
+sys	0m0.895s
+
+real	0m15.159s
+user	0m14.622s
+sys	0m0.787s
+
+real	0m22.540s
+user	0m22.019s
+sys	0m0.755s
+
+real	0m20.344s
+user	0m19.852s
+sys	0m0.735s
+
+real	1m59.413s
+user	1m58.806s
+sys	0m0.846s
+
+real	0m9.674s
+user	0m9.254s
+sys	0m0.660s
+
+real	0m16.057s
+user	0m15.562s
+sys	0m0.753s

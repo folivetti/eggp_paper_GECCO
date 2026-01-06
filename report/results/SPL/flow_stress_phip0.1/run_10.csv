@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x1**(1/4)*sqrt(sqrt(x1) + x1) + log(x0)**2 + log(x0) - log(exp(sqrt(x1*log(x0)))),28,1755.1675586044398,1338.7880937826742,1755.1675586044398,1338.7880937826742,-0.3734043700948464,-0.4976212169125156

@@ -1,0 +1,1144 @@
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 42, in <module>
+    all_eqs, success_rate, all_times = run_spl(sys.argv[1],
+                                       ~~~~~~~^^^^^^^^^^^^^
+                                               fold=-1 if len(sys.argv) <= 2 else sys.argv[2],
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                               data_dir=data_dir,
+                                               ^^^^^^^^^^^^^^^^^^
+                                               num_run=1,
+                                               ^^^^^^^^^^
+                                               transplant_step=5000, num_transplant=20)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_train.py", line 106, in run_spl
+    _, current_solution, good_modules = spl_model.run(transplant_step,
+                                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+                                                      num_play=10,
+                                                      ^^^^^^^^^^^^
+                                                      print_flag=False)
+                                                      ^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_base.py", line 287, in run
+    next_state, ntn_next, reward, done, eq = self.step(state, action, ntn)
+                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_base.py", line 115, in step
+    reward, eq = self.score(self.tree_to_eq(state.split(',')), len(state.split(',')),
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            self.data_sample, eta=self.eta)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/score.py", line 79, in score_with_est
+    with time_limit(t_limit, 'sleep'):
+         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/root/SymbolicPhysicsLearner/score.py", line 18, in time_limit
+    timer.start()
+    ~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/threading.py", line 981, in start
+    self._started.wait()  # Will set ident and native_id
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/root/anaconda3/lib/python3.13/threading.py", line 659, in wait
+    signaled = self._cond.wait(timeout)
+  File "/root/anaconda3/lib/python3.13/threading.py", line 359, in wait
+    waiter.acquire()
+    ~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+Exception ignored on threading shutdown:
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.13/threading.py", line 1542, in _shutdown
+    _thread_shutdown()
+KeyboardInterrupt: 
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.744s
+user	0m0.648s
+sys	0m0.092s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.751s
+user	0m0.661s
+sys	0m0.092s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.752s
+user	0m0.674s
+sys	0m0.080s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.751s
+user	0m0.659s
+sys	0m0.094s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.744s
+user	0m0.675s
+sys	0m0.071s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.754s
+user	0m0.671s
+sys	0m0.086s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.768s
+user	0m0.664s
+sys	0m0.093s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.745s
+user	0m0.650s
+sys	0m0.098s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.744s
+user	0m0.664s
+sys	0m0.083s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.745s
+user	0m0.663s
+sys	0m0.083s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.758s
+user	0m0.669s
+sys	0m0.091s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.744s
+user	0m0.658s
+sys	0m0.088s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.755s
+user	0m0.651s
+sys	0m0.106s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.747s
+user	0m0.668s
+sys	0m0.081s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.743s
+user	0m0.664s
+sys	0m0.081s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.766s
+user	0m0.680s
+sys	0m0.088s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.768s
+user	0m0.674s
+sys	0m0.096s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.754s
+user	0m0.679s
+sys	0m0.076s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.747s
+user	0m0.662s
+sys	0m0.087s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.740s
+user	0m0.664s
+sys	0m0.079s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.744s
+user	0m0.651s
+sys	0m0.095s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.744s
+user	0m0.654s
+sys	0m0.092s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.743s
+user	0m0.677s
+sys	0m0.068s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.737s
+user	0m0.660s
+sys	0m0.079s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.756s
+user	0m0.660s
+sys	0m0.099s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.749s
+user	0m0.654s
+sys	0m0.096s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.751s
+user	0m0.663s
+sys	0m0.089s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.749s
+user	0m0.663s
+sys	0m0.089s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.747s
+user	0m0.657s
+sys	0m0.092s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 33, in <module>
+    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/realworld/192_vineyard_train.csv'
+
+real	0m0.745s
+user	0m0.657s
+sys	0m0.090s
+
+real	0m13.434s
+user	0m12.841s
+sys	0m1.437s
+
+real	0m11.886s
+user	0m11.185s
+sys	0m1.930s
+
+real	0m14.689s
+user	0m14.056s
+sys	0m1.907s
+
+real	0m12.870s
+user	0m12.308s
+sys	0m1.777s
+
+real	0m14.127s
+user	0m13.516s
+sys	0m1.749s
+
+real	0m50.355s
+user	0m49.660s
+sys	0m1.830s
+
+real	0m17.604s
+user	0m16.908s
+sys	0m1.884s
+
+real	0m12.636s
+user	0m11.975s
+sys	0m1.812s
+
+real	0m15.373s
+user	0m14.666s
+sys	0m1.866s
+
+real	0m20.298s
+user	0m19.651s
+sys	0m1.812s
+
+real	0m26.876s
+user	0m26.117s
+sys	0m1.960s
+
+real	0m14.448s
+user	0m13.751s
+sys	0m1.886s
+
+real	0m19.484s
+user	0m18.853s
+sys	0m1.799s
+
+real	0m12.557s
+user	0m11.928s
+sys	0m1.802s
+
+real	0m16.364s
+user	0m15.716s
+sys	0m1.798s
+
+real	0m22.779s
+user	0m22.145s
+sys	0m1.785s
+
+real	0m10.245s
+user	0m9.653s
+sys	0m1.658s
+
+real	0m12.445s
+user	0m11.891s
+sys	0m1.759s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 57, in <module>
+    mse_train = np.inf if has_nan else mean_squared_error(y_train, y_hat)
+                                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        array,
+        ^^^^^^
+    ...<2 lines>...
+        allow_nan=ensure_all_finite == "allow-nan",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<4 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+real	0m16.327s
+user	0m15.736s
+sys	0m1.732s
+
+real	0m11.820s
+user	0m11.212s
+sys	0m1.672s
+
+real	0m18.255s
+user	0m17.651s
+sys	0m1.694s
+
+real	0m19.669s
+user	0m18.861s
+sys	0m1.901s
+
+real	0m12.094s
+user	0m11.511s
+sys	0m1.681s
+
+real	0m9.886s
+user	0m9.287s
+sys	0m1.680s
+
+real	0m12.212s
+user	0m11.634s
+sys	0m1.660s
+
+real	0m26.114s
+user	0m25.558s
+sys	0m1.623s
+
+real	0m12.445s
+user	0m11.854s
+sys	0m1.689s
+
+real	0m13.876s
+user	0m13.283s
+sys	0m1.709s
+
+real	0m13.695s
+user	0m13.139s
+sys	0m1.604s
+
+real	0m12.520s
+user	0m11.996s
+sys	0m1.588s

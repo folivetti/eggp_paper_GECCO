@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(log(exp(sin(x4))*sqrt(exp(sin(sin(x3))))*exp(-sin(sin(x4)))) - sin(x2)),23,0.7886561745907635,0.726495269105825,0.7886561745907635,0.726495269105825,0.22952946630771398,0.2347892821502231

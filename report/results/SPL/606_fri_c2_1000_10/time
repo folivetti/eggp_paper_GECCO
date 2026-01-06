@@ -1,0 +1,148 @@
+
+real	0m9.934s
+user	0m9.442s
+sys	0m1.219s
+
+real	1m13.030s
+user	1m12.616s
+sys	0m1.216s
+
+real	1m13.131s
+user	1m12.498s
+sys	0m1.215s
+
+real	0m57.480s
+user	0m57.065s
+sys	0m1.056s
+
+real	3m28.538s
+user	3m20.598s
+sys	0m8.176s
+
+real	0m18.247s
+user	0m17.811s
+sys	0m1.038s
+
+real	0m38.404s
+user	0m37.961s
+sys	0m1.066s
+
+real	0m13.420s
+user	0m13.011s
+sys	0m0.960s
+
+real	0m13.649s
+user	0m13.244s
+sys	0m0.999s
+
+real	0m17.900s
+user	0m17.605s
+sys	0m0.761s
+
+real	0m16.623s
+user	0m16.359s
+sys	0m0.618s
+
+real	0m6.321s
+user	0m5.962s
+sys	0m1.104s
+
+real	0m6.728s
+user	0m6.450s
+sys	0m0.705s
+
+real	4m25.133s
+user	4m9.102s
+sys	0m15.639s
+
+real	0m12.434s
+user	0m12.194s
+sys	0m0.496s
+
+real	7m18.917s
+user	6m39.323s
+sys	0m38.103s
+
+real	0m16.806s
+user	0m16.557s
+sys	0m0.539s
+
+real	0m5.000s
+user	0m4.731s
+sys	0m0.637s
+
+real	2m23.912s
+user	2m22.467s
+sys	0m1.711s
+
+real	0m19.018s
+user	0m18.747s
+sys	0m0.602s
+
+real	0m8.336s
+user	0m8.083s
+sys	0m0.757s
+
+real	0m6.988s
+user	0m6.572s
+sys	0m1.218s
+
+real	0m12.680s
+user	0m12.435s
+sys	0m0.527s
+
+real	0m19.602s
+user	0m19.342s
+sys	0m0.571s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/score.py", line 82, in score_with_est
+    f_pred = eval(eq)
+  File "<string>", line 1, in <module>
+NameError: name 'zoo' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 42, in <module>
+    all_eqs, success_rate, all_times = run_spl(sys.argv[1],
+                                       ~~~~~~~^^^^^^^^^^^^^
+                                               fold=-1 if len(sys.argv) <= 2 else sys.argv[2],
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                               data_dir=data_dir,
+                                               ^^^^^^^^^^^^^^^^^^
+                                               num_run=1,
+                                               ^^^^^^^^^^
+                                               transplant_step=200, num_transplant=20)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_train.py", line 129, in run_spl
+    test_score = score_with_est(simplify_eq(best_solution[0]), 0, test_sample, eta = eta)[0]
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/score.py", line 104, in score_with_est
+    except e:
+        print(e, eq)
+        return 0, eq
+TypeError: catching classes that do not inherit from BaseException is not allowed
+
+real	0m2.417s
+user	0m2.257s
+sys	0m0.411s
+
+real	0m20.068s
+user	0m19.825s
+sys	0m0.577s
+
+real	0m14.199s
+user	0m13.925s
+sys	0m0.626s
+
+real	0m7.973s
+user	0m7.666s
+sys	0m0.592s
+
+real	0m16.127s
+user	0m15.850s
+sys	0m0.584s
+
+real	0m12.283s
+user	0m12.013s
+sys	0m0.734s

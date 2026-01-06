@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(sin(log(exp(log(x1)**exp(sin(sin(log(x0)/2)))/x1)) + sin(x1/x0))),25,0.0029685577758505467,0.0020142284520362364,0.0029685577758505467,0.0020142284520362364,0.9138992303571799,0.796763761260138

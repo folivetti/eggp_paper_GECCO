@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sqrt(exp(sqrt(exp(sin(sin(sqrt(x0)))))))*sin(sin(sqrt(sqrt(x0)*exp(sin(sqrt(x0)))))),25,0.04015013701584076,0.043415507422313614,0.04015013701584076,0.043415507422313614,0.2482809959888811,0.41882967083329814

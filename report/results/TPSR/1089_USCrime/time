@@ -1,0 +1,630 @@
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.819s
+user	0m6.705s
+sys	0m1.099s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.659s
+user	0m6.588s
+sys	0m1.057s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.609s
+user	0m6.544s
+sys	0m1.050s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.603s
+user	0m6.520s
+sys	0m1.080s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.596s
+user	0m6.498s
+sys	0m1.084s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.633s
+user	0m6.574s
+sys	0m1.045s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.609s
+user	0m6.539s
+sys	0m1.067s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.621s
+user	0m6.533s
+sys	0m1.061s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.592s
+user	0m6.527s
+sys	0m1.063s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.612s
+user	0m6.512s
+sys	0m1.086s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.581s
+user	0m6.505s
+sys	0m1.060s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.566s
+user	0m6.507s
+sys	0m1.056s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.581s
+user	0m6.530s
+sys	0m1.048s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.592s
+user	0m6.514s
+sys	0m1.075s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.607s
+user	0m6.550s
+sys	0m1.055s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.560s
+user	0m6.507s
+sys	0m1.050s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.566s
+user	0m6.517s
+sys	0m1.046s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.576s
+user	0m6.536s
+sys	0m1.037s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.553s
+user	0m6.526s
+sys	0m1.024s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [31, 33].  Tensor sizes: [31, 42]
+
+real	0m7.538s
+user	0m6.458s
+sys	0m1.078s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.449s
+user	0m6.410s
+sys	0m1.025s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.460s
+user	0m6.388s
+sys	0m1.069s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.464s
+user	0m6.401s
+sys	0m1.061s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.435s
+user	0m6.367s
+sys	0m1.065s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.439s
+user	0m6.378s
+sys	0m1.058s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.483s
+user	0m6.395s
+sys	0m1.072s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.452s
+user	0m6.413s
+sys	0m1.037s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.433s
+user	0m6.391s
+sys	0m1.040s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.432s
+user	0m6.383s
+sys	0m1.046s
+Checkpoint path does not exist, checkpoint.pth
+/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+Traceback (most recent call last):
+  File "TPSR_wrapper.py", line 113, in <module>
+    s, time_elapsed, sample_times = tpsr_fit([X_train_sc], [y_train], params,env , 1)
+  File "/root/TPSR/tpsr.py", line 19, in tpsr_fit
+    model = Transformer(params = params, env=equation_env, samples=samples)
+  File "/root/TPSR/symbolicregression/e2e_model.py", line 29, in __init__
+    self.x1, self.src_len = self.embedder(x1)
+  File "/root/anaconda3/envs/tpsr/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 86, in forward
+    sequences, sequences_len = self.batch(sequences)
+  File "/root/TPSR/symbolicregression/model/embedders.py", line 132, in batch
+    sent[0 : len(seq), i, :] = seq
+RuntimeError: The expanded size of the tensor (33) must match the existing size (42) at non-singleton dimension 1.  Target sizes: [32, 33].  Tensor sizes: [32, 42]
+
+real	0m7.474s
+user	0m6.401s
+sys	0m1.070s

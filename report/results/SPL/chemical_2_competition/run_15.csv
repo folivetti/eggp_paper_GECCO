@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,exp(x31*sin(sin(log(log(x42))))/x18)/(sqrt(log(x16 + sin(x27)))*log(exp(x31*sin(sin(log(log(x42))))/x18))),33,0.09767218191992239,0.10363558044925919,0.09767218191992239,0.10363558044925919,0.13936331893793996,0.25990671569561974

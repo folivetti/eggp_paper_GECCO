@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,-x1*sin(sin(log(x0)) + sin(sin(x0)))/(x0 + x1)**(1/4) - sin(sin(x0)),22,1747.3588941818941,1444.5498266931816,1747.3588941818941,1444.5498266931816,-0.3672941535574261,-0.6159304668078331

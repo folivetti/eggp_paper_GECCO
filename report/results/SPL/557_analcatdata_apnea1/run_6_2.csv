@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x0*x2*exp(x1)*sin(x1) + x0*x2*exp(x1) + x2*exp(x1)*sin(x1) + x2*exp(x1),23,10913527.996877745,7851658.579313434,10913527.996877745,7851658.579313434,0.010044103784610958,0.060763667055253934

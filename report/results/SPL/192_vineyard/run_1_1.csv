@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,(2*x1 - sin(x0) + sin(x1))**(x0 + 1)/(2*x1 - sin(x0) + sin(x1))**x0 + log(exp(2*x1)*exp(-sin(x0))*exp(sin(x1)))*sin(2*x1 - sin(x0) + sin(x1))/(2*x1 - sin(x0) + sin(x1))**x0,70,7.953374302555276,23.62101340505861,7.953374302555276,23.62101340505861,0.6626250144352991,-1.7931558404508747

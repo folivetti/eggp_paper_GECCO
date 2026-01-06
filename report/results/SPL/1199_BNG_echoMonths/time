@@ -1,0 +1,205 @@
+
+real	3m53.172s
+user	3m52.615s
+sys	0m1.235s
+
+real	3m44.985s
+user	3m44.344s
+sys	0m1.393s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/score.py", line 82, in score_with_est
+    f_pred = eval(eq)
+  File "<string>", line 1, in <module>
+NameError: name 'E' is not defined. Did you mean: 'e'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 42, in <module>
+    all_eqs, success_rate, all_times = run_spl(sys.argv[1],
+                                       ~~~~~~~^^^^^^^^^^^^^
+                                               fold=-1 if len(sys.argv) <= 2 else sys.argv[2],
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                               data_dir=data_dir,
+                                               ^^^^^^^^^^^^^^^^^^
+                                               num_run=1,
+                                               ^^^^^^^^^^
+                                               transplant_step=200, num_transplant=20)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_train.py", line 129, in run_spl
+    test_score = score_with_est(simplify_eq(best_solution[0]), 0, test_sample, eta = eta)[0]
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/score.py", line 104, in score_with_est
+    except e:
+        print(e, eq)
+        return 0, eq
+TypeError: catching classes that do not inherit from BaseException is not allowed
+
+real	0m1.912s
+user	0m1.783s
+sys	0m0.185s
+
+real	0m27.950s
+user	0m27.447s
+sys	0m1.345s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/score.py", line 82, in score_with_est
+    f_pred = eval(eq)
+  File "<string>", line 1, in <module>
+NameError: name 'E' is not defined. Did you mean: 'e'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 42, in <module>
+    all_eqs, success_rate, all_times = run_spl(sys.argv[1],
+                                       ~~~~~~~^^^^^^^^^^^^^
+                                               fold=-1 if len(sys.argv) <= 2 else sys.argv[2],
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                               data_dir=data_dir,
+                                               ^^^^^^^^^^^^^^^^^^
+                                               num_run=1,
+                                               ^^^^^^^^^^
+                                               transplant_step=200, num_transplant=20)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/spl_train.py", line 129, in run_spl
+    test_score = score_with_est(simplify_eq(best_solution[0]), 0, test_sample, eta = eta)[0]
+                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/SymbolicPhysicsLearner/score.py", line 104, in score_with_est
+    except e:
+        print(e, eq)
+        return 0, eq
+TypeError: catching classes that do not inherit from BaseException is not allowed
+
+real	0m3.539s
+user	0m3.338s
+sys	0m0.464s
+
+real	0m21.725s
+user	0m21.262s
+sys	0m1.335s
+
+real	0m56.970s
+user	0m56.602s
+sys	0m0.995s
+
+real	0m39.845s
+user	0m39.481s
+sys	0m0.959s
+
+real	0m35.465s
+user	0m35.079s
+sys	0m0.997s
+
+real	0m42.710s
+user	0m42.352s
+sys	0m0.709s
+
+real	0m50.684s
+user	0m50.176s
+sys	0m1.041s
+
+real	0m34.785s
+user	0m34.333s
+sys	0m1.007s
+
+real	2m14.859s
+user	2m14.459s
+sys	0m1.024s
+
+real	0m23.090s
+user	0m22.769s
+sys	0m0.809s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 58, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+                                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/expr.py", line 339, in __float__
+    raise TypeError("Cannot convert complex to float")
+TypeError: Cannot convert complex to float
+
+real	0m58.167s
+user	0m57.736s
+sys	0m0.982s
+
+real	1m4.797s
+user	1m4.298s
+sys	0m0.940s
+
+real	0m37.837s
+user	0m37.531s
+sys	0m0.668s
+
+real	0m21.972s
+user	0m21.555s
+sys	0m0.900s
+
+real	0m36.158s
+user	0m35.818s
+sys	0m0.718s
+
+real	0m26.837s
+user	0m26.543s
+sys	0m0.709s
+
+real	0m21.971s
+user	0m21.651s
+sys	0m0.846s
+
+real	0m24.186s
+user	0m23.758s
+sys	0m0.918s
+
+real	0m57.354s
+user	0m57.018s
+sys	0m0.735s
+
+real	0m40.290s
+user	0m39.983s
+sys	0m0.706s
+
+real	1m34.509s
+user	1m34.128s
+sys	0m0.890s
+
+real	1m12.191s
+user	1m11.809s
+sys	0m0.830s
+
+real	0m16.811s
+user	0m16.319s
+sys	0m0.875s
+
+real	0m57.672s
+user	0m57.356s
+sys	0m0.729s
+
+real	0m45.361s
+user	0m45.066s
+sys	0m0.712s
+
+real	0m27.812s
+user	0m27.535s
+sys	0m0.535s

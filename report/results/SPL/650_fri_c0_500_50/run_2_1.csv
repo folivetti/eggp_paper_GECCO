@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(sin(x1) + sin(x3) + sin(sin(sin(x3) + sin(sin(sin(sin(x4)*sin(sin(sqrt(exp(x3))))))))) + sin(sin(sin(sin(x4)*sin(sin(sqrt(exp(x3))))))) - sin(sin(sin(sin(x3) + sin(sin(sin(sin(x4)*sin(sin(sqrt(exp(x3))))))))))),55,0.485474592912832,0.6365763146958251,0.485474592912832,0.6365763146958251,0.5051134379137865,0.38246162250977456

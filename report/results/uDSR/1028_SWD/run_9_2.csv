@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x3**(1/8) + sqrt(x2 + x5 + x9 + sin(sqrt(x2)) + sin(x2)),37,0.493671179145004,0.5316623013832492,0.493671179145004,0.5316623013832492,0.22791488065667231,0.23330861243644518

@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x1*x2*sin(log(x1*x2 - x2**(x0**sin(x3))*x3 + exp(x4))) - x2**(x0**sin(x3)),29,870141.2286736874,842727.2711149447,870141.2286736874,842727.2711149447,-0.6825631837235653,-0.6032194051330269

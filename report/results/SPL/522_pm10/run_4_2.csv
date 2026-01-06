@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,log(x0**(3/2)*log(sqrt(x0) + log(x0)/(2*sqrt(x2))) + x0*log(x0)*log(sqrt(x0) + log(x0)/(2*sqrt(x2)))/(2*sqrt(x2))),38,0.6913371197328808,0.5684890931369789,0.6913371197328808,0.5684890931369789,0.16234919583265517,0.17005518714723644

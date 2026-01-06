@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,2*sin(log(exp(sin(x3 + sin(sin(x0) + sin(x1)) - sin(sin(x3 + sin(sin(x0) + sin(x1)))))))),26,0.3539607345440994,0.3428366252251132,0.3539607345440994,0.3428366252251132,0.6554813498547776,0.6314427618245213

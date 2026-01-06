@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,exp(sin(sin(sin(x3) - sin(x3/exp(x5)**(1/4))))/sqrt(exp(x2)))*exp(-exp(exp(x0))),27,0.9314528942779214,0.9230897835176961,0.9314528942779214,0.9230897835176961,0.07552710155257092,0.05986703162682194

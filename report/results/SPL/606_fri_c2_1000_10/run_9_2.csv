@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(2*x9*sin(sin(log(exp(sin(exp(-exp(x2))*sin(x4))))/2)) - 2*sin(x1)),24,0.6759478475878897,0.7612555052886338,0.6759478475878897,0.7612555052886338,0.3291174790505027,0.22468928737341298

@@ -2,7 +2,7 @@ dataset,algorithm,time
 1028_SWD,SymRegg,469.4
 1028_SWD,GPGOMEA,759.267
 1028_SWD,GPZGD,231.533
-1028_SWD,PySIPS,320.1
+1028_SWD,PySIPS,169.567
 1028_SWD,PySR,880.3
 1028_SWD,random,237.667
 1028_SWD,Operon,91.5
@@ -12,7 +12,7 @@ dataset,algorithm,time
 1089_USCrime,SymRegg,252.033
 1089_USCrime,GPGOMEA,149.433
 1089_USCrime,GPZGD,29.9667
-1089_USCrime,PySIPS,95.9333
+1089_USCrime,PySIPS,32.1
 1089_USCrime,PySR,486.867
 1089_USCrime,random,158.4
 1089_USCrime,Operon,27.1667
@@ -22,7 +22,7 @@ dataset,algorithm,time
 1193_BNG_lowbwt,SymRegg,525.967
 1193_BNG_lowbwt,GPGOMEA,582.3
 1193_BNG_lowbwt,GPZGD,328.1
-1193_BNG_lowbwt,PySIPS,401.967
+1193_BNG_lowbwt,PySIPS,245.6
 1193_BNG_lowbwt,PySR,1156.2
 1193_BNG_lowbwt,random,233.067
 1193_BNG_lowbwt,Operon,214.167
@@ -32,7 +32,7 @@ dataset,algorithm,time
 1199_BNG_echoMonths,SymRegg,467.1
 1199_BNG_echoMonths,GPGOMEA,505.333
 1199_BNG_echoMonths,GPZGD,241.7
-1199_BNG_echoMonths,PySIPS,276.233
+1199_BNG_echoMonths,PySIPS,150.567
 1199_BNG_echoMonths,PySR,2375.87
 1199_BNG_echoMonths,random,236.733
 1199_BNG_echoMonths,Operon,221.633
@@ -42,7 +42,7 @@ dataset,algorithm,time
 192_vineyard,SymRegg,306.1
 192_vineyard,GPGOMEA,174.067
 192_vineyard,GPZGD,33.3333
-192_vineyard,PySIPS,84.8333
+192_vineyard,PySIPS,40.8333
 192_vineyard,PySR,301.8
 192_vineyard,random,211.667
 192_vineyard,Operon,84.8333
@@ -52,7 +52,7 @@ dataset,algorithm,time
 210_cloud,SymRegg,287.067
 210_cloud,GPGOMEA,304.533
 210_cloud,GPZGD,43.8333
-210_cloud,PySIPS,98.4
+210_cloud,PySIPS,41.7333
 210_cloud,PySR,510.167
 210_cloud,random,190.533
 210_cloud,Operon,62.4
@@ -62,7 +62,7 @@ dataset,algorithm,time
 522_pm10,SymRegg,387.5
 522_pm10,GPGOMEA,528.433
 522_pm10,GPZGD,137.967
-522_pm10,PySIPS,159.967
+522_pm10,PySIPS,61.2333
 522_pm10,PySR,1203.33
 522_pm10,random,212.433
 522_pm10,Operon,104.633
@@ -72,7 +72,7 @@ dataset,algorithm,time
 557_analcatdata_apnea1,SymRegg,405.133
 557_analcatdata_apnea1,GPGOMEA,273.6
 557_analcatdata_apnea1,GPZGD,140.3
-557_analcatdata_apnea1,PySIPS,294.533
+557_analcatdata_apnea1,PySIPS,412.7
 557_analcatdata_apnea1,PySR,1418.2
 557_analcatdata_apnea1,random,233.633
 557_analcatdata_apnea1,Operon,82.4
@@ -82,7 +82,7 @@ dataset,algorithm,time
 579_fri_c0_250_5,SymRegg,385.633
 579_fri_c0_250_5,GPGOMEA,593.467
 579_fri_c0_250_5,GPZGD,102.5
-579_fri_c0_250_5,PySIPS,145.833
+579_fri_c0_250_5,PySIPS,56.1333
 579_fri_c0_250_5,PySR,495.833
 579_fri_c0_250_5,random,200.667
 579_fri_c0_250_5,Operon,33.9333
@@ -92,7 +92,7 @@ dataset,algorithm,time
 606_fri_c2_1000_10,SymRegg,542.2
 606_fri_c2_1000_10,GPGOMEA,539.933
 606_fri_c2_1000_10,GPZGD,224.7
-606_fri_c2_1000_10,PySIPS,202.433
+606_fri_c2_1000_10,PySIPS,298.867
 606_fri_c2_1000_10,PySR,1089.73
 606_fri_c2_1000_10,random,223.733
 606_fri_c2_1000_10,Operon,90.2333
@@ -102,7 +102,7 @@ dataset,algorithm,time
 650_fri_c0_500_50,SymRegg,402.667
 650_fri_c0_500_50,GPGOMEA,495.3
 650_fri_c0_500_50,GPZGD,160.267
-650_fri_c0_500_50,PySIPS,103.867
+650_fri_c0_500_50,PySIPS,57.9333
 650_fri_c0_500_50,PySR,1168.8
 650_fri_c0_500_50,random,158.067
 650_fri_c0_500_50,Operon,49.8
@@ -112,7 +112,7 @@ dataset,algorithm,time
 678_visualizing_environmental,SymRegg,262.767
 678_visualizing_environmental,GPGOMEA,148.833
 678_visualizing_environmental,GPZGD,61.1667
-678_visualizing_environmental,PySIPS,91.8
+678_visualizing_environmental,PySIPS,41.0333
 678_visualizing_environmental,PySR,602.833
 678_visualizing_environmental,random,204.1
 678_visualizing_environmental,Operon,25.3
@@ -122,7 +122,7 @@ dataset,algorithm,time
 chemical_1_tower,SymRegg,1037.63
 chemical_1_tower,GPGOMEA,1030.7
 chemical_1_tower,GPZGD,620.767
-chemical_1_tower,PySIPS,383.033
+chemical_1_tower,PySIPS,16283.6
 chemical_1_tower,PySR,2884.77
 chemical_1_tower,random,224.567
 chemical_1_tower,Operon,374.5
@@ -132,7 +132,7 @@ chemical_1_tower,slim_gsgp,1024.1
 chemical_2_competition,SymRegg,480.833
 chemical_2_competition,GPGOMEA,617.933
 chemical_2_competition,GPZGD,255.833
-chemical_2_competition,PySIPS,119.133
+chemical_2_competition,PySIPS,494.667
 chemical_2_competition,PySR,1871.5
 chemical_2_competition,random,124.2
 chemical_2_competition,Operon,214.967
@@ -142,7 +142,7 @@ chemical_2_competition,slim_gsgp,927.7
 flow_stress_phip0.1,SymRegg,1400.9
 flow_stress_phip0.1,GPGOMEA,956.533
 flow_stress_phip0.1,GPZGD,605.667
-flow_stress_phip0.1,PySIPS,795.1
+flow_stress_phip0.1,PySIPS,29895.4
 flow_stress_phip0.1,PySR,3658.07
 flow_stress_phip0.1,random,534.033
 flow_stress_phip0.1,Operon,817.8
@@ -152,7 +152,7 @@ flow_stress_phip0.1,slim_gsgp,998.5
 friction_dyn_one-hot,SymRegg,568.3
 friction_dyn_one-hot,GPGOMEA,702.567
 friction_dyn_one-hot,GPZGD,322.533
-friction_dyn_one-hot,PySIPS,141.667
+friction_dyn_one-hot,PySIPS,1021.1
 friction_dyn_one-hot,PySR,2460.37
 friction_dyn_one-hot,random,147.9
 friction_dyn_one-hot,Operon,237.967
@@ -162,7 +162,7 @@ friction_dyn_one-hot,slim_gsgp,888.767
 friction_stat_one-hot,SymRegg,559.5
 friction_stat_one-hot,GPGOMEA,447.467
 friction_stat_one-hot,GPZGD,336.067
-friction_stat_one-hot,PySIPS,113.433
+friction_stat_one-hot,PySIPS,1351.03
 friction_stat_one-hot,PySR,3022.63
 friction_stat_one-hot,random,147.8
 friction_stat_one-hot,Operon,246.367
@@ -172,7 +172,7 @@ friction_stat_one-hot,slim_gsgp,852.233
 nasa_battery_1_10min,SymRegg,496.267
 nasa_battery_1_10min,GPGOMEA,399.2
 nasa_battery_1_10min,GPZGD,207.533
-nasa_battery_1_10min,PySIPS,116.8
+nasa_battery_1_10min,PySIPS,4529.9
 nasa_battery_1_10min,PySR,1684.27
 nasa_battery_1_10min,random,186.8
 nasa_battery_1_10min,Operon,186.467
@@ -182,7 +182,7 @@ nasa_battery_1_10min,slim_gsgp,843.2
 nasa_battery_2_20min,SymRegg,849.533
 nasa_battery_2_20min,GPGOMEA,834.933
 nasa_battery_2_20min,GPZGD,320.167
-nasa_battery_2_20min,PySIPS,158.967
+nasa_battery_2_20min,PySIPS,8554.87
 nasa_battery_2_20min,PySR,3679.1
 nasa_battery_2_20min,random,216.767
 nasa_battery_2_20min,Operon,424.233
@@ -192,7 +192,7 @@ nasa_battery_2_20min,slim_gsgp,1012.83
 nikuradse_1,SymRegg,516.667
 nikuradse_1,GPGOMEA,186.033
 nikuradse_1,GPZGD,146.533
-nikuradse_1,PySIPS,75.8
+nikuradse_1,PySIPS,1240.93
 nikuradse_1,PySR,1405.67
 nikuradse_1,random,180.667
 nikuradse_1,Operon,222.1
@@ -202,7 +202,7 @@ nikuradse_1,slim_gsgp,928.367
 nikuradse_2,SymRegg,601.067
 nikuradse_2,GPGOMEA,267.867
 nikuradse_2,GPZGD,133.2
-nikuradse_2,PySIPS,101.467
+nikuradse_2,PySIPS,283.367
 nikuradse_2,PySR,1104.53
 nikuradse_2,random,185.5
 nikuradse_2,Operon,156.567

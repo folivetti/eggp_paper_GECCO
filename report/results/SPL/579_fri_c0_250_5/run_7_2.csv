@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x3 + sin(-log(exp(sin(x3))) + sin(x0) + sin(sin(x3) + sin(x4))),18,0.5680642929464503,0.5081742402083901,0.5680642929464503,0.5081742402083901,0.4531847824276224,0.4408750818598367

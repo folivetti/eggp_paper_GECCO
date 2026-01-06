@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,x20*sin(sqrt(2*x13 + x24 + x7)) + log(exp(2*x13)*exp(x24)*exp(x7*sin(x11))),25,6551.554825831069,5111.353706820795,6551.554825831069,5111.353706820795,0.19754114984135385,0.26006968410192177

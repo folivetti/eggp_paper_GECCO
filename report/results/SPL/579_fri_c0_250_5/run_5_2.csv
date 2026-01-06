@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(sin(x3)) + sin(sin(x0 + x4))/exp(sin(sin(x0 + x4) + sin(sin(x3))))**sin(sin(sin(x0 + x4) + sin(sin(x3)))),33,0.5243551773829443,0.48656026488127063,0.5243551773829443,0.48656026488127063,0.49525891001058553,0.46465612235591425

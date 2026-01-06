@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,-exp(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(log(exp(sin(x4)))/2)))))))))))))*sin(x0) + sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(log(exp(sin(x4)))/2)))))))))))),42,0.8528015148552547,0.8029636976594303,0.8528015148552547,0.8029636976594303,0.16686325492212362,0.15424579674202676

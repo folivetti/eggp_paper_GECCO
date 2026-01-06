@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(sin(x8*sin(x8 - exp(x1))) + sin(sin(x3 - sin(x3)))),20,0.6893066936246842,0.7706221273113582,0.6893066936246842,0.7706221273113582,0.28619724048084527,0.27645704507898083

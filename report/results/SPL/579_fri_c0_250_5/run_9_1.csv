@@ -1,0 +1,2 @@
+Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test
+0,sin(sin(x0 + x3) + sin(sin(sin(x3) + sin(x4)))),13,0.540656532983051,0.5100223854711682,0.540656532983051,0.5100223854711682,0.4543351003595142,0.49283473834218106

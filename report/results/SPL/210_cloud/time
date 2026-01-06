@@ -1,0 +1,149 @@
+
+real	0m7.168s
+user	0m6.708s
+sys	0m1.254s
+
+real	0m10.649s
+user	0m10.045s
+sys	0m1.782s
+
+real	0m14.299s
+user	0m13.693s
+sys	0m1.862s
+
+real	0m12.580s
+user	0m12.000s
+sys	0m1.788s
+
+real	0m12.910s
+user	0m12.235s
+sys	0m1.993s
+
+real	0m13.319s
+user	0m12.588s
+sys	0m2.165s
+
+real	0m12.704s
+user	0m12.010s
+sys	0m2.228s
+
+real	0m11.554s
+user	0m10.790s
+sys	0m1.999s
+
+real	0m10.033s
+user	0m9.428s
+sys	0m1.650s
+
+real	0m13.368s
+user	0m12.559s
+sys	0m2.344s
+
+real	0m14.634s
+user	0m13.805s
+sys	0m2.551s
+
+real	0m13.250s
+user	0m12.491s
+sys	0m2.265s
+
+real	0m12.542s
+user	0m11.793s
+sys	0m2.252s
+
+real	0m13.269s
+user	0m12.452s
+sys	0m2.301s
+
+real	0m8.293s
+user	0m7.757s
+sys	0m1.404s
+
+real	0m12.874s
+user	0m12.108s
+sys	0m2.188s
+
+real	0m12.746s
+user	0m12.120s
+sys	0m1.959s
+
+real	0m9.173s
+user	0m8.674s
+sys	0m1.312s
+
+real	0m11.750s
+user	0m11.069s
+sys	0m1.832s
+
+real	0m13.152s
+user	0m12.297s
+sys	0m2.325s
+
+real	0m11.263s
+user	0m10.628s
+sys	0m1.891s
+
+real	0m14.228s
+user	0m13.496s
+sys	0m2.182s
+
+real	0m14.027s
+user	0m13.412s
+sys	0m1.906s
+
+real	0m17.663s
+user	0m16.974s
+sys	0m1.932s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 58, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+                                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/expr.py", line 339, in __float__
+    raise TypeError("Cannot convert complex to float")
+TypeError: Cannot convert complex to float
+
+real	0m13.278s
+user	0m12.599s
+sys	0m2.056s
+
+real	0m11.273s
+user	0m10.641s
+sys	0m1.893s
+
+real	0m12.315s
+user	0m11.607s
+sys	0m2.215s
+
+real	0m12.687s
+user	0m11.938s
+sys	0m2.303s
+
+real	0m12.430s
+user	0m11.790s
+sys	0m1.844s
+
+real	0m11.472s
+user	0m10.851s
+sys	0m1.747s

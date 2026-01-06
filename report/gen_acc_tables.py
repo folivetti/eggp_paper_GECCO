@@ -47,7 +47,7 @@ base_dir = ""
 df = pd.read_csv(f"perf.csv")
 
 # Order to display
-algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp"]
+algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp", "RF"]
 
 df = df[df.algorithm.isin(algs)]
 
@@ -120,7 +120,7 @@ s = tbl_sz[algs_sz].style.highlight_min(axis=1, props="mathbf:--rwrap")
 s.format("{:.0f}")
 print(s.to_latex())
 
-ranks = tbl.rank(axis=1, ascending=False if maxobj else True, pct=False)
+ranks = tbl.rank(axis=1, ascending=False if maxobj else True)
 
 ranks.loc["mean"] = ranks.mean()
 print("\n====Ranks====")

@@ -1,0 +1,239 @@
+
+real	0m12.511s
+user	0m11.977s
+sys	0m1.429s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 58, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+                                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        array,
+        ^^^^^^
+    ...<2 lines>...
+        allow_nan=ensure_all_finite == "allow-nan",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<4 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+real	0m16.014s
+user	0m15.414s
+sys	0m1.809s
+
+real	0m15.075s
+user	0m14.437s
+sys	0m1.812s
+
+real	0m15.754s
+user	0m15.125s
+sys	0m1.785s
+
+real	0m19.453s
+user	0m18.837s
+sys	0m1.851s
+
+real	0m12.443s
+user	0m11.837s
+sys	0m1.788s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 58, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+                                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sympy/core/expr.py", line 339, in __float__
+    raise TypeError("Cannot convert complex to float")
+TypeError: Cannot convert complex to float
+
+real	0m15.258s
+user	0m14.639s
+sys	0m1.863s
+
+real	0m17.160s
+user	0m16.531s
+sys	0m1.852s
+
+real	0m14.424s
+user	0m13.815s
+sys	0m1.799s
+Traceback (most recent call last):
+  File "/root/SymbolicPhysicsLearner/SPL_wrapper.py", line 58, in <module>
+    mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
+                                            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 565, in mean_squared_error
+    _check_reg_targets_with_floating_dtype(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, sample_weight, multioutput, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 198, in _check_reg_targets_with_floating_dtype
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+                                          ~~~~~~~~~~~~~~~~~~^
+        y_true, y_pred, multioutput, dtype=dtype_name, xp=xp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/metrics/_regression.py", line 106, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1107, in check_array
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        array,
+        ^^^^^^
+    ...<2 lines>...
+        allow_nan=ensure_all_finite == "allow-nan",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<4 lines>...
+        input_name=input_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/anaconda3/lib/python3.13/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+real	0m16.449s
+user	0m15.794s
+sys	0m1.864s
+
+real	0m14.306s
+user	0m13.723s
+sys	0m1.844s
+
+real	0m16.585s
+user	0m15.988s
+sys	0m1.779s
+
+real	0m14.378s
+user	0m13.669s
+sys	0m1.897s
+
+real	0m18.950s
+user	0m18.269s
+sys	0m1.929s
+
+real	0m15.483s
+user	0m14.807s
+sys	0m1.856s
+
+real	0m16.093s
+user	0m15.425s
+sys	0m1.891s
+
+real	0m14.497s
+user	0m13.857s
+sys	0m1.875s
+
+real	0m17.721s
+user	0m17.069s
+sys	0m1.803s
+
+real	0m15.288s
+user	0m14.728s
+sys	0m1.729s
+
+real	0m21.648s
+user	0m21.079s
+sys	0m1.722s
+
+real	0m16.843s
+user	0m16.233s
+sys	0m1.786s
+
+real	0m18.718s
+user	0m17.993s
+sys	0m1.878s
+
+real	0m14.371s
+user	0m13.716s
+sys	0m1.847s
+
+real	0m15.757s
+user	0m15.284s
+sys	0m1.664s
+
+real	0m14.796s
+user	0m14.241s
+sys	0m1.735s
+
+real	0m14.445s
+user	0m13.918s
+sys	0m1.704s
+
+real	0m15.138s
+user	0m14.455s
+sys	0m1.817s
+
+real	0m14.226s
+user	0m13.690s
+sys	0m1.737s
+
+real	0m14.367s
+user	0m13.777s
+sys	0m1.700s
+
+real	0m15.647s
+user	0m15.148s
+sys	0m1.625s
