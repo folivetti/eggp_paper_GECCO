@@ -6,7 +6,7 @@ import seaborn as sns
 sns.set_style("whitegrid")
 
 df = pd.read_csv('perf.csv')
-algs = ["eggp", "GPZGD", "Operon", "QLattice", "RF", "PySR", "PySIPS", "GPGOMEA", "SymRegg", "neogp", "slim_gsgp", "random"]
+algs = ["eggp", "GPZGD", "Operon", "QLattice", "RF", "PySR", "PySIPS", "GPGOMEA", "SymRegg", "neogp", "neogp_nsga2", "slim_gsgp", "random"]
 datasets = ['192_vineyard',
             '210_cloud',
             '522_pm10',

@@ -27,7 +27,7 @@ thr = float(args.thr)
 # list of datasets and algorithms
 datasets = ["1028_SWD", "1193_BNG_lowbwt", "192_vineyard", "522_pm10", "579_fri_c0_250_5", "650_fri_c0_500_50", "1089_USCrime", "1199_BNG_echoMonths", "210_cloud", "557_analcatdata_apnea1", "606_fri_c2_1000_10", "678_visualizing_environmental", "chemical_1_tower", "flow_stress_phip0.1", "friction_stat_one-hot", "nasa_battery_2_20min", "nikuradse_2", "chemical_2_competition",  "friction_dyn_one-hot", "nasa_battery_1_10min", "nikuradse_1"]
 
-algs = ["SymRegg","eggp",  "PySIPS", "Operon", "QLattice", "GPGOMEA", "PySR", "neogp", "random", "GPZGD", "slim_gsgp", "RF", "random"]
+algs = ["SymRegg","eggp",  "PySIPS", "Operon", "QLattice", "GPGOMEA", "PySR", "neogp", "neogp_nsga2", "random", "GPZGD", "slim_gsgp", "RF", "random"]
 ref = "eggp"
 base_dir = ""
 
@@ -53,7 +53,9 @@ for d in datasets:
         for i,f in enumerate(glob.glob(directory)):
             try:
                 if alg == "neogp":
-                    dfi = pd.read_csv(f, skiprows=10, skipfooter=1, engine='python')
+                    dfi = pd.read_csv(f, skiprows=10, skipfooter=1, engine="python")
+                elif alg == "neogp_nsga2":
+                    dfi = pd.read_csv(f, skiprows=9, skipfooter=1, engine="python")
                 elif alg == "TabPFN":
                     dfi = pd.read_csv(f, skiprows=[1])
                 else:
