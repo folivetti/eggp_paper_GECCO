@@ -1,0 +1,127 @@
+
+real	8m32,114s
+user	8m43,601s
+sys	0m0,907s
+
+real	7m50,325s
+user	8m1,778s
+sys	0m0,927s
+
+real	8m28,047s
+user	8m39,502s
+sys	0m0,976s
+
+real	8m19,282s
+user	8m30,756s
+sys	0m0,994s
+
+real	8m10,199s
+user	8m20,941s
+sys	0m0,981s
+
+real	8m17,041s
+user	8m28,565s
+sys	0m0,914s
+
+real	9m11,680s
+user	9m23,476s
+sys	0m0,991s
+
+real	8m29,880s
+user	8m41,440s
+sys	0m0,913s
+
+real	7m41,383s
+user	7m52,840s
+sys	0m0,816s
+
+real	9m8,634s
+user	9m20,281s
+sys	0m0,866s
+
+real	8m7,817s
+user	8m18,840s
+sys	0m0,880s
+
+real	8m32,522s
+user	8m44,059s
+sys	0m0,765s
+
+real	8m40,059s
+user	8m51,734s
+sys	0m0,854s
+
+real	8m36,806s
+user	8m48,403s
+sys	0m0,885s
+
+real	9m48,698s
+user	10m0,543s
+sys	0m0,946s
+eggp: Uncaught exception ghc-internal:GHC.Internal.Exception.ErrorCall:
+
+Map.!: given key is not an element in the map
+
+HasCallStack backtrace:
+  error, called at libraries/containers/containers/src/Data/Map/Internal.hs:622:17 in containers-0.7-5a8f:Data.Map.Internal
+
+
+real	2m0,164s
+user	2m11,041s
+sys	0m0,263s
+
+real	10m10,765s
+user	10m22,618s
+sys	0m0,913s
+
+real	8m4,127s
+user	8m15,570s
+sys	0m0,936s
+
+real	8m17,104s
+user	8m28,361s
+sys	0m0,918s
+
+real	8m37,968s
+user	8m49,576s
+sys	0m0,882s
+
+real	7m8,671s
+user	7m19,806s
+sys	0m1,038s
+
+real	7m41,280s
+user	7m52,389s
+sys	0m1,046s
+
+real	7m9,150s
+user	7m20,297s
+sys	0m0,974s
+
+real	7m38,878s
+user	7m50,190s
+sys	0m0,967s
+
+real	8m42,893s
+user	8m54,464s
+sys	0m0,918s
+
+real	7m32,390s
+user	7m43,712s
+sys	0m0,934s
+
+real	8m31,542s
+user	8m42,941s
+sys	0m1,054s
+
+real	7m5,976s
+user	7m17,234s
+sys	0m0,944s
+
+real	6m12,614s
+user	6m23,638s
+sys	0m0,998s
+
+real	7m16,979s
+user	7m28,424s
+sys	0m0,810s

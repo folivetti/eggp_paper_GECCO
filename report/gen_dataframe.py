@@ -27,7 +27,7 @@ thr = float(args.thr)
 # list of datasets and algorithms
 datasets = ["1028_SWD", "1193_BNG_lowbwt", "192_vineyard", "522_pm10", "579_fri_c0_250_5", "650_fri_c0_500_50", "1089_USCrime", "1199_BNG_echoMonths", "210_cloud", "557_analcatdata_apnea1", "606_fri_c2_1000_10", "678_visualizing_environmental", "chemical_1_tower", "flow_stress_phip0.1", "friction_stat_one-hot", "nasa_battery_2_20min", "nikuradse_2", "chemical_2_competition",  "friction_dyn_one-hot", "nasa_battery_1_10min", "nikuradse_1"]
 
-algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp", "RF"]
+algs = ["SymRegg","eggp", "eggp_fb2",  "PySIPS", "Operon", "QLattice", "GPGOMEA", "PySR", "neogp", "random", "GPZGD", "slim_gsgp", "RF", "random", "Operon_fbf"]
 ref = "eggp"
 base_dir = ""
 
@@ -83,19 +83,31 @@ for d in datasets:
                     dfi.dropna(inplace=True, how='any') # tinyGP sometimes fails
 
                 r2max = dfi.R2_train.max()
-                ix = dfi.OOB_score.idxmin() if alg == "RF" else dfi[dfi.R2_train >= thr*r2max]['size'].idxmin()
+                if alg == "RF":
+                    ix = dfi.OOB_score.idxmin()
+                #elif "eggp_fb" in alg:
+                #    ix = dfi.dl_train.idxmin()
+                else:
+                    ix = dfi[dfi.R2_train >= thr*r2max]['size'].idxmin()
 
                 v = dfi.loc[ix, 'R2_test']
                 vs = 10000 if alg == "RF" else dfi.loc[ix, 'size']
 
-                msemin = dfi[f"{msecol}_{useval}"].min()
-                mse_trains.append(msemin)
-                if alg == "neogp":
-                    ixmse = 199
-                elif alg == "RF":
-                    imxse = ix
+                if "eggp_fb" in alg:
+                    ixmse = dfi.dl_val.idxmin()
+                    mse_trains.append(dfi.loc[ixmse, f"{msecol}_{useval}"].min())
+                elif "Operon_fbf" in alg:
+                    ixmse = dfi.FBF_train.idxmin()
+                    mse_trains.append(dfi.loc[ixmse, f"MSE_train"].min())
                 else:
-                    ixmse = dfi[dfi[f"{msecol}_{useval}"] <= (2 - thr)*msemin]['size'].idxmin()
+                    msemin = dfi[f"{msecol}_{useval}"].min()
+                    mse_trains.append(msemin)
+                    if alg == "neogp":
+                        ixmse = 199
+                    elif alg == "RF":
+                        imxse = ix
+                    else:
+                        ixmse = dfi[dfi[f"{msecol}_{useval}"] <= (2 - thr)*msemin]['size'].idxmin()
 
                 vmse = dfi.loc[ixmse, f"{msecolt}_test"]
                 vsmse = 100000 if alg == "RF" else dfi.loc[ixmse, 'size']
@@ -115,15 +127,6 @@ for d in datasets:
                     print(f"INF IN {f}")
             except Exception as e:
                 print(f"ERROR IN {f} - {e}")
-                dfalgs.append(alg)
-                ds.append(d)
-                r2_tests.append(-np.inf)
-                mse_trains.append(np.inf)
-                mse_tests.append(np.inf)
-                runs.append(i)
-                hyps.append(np.inf)
-                sizes.append(np.inf)
-                sizesmse.append(np.inf)
 
 # create the dataframe and save it
 df = pd.DataFrame({"run":runs, "algorithm": dfalgs, "dataset": ds, "r2_test": r2_tests, "mse_train" : mse_trains, "mse_test": mse_tests, "hypervolume": hyps, 'size':sizes, 'size_mse':sizesmse})

@@ -23,7 +23,7 @@ base_dir = ""
 
 df = pd.read_csv(f"perf.csv")
 # Order to display
-algs = ["eggp", "GPZGD", "Operon", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp", "RF"]
+algs = ["eggp", "eggp_fb2", "GPZGD", "Operon", "Operon_fbf", "QLattice", "PySR", "PySIPS", "SymRegg", "GPGOMEA", "neogp", "slim_gsgp", "RF"]
 
 df = df[df.algorithm.isin(algs)]
 

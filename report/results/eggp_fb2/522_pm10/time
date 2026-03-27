@@ -1,0 +1,127 @@
+
+real	5m14,718s
+user	5m15,149s
+sys	0m10,980s
+
+real	4m53,961s
+user	5m4,859s
+sys	0m0,814s
+
+real	5m12,547s
+user	5m23,445s
+sys	0m0,856s
+
+real	4m54,888s
+user	5m5,745s
+sys	0m0,876s
+
+real	5m28,242s
+user	5m39,233s
+sys	0m0,833s
+
+real	6m14,845s
+user	6m26,006s
+sys	0m0,832s
+
+real	5m13,673s
+user	5m24,659s
+sys	0m0,815s
+
+real	5m45,030s
+user	5m56,026s
+sys	0m0,859s
+
+real	4m20,693s
+user	4m31,663s
+sys	0m0,670s
+
+real	4m53,611s
+user	5m4,451s
+sys	0m0,830s
+
+real	5m47,961s
+user	5m59,135s
+sys	0m0,832s
+
+real	6m54,004s
+user	7m5,178s
+sys	0m0,925s
+
+real	5m12,991s
+user	5m23,876s
+sys	0m0,886s
+
+real	5m23,453s
+user	5m34,495s
+sys	0m0,812s
+
+real	5m42,049s
+user	5m53,079s
+sys	0m0,862s
+
+real	4m53,016s
+user	5m3,956s
+sys	0m0,749s
+
+real	5m15,928s
+user	5m26,756s
+sys	0m0,843s
+
+real	5m12,268s
+user	5m23,181s
+sys	0m0,905s
+
+real	5m30,639s
+user	5m41,532s
+sys	0m0,802s
+
+real	5m17,755s
+user	5m28,728s
+sys	0m0,794s
+
+real	5m27,285s
+user	5m38,216s
+sys	0m0,816s
+
+real	5m26,354s
+user	5m37,328s
+sys	0m0,867s
+
+real	6m9,962s
+user	6m21,134s
+sys	0m0,811s
+
+real	5m31,641s
+user	5m42,708s
+sys	0m0,805s
+
+real	5m50,677s
+user	6m1,784s
+sys	0m0,766s
+
+real	4m58,249s
+user	5m9,218s
+sys	0m0,792s
+eggp: Uncaught exception ghc-internal:GHC.Internal.Exception.ErrorCall:
+
+Map.!: given key is not an element in the map
+
+HasCallStack backtrace:
+  error, called at libraries/containers/containers/src/Data/Map/Internal.hs:622:17 in containers-0.7-5a8f:Data.Map.Internal
+
+
+real	0m2,093s
+user	0m12,566s
+sys	0m0,206s
+
+real	4m53,719s
+user	5m4,610s
+sys	0m0,819s
+
+real	5m51,605s
+user	6m2,613s
+sys	0m0,833s
+
+real	5m28,644s
+user	5m39,445s
+sys	0m0,860s

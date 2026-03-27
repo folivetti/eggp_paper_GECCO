@@ -1,0 +1,15 @@
+FROM folivetti/nongpsr AS builder
+
+WORKDIR /root/DAG_search
+
+SHELL ["/bin/bash", "--login", "-c"]
+
+ENV PATH="/root/anaconda3/bin:$PATH"
+
+# RUN ./runRW.sh 
+
+CMD ["sleep", "infinity"]
+
+FROM scratch AS exporter
+
+COPY --from=builder /root/DAG_search/*.gz .

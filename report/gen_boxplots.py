@@ -7,6 +7,7 @@ sns.set_style("whitegrid")
 
 df = pd.read_csv('perf.csv')
 algs = ["eggp", "GPZGD", "Operon", "QLattice", "RF", "PySR", "PySIPS", "GPGOMEA", "SymRegg", "neogp", "slim_gsgp", "random"]
+algs = ["eggp", "Operon_fbf", "Operon"]
 datasets = ['192_vineyard',
             '210_cloud',
             '522_pm10',

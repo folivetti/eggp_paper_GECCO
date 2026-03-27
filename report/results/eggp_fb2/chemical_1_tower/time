@@ -1,0 +1,164 @@
+eggp: zdsrtreezm2zi0zi1zi7zm4c855d58e0ebc6fe1788405f15e5741d31f3f4d0c2448610e0db0982843f6a69zdNumericziOptimizzationziNLOPTziBindingszdsrtreezzm2zzi0zzi1zzi7zzm4c855d58e0ebc6fe1788405f15e5741d31f3f4d0c2448610e0db0982843f6a69zuNumericzziOptimizzzzationzziNLOPTzziBindingszumkCFunction: interrupted
+
+real	0m1,173s
+user	0m12,156s
+sys	0m0,132s
+Traceback (most recent call last):
+  File "/home/olivetti/.local/pyenv/bin/eggp", line 5, in <module>
+    from eggp.__main__ import main
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/eggp/__init__.py", line 13, in <module>
+    from sklearn.base import BaseEstimator, RegressorMixin
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/__init__.py", line 73, in <module>
+    from .base import clone  # noqa: E402
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/__init__.py", line 9, in <module>
+    from ._chunking import gen_batches, gen_even_slices
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_chunking.py", line 11, in <module>
+    from ._param_validation import Interval, validate_params
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 17, in <module>
+    from .validation import _is_arraylike_not_scalar
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/validation.py", line 21, in <module>
+    from ..utils._array_api import _asarray_with_order, _is_numpy_namespace, get_namespace
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/_array_api.py", line 20, in <module>
+    from .fixes import parse_version
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/sklearn/utils/fixes.py", line 16, in <module>
+    import scipy.stats
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/scipy/stats/__init__.py", line 624, in <module>
+    from ._stats_py import *
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/scipy/stats/_stats_py.py", line 52, in <module>
+    from . import distributions
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/scipy/stats/distributions.py", line 10, in <module>
+    from . import _continuous_distns
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/scipy/stats/_continuous_distns.py", line 12, in <module>
+    from scipy.interpolate import BSpline
+  File "/home/olivetti/.local/pyenv/lib/python3.10/site-packages/scipy/interpolate/__init__.py", line 198, in <module>
+    from ._pade import *
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 969, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1091, in path_stats
+  File "<frozen importlib._bootstrap_external>", line 147, in _path_stat
+KeyboardInterrupt
+
+real	25m8,339s
+user	25m22,622s
+sys	0m1,379s
+
+real	23m51,815s
+user	24m5,865s
+sys	0m1,405s
+
+real	21m2,544s
+user	21m15,990s
+sys	0m1,261s
+
+real	20m36,283s
+user	20m49,787s
+sys	0m1,034s
+
+real	22m15,136s
+user	22m27,468s
+sys	0m1,301s
+
+real	19m2,242s
+user	19m15,028s
+sys	0m1,275s
+
+real	22m12,155s
+user	22m26,289s
+sys	0m1,251s
+
+real	21m19,466s
+user	21m33,377s
+sys	0m1,246s
+
+real	24m54,838s
+user	25m8,978s
+sys	0m1,168s
+
+real	19m21,664s
+user	19m35,104s
+sys	0m1,158s
+
+real	22m25,249s
+user	22m39,086s
+sys	0m1,382s
+
+real	20m17,093s
+user	20m30,735s
+sys	0m1,203s
+
+real	22m17,750s
+user	22m31,126s
+sys	0m1,197s
+
+real	22m50,939s
+user	23m4,932s
+sys	0m1,433s
+
+real	23m2,053s
+user	23m15,155s
+sys	0m1,355s
+
+real	21m56,985s
+user	22m10,315s
+sys	0m1,203s
+
+real	23m40,792s
+user	23m54,160s
+sys	0m1,208s
+
+real	23m13,264s
+user	23m27,543s
+sys	0m1,216s
+
+real	22m39,230s
+user	22m52,754s
+sys	0m1,541s
+
+real	21m45,193s
+user	21m59,287s
+sys	0m1,229s
+
+real	23m7,285s
+user	23m21,825s
+sys	0m1,341s
+
+real	22m41,077s
+user	22m54,066s
+sys	0m1,306s
+
+real	22m9,825s
+user	22m22,563s
+sys	0m1,226s
+
+real	23m37,278s
+user	23m51,210s
+sys	0m1,348s
+
+real	23m2,416s
+user	23m16,593s
+sys	0m1,357s
+
+real	20m49,512s
+user	21m2,116s
+sys	0m1,343s
+
+real	19m1,820s
+user	19m13,912s
+sys	0m2,265s
+
+real	20m7,574s
+user	20m21,171s
+sys	0m1,260s
+
+real	21m21,494s
+user	21m34,890s
+sys	0m1,205s
+
+real	23m23,119s
+user	23m37,374s
+sys	0m1,334s
